@@ -1,28 +1,42 @@
 import React, { Component } from 'react'
 import { View } from '@tarojs/components'
-import { AtTabs, AtTabsPane } from 'taro-ui'
-import { CuButton } from "taro-color-ui"
 
+import { AtTabs, AtTabsPane, AtNoticebar } from 'taro-ui'
 
+import * as homeApi from './service';
 import './index.css'
 
 export default class Index extends Component {
-  constructor() {
-    super(...arguments)
+  constructor(props) {
+    super(props)
     this.state = {
       current: 0,
+      goodsInfo: {},
+      noticebar: ''
     }
   }
+
   handleClick(value) {
     this.setState({
       current: value
     })
   }
 
+  async componentWillMount() {
+    const goodsinfo = await homeApi.goodsInfo()
+    const noticebar = await homeApi.noticebarText()
+    this.setState({
+      goodsInfo: goodsinfo.data,
+      noticebar: noticebar.data
+    })
+  }
+
   render() {
     return (
       <View>
-        <CuButton inline>按钮文案</CuButton>
+        <AtNoticebar marquee icon='volume-plus'>
+          {this.state.noticebar}
+        </AtNoticebar>
         <AtTabs
           current={this.state.current}
           scroll
