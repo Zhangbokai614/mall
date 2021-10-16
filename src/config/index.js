@@ -1,4 +1,2 @@
 // Link prefix
-export const baseUrl = 'https://ms-api.caibowen.net';
-
-export const noConsole = false;
+export const baseUrl = 'http://localhost:3003';

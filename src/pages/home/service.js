@@ -1,8 +1,17 @@
 import Request from '../../utils/request';
 
-export const getAddressList = data =>
-    Request({
-        url: '/user/address',
+export const goodsInfo = (data) => {
+    return Request({
+        url: '/goodsinfo',
         method: 'GET',
-        data,
+        ...data
     });
+}
+
+export const noticebarText = (data) => {
+    return Request({
+        url: '/noticebar',
+        method: 'GET',
+        ...data
+    });
+}

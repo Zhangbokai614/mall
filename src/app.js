@@ -8,7 +8,7 @@ import { Set } from './global-data/index'
 import languages from './asset/languages/zn-cn.json'
 
 class App extends Component {
-  componentDidMount() {
+  componentWillMount() {
     Set('languages', languages)
   }
 
