@@ -1,10 +1,11 @@
 import Taro from '@tarojs/taro'
 import React, { Component } from 'react'
 import { AtButton, AtFloatLayout, AtRadio, AtIcon } from 'taro-ui'
-import { View, Button } from '@tarojs/components';
+import { View } from '@tarojs/components';
 
 import { SwiperPosters } from '../../components/detail/swiper_posters'
 import './index.css'
+import { Get } from '../../global-data/index'
 
 const posters = [
     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1633323146590-assets/web-upload/df14984d-9593-4756-ad22-e2cd0fe3c020.jpeg",
@@ -85,53 +86,53 @@ export default class Index extends Component {
 
         const postersImages = posters
         return (
-            <View className='index h-screen'>
+            <View className='index'>
                 <SwiperPosters images={postersImages} />
                 <View className='at-article__h1'>
-                    商品简介
+                {Get('languages').goodsintroduction}
                 </View>
-                <AtButton className='at-col at-col-2' onClick={this.handleClick.bind(this)}>已选</AtButton>
-                <AtFloatLayout isOpened={this.state.atButton} title="商品选择">
+                <AtButton className='at-col at-col-2' onClick={this.handleClick.bind(this)}>{Get('languages').selecte}</AtButton>
+                <AtFloatLayout isOpened={this.state.atButton} title={Get('languages').goodsselection}>
                     <AtRadio
                         options={[
-                            { label: '商品一', value: 'option1', },
-                            { label: '商品二', value: 'option2', },
-                            { label: '商品三', value: 'option3', }
+                            { label: '', value: 'option1', },
+                            { label: '', value: 'option2', },
+                            { label: '', value: 'option3', }
                         ]}
                         value={this.state.value}
                         onClick={this.handleChange.bind(this)}
                     />
-                    <AtButton className='goodscar' circle="true" onClick={this.On.bind(this)}>加入购物车</AtButton>
-                    <AtButton className='confirm' circle="true" onClick={this.On.bind(this)}>立即购买</AtButton>
+                    <AtButton className='goodscar' circle="true" onClick={this.On.bind(this)}>{Get('languages').addcar}</AtButton>
+                    <AtButton className='confirm' circle="true" onClick={this.On.bind(this)}>{Get('languages').tobuy}</AtButton>
                 </AtFloatLayout>
-                <View className="goodInfoBottom">
-                    <View className="bottomIconWrap">
-                        <View className="bottomIcon">
+                <View className="" id ="m">
+                    <View className="bottomIconWrap ">
+                        <View className="bottomIcon" id="n">
+                            <AtButton className="firstpage" id="d">
+                            {Get('languages').home}
+                            </AtButton>
                             <AtIcon value="home" size="21" color="#666" onClick={this.goHref.bind(this, '01')} />
-                            <View className="iconTxt">首页</View>
                         </View>
                         <View className="bottomIcon" onClick={this.goHref.bind(this, '02')}>
-                            <AtIcon value="bullet-list" size="21" color="#666" />
-                            <View className="iconTxt">分类</View>
+                            <AtButton className="service">
+                            {Get('languages').service}
+                            </AtButton>
+                            <AtIcon value="message" size="21" color="#666" />
                         </View>
                         <View className="bottomIcon" onClick={this.goHref.bind(this, '03')}>
-                            <View
-                                className="badgeDom"
-                                style={{ display: this.state.totalNum > 0 ? 'block' : 'none' }}
-                            >
-                                {this.state.totalNum}
-                            </View>
+                            <AtButton className="bottomIcon">
+                            {Get('languages').goodscar}
+                            </AtButton>
                             <AtIcon value="shopping-cart" size="21" color="#666" />
-                            <View className="iconTxt">购物车</View>
                         </View>
                     </View>
                     <View className="botBtnWrap">
-                        <View className="addToCart" onClick={this.btnClick.bind(this, 'add')}>
-                            加入购物车
-                        </View>
-                        <Button className="goPay" onClick={this.goHref.bind(this, '04')}>
-                            去结算
-                        </Button>
+                        <AtButton className="addToCar" onClick={this.btnClick.bind(this, 'add')}>
+                        {Get('languages').addcar}
+                        </AtButton>
+                        <AtButton className="goPay" onClick={this.goHref.bind(this, '04')}>
+                        {Get('languages').tobuy}
+                        </AtButton>
                     </View>
                 </View>
             </View>

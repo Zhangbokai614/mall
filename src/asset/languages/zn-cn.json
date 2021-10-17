@@ -1,5 +1,11 @@
 {
     "hello": "你好",
     "home": "首页",
-    "loading": "加载中"
+    "service": "客服",
+    "selecte": "已选",
+    "tobuy": "立刻购买",
+    "goodscar": "购物车",
+    "addcar": "加入购物车",
+    "goodsselection": "商品选择",
+    "goodsintroduction": "商品简介"
 }

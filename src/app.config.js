@@ -1,7 +1,9 @@
 export default {
   pages: [
+    
     'pages/home/index',
     'pages/detail/index'
+  
   ],
 
   window: {
