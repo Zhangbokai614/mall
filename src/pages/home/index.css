@@ -1,0 +1,27 @@
+.at-noticebar {
+    width:100%
+}
+
+#posters {
+    border-radius: 0 0 60px 60px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.19);
+    margin-bottom: 16px;
+}
+
+#loadingPosters {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#cardList {
+    display: flex;
+    flex-flow: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-left: 4px;
+    padding-right: 4px;
+    padding-top: 4px;
+    width: 100%;
+}

@@ -1,0 +1,11 @@
+.focusCard {
+  display: flex;
+  flex-flow: column;
+  width: 46%;
+  height: 480px;
+  margin: 12px;
+}
+
+.info {
+  height: 40%;
+}

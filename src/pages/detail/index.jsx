@@ -3,7 +3,7 @@ import React, { Component } from 'react'
 import { AtButton, AtFloatLayout, AtRadio, AtIcon } from 'taro-ui'
 import { View, Button } from '@tarojs/components';
 
-import { SwiperPosters } from '../../components/detail/goods_card'
+import { SwiperPosters } from '../../components/detail/swiper_posters'
 import './index.css'
 
 const posters = [
