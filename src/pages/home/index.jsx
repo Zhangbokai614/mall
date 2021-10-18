@@ -53,7 +53,11 @@ export default class Index extends Component {
                         <GoodsCard
                             key={key}
                             focus={e.focus}
+                            title={e.title}
                             imageSrc={e.images}
+                            price={e.price}
+                            marketPrice={e.marketPrice}
+                            inventory={e.inventory}
                         />
                     )
                 }
@@ -68,7 +72,11 @@ export default class Index extends Component {
                         <GoodsCard
                             key={key}
                             focus={e.focus}
+                            title={e.title}
                             imageSrc={e.images}
+                            price={e.price}
+                            marketPrice={e.marketPrice}
+                            inventory={e.inventory}
                         />
                     )
                 }

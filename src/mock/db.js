@@ -14,7 +14,6 @@ module.exports = () => {
                     "images": Random.image('100x100', '#4A7BF7', 'goods'),
                     "focus": false,
                     "price|10-80": 80,
-                    "marketPrice|15-100": 100
                 }
             ],
             "水果|2-6": [
@@ -25,7 +24,6 @@ module.exports = () => {
                     "images": Random.image('100x100', '#4A7BF7', 'goods'),
                     "focus": false,
                     "price|10-80": 80,
-                    "marketPrice|15-100": 100
                 }
             ],
             "生鲜|2-6": [
@@ -36,7 +34,6 @@ module.exports = () => {
                     "images": Random.image('100x100', '#4A7BF7', 'goods'),
                     "focus": false,
                     "price|10-80": 80,
-                    "marketPrice|15-100": 100
                 }
             ],
             "粮油|2-6": [
@@ -47,7 +44,6 @@ module.exports = () => {
                     "images": Random.image('100x100', '#4A7BF7', 'goods'),
                     "focus": false,
                     "price|10-80": 80,
-                    "marketPrice|15-100": 100
                 }
             ],
             "海鲜|1-2": [
@@ -58,7 +54,6 @@ module.exports = () => {
                     "images": Random.image('200x100', '#4A7BF7', 'focus'),
                     "focus": true,
                     "price|10-80": 80,
-                    "marketPrice|15-100": 100
                 }
             ],
             "其他|2-6": [
@@ -69,7 +64,6 @@ module.exports = () => {
                     "images": Random.image('100x100', '#4A7BF7', 'goods'),
                     "focus": false,
                     "price|10-80": 80,
-                    "marketPrice|15-100": 100
                 }
             ],
         },
