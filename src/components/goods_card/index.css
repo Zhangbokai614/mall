@@ -1,11 +1,35 @@
-.focusCard {
-  display: flex;
-  flex-flow: column;
-  width: 46%;
-  height: 480px;
-  margin: 12px;
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 16px 0 rgba(0, 0, 0, 0.19);
+  border-radius: 20px 20px 20px 20px;
 }
 
-.info {
-  height: 40%;
+.cardImage {
+  border-radius: 20px 20px 0px 0px;
+}
+
+.focusCard {
+  width: 92vw;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.focusInfo {
+  height: 10vh;
+}
+
+.goodsCard {
+  display: flex;
+  flex-flow: column;
+  width: 44vw;
+  height: 28vh;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
+}
+
+.goodsInfo {
+  height: 12vh;
 }

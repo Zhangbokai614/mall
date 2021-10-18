@@ -85,20 +85,22 @@ export default class Index extends Component {
 
                     <Image
                         id='posters'
+                        className='card'
                         style='width: 100%;background: #fff;'
                         src={this.state.posters}
                         mode='widthFix'
                     />
 
-                    <Image
-                        id='activity'
-                        style='width: 100%;background: #fff;'
-                        src={this.state.activity}
-                        mode='widthFix'
-
-                    />
-
-                    {FocusList}
+                    <View id='activitys'>
+                        <Image
+                            id='activity'
+                            className='card'
+                            style='width: 96%;background: #fff;'
+                            src={this.state.activity}
+                            mode='widthFix'
+                        />
+                        {FocusList}
+                    </View>
 
                     <View id='cardList'>
                         {CardList}

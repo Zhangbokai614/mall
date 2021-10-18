@@ -15,20 +15,25 @@ class GoodsCard extends React.Component {
         const imageSrc = this.props.imageSrc
         return (
             this.state.focus
-                ? <View>
+                ? <View className='card focusCard'>
                     <Image
-                        style='width: 100%;background: #fff;'
+                        className='cardImage'
+                        style='width: 100%; height: 60%; background: #fff;'
                         src={imageSrc}
                         mode='widthFix'
                     />
+                    <View className='focusInfo'>
+
+                    </View>
                 </View>
-                : <View className='focusCard'>
+                : <View className='card goodsCard'>
                     <Image
+                        className='cardImage'
                         style='width: 100%; background: #ff0000;'
                         src={imageSrc}
                         mode='scaleToFill'
                     />
-                    <View className='info'>
+                    <View className='goodsInfo'>
 
                     </View>
                 </View>
