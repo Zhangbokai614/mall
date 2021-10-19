@@ -25,7 +25,7 @@ export default {
       },
       {
         pagePath: 'pages/cart/index',
-        text: 'card',
+        text: 'cart',
         iconPath: './asset/images/tabs/shopping-cart.png',
         selectedIconPath: './asset/images/tabs/shopping-cart-select.png'
       }]
