@@ -3,12 +3,13 @@ export default {
     
     'pages/home/index',
     'pages/detail/index'
-  
   ],
   window: {
     backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#fff',
+    navigationBarBackgroundColor: '#ff4949',
     navigationBarTitleText: 'WeChat',
-    navigationBarTextStyle: 'black'
+    navigationBarTextStyle: 'black',
+
   }
+  
 }
