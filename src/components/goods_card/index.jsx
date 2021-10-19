@@ -22,7 +22,7 @@ class GoodsCard extends React.Component {
                         className='cardImage'
                         style='width: 100%; height: 60%; background: #fff;'
                         src={imageSrc}
-                        mode='widthFix'
+                        mode='aspectFill'
                     />
                     <View className='focusInfo'>
                         <View className='.at-article__h1'>
@@ -47,7 +47,7 @@ class GoodsCard extends React.Component {
                 : <View className='card goodsCard'>
                     <Image
                         className='cardImage'
-                        style='width: 100%; background: #ff0000;'
+                        style='width: 100%; background: #fff;'
                         src={imageSrc}
                         mode='scaleToFill'
                     />
