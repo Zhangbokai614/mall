@@ -1,14 +1,6 @@
-.goodsSelection {
-    background-color: blueviolet;
-}
-.distribution {
-    background-color: rgb(0, 81, 255);
-}
-.service {
-    background-color: deeppink;
-}
 .button {
     padding-right: 90%;
+    border:2px solid #555555;
 }
 .goodscar {
     background-color:#4CAF50;
