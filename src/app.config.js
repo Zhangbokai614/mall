@@ -1,3 +1,5 @@
+import languages from './asset/languages/zn-cn.json'
+
 export default {
   pages: [
     'pages/home/index',
@@ -19,13 +21,13 @@ export default {
     list: [
       {
         pagePath: 'pages/home/index',
-        text: 'home',
+        text: languages.home,
         iconPath: './asset/images/tabs/home.png',
         selectedIconPath: './asset/images/tabs/home-select.png'
       },
       {
         pagePath: 'pages/cart/index',
-        text: 'cart',
+        text: languages.shoppingCart,
         iconPath: './asset/images/tabs/shopping-cart.png',
         selectedIconPath: './asset/images/tabs/shopping-cart-select.png'
       }]

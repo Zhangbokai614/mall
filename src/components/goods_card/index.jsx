@@ -13,7 +13,7 @@ class GoodsCard extends React.Component {
     }
 
     render() {
-        const { title, imageSrc, price, inventory } = this.props
+        const { title, imageSrc, price } = this.props
 
         return (
             this.state.focus
@@ -38,7 +38,7 @@ class GoodsCard extends React.Component {
                                 </View>
                                 <AtTag className='.at-article__h2' active='false' circle>tag</AtTag>
                             </View>
-                                <AtIcon className='shoping-cart-icon' value='shopping-cart' size='24' color='#F00'></AtIcon>
+                            <AtIcon className='shoping-cart-icon' value='shopping-cart' size='24' color='#F00'></AtIcon>
                         </View>
                     </View>
                 </View>
