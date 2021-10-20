@@ -1,0 +1,42 @@
+.bottomIconWrap{
+    display: flex;
+    flex-direction: row;
+    margin: 10px;
+    padding: 5px;
+}
+
+.bottomIcon {
+    display: flex;
+    flex-direction: column;
+    padding-top: 15px;
+}
+.icon {
+    margin-left: 1vw;
+}
+.bottombutton {
+    left: -35px;
+    background-color: #ff4949;
+
+}
+.botBtnWrap{
+    display: flex;
+    flex-direction: row;
+    margin: 50vw;
+    padding:5px;
+}
+.bottombutton2 {
+    left: -110px;
+    background-color: #4CAF50;
+    border: none;
+    color: black;
+    width: 50%;
+    height: 80%;
+}
+.bottombutton3 {
+    left: -120px;
+    background-color:  #e2211c;
+    border: none;
+    color: black;
+    width: 50%;
+    height: 80%;
+}

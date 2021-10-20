@@ -1,11 +1,13 @@
-import Taro from '@tarojs/taro'
-import React, { Component } from 'react'
-import { AtButton, AtFloatLayout, AtRadio, AtIcon } from 'taro-ui'
-import { View } from '@tarojs/components';
+import Taro from "@tarojs/taro"
+import React, { Component } from "react"
+import { View } from "@tarojs/components"
+import { AtButton, AtIcon } from "taro-ui"
 
-import { SwiperPosters } from '../../components/detail/swiper_posters'
-import './index.css'
-import { Get } from '../../global-data/index'
+import { SwiperPosters } from "../../components/detail/swiper_posters"
+import { GoodsSelection } from "../../components/at_radio/index"
+import { Bottomdetail } from "../../components/detail_bottom/index"
+import "./index.css"
+import { Get } from "../../global-data/index"
 
 const posters = [
     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1633323146590-assets/web-upload/df14984d-9593-4756-ad22-e2cd0fe3c020.jpeg",
@@ -16,17 +18,17 @@ const posters = [
 ]
 
 export default class Index extends Component {
+
+
     constructor(props) {
         super(props)
         this.state = {
-            atButton: false,
-
+            totalNum: 0,
         }
-
     };
     btnClick = (type) => {
         let num = this.state.totalNum;
-        num = type === 'add' ? (num += 1) : (num -= 1);
+        num = type === "add" ? (num += 1) : (num -= 1);
         if (num < 1) {
             num = 0;
         }
@@ -36,102 +38,76 @@ export default class Index extends Component {
             totalMoney: (money * num).toFixed(2),
         });
     };
-    handleChange(value) {
-        this.setState({
-            value
-        })
-    };
-    handleClick() {
-        this.setState({
-            atButton: true,
-        })
-    };
     goHref = (type) => {
         switch (type) {
-            case '01':
-                Taro.switchTab({
-                    url: '/pages/index/index',
-                });
-                break;
-            case '02':
-                Taro.switchTab({
-                    url: '/pages/category/index',
-                });
-                break;
-            case '03':
-                this.setStore();
-                Taro.switchTab({
-                    url: '/pages/cart/index',
-                });
-                break;
-            case '04':
-                this.setStore();
+            case "01":
                 Taro.navigateTo({
-                    url: '/pages/order/index',
+                    url: "/pages/home/index",
+                });
+                break;
+            case "02":
+                Taro.navigateTo({
+                    url: "/pages/category/index",
+                });
+                break;
+            case "03":
+                Taro.navigateTo({
+                    url: "/pages/cart/index",
+                });
+                break;
+            case "04":
+                Taro.navigateTo({
+                    url: "/pages/order/index",
                 });
                 break;
             default:
-                Taro.switchTab({
-                    url: '/pages/index/index',
+                Taro.navigateTo({
+                    url: "/pages/home/index",
                 });
         }
-    };
-    On() {
-        console.log('xxxs')
-        Taro.navigateTo({
-            url: '/pages/index/index',
-        })
     };
     render() {
 
         const postersImages = posters
         return (
-            <View className='index'>
-                <SwiperPosters images={postersImages} />
-                <View className='at-article__h1'>
-                {Get('languages').goodsintroduction}
-                </View>
-                <AtButton className='at-col at-col-2' onClick={this.handleClick.bind(this)}>{Get('languages').selecte}</AtButton>
-                <AtFloatLayout isOpened={this.state.atButton} title={Get('languages').goodsselection}>
-                    <AtRadio
-                        options={[
-                            { label: '', value: 'option1', },
-                            { label: '', value: 'option2', },
-                            { label: '', value: 'option3', }
-                        ]}
-                        value={this.state.value}
-                        onClick={this.handleChange.bind(this)}
-                    />
-                    <AtButton className='goodscar' circle="true" onClick={this.On.bind(this)}>{Get('languages').addcar}</AtButton>
-                    <AtButton className='confirm' circle="true" onClick={this.On.bind(this)}>{Get('languages').tobuy}</AtButton>
-                </AtFloatLayout>
-                <View className="" id ="m">
-                    <View className="bottomIconWrap ">
-                        <View className="bottomIcon" id="n">
-                            <AtButton className="firstpage" id="d">
-                            {Get('languages').home}
-                            </AtButton>
-                            <AtIcon value="home" size="21" color="#666" onClick={this.goHref.bind(this, '01')} />
-                        </View>
-                        <View className="bottomIcon" onClick={this.goHref.bind(this, '02')}>
-                            <AtButton className="service">
-                            {Get('languages').service}
-                            </AtButton>
-                            <AtIcon value="message" size="21" color="#666" />
-                        </View>
-                        <View className="bottomIcon" onClick={this.goHref.bind(this, '03')}>
-                            <AtButton className="bottomIcon">
-                            {Get('languages').goodscar}
-                            </AtButton>
-                            <AtIcon value="shopping-cart" size="21" color="#666" />
-                        </View>
+            <View className="index">
+                <View className="body">
+                    <SwiperPosters images={postersImages} />
+                    <View className="at-article__h1">
+                        {Get("languages").goodsintroduction}
                     </View>
-                    <View className="botBtnWrap">
-                        <AtButton className="addToCar" onClick={this.btnClick.bind(this, 'add')}>
-                        {Get('languages').addcar}
+                    <GoodsSelection />
+                </View>
+                <View>
+                    {/* goodsSpecifications 
+                        goodsEvaluation
+                    */}
+                </View>
+                <View className="bottomNavigation ">
+                    <View className="bottomIcon" id="firstpage" onClick={this.goHref.bind(this, "01")}>
+                        <AtIcon className="icon" value="home" size="21" color="#666" />
+                        <AtButton className="bottombutton" >
+                            {Get('languages').home}
                         </AtButton>
-                        <AtButton className="goPay" onClick={this.goHref.bind(this, '04')}>
-                        {Get('languages').tobuy}
+                    </View>
+                    <View className="bottomIcon" id="service" onClick={this.goHref.bind(this, "02")}>
+                        <AtIcon className="icon" value="message" size="21" color="#666" />
+                        <AtButton className="bottombutton">
+                            {Get('languages').service}
+                        </AtButton>
+                    </View>
+                    <View className="bottomIcon" id="goodscar" onClick={this.goHref.bind(this, "03")}>
+                        <AtIcon className="icon" value="shopping-cart" size="21" color="#666" />
+                        <AtButton className="bottombutton">
+                            {Get("languages").goodscar}
+                        </AtButton>
+                    </View>
+                    <View className="botBtnWrap ">
+                        <AtButton className="bottombutton2" onClick={this.btnClick.bind(this, "add")}>
+                            {Get("languages").addcar}
+                        </AtButton>
+                        <AtButton className="bottombutton3" onClick={this.goHref.bind(this, "04")}>
+                            {Get("languages").tobuy}
                         </AtButton>
                     </View>
                 </View>

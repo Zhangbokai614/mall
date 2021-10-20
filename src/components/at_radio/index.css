@@ -1,0 +1,22 @@
+.button {
+    padding-right: 90%;
+    border:2px solid #555555;
+}
+.goodscar {
+    background-color:#4CAF50;
+    color: black;
+    text-align: center;
+    display:inline-block;
+    width: 50%;
+    height: 100%;
+
+}
+.confirm {
+    background-color:  #d60e1f;
+    text-align: center;
+    display:inline-block;
+    font-size: 30px;
+    width: 50%;
+    height: 100%;
+
+}

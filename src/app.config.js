@@ -1,23 +1,19 @@
 import languages from './asset/languages/zn-cn.json'
 
 export default {
-  pages: [
-    'pages/home/index',
-    'pages/cart/index',
-    'pages/detail/index'
-  ],
+  pages: ["pages/home/index", "pages/cart/index"],
 
   window: {
-    backgroundTextStyle: 'light',
-    navigationBarBackgroundColor: '#ff4949',
-    navigationBarTitleText: 'WeChat',
-    navigationBarTextStyle: 'white'
+    backgroundTextStyle: "light",
+    navigationBarBackgroundColor: "#ff4949",
+    navigationBarTitleText: "WeChat",
+    navigationBarTextStyle: "white"
   },
 
   tabBar: {
-    color: 'rgba(68, 68, 68, 1)',
-    selectedColor: '#ff4949',
-    backgroundColor: 'white',
+    color: "rgba(68, 68, 68, 1)",
+    selectedColor: "#ff4949",
+    backgroundColor: "white",
     list: [
       {
         pagePath: 'pages/home/index',
@@ -32,4 +28,4 @@ export default {
         selectedIconPath: './asset/images/tabs/shopping-cart-select.png'
       }]
   }
-}
+};
