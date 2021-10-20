@@ -1,7 +1,11 @@
 import languages from './asset/languages/zn-cn.json'
 
 export default {
-  pages: ["pages/home/index", "pages/cart/index"],
+  pages: [
+    "pages/home/index",
+    "pages/cart/index",
+    "pages/detail/index"
+  ],
 
   window: {
     backgroundTextStyle: "light",

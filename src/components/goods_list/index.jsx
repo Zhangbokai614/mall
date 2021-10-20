@@ -10,14 +10,7 @@ class GoodsList extends React.Component {
         super(props)
         this.state = {
             listInfo: this.props.listInfo,
-            current: 0,
         }
-    }
-
-    handleClick(value) {
-        this.setState({
-            current: value
-        })
     }
 
     render() {
