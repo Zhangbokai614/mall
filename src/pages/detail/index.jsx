@@ -1,10 +1,11 @@
 import Taro from "@tarojs/taro"
 import React, { Component } from "react"
+import { View } from "@tarojs/components"
 import { AtButton, AtIcon } from "taro-ui"
-import { View } from "@tarojs/components";
 
 import { SwiperPosters } from "../../components/detail/swiper_posters"
 import { GoodsSelection } from "../../components/at_radio/index"
+import { Bottomdetail } from "../../components/detail_bottom/index"
 import "./index.css"
 import { Get } from "../../global-data/index"
 
@@ -17,6 +18,8 @@ const posters = [
 ]
 
 export default class Index extends Component {
+
+
     constructor(props) {
         super(props)
         this.state = {
@@ -35,7 +38,6 @@ export default class Index extends Component {
             totalMoney: (money * num).toFixed(2),
         });
     };
-
     goHref = (type) => {
         switch (type) {
             case "01":
@@ -76,29 +78,31 @@ export default class Index extends Component {
                     </View>
                     <GoodsSelection />
                 </View>
-                <View className="" id="bottomNavigation">
-                    <View className="bottomIconWrap">
-                        <View className="bottomIcon" id="firstpage" onClick={this.goHref.bind(this, "01")}>
-                            <AtIcon className="icon" value="home" size="21" color="#666" />
-                            <AtButton className="bottombutton" >
-                                {Get('languages').home}
-                            </AtButton>
-                        </View>
-                        <View className="bottomIcon" id="service" onClick={this.goHref.bind(this, "02")}>
-
-                            <AtIcon className="icon" value="message" size="21" color="#666" />
-                            <AtButton className="bottombutton">
-                                {Get('languages').service}
-                            </AtButton>
-                        </View>
-                        <View className="bottomIcon" id="goodscar" onClick={this.goHref.bind(this, "03")}>
-                            <AtIcon className="icon" value="shopping-cart" size="21" color="#666" />
-                            <AtButton className="bottombutton">
-                                {Get("languages").goodscar}
-                            </AtButton>
-                        </View>
+                <View>
+                    {/* goodsSpecifications 
+                        goodsEvaluation
+                    */}
+                </View>
+                <View className="bottomNavigation ">
+                    <View className="bottomIcon" id="firstpage" onClick={this.goHref.bind(this, "01")}>
+                        <AtIcon className="icon" value="home" size="21" color="#666" />
+                        <AtButton className="bottombutton" >
+                            {Get('languages').home}
+                        </AtButton>
                     </View>
-                    <View className="botBtnWrap">
+                    <View className="bottomIcon" id="service" onClick={this.goHref.bind(this, "02")}>
+                        <AtIcon className="icon" value="message" size="21" color="#666" />
+                        <AtButton className="bottombutton">
+                            {Get('languages').service}
+                        </AtButton>
+                    </View>
+                    <View className="bottomIcon" id="goodscar" onClick={this.goHref.bind(this, "03")}>
+                        <AtIcon className="icon" value="shopping-cart" size="21" color="#666" />
+                        <AtButton className="bottombutton">
+                            {Get("languages").goodscar}
+                        </AtButton>
+                    </View>
+                    <View className="botBtnWrap ">
                         <AtButton className="bottombutton2" onClick={this.btnClick.bind(this, "add")}>
                             {Get("languages").addcar}
                         </AtButton>

@@ -1,7 +1,8 @@
 {
     "hello": "你好",
     "home": "首页",
-    "service": "客服",
+    "detail": "详情",
+    "service": "服务",
     "select": "已选",
     "tobuy": "立刻购买",
     "goodscar": "购物车",

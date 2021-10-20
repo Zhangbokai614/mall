@@ -11,8 +11,10 @@ class GoodsSelection extends React.Component {
         this.state = {
             atButtonSelect: false,
             atButtonDistribution: false,
+            atButtonService: false,
             select: "",
             distribution: "",
+            service: "",
         }
     };
 
@@ -45,6 +47,22 @@ class GoodsSelection extends React.Component {
             })
             : this.setState({
                 atButtonDistribution: true,
+            })
+    };
+
+    handleChangeService(service) {
+        this.setState({
+            service
+        })
+    };
+
+    handleClickService() {
+        this.state.atButtonService
+            ? this.setState({
+                atButtonService: false,
+            })
+            : this.setState({
+                atButtonService: true,
             })
     };
 
@@ -81,7 +99,7 @@ class GoodsSelection extends React.Component {
         return (
             <View className="atradio">
                 <View className="goodsSelection">
-                    <AtButton className="at-col at-col-2" onClick={this.handleClickSelect.bind(this)}>{Get("languages").select}</AtButton>
+                    <AtButton className="button" onClick={this.handleClickSelect.bind(this)}>{Get("languages").select}</AtButton>
                     <AtFloatLayout isOpened={this.state.atButtonSelect} onClose={this.handleClickSelect.bind(this)} title={Get("languages").goodsSelection}>
                         <AtRadio
                             options={[
@@ -97,7 +115,7 @@ class GoodsSelection extends React.Component {
                     </AtFloatLayout>
                 </View>
                 <View className="distribution">
-                    <AtButton className="at-col at-col-2" onClick={this.handleClickDistribution.bind(this)}>{Get("languages").distribution}</AtButton>
+                    <AtButton className="button" onClick={this.handleClickDistribution.bind(this)}>{Get("languages").distribution}</AtButton>
                     <AtFloatLayout isOpened={this.state.atButtonDistribution} onClose={this.handleClickDistribution.bind(this)} title={Get("languages").deliveryTo}>
                         <AtRadio
                             options={[
@@ -106,6 +124,19 @@ class GoodsSelection extends React.Component {
                             ]}
                             value={this.state.distribution}
                             onClick={this.handleChangeDistribution.bind(this)}
+                        />
+                    </AtFloatLayout>
+                </View>
+                <View className="service">
+                    <AtButton className="button" onClick={this.handleClickService.bind(this)}>{Get("languages").service}</AtButton>
+                    <AtFloatLayout isOpened={this.state.atButtonService} onClose={this.handleClickService.bind(this)} title={Get("languages").deliveryTo}>
+                        <AtRadio
+                            options={[
+                                { label: "", value: "option1", },
+                                { label: "", value: "option2", }
+                            ]}
+                            value={this.state.service}
+                            onClick={this.handleChangeService.bind(this)}                         
                         />
                     </AtFloatLayout>
                 </View>
