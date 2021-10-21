@@ -4,6 +4,7 @@ import { View, Image } from '@tarojs/components'
 import { AtIcon, AtTag } from 'taro-ui'
 
 import './index.css'
+import cart from '../../asset/images/icon/cart.png'
 
 class GoodsCard extends React.Component {
     constructor(props) {
@@ -46,7 +47,12 @@ class GoodsCard extends React.Component {
                                 </View>
                                 <AtTag className='.at-article__h2' active='false' circle>tag</AtTag>
                             </View>
-                            <AtIcon className='shoping-cart-icon' value='shopping-cart' size='24' color='#F00'></AtIcon>
+                            <Image
+                                className='shoping-cart-icon'
+                                src={cart}
+                                style='height: 80%'
+                                mode='heightFix'
+                            />
                         </View>
                     </View>
                 </View>
@@ -70,7 +76,12 @@ class GoodsCard extends React.Component {
                             </View>
                         </View>
                         <View>
-                            <AtIcon className='shoping-cart-icon' value='shopping-cart' size='24' color='#F00'></AtIcon>
+                            <Image
+                                className='shoping-cart-icon'
+                                src={cart}
+                                style='height: 80%'
+                                mode='heightFix'
+                            />
                         </View>
                     </View>
                 </View>
