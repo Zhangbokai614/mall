@@ -1,4 +1,5 @@
 import React from 'react'
+import Taro from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
 import { AtIcon, AtTag } from 'taro-ui'
 
@@ -8,16 +9,23 @@ class GoodsCard extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            focus: this.props.focus
+            focus: this.props.focus,
+            id: this.props.id
         }
     }
 
+    handleClick() {
+        Taro.navigateTo({
+            url: '/pages/detail/index?id=' + this.state.id
+        })
+    }
+
     render() {
-        const { title, imageSrc, price, inventory } = this.props
+        const { title, imageSrc, price } = this.props
 
         return (
             this.state.focus
-                ? <View className='card focusCard'>
+                ? <View className='card focusCard' onClick={this.handleClick.bind(this)}>
                     <Image
                         className='focusImage'
                         style='width: 100%; height: 60%; background: #fff;'
@@ -38,11 +46,11 @@ class GoodsCard extends React.Component {
                                 </View>
                                 <AtTag className='.at-article__h2' active='false' circle>tag</AtTag>
                             </View>
-                                <AtIcon className='shoping-cart-icon' value='shopping-cart' size='24' color='#F00'></AtIcon>
+                            <AtIcon className='shoping-cart-icon' value='shopping-cart' size='24' color='#F00'></AtIcon>
                         </View>
                     </View>
                 </View>
-                : <View className='card goodsCard'>
+                : <View className='card goodsCard' onClick={this.handleClick.bind(this)}>
                     <Image
                         className='cardImage'
                         style='width: 100%; background: #fff;'

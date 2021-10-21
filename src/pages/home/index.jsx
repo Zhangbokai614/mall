@@ -4,8 +4,9 @@ import Taro from '@tarojs/taro'
 import { AtNoticebar } from 'taro-ui'
 
 import { GoodsCard } from '../../components/goods_card/index'
-import * as homeApi from './service';
+import { GoodsList } from '../../components/goods_list/index'
 import { Get } from '../../global-data/index'
+import * as homeApi from './service';
 import './index.css'
 
 export default class Index extends Component {
@@ -15,12 +16,19 @@ export default class Index extends Component {
             current: 0,
             goodsInfo: {},
             noticebar: '',
-            imageLoading: true
+            loading: true
         }
     }
 
-    async componentDidMount() {
+    componentDidMount() {
+        this.loading()
+    }
 
+    componentDidShow() {
+        this.loading()
+    }
+
+    async loading() {
         Taro.showLoading({
             title: Get('languages').loading,
         })
@@ -44,11 +52,13 @@ export default class Index extends Component {
         const info = this.state.goodsInfo
         const type = Object.keys(info)
         let key = 0
+        let goodsListInfo = []
 
-        const FocusList = type.map((t) => {
-            key += 1
+        const focusList = type.map((t) => {
+            goodsListInfo[t] = []
             return info[t].map((e) => {
-                if (e.focus) {
+                key += 1
+                if (e.focus && e.inventory !== 0) {
                     return (
                         <GoodsCard
                             key={key}
@@ -57,28 +67,10 @@ export default class Index extends Component {
                             imageSrc={e.images}
                             price={e.price}
                             marketPrice={e.marketPrice}
-                            inventory={e.inventory}
                         />
                     )
-                }
-            })
-        })
-
-        const CardList = type.map((t) => {
-            key += 1
-            return info[t].map((e) => {
-                if (!e.focus) {
-                    return (
-                        <GoodsCard
-                            key={key}
-                            focus={e.focus}
-                            title={e.title}
-                            imageSrc={e.images}
-                            price={e.price}
-                            marketPrice={e.marketPrice}
-                            inventory={e.inventory}
-                        />
-                    )
+                } else if (!e.focus && e.inventory !== 0) {
+                    goodsListInfo[t].push(e)
                 }
             })
         })
@@ -107,12 +99,10 @@ export default class Index extends Component {
                             src={this.state.activity}
                             mode='widthFix'
                         />
-                        {FocusList}
+                        {focusList}
                     </View>
 
-                    <View id='cardList'>
-                        {CardList}
-                    </View>
+                    <GoodsList listInfo={goodsListInfo} />
                 </View>
         )
     }

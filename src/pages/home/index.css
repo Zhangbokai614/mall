@@ -23,17 +23,3 @@
     margin-left: 2vw;
     margin-right: 2vw;
 }
-
-#cardList {
-    display: flex;
-    flex-flow: row;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-/* #loadingPosters {
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
-} */

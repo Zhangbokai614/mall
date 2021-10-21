@@ -27,7 +27,7 @@
     "dev:qq": "npm run build:qq -- --watch",
     "dev:jd": "npm run build:jd -- --watch",
     "dev:quickapp": "npm run build:quickapp -- --watch",
-    "mock": "json-server --watch src/mock/db.js -H 192.168.0.40 --port 3003"
+    "mock": "json-server --watch src/mock/db.js -H 192.168.0.39 --port 3003"
   },
   "browserslist": [
     "last 3 versions",
