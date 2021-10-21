@@ -1,6 +1,6 @@
 import { View } from '@tarojs/components'
 import React from "react"
-import { AtButton, AtFloatLayout, AtRadio } from "taro-ui"
+import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList } from "taro-ui"
 
 import { Get } from "../../global-data/index"
 import "./index.css"
@@ -99,23 +99,25 @@ class GoodsSelection extends React.Component {
         return (
             <View className="atradio">
                 <View className="goodsSelection">
-                    <AtButton className="button" onClick={this.handleClickSelect.bind(this)}>{Get("languages").select}</AtButton>
-                    <AtFloatLayout isOpened={this.state.atButtonSelect} onClose={this.handleClickSelect.bind(this)} title={Get("languages").goodsSelection}>
-                        <AtRadio
-                            options={[
-                                { label: "", value: "option1", },
-                                { label: "", value: "option2", },
-                                { label: "", value: "option3", }
-                            ]}
-                            value={this.state.select}
-                            onClick={this.handleChangeSelect.bind(this)}
-                        />
-                        <AtButton className="goodscar" circle="true" onClick={this.goHref.bind(this, "01")}>{Get("languages").addcar}</AtButton>
-                        <AtButton className="confirm" circle="true" onClick={this.goHref.bind(this, "04")}>{Get("languages").tobuy}</AtButton>
-                    </AtFloatLayout>
+                    <AtList>
+                        <AtListItem className="radioList" title={Get("languages").select} onClick={this.handleClickSelect.bind(this)} arrow="right"/>
+                        <AtFloatLayout isOpened={this.state.atButtonSelect} onClose={this.handleClickSelect.bind(this)} title={Get("languages").goodsSelection}>
+                            <AtRadio
+                                options={[
+                                    { label: "", value: "option1", },
+                                    { label: "", value: "option2", },
+                                    { label: "", value: "option3", }
+                                ]}
+                                value={this.state.select}
+                                onClick={this.handleChangeSelect.bind(this)}
+                            />
+                            <AtButton className="goodscar" circle="true" onClick={this.goHref.bind(this, "01")}>{Get("languages").addcar}</AtButton>
+                            <AtButton className="confirm" circle="true" onClick={this.goHref.bind(this, "04")}>{Get("languages").tobuy}</AtButton>
+                        </AtFloatLayout>
+                    </AtList>
                 </View>
                 <View className="distribution">
-                    <AtButton className="button" onClick={this.handleClickDistribution.bind(this)}>{Get("languages").distribution}</AtButton>
+                    <AtListItem className="radioList" title={Get("languages").distribution} onClick={this.handleClickDistribution.bind(this)} arrow="right"/>
                     <AtFloatLayout isOpened={this.state.atButtonDistribution} onClose={this.handleClickDistribution.bind(this)} title={Get("languages").deliveryTo}>
                         <AtRadio
                             options={[
@@ -128,7 +130,7 @@ class GoodsSelection extends React.Component {
                     </AtFloatLayout>
                 </View>
                 <View className="service">
-                    <AtButton className="button" onClick={this.handleClickService.bind(this)}>{Get("languages").service}</AtButton>
+                    <AtListItem className="radioList" title={Get("languages").service} onClick={this.handleClickService.bind(this)} arrow="right"/>
                     <AtFloatLayout isOpened={this.state.atButtonService} onClose={this.handleClickService.bind(this)} title={Get("languages").deliveryTo}>
                         <AtRadio
                             options={[
@@ -136,7 +138,7 @@ class GoodsSelection extends React.Component {
                                 { label: "", value: "option2", }
                             ]}
                             value={this.state.service}
-                            onClick={this.handleChangeService.bind(this)}                         
+                            onClick={this.handleChangeService.bind(this)}
                         />
                     </AtFloatLayout>
                 </View>
