@@ -1,42 +1,59 @@
-.bottomIconWrap{
-    display: flex;
+.bottom {
+    position: absolute;
+    bottom: 0px; 
+    display: flex; 
     flex-direction: row;
-    margin: 10px;
-    padding: 5px;
-}
-
-.bottomIcon {
+    padding-bottom: 3vh;
+} 
+.bottomLeft {   
     display: flex;
-    flex-direction: column;
-    padding-top: 15px;
-}
-.icon {
+    flex-direction: column; 
     margin-left: 1vw;
+    margin-top: 2vh;
+    height: 80%;
+    border: none;
 }
-.bottombutton {
-    left: -35px;
-    background-color: #ff4949;
+.bottonLeft {
+    display: flex;
+	flex-direction: column;
+	flex-wrap: nowrap;
+	justify-content: flex-end;
+	align-items: center;
+	align-content: space-between;
+}
+ 
+.bottombuttonCar {
+    display: flex;
+    margin-top: 2vh;
+    margin-left: 4vw;
+    background-color: #e4ff49;
+    padding-top: 1vh;
+    font-size: 28px;
+    border-radius: 40px;
+    height: 80%;
 
 }
-.botBtnWrap{
+.bottombuttonTobuy {
+    display: flex;
+    margin-top: 2vh;
+    margin-left: 3vw;
+    background-color: #e95955;
+    padding-top: 1vh;
+    font-size: 28px;
+    border-radius: 40px;
+    height: 80%;
+}
+.bottomRight {
     display: flex;
     flex-direction: row;
-    margin: 50vw;
-    padding:5px;
+    margin-bottom: 1vh;
 }
-.bottombutton2 {
-    left: -110px;
-    background-color: #4CAF50;
-    border: none;
-    color: black;
-    width: 50%;
-    height: 80%;
+.imageHome {
+    margin-left: 0vw;
 }
-.bottombutton3 {
-    left: -120px;
-    background-color:  #e2211c;
-    border: none;
-    color: black;
-    width: 50%;
-    height: 80%;
+.imageService {
+    margin-left: 0vw;
+}
+.imageGoodscar {
+    margin-left: 0vw;
 }
