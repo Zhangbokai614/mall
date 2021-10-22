@@ -1,15 +1,17 @@
-.button {
-    padding-right: 90%;
+.radioList {
+    margin-left: 0vw;
     border:2px solid #555555;
+    background-color: white;
+    height: 5vh;
+    text-align: left;
 }
 .goodscar {
     background-color:#4CAF50;
     color: black;
     text-align: center;
     display:inline-block;
+    font-size: 30px;
     width: 50%;
-    height: 100%;
-
 }
 .confirm {
     background-color:  #d60e1f;
@@ -17,6 +19,4 @@
     display:inline-block;
     font-size: 30px;
     width: 50%;
-    height: 100%;
-
 }

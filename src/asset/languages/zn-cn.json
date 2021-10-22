@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "hello": "你好",
   "home": "首页",
   "detail": "详情",
@@ -22,3 +23,20 @@
   "hurryupandbuysomebaby": "赶紧买点宝贝慰劳下自己吧",
   "hint": "商品库存有限，请尽快下单"
 }
+=======
+    "hello": "你好",
+    "home": "首页",
+    "service": "客服",
+    "loading": "正在加载",
+    "selecte": "已选",
+    "detail": "详情",
+    "select": "已选",
+    "tobuy": "立刻购买",
+    "shoppingCart": "购物车",
+    "addcar": "加入购物车",
+    "goodsselection": "商品选择",
+    "goodsintroduction": "商品简介",
+    "distribution": "配送",
+    "deliveryTo": "配送至"
+}
+>>>>>>> d480d92b0b0b0807406b6c357a0d75b066189fd9

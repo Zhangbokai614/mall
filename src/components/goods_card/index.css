@@ -37,25 +37,26 @@
   display: flex;
   flex-flow: column;
   width: 44vw;
+  /* margin-top: 2vh; */
   margin-bottom: 2vh;
   margin-left: 2vw;
   margin-right: 2vw;
 }
 
 .focusTitle {
-  font-weight: 600;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  text-align: left;
   overflow: hidden;
   margin-bottom: 1vh;
 }
 
 .cardTitle {
-  font-weight: 600;
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  text-align: left;
   overflow: hidden;
 }
 
@@ -78,6 +79,7 @@
   color: #ff4949;
   font-weight: bold;
   font-size: 3.2vh;
+  margin-bottom: 0.8vh;
 }
 
 .cny {
@@ -85,6 +87,7 @@
   font-size: 2vh;
   color: #ff4949;
   margin-right: -1.4vh;
+  margin-bottom: 0.8vh;
 }
 
 #price {
@@ -95,6 +98,6 @@
 .shoping-cart-icon {
   align-items: flex-end;
   margin-right: 2vh;
-  margin-top: 1vh;
+  margin-top: 0.8vh;
   margin-bottom: 1vh;
 }

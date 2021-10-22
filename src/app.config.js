@@ -1,5 +1,11 @@
+import languages from './asset/languages/zn-cn.json'
+
 export default {
-  pages: ["pages/home/index", "pages/cart/index"],
+  pages: [
+    "pages/home/index",
+    "pages/cart/index",
+    "pages/detail/index"
+  ],
 
   window: {
     backgroundTextStyle: "light",
@@ -14,17 +20,16 @@ export default {
     backgroundColor: "white",
     list: [
       {
-        pagePath: "pages/home/index",
-        text: "home",
-        iconPath: "./asset/images/tabs/home.png",
-        selectedIconPath: "./asset/images/tabs/home-select.png"
+        pagePath: 'pages/home/index',
+        text: languages.home,
+        iconPath: './asset/images/tabs/home.png',
+        selectedIconPath: './asset/images/tabs/home-select.png'
       },
       {
-        pagePath: "pages/cart/index",
-        text: "cart",
-        iconPath: "./asset/images/tabs/shopping-cart.png",
-        selectedIconPath: "./asset/images/tabs/shopping-cart-select.png"
-      }
-    ]
+        pagePath: 'pages/cart/index',
+        text: languages.shoppingCart,
+        iconPath: './asset/images/tabs/shopping-cart.png',
+        selectedIconPath: './asset/images/tabs/shopping-cart-select.png'
+      }]
   }
 };
