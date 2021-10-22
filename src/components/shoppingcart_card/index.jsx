@@ -53,7 +53,7 @@ class Card extends Component {
         <View className="align">
           <Image className="cardImage" mode="scaleToFill" src={link} />
         </View>
-        <View className="flex-col frameright">
+        <View className="flex-col frameright relative">
           <Text className="producttitle">{title}</Text>
           <View>
             <View className="standard" onClick={this.handleClose.bind(this)}>
@@ -61,7 +61,7 @@ class Card extends Component {
               <AtIcon value="chevron-down" size="18" color="#C2C2C2"></AtIcon>
             </View>
           </View>
-          <View className="absolute bottom relative">
+          <View className="absolute down relative">
             <Text className="money">￥</Text>
             <Text className="number">{number}</Text>
             <AtInputNumber

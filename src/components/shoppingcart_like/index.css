@@ -1,0 +1,34 @@
+.justify {
+  display: flex;
+  justify-content: center;
+}
+
+.align {
+  display: flex;
+  align-items: center;
+}
+
+.flex-row {
+  display: flex;
+  flex-direction: row;
+}
+
+.margin {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.line1 {
+  width: 6vw;
+  height: 1px;
+  background-color: #989898;
+  flex-grow: 0.1;
+  margin-left: 3.5vw;
+  margin-right: 3.5vw;
+}
+
+.text {
+  font-size: 25px;
+  color: #989898;
+  margin-left: 1.5vw;
+}
