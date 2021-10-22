@@ -1,8 +1,9 @@
 .radioList {
-    margin-left: 0vw;
-    border:2px solid #555555;
+    display: flex;
+    flex-direction: row;
+    border:1px solid #a39898;
     background-color: white;
-    height: 5vh;
+    height: 6vh;
     text-align: left;
 }
 .goodscar {
@@ -19,4 +20,22 @@
     display:inline-block;
     font-size: 30px;
     width: 50%;
+}
+.textService {
+    font-size: 25px;
+    margin-left: 2vw;
+    margin-top: 2vh;
+    width: 8vw;
+}
+.imageFruit {
+    margin-top: 2vh;
+    margin-left: 8vw;
+}
+.imageFree {
+    margin-top: 2vh;
+    margin-left: 20vw;
+}
+.imageSevenDays {
+    margin-top: 2vh;
+    margin-left: 20vw;
 }

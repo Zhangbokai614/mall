@@ -1,7 +1,8 @@
 {
     "hello": "你好",
     "home": "首页",
-    "service": "客服",
+    "service": "服务",
+    "customerService": "客服",
     "loading": "正在加载",
     "selecte": "已选",
     "detail": "详情",
@@ -12,5 +13,10 @@
     "goodsselection": "商品选择",
     "goodsintroduction": "商品简介",
     "distribution": "配送",
-    "deliveryTo": "配送至"
+    "deliveryTo": "配送至",
+    "productSpecification": "商品规格",
+    "goodsId":"商品编号",
+    "productionLicense":"生成许可证",
+    "productEvaluation": "商品评价",
+    "productIntroduction": "商品介绍"
 }

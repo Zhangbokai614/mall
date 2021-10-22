@@ -2,9 +2,9 @@ import languages from './asset/languages/zn-cn.json'
 
 export default {
   pages: [
+    "pages/detail/index",
     "pages/home/index",
-    "pages/cart/index",
-    "pages/detail/index"
+    "pages/cart/index"
   ],
 
   window: {
