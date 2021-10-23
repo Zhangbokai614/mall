@@ -1,0 +1,13 @@
+.topClass {
+    height: 60vh;
+    text-align: left;
+    border:1px solid #a39898;
+    margin-top: 3vh;
+}
+.goodsSpecification {
+    margin-top: 2vh;
+    margin-left: 4vw;
+}
+.goodsdetail {
+    height: 20vh;
+}

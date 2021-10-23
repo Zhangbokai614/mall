@@ -2,9 +2,11 @@ import React from 'react'
 import { View, Image } from '@tarojs/components'
 import { Swiper, SwiperItem } from '@tarojs/components'
 
+
 class SwiperPosters extends React.Component {
 
     render() {
+
         const { images } = this.props
         const element = images.map((image, index) => {
             return (

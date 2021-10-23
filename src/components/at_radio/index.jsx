@@ -1,8 +1,11 @@
-import { View } from '@tarojs/components'
+import { View, Image, Text } from '@tarojs/components'
 import React from "react"
 import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList } from "taro-ui"
 
 import { Get } from "../../global-data/index"
+import Fruit from "../../asset/images/icon/fruit.png"
+import FreeMoney from "../../asset/images/icon/free.png"
+import SevenDays from "../../asset/images/icon/seven-days.png"
 import "./index.css"
 
 class GoodsSelection extends React.Component {
@@ -100,8 +103,15 @@ class GoodsSelection extends React.Component {
             <View className="atradio">
                 <View className="goodsSelection">
                     <AtList>
-                        <AtListItem className="radioList" title={Get("languages").select} onClick={this.handleClickSelect.bind(this)} arrow="right"/>
-                        <AtFloatLayout isOpened={this.state.atButtonSelect} onClose={this.handleClickSelect.bind(this)} title={Get("languages").goodsSelection}>
+                        <AtListItem
+                            className="radioList"
+                            title={Get("languages").select}
+                            onClick={this.handleClickSelect.bind(this)}
+                            arrow="right" />
+                        <AtFloatLayout
+                            isOpened={this.state.atButtonSelect}
+                            onClose={this.handleClickSelect.bind(this)}
+                            title={Get("languages").goodsSelection}>
                             <AtRadio
                                 options={[
                                     { label: "", value: "option1", },
@@ -111,14 +121,35 @@ class GoodsSelection extends React.Component {
                                 value={this.state.select}
                                 onClick={this.handleChangeSelect.bind(this)}
                             />
-                            <AtButton className="goodscar" circle="true" onClick={this.goHref.bind(this, "01")}>{Get("languages").addcar}</AtButton>
-                            <AtButton className="confirm" circle="true" onClick={this.goHref.bind(this, "04")}>{Get("languages").tobuy}</AtButton>
+                            <AtButton
+                                className="goodscar"
+                                circle="true"
+                                onClick={this.goHref.bind(this, "01")}
+                            >
+                                {Get("languages").addcar}
+                            </AtButton>
+                            <AtButton
+                                className="confirm"
+                                circle="true"
+                                onClick={this.goHref.bind(this, "04")}
+                            >
+                                {Get("languages").tobuy}
+                            </AtButton>
                         </AtFloatLayout>
                     </AtList>
                 </View>
                 <View className="distribution">
-                    <AtListItem className="radioList" title={Get("languages").distribution} onClick={this.handleClickDistribution.bind(this)} arrow="right"/>
-                    <AtFloatLayout isOpened={this.state.atButtonDistribution} onClose={this.handleClickDistribution.bind(this)} title={Get("languages").deliveryTo}>
+                    <AtListItem
+                        className="radioList"
+                        title={Get("languages").distribution}
+                        onClick={this.handleClickDistribution.bind(this)}
+                        arrow="right"
+                    />
+                    <AtFloatLayout
+                        isOpened={this.state.atButtonDistribution}
+                        onClose={this.handleClickDistribution.bind(this)}
+                        title={Get("languages").deliveryTo}
+                    >
                         <AtRadio
                             options={[
                                 { label: "", value: "option1", },
@@ -130,8 +161,38 @@ class GoodsSelection extends React.Component {
                     </AtFloatLayout>
                 </View>
                 <View className="service">
-                    <AtListItem className="radioList" title={Get("languages").service} onClick={this.handleClickService.bind(this)} arrow="right"/>
-                    <AtFloatLayout isOpened={this.state.atButtonService} onClose={this.handleClickService.bind(this)} title={Get("languages").deliveryTo}>
+                    <View
+                        className="serviceList"
+                        onClick={this.handleClickService.bind(this)}
+                    >
+                        <View className="textService">
+                            <Text >
+                                {Get("languages").service}
+                            </Text>
+                        </View>
+
+                        <Image
+                            className="imageFruit"
+                            src={Fruit}
+                            style="width:20px; height:20px;"
+                        />
+
+                        <Image
+                            className="imageFree"
+                            src={FreeMoney}
+                            style="width:20px; height:20px;"
+                        />
+                        <Image
+                            className="imageSevenDays"
+                            src={SevenDays}
+                            style="width:22px; height:22px;"
+                        />
+                    </View>
+                    <AtFloatLayout
+                        isOpened={this.state.atButtonService}
+                        onClose={this.handleClickService.bind(this)}
+                        title={Get("languages").deliveryTo}
+                    >
                         <AtRadio
                             options={[
                                 { label: "", value: "option1", },

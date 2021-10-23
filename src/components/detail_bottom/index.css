@@ -1,9 +1,11 @@
 .bottom {
     position: absolute;
+    position: sticky;
     bottom: 0px; 
     display: flex; 
     flex-direction: row;
     padding-bottom: 3vh;
+    background-color:whitesmoke;
 } 
 .bottomLeft {   
     display: flex;

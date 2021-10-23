@@ -1,10 +1,11 @@
 import React, { Component } from "react"
-import { View } from "@tarojs/components"
+import { View, Text } from "@tarojs/components"
 import { getCurrentInstance } from '@tarojs/taro'
 
 import { SwiperPosters } from "../../components/detail/swiper_posters"
 import { GoodsSelection } from "../../components/at_radio/index"
 import { Bottomdetail } from "../../components/detail_bottom/index"
+import { Specification } from "../../components/detail_specification/index"
 import "./index.css"
 import { Get } from "../../global-data/index"
 
@@ -17,7 +18,8 @@ const posters = [
 ]
 
 export default class Index extends Component {
-    componentDidMount() {
+
+    componentDidMount () {
         console.log(getCurrentInstance().router.params)
     }
 
@@ -27,20 +29,30 @@ export default class Index extends Component {
         return (
             <View className="index">
                 <View >
-                    <SwiperPosters images={postersImages} />
-                    <View className="at-article__h1">
+                    <SwiperPosters
+                        images={postersImages}
+                    />
+                    <View
+                        className="at-article__h1"
+                    >
                         {Get("languages").goodsintroduction}
                     </View>
                     <GoodsSelection />
                 </View>
-                <View>
-                    {/* goodsSpecifications 
-                        goodsEvaluation
-                    */}
+                <View >
+                    <Specification />
                 </View>
-
+                <View>
+                    <Text>
+                        {Get("languages").productEvaluation}
+                    </Text>
+                </View>
+                <View>
+                    <Text>
+                        {Get("languages").productIntroduction}
+                    </Text>
+                </View>
                 <Bottomdetail />
-
             </View>
 
         )
