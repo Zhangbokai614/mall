@@ -1,5 +1,6 @@
 import React, { Component } from "react"
 import { View, Text } from "@tarojs/components"
+import { getCurrentInstance } from '@tarojs/taro'
 
 import { SwiperPosters } from "../../components/detail/swiper_posters"
 import { GoodsSelection } from "../../components/at_radio/index"
@@ -18,9 +19,13 @@ const posters = [
 
 export default class Index extends Component {
 
+    componentDidMount () {
+
+        console.log(getCurrentInstance().router.params) 
+    }
 
     render() {
-
+        
         const postersImages = posters
         return (
             <View className="index">

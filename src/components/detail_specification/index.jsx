@@ -13,7 +13,7 @@ class Specification extends React.Component {
             <View className="topClass">
                 <View className="goodsSpecification">
                     <View >
-                        {Get("languages").productSpecification}
+                        {Get("languages").goodsSpecification}
                     </View>
                 </View>
                 <AtDivider />

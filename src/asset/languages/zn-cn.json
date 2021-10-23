@@ -6,6 +6,7 @@
   "select": "已选",
   "selecTall": "全选",
   "settlement": "结算",
+  "customerService": "客服",
   "total": "合计",
   "edit": "编辑",
   "achieve": "完成",
@@ -20,5 +21,7 @@
   "youmightlike": "你或许会喜欢",
   "shoppingcartisempty": "购物车当前是空的",
   "hurryupandbuysomebaby": "赶紧买点宝贝慰劳下自己吧",
-  "hint": "商品库存有限，请尽快下单"
+  "hint": "商品库存有限，请尽快下单",
+  "goodsSpecification": "商品规格",
+  "goodsId": "商品编号"
 }

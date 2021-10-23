@@ -162,7 +162,7 @@ class GoodsSelection extends React.Component {
                 </View>
                 <View className="service">
                     <View
-                        className="radioList"
+                        className="serviceList"
                         onClick={this.handleClickService.bind(this)}
                     >
                         <View className="textService">

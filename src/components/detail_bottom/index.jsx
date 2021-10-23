@@ -120,7 +120,7 @@ class Bottomdetail extends React.Component {
                             style="width:23px; height:23px;"
                         />
                         <View className="goodcar">
-                            {Get("languages").shoppingCart}
+                            {Get("languages").goodscar}
                         </View>
                     </View>
                 </AtButton>
