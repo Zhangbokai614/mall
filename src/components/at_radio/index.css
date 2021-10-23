@@ -4,6 +4,7 @@
     background-color: white;
     height: 6vh;
     text-align: left;
+    font-size: 30px;
 }
 .goodscar {
     background-color:#4CAF50;
@@ -14,6 +15,8 @@
     width: 50%;
 }
 .confirm {
+    display: flex;
+    align-items: center;
     background-color:  #d60e1f;
     text-align: center;
     display:inline-block;
@@ -21,22 +24,23 @@
     width: 50%;
 }
 .textService {
-    font-size: 25px;
+    display: flex;
+    align-items: center;
+    font-size: 30px;
     margin-left: 2vw;
-    margin-top: 2vh;
     width: 8vw;
 }
 .imageFruit {
     margin-top: 2vh;
-    margin-left: 8vw;
+    margin-left: 3vw;
 }
 .imageFree {
     margin-top: 2vh;
-    margin-left: 20vw;
+    margin-left: 3vw;
 }
 .imageSevenDays {
     margin-top: 2vh;
-    margin-left: 20vw;
+    margin-left: 3vw;
 }
 .serviceList {
     display: flex;
@@ -45,4 +49,9 @@
     background-color: white;
     height: 6vh;
     text-align: left;
+}
+.serviceDetail {
+    display: flex;
+    align-items: center;
+    font-size: 25px;
 }

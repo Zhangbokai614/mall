@@ -23,5 +23,8 @@
   "hurryupandbuysomebaby": "赶紧买点宝贝慰劳下自己吧",
   "hint": "商品库存有限，请尽快下单",
   "goodsSpecification": "商品规格",
-  "goodsId": "商品编号"
+  "goodsId": "商品编号",
+  "compensation": "坏果包赔",
+  "freeMoney": "包邮",
+  "returnGoods": "支持七天无理由退货"
 }

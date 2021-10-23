@@ -9,6 +9,7 @@ import SevenDays from "../../asset/images/icon/seven-days.png"
 import "./index.css"
 
 class GoodsSelection extends React.Component {
+
     constructor(props) {
         super(props)
         this.state = {
@@ -176,28 +177,31 @@ class GoodsSelection extends React.Component {
                             src={Fruit}
                             style="width:20px; height:20px;"
                         />
-
+                        <View className="serviceDetail">
+                            {Get("languages").compensation}
+                            </View>   
                         <Image
                             className="imageFree"
                             src={FreeMoney}
                             style="width:20px; height:20px;"
                         />
+                        <View className="serviceDetail">
+                            {Get("languages").freeMoney}
+                        </View>
                         <Image
                             className="imageSevenDays"
                             src={SevenDays}
                             style="width:22px; height:22px;"
                         />
+                        <View className="serviceDetail">
+                            {Get("languages").returnGoods}
+                        </View>
                     </View>
                     <AtFloatLayout
                         isOpened={this.state.atButtonService}
-                        onClose={this.handleClickService.bind(this)}
-                        title={Get("languages").deliveryTo}
+                        onClose={this.handleClickService.bind(this)}                 
                     >
                         <AtRadio
-                            options={[
-                                { label: "", value: "option1", },
-                                { label: "", value: "option2", }
-                            ]}
                             value={this.state.service}
                             onClick={this.handleChangeService.bind(this)}
                         />
