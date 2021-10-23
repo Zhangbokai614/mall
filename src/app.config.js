@@ -11,7 +11,7 @@ export default {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#ff4949",
     navigationBarTitleText: "WeChat",
-    navigationBarTextStyle: "white"
+    navigationBarTextStyle: "white",
   },
 
   tabBar: {
