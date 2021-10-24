@@ -66,7 +66,7 @@ export default class Index extends Component {
                     <View
                         className="goodsintroduction"
                     >
-                        {Get("languages").goodsintroduction}
+                        {postersImages[0].title}
                     </View>
                     <View>
                     <GoodsSelection />

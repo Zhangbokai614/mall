@@ -1,10 +1,11 @@
 .radioList {
-
     border:1px solid #a39898;
     height: 6vh;
     text-align: left;
     font-size: 30px;
-
+    background-color: white;
+    margin-top: 1vh;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
 }
 .goodscar {
     background-color:#4CAF50;
@@ -31,26 +32,29 @@
     width: 8vw;
 }
 .imageFruit {
-    margin-top: 2vh;
-    margin-left: 3vw;
+    margin-top: 24px;
+    margin-left: 6vw;
 }
 .imageFree {
-    margin-top: 2vh;
-    margin-left: 3vw;
+    margin-top: 24px;
+    margin-left: 4vw;
 }
 .imageSevenDays {
-    margin-top: 2vh;
-    margin-left: 3vw;
+    margin-top: 24px;
+    margin-left: 4vw;
 }
 .serviceList {
+    margin-top: 1vh;
     display: flex;
     flex-direction: row;
     border:1px solid #a39898;
     background-color: white;
     height: 6vh;
     text-align: left;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
 }
 .serviceDetail {
+    margin-left: 2vw;
     display: flex;
     align-items: center;
     font-size: 25px;
