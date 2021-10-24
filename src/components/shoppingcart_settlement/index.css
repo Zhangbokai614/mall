@@ -19,7 +19,7 @@
 
 .footer {
   width: 100vw;
-  height: 7vh;
+  height: 8.5vh;
   position: fixed;
   bottom: 0;
   background: white;
@@ -46,9 +46,9 @@
 }
 
 .bottom {
-  margin-left: 2vw;
+  margin-left: 2.5vw;
   margin-right: 2vw;
-  width: 20vw;
+  width: 24vw;
   font-size: 1rem;
 }
 
@@ -57,9 +57,9 @@
   height: 45px;
   background: #ffffff;
   border: solid;
-  border-width: 1px;
+  border-width: 2px;
   --tw-border-opacity: 1;
-  border-color: #cfcfcf;
+  border-color: #c9c9c9;
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
