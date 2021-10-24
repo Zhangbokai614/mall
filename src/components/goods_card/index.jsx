@@ -1,7 +1,7 @@
 import React from 'react'
 import Taro from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
-import { AtIcon, AtTag } from 'taro-ui'
+import { AtTag } from 'taro-ui'
 
 import './index.css'
 import cart from '../../asset/images/icon/cart.png'
@@ -11,25 +11,26 @@ class GoodsCard extends React.Component {
         super(props)
         this.state = {
             focus: this.props.focus,
-            id: this.props.id
+            id: this.props.id,
+            type: this.props.type
         }
     }
 
     handleClick() {
         Taro.navigateTo({
-            url: '/pages/detail/index?id=' + this.state.id
+            url: '/pages/detail/index?id=' + this.state.id + '&&type=' + this.state.type
         })
     }
 
     render() {
-        const { title, imageSrc, price } = this.props
+        const { title, imageSrc, price, inventory } = this.props
 
         return (
             this.state.focus
                 ? <View className='card focusCard' onClick={this.handleClick.bind(this)}>
                     <Image
                         className='focusImage'
-                        style='width: 100%; height: 60%; background: #fff;'
+                        style='width: 100%; background: #fff;'
                         src={imageSrc}
                         mode='aspectFill'
                     />
@@ -50,7 +51,7 @@ class GoodsCard extends React.Component {
                             <Image
                                 className='shoping-cart-icon'
                                 src={cart}
-                                style='height: 80%'
+                                style='height: 4vh'
                                 mode='heightFix'
                             />
                         </View>
@@ -66,6 +67,11 @@ class GoodsCard extends React.Component {
                     <View className='.at-article__h1 cardTitle'>
                         {title}
                     </View>
+                    {
+                        inventory > 4000
+                        ? <View></View>
+                        : <AtTag className='goodsCardTag' active='false' circle>tag</AtTag>
+                    }
                     <View id='goodsInfoText'>
                         <View id='price'>
                             <View className='.at-article__h2 cny price'>

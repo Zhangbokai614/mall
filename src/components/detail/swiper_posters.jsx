@@ -2,25 +2,30 @@ import React from 'react'
 import { View, Image } from '@tarojs/components'
 import { Swiper, SwiperItem } from '@tarojs/components'
 
+import "./index.css"
 class SwiperPosters extends React.Component {
-
+    
     render() {
         const { images } = this.props
-        const element = images.map((image, index) => {
+        console.log(images)
+        const element = images.map((e, index) => {
             return (
                 <SwiperItem key={index}>
-                    <View>
-                        <Image
-                            src={image}
-                            mode='heightFix' />
-                    </View>
+                    <View className='b'>
+                        <Image 
+                            src={e}
+                            style='width: 100vw; height: 45vh; background: #fff;'
+                          
+                            
+                            />
+                            </View>
                 </SwiperItem>
             )
         })
 
         return (
             <Swiper
-                className='shadow-lg h-2_5'
+                className='shadow-lg'
                 indicatorColor='#999'
                 indicatorActiveColor='#333'
                 circular

@@ -25,13 +25,12 @@ class GoodsList extends React.Component {
 
         const tabsBar = tabList.map((e, index) =>
             e === this.state.selectKey
-                ? <View>
-                    <View className='tabsBarItem select' key={index} onClick={this.handleClick.bind(this, e)}>
-                        {e}
-                    </View>
-                    <View id='underscore'></View>
+                ? <View className='select' key={index} onClick={this.handleClick.bind(this, e)}>
+                    <View></View>
+                    {e}
+                    <View id='underscore' ></View>
                 </View>
-                : <View className='tabsBarItem' key={index} onClick={this.handleClick.bind(this, e)}>
+                : <View className='' key={index} onClick={this.handleClick.bind(this, e)}>
                     {e}
                 </View>
         )
@@ -41,11 +40,14 @@ class GoodsList extends React.Component {
                 return (
                     <GoodsCard
                         key={index}
+                        id={e.id}
                         focus={e.focus}
                         title={e.title}
                         imageSrc={e.images}
                         price={e.price}
+                        inventory={e.inventory}
                         marketPrice={e.marketPrice}
+                        type={this.state.selectKey}
                     />
                 )
             })
