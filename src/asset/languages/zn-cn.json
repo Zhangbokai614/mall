@@ -1,4 +1,5 @@
 {
+  "loading": "正在加载",
   "hello": "你好",
   "home": "首页",
   "detail": "详情",
@@ -26,5 +27,9 @@
   "goodsId": "商品编号",
   "compensation": "坏果包赔",
   "freeMoney": "包邮",
-  "returnGoods": "支持七天无理由退货"
+  "returnGoods": "支持七天无理由退货",
+  "productionLicense": "生产许可证",
+  "productNumber": "产品标准号",
+  "shelfLife": "保质期",
+  "weight": "重量"
 }

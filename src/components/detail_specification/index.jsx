@@ -17,9 +17,22 @@ class Specification extends React.Component {
                     </View>
                 </View>
                 <AtDivider />
-                <View className="">
+                <View className="goodsDetaiInfo">
                     {Get("languages").goodsId}
                 </View>
+                <View className="goodsDetaiInfo">
+                    {Get("languages").productionLicense}
+                </View>
+                <View className="goodsDetaiInfo">
+                    {Get("languages").productNumber}
+                </View>
+                <View className="goodsDetaiInfo">
+                    {Get("languages").shelfLife}
+                </View>
+                <View className="goodsDetaiInfo">
+                    {Get("languages").weight}
+                </View>
+                
             </View>
         )
     }

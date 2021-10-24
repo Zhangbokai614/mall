@@ -1,8 +1,9 @@
 .topClass {
-    height: 60vh;
+    height: 30vh;
     text-align: left;
     border:1px solid #a39898;
     margin-top: 3vh;
+    
 }
 .goodsSpecification {
     margin-top: 2vh;
@@ -10,4 +11,7 @@
 }
 .goodsdetail {
     height: 20vh;
+}
+.goodsDetaiInfo {
+    margin-left: 4vw;
 }

@@ -55,20 +55,21 @@ export default class Index extends Component {
         const postersImages = this.state.goodsInfo
         console.log(postersImages)
         return (
-            
             this.state.loading
                 ? null
                 : <View className="index">
-                    <View >
+                    <View className="images">
                         <SwiperPosters
                             images={postersImages[0].images}
                         />
-                        <View
-                            className="at-article__h1"
-                        >
-                            {Get("languages").goodsintroduction}
-                        </View>
-                        <GoodsSelection />
+                    </View>
+                    <View
+                        className="goodsintroduction"
+                    >
+                        {Get("languages").goodsintroduction}
+                    </View>
+                    <View>
+                    <GoodsSelection />
                     </View>
                     <View >
                         <Specification />

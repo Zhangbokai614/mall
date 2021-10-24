@@ -56,7 +56,7 @@ class Bottomdetail extends React.Component {
                 });
                 break;
             case "03":
-                Taro.navigateTo({
+                Taro.reLaunch({
                     url: "/pages/cart/index",
                 });
                 break;
