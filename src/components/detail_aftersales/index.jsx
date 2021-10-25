@@ -13,7 +13,7 @@ class AfterSales extends React.Component {
 
             <View className='detailAfterSales'>
                 <View className='afterSales'>
-                    <View>
+                    <View className='afterSalesTitle'>
                         {Get('languages').afterSales}
                     </View>
                 </View>
