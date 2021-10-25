@@ -1,0 +1,50 @@
+#optionsCard{
+  border-radius: 40px 40px 40px 40px;
+  height: 24vh;
+  display: flex;
+  flex-flow: column;
+  margin-left: 4vw;
+  margin-right: 4vw;
+  margin-bottom: 4vw;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
+}
+
+#cardHead {
+  border-radius: 40px 40px 0px 0px;
+  height: 6vh;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color: white;
+  padding-left: 4vw;
+  padding-right: 2vw;
+  border-bottom:4px solid #e2e2e2;
+}
+
+#cardContent {
+  border-radius: 0px 0px 40px 40px;
+  height: 18vh;
+  background-color: white;
+  display: flex;
+  flex-flow: row;
+  justify-content: space-evenly;
+  align-items: center;
+}
+
+.option {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.optionIcon {
+  height: 5.2vh;
+  width: 5.2vh;
+  margin-bottom: 1vh;
+}
+
+.optionsText {
+
+}

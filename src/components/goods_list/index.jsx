@@ -14,6 +14,7 @@ class GoodsList extends React.Component {
     }
 
     handleClick(value) {
+        this.tabsBar = null
         this.setState({
             selectKey: value
         })
@@ -23,14 +24,14 @@ class GoodsList extends React.Component {
         const info = this.state.listInfo
         const tabList = Object.keys(info)
 
-        const tabsBar = tabList.map((e, index) =>
+        let tabsBar = tabList.map((e, index) =>
             e === this.state.selectKey
                 ? <View className='select' key={index} onClick={this.handleClick.bind(this, e)}>
                     <View></View>
                     {e}
                     <View id='underscore' ></View>
                 </View>
-                : <View className='' key={index} onClick={this.handleClick.bind(this, e)}>
+                : <View className='unSelect' key={index} onClick={this.handleClick.bind(this, e)}>
                     {e}
                 </View>
         )

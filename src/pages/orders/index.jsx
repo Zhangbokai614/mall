@@ -16,7 +16,6 @@ export default class Index extends Component {
             current: 0,
             goodsInfo: {},
             noticebar: '',
-            activity:'',
             loading: true
         }
     }

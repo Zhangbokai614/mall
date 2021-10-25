@@ -1,7 +1,13 @@
 import languages from "./asset/languages/zn-cn.json";
 
 export default {
-  pages: ["pages/cart/index", "pages/home/index", "pages/detail/index"],
+  pages: [
+    "pages/home/index",
+    "pages/cart/index",
+    "pages/user/index",
+    "pages/detail/index",
+    "pages/orders/index",
+  ],
 
   window: {
     backgroundTextStyle: "light",
@@ -27,6 +33,12 @@ export default {
         iconPath: "./asset/images/tabs/shopping-cart.png",
         selectedIconPath: "./asset/images/tabs/shopping-cart-select.png"
       },
+      {
+        pagePath: "pages/user/index",
+        text: languages.myself,
+        iconPath: './asset/images/tabs/user.png',
+        selectedIconPath: './asset/images/tabs/user-select.png'
+      }
     ]
   }
 };

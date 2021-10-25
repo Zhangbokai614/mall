@@ -20,6 +20,7 @@ class GoodsCard extends React.Component {
         Taro.navigateTo({
             url: '/pages/detail/index?id=' + this.state.id + '&&type=' + this.state.type
         })
+        console.log(this.state.id)
     }
 
     render() {
