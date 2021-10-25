@@ -13,7 +13,7 @@ class Introduction extends React.Component {
             
             <View className='detailIntroduce'>
                 <View className='goodsIntroduce'>
-                    <View >
+                    <View className='introduceTitle'>
                         {Get('languages').goodsIntroduce}
                     </View>
                 </View>

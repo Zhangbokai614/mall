@@ -5,4 +5,7 @@
     padding-left: 20px;
     background-color: white;
     font-size: 45px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
 }

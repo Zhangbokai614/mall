@@ -11,7 +11,7 @@ class ProductEvaluation extends React.Component {
         return (
             <View className="detailEvaluation">
                 <View className="productEvaluation">
-                    <View >
+                    <View className='evaluationTitle'>
                         {Get("languages").goodsEvaluation}
                     </View>
                 </View>

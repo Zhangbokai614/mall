@@ -1,5 +1,4 @@
 .radioList {
-    border:1px solid #a39898;
     height: 6vh;
     text-align: left;
     font-size: 30px;
@@ -47,7 +46,6 @@
     margin-top: 1vh;
     display: flex;
     flex-direction: row;
-    border:1px solid #a39898;
     background-color: white;
     height: 6vh;
     text-align: left;
@@ -58,4 +56,7 @@
     display: flex;
     align-items: center;
     font-size: 25px;
+}
+.at-Floatlayout {
+    z-index: 200;
 }

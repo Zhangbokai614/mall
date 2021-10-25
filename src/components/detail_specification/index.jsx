@@ -11,7 +11,7 @@ class Specification extends React.Component {
         return (
             <View className='detailSpecification'>
                 <View className='goodsSpecification'>
-                    <View >
+                    <View className='specificationTitle'>
                         {Get('languages').goodsSpecification}
                     </View>
                 </View>

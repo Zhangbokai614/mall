@@ -1,18 +1,18 @@
-.detailEvaluation {
-    height: 30vh;
+.detailAfterSales {
+    height: 28vh;
     text-align: left;
     margin-top: 3vh;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.094);
 }
-.productEvaluation {
+.afterSales {
     font-size: 35px;
     margin-top: 3vh;
     margin-left: 4vw;
 }
-.evaluationdetail {
+.afterSalesText {
     margin-left: 4vw;
 }
-.evaluationTitle {
+.afterSalesTitle {
     padding-top: 3vh;
 }

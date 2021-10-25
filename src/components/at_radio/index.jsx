@@ -112,7 +112,8 @@ class GoodsSelection extends React.Component {
                         <AtFloatLayout
                             isOpened={this.state.atButtonSelect}
                             onClose={this.handleClickSelect.bind(this)}
-                            title={Get("languages").goodsSelection}>
+                            title={Get("languages").goodsSelection}
+                            >
                             <AtRadio
                                 options={[
                                     { label: "", value: "option1", },
