@@ -31,5 +31,10 @@
   "productionLicense": "生产许可证",
   "productNumber": "产品标准号",
   "shelfLife": "保质期",
-  "weight": "重量"
+  "weight": "重量",
+  "goodsEvaluation": "商品评价",
+  "serviceAttitude": "服务态度",
+  "deliverySpeed": "发货速度",
+  "logisticsSpeed": "物流速度",
+  "thePacking": "包装情况"
 }

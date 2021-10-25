@@ -1,7 +1,7 @@
 import languages from "./asset/languages/zn-cn.json";
 
 export default {
-  pages: ["pages/cart/index", "pages/home/index"],
+  pages: ["pages/cart/index", "pages/home/index", "pages/detail/index"],
 
   window: {
     backgroundTextStyle: "light",
@@ -26,7 +26,7 @@ export default {
         text: languages.goodscar,
         iconPath: "./asset/images/tabs/shopping-cart.png",
         selectedIconPath: "./asset/images/tabs/shopping-cart-select.png"
-      }
+      },
     ]
   }
 };

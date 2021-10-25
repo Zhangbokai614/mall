@@ -1,6 +1,5 @@
 import { View } from "@tarojs/components"
 import React from "react"
-import Taro from "@tarojs/taro"
 import { AtDivider } from "taro-ui"
 
 import { Get } from "../../global-data/index"
@@ -10,7 +9,7 @@ class Specification extends React.Component {
 
     render() {
         return (
-            <View className="topClass">
+            <View className="detailSpecification">
                 <View className="goodsSpecification">
                     <View >
                         {Get("languages").goodsSpecification}

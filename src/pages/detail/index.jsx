@@ -3,17 +3,16 @@ import { View, Text } from "@tarojs/components"
 import Taro from "@tarojs/taro"
 import { getCurrentInstance } from '@tarojs/taro'
 
-import { SwiperPosters } from "../../components/detail/swiper_posters"
+import { SwiperPosters } from "../../components/detail_swiper"
 import { GoodsSelection } from "../../components/at_radio/index"
 import { Bottomdetail } from "../../components/detail_bottom/index"
 import { Specification } from "../../components/detail_specification/index"
+import { ProductEvaluation } from "../../components/detail_evaluation/index"
 import * as homeApi from './service'
 import "./index.css"
 import { Get } from "../../global-data/index"
 
 export default class Index extends Component {
-
-
 
     constructor(props) {
         super(props)
@@ -69,15 +68,13 @@ export default class Index extends Component {
                         {postersImages[0].title}
                     </View>
                     <View>
-                    <GoodsSelection />
+                        <GoodsSelection />
                     </View>
                     <View >
                         <Specification />
                     </View>
                     <View>
-                        <Text>
-                            {Get("languages").productEvaluation}
-                        </Text>
+                        <ProductEvaluation/>
                     </View>
                     <View>
                         <Text>
