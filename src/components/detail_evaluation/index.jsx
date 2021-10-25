@@ -1,6 +1,6 @@
 import { View } from "@tarojs/components"
 import React from "react"
-import { AtDivider, AtIcon } from "taro-ui"
+import { AtDivider } from "taro-ui"
 
 import { Get } from "../../global-data/index"
 import "./index.css"
@@ -12,7 +12,7 @@ class ProductEvaluation extends React.Component {
             <View className="detailEvaluation">
                 <View className="productEvaluation">
                     <View >
-                        {Get("languages").productEvaluation}
+                        {Get("languages").goodsEvaluation}
                     </View>
                 </View>
                 <AtDivider />
@@ -29,7 +29,7 @@ class ProductEvaluation extends React.Component {
                     {Get("languages").logisticsSpeed}
                 </View>
                 <View className="evaluationdetail">
-                    {Get("languages").wthePackingeight}
+                    {Get("languages").thePacking}
                 </View>
                 
             </View>

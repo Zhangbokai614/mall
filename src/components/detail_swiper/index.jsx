@@ -14,8 +14,6 @@ class SwiperPosters extends React.Component {
                         <Image 
                             src={e}
                             style='width: 100vw; height: 45vh; background: #fff;'
-                          
-                            
                             />
                             </View>
                 </SwiperItem>

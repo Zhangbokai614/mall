@@ -36,5 +36,6 @@
   "serviceAttitude": "服务态度",
   "deliverySpeed": "发货速度",
   "logisticsSpeed": "物流速度",
-  "thePacking": "包装情况"
+  "thePacking": "包装情况",
+  "goodsIntroduce": "商品介绍"
 }

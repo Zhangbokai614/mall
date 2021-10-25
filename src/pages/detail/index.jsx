@@ -8,9 +8,11 @@ import { GoodsSelection } from "../../components/at_radio/index"
 import { Bottomdetail } from "../../components/detail_bottom/index"
 import { Specification } from "../../components/detail_specification/index"
 import { ProductEvaluation } from "../../components/detail_evaluation/index"
+import { Introduction } from "../../components/detail_introduction/index"
 import * as homeApi from './service'
 import "./index.css"
 import { Get } from "../../global-data/index"
+import { AfterSales } from "../../components/detail_aftersales"
 
 export default class Index extends Component {
 
@@ -77,9 +79,14 @@ export default class Index extends Component {
                         <ProductEvaluation/>
                     </View>
                     <View>
-                        <Text>
-                            {Get("languages").productIntroduction}
-                        </Text>
+                        <View>
+                        <Introduction/>
+                        </View>
+                    </View>
+                    <View>
+                        <View>
+                            <AfterSales/>
+                        </View>
                     </View>
                     <Bottomdetail />
                 </View>
