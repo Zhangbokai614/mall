@@ -1,16 +1,16 @@
-.detailSpecification {
-    height: 30vh;
+.detailAfterSales {
+    height: 25vh;
     text-align: left;
     border:1px solid #a39898;
     margin-top: 3vh;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.094);
 }
-.goodsSpecification {
+.afterSales {
     font-size: 35px;
     margin-top: 3vh;
     margin-left: 4vw;
 }
-.goodsDetaiInfo {
+.afterSalesText {
     margin-left: 4vw;
 }

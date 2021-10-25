@@ -37,5 +37,8 @@
   "deliverySpeed": "发货速度",
   "logisticsSpeed": "物流速度",
   "thePacking": "包装情况",
-  "goodsIntroduce": "商品介绍"
+  "goodsIntroduce": "商品介绍",
+  "afterSales": "关于售后",
+  "afterSalesDetail": "折扣价：为折扣期间的价格如果没有特殊说明，折扣是在原价基础上计算出的优惠比例或者优惠金额；如果有疑问您可以在购买前询问客服。",
+  "afterSalesFree": "：包邮不包含偏远地区及海外地区。"
 }

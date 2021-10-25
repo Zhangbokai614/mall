@@ -9,10 +9,11 @@ import { Bottomdetail } from "../../components/detail_bottom/index"
 import { Specification } from "../../components/detail_specification/index"
 import { ProductEvaluation } from "../../components/detail_evaluation/index"
 import { Introduction } from "../../components/detail_introduction/index"
+import { AfterSales } from "../../components/detail_aftersales"
 import * as homeApi from './service'
 import "./index.css"
 import { Get } from "../../global-data/index"
-import { AfterSales } from "../../components/detail_aftersales"
+
 
 export default class Index extends Component {
 
@@ -76,17 +77,13 @@ export default class Index extends Component {
                         <Specification />
                     </View>
                     <View>
-                        <ProductEvaluation/>
+                        <ProductEvaluation />
                     </View>
                     <View>
-                        <View>
-                        <Introduction/>
-                        </View>
+                        <Introduction />
                     </View>
                     <View>
-                        <View>
-                            <AfterSales/>
-                        </View>
+                        <AfterSales />
                     </View>
                     <Bottomdetail />
                 </View>
