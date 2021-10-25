@@ -2,9 +2,11 @@ import languages from './asset/languages/zn-cn.json'
 
 export default {
   pages: [
-    "pages/detail/index",
     "pages/home/index",
-    "pages/cart/index"
+    "pages/cart/index",
+    "pages/user/index",
+    "pages/detail/index",
+    "pages/orders/index",
   ],
 
   window: {
@@ -30,6 +32,12 @@ export default {
         text: languages.shoppingCart,
         iconPath: './asset/images/tabs/shopping-cart.png',
         selectedIconPath: './asset/images/tabs/shopping-cart-select.png'
+      },
+      {
+        pagePath: "pages/user/index",
+        text: languages.myself,
+        iconPath: './asset/images/tabs/user.png',
+        selectedIconPath: './asset/images/tabs/user-select.png'
       }]
   }
 };

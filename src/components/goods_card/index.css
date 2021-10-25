@@ -5,7 +5,7 @@
 }
 
 .cardImage {
-  height: 44vw;
+  height: 46vw;
   border-radius: 20px 20px 0px 0px;
 }
 
@@ -17,7 +17,6 @@
 .focusCard {
   display: flex;
   flex-flow: column;
-  /* height: 62vw; */
   width: 92vw;
   margin-bottom: 2vh;
   margin-left: 2vw;

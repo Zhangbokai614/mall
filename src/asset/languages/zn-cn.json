@@ -1,4 +1,5 @@
 {
+  "loading": "正在加载",
   "hello": "你好",
   "home": "首页",
   "detail": "详情",
@@ -23,5 +24,18 @@
   "hurryupandbuysomebaby": "赶紧买点宝贝慰劳下自己吧",
   "hint": "商品库存有限，请尽快下单",
   "goodsSpecification": "商品规格",
-  "goodsId": "商品编号"
+  "goodsId": "商品编号",
+  "myself": "我的",
+  "defaultName": "点击登录",
+  "bindPhone": "绑定手机号",
+  "myorDers": "我的订单",
+  "allDers": "全部订单",
+  "commonFeatures": "常用功能",
+  "technicalSupport": "风顺（天津）网络科技提供技术支持",
+  "address": "收获地址",
+  "coupons": "优惠券",
+  "pendingPayment": "待付款",
+  "pendingAppraise": "待评价",
+  "pendingReceipt": "待收货",
+  "returnExchange": "退换货"
 }

@@ -9,21 +9,36 @@
   top: -0.1vh;
   height: 8vh;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
+  padding-left: 2vw;
+
 }
 
 .select {
   color: #ff4949;
+  white-space: nowrap;
   height: 100%;
+  flex: 1;
   display: flex;
   flex-flow: column;
   justify-content: space-between;
+  align-items: center;
+}
+
+.unSelect {
+  height: 100%;
+  white-space: nowrap;
+  flex: 1;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 
 #underscore {
   background-color: #ff4949;
   height: 0.36vh;
-  width: 100%;
+  width: 88%;
   border-radius: 100px;
 }
 
@@ -33,7 +48,7 @@
   grid-template-columns: 48% 48%;
   justify-content: space-evenly;
   align-content:space-evenly;
-  /* width: 100vw; */
-  display: flex;
-  flex-wrap: wrap;
+  padding-left: 1.6vw;
+  /* display: flex; */
+  /* flex-wrap: wrap; */
 }
