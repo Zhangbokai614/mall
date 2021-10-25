@@ -35,11 +35,10 @@
 }
 
 .frame {
-  width: 98vw;
+  width: 100vw;
   height: 20vh;
-  border-radius: 0.375rem;
-  margin: 0.275em auto;
   background: #ffffff;
+  margin-right: 1px;
 }
 
 .frameleft {
@@ -65,28 +64,30 @@
 .producttitle {
   width: 50vw;
   --tw-text-opacity: 1;
-  font-size: 0.875rem;
+  font-size: 2.2vh;
   font: tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
   font-weight: 500;
+  margin-bottom: 0.5rem;
   /* overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap; */
 }
 
 .standard {
-  margin-top: 0.5rem;
+  width: auto;
   padding: 0.175rem 0.5rem 0.175rem 0.5rem;
   display: inline-block;
   background: #f5f5f5;
 }
 
 .standardtext {
-  font-size: 23px;
-  margin-right: 0.25rem;
+  vertical-align: baseline;
+  font-size: 2vh;
 }
 
 .money {
   color: red;
+  font-size: 1rem;
 }
 
 .number {
@@ -103,6 +104,12 @@
   margin-right: 0.375rem;
   right: 0;
   bottom: 0.3rem;
+}
+
+.action {
+  margin-top: 0.5px;
+  margin-bottom: 0.5px;
+  overflow: hidden;
 }
 
 /* ---------------------------------------------------------------- */

@@ -38,7 +38,7 @@ module.exports = () => {
             ],
             "粮油|2-6": [
                 {
-                    "id|+1": 300,
+                    "id|+1": 400,
                     "title": '@csentence',
                     "inventory|0-10000": 10000,
                     "images": ['https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624970549-assets/web-upload/1feeadb1-9f70-4df2-89e8-90afb12cfa15.jpeg'],
@@ -48,7 +48,7 @@ module.exports = () => {
             ],
             "海鲜|1-2": [
                 {
-                    "id|+1": 300,
+                    "id|+1": 500,
                     "title": '@csentence',
                     "inventory|0-10000": 10000,
                     "images": ['https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624780002-assets/web-upload/ddb1742e-309c-4b5f-ad4b-de2b656e69db.jpeg'],
@@ -58,7 +58,7 @@ module.exports = () => {
             ],
             "其他|2-6": [
                 {
-                    "id|+1": 300,
+                    "id|+1": 600,
                     "title": '@csentence',
                     "inventory|0-10000": 10000,
                     "images": ['https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624973974-assets/web-upload/922f160e-4682-46a5-a11f-49cc55a263a0.jpeg'],

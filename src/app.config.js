@@ -1,4 +1,4 @@
-import languages from './asset/languages/zn-cn.json'
+import languages from "./asset/languages/zn-cn.json";
 
 export default {
   pages: [
@@ -13,7 +13,7 @@ export default {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#ff4949",
     navigationBarTitleText: "WeChat",
-    navigationBarTextStyle: "white",
+    navigationBarTextStyle: "white"
   },
 
   tabBar: {
@@ -22,22 +22,23 @@ export default {
     backgroundColor: "white",
     list: [
       {
-        pagePath: 'pages/home/index',
+        pagePath: "pages/home/index",
         text: languages.home,
-        iconPath: './asset/images/tabs/home.png',
-        selectedIconPath: './asset/images/tabs/home-select.png'
+        iconPath: "./asset/images/tabs/home.png",
+        selectedIconPath: "./asset/images/tabs/home-select.png"
       },
       {
-        pagePath: 'pages/cart/index',
-        text: languages.shoppingCart,
-        iconPath: './asset/images/tabs/shopping-cart.png',
-        selectedIconPath: './asset/images/tabs/shopping-cart-select.png'
+        pagePath: "pages/cart/index",
+        text: languages.goodscar,
+        iconPath: "./asset/images/tabs/shopping-cart.png",
+        selectedIconPath: "./asset/images/tabs/shopping-cart-select.png"
       },
       {
         pagePath: "pages/user/index",
         text: languages.myself,
         iconPath: './asset/images/tabs/user.png',
         selectedIconPath: './asset/images/tabs/user-select.png'
-      }]
+      }
+    ]
   }
 };

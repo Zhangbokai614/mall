@@ -25,14 +25,15 @@ class Settlement extends Component {
     const { number } = this.props;
     return (
       <View className="footer flex-row align relative">
-        <View
-          className={
-            this.state.select == false
-              ? "unselected" + " " + "margin"
-              : "selected" + " " + "margin"
-          }
-          onClick={this.clink.bind(this)}
-        ></View>
+        <View onClick={this.clink.bind(this)}>
+          <View
+            className={
+              this.state.select == false
+                ? "unselected" + " " + "margin"
+                : "selected" + " " + "margin"
+            }
+          ></View>
+        </View>
         <Text className="selectall ">{Get("languages").selecTall}</Text>
         <View className="absolute flex-row">
           <View>

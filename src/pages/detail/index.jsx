@@ -1,59 +1,95 @@
 import React, { Component } from "react"
 import { View, Text } from "@tarojs/components"
+import Taro from "@tarojs/taro"
 import { getCurrentInstance } from '@tarojs/taro'
 
-import { SwiperPosters } from "../../components/detail/swiper_posters"
+import { SwiperPosters } from "../../components/detail_swiper"
 import { GoodsSelection } from "../../components/at_radio/index"
 import { Bottomdetail } from "../../components/detail_bottom/index"
 import { Specification } from "../../components/detail_specification/index"
+import { ProductEvaluation } from "../../components/detail_evaluation/index"
+import { Introduction } from "../../components/detail_introduction/index"
+import * as homeApi from './service'
 import "./index.css"
 import { Get } from "../../global-data/index"
-
-const posters = [
-    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1633323146590-assets/web-upload/df14984d-9593-4756-ad22-e2cd0fe3c020.jpeg",
-    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1633323146770-assets/web-upload/32f3755c-546c-4271-a80b-b92411cc9a0d.jpeg",
-    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1633323146811-assets/web-upload/fe162239-eaac-4a52-aea4-41dab5655f18.jpeg",
-    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1633323146803-assets/web-upload/a4bc4a99-7e76-4acb-a2d8-53abd84e18b2.jpeg",
-    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1633323147669-assets/web-upload/a988079f-d135-481f-aa18-2a495d8e3edf.jpeg"
-]
+import { AfterSales } from "../../components/detail_aftersales"
 
 export default class Index extends Component {
 
-    componentDidMount () {
+    constructor(props) {
+        super(props)
+        this.state = {
+            current: 0,
+            goodsInfo: {},
+            loading: true,
+        }
+    }
+
+    componentDidMount() {
+        this.loading()
+    }
+
+    componentDidShow() {
+        this.loading()
+    }
+
+    async loading() {
+        Taro.showLoading({
+            title: Get('languages').loading,
+        })
+
+        const goodsInfo = await homeApi.goodsInfo()
+        const { id, type } = getCurrentInstance().router.params
+        this.setState({
+            goodsInfo: goodsInfo.data[type].filter((e) => e.id === +id),
+            loading: false,
+        })
+        Taro.hideLoading()
+    }
+
+    componentDidMount() {
         console.log(getCurrentInstance().router.params)
     }
 
     render() {
 
-        const postersImages = posters
+        const postersImages = this.state.goodsInfo
+        console.log(postersImages)
         return (
-            <View className="index">
-                <View >
-                    <SwiperPosters
-                        images={postersImages}
-                    />
-                    <View
-                        className="at-article__h1"
-                    >
-                        {Get("languages").goodsintroduction}
+            this.state.loading
+                ? null
+                : <View className="index">
+                    <View className="images">
+                        <SwiperPosters
+                            images={postersImages[0].images}
+                        />
                     </View>
-                    <GoodsSelection />
+                    <View
+                        className="goodsintroduction"
+                    >
+                        {postersImages[0].title}
+                    </View>
+                    <View>
+                        <GoodsSelection />
+                    </View>
+                    <View >
+                        <Specification />
+                    </View>
+                    <View>
+                        <ProductEvaluation/>
+                    </View>
+                    <View>
+                        <View>
+                        <Introduction/>
+                        </View>
+                    </View>
+                    <View>
+                        <View>
+                            <AfterSales/>
+                        </View>
+                    </View>
+                    <Bottomdetail />
                 </View>
-                <View >
-                    <Specification />
-                </View>
-                <View>
-                    <Text>
-                        {Get("languages").productEvaluation}
-                    </Text>
-                </View>
-                <View>
-                    <Text>
-                        {Get("languages").productIntroduction}
-                    </Text>
-                </View>
-                <Bottomdetail />
-            </View>
 
         )
     }

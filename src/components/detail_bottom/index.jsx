@@ -1,15 +1,15 @@
-import { AtButton } from "taro-ui"
-import { View, Image } from "@tarojs/components"
-import React from "react"
-import Taro from "@tarojs/taro"
+import { AtButton } from 'taro-ui'
+import { View, Image } from '@tarojs/components'
+import React from 'react'
+import Taro from '@tarojs/taro'
 
-import { Get } from "../../global-data/index"
-import shoppingcar from "../../asset/images/tabs/shopping-cart.png"
-import shoppingcarSelect from "../../asset/images/tabs/shopping-cart-select.png"
-import home from "../../asset/images/tabs/home.png"
-import homeSelect from "../../asset/images/tabs/home-select.png"
-import service from "../../asset/images/tabs/customer-service.png"
-import serviceSelect from "../../asset/images/tabs/customer-service-select.png"
+import { Get } from '../../global-data/index'
+import shoppingcar from '../../asset/images/tabs/shopping-cart.png'
+import shoppingcarSelect from '../../asset/images/tabs/shopping-cart-select.png'
+import home from '../../asset/images/tabs/home.png'
+import homeSelect from '../../asset/images/tabs/home-select.png'
+import service from '../../asset/images/tabs/customer-service.png'
+import serviceSelect from '../../asset/images/tabs/customer-service-select.png'
 import './index.css'
 class Bottomdetail extends React.Component {
     constructor(props) {
@@ -19,6 +19,8 @@ class Bottomdetail extends React.Component {
             home: false,
             shoppingcar: false,
             service: false,
+            id: this.props.id,
+            type: this.props.type
         }
     };
 
@@ -30,7 +32,7 @@ class Bottomdetail extends React.Component {
 
     btnClick = (type) => {
         let num = this.state.totalNum;
-        num = type === "add" ? (num += 1) : (num -= 1);
+        num = type === 'add' ? (num += 1) : (num -= 1);
         if (num < 1) {
             num = 0;
         }
@@ -43,32 +45,32 @@ class Bottomdetail extends React.Component {
 
     handeChange
     goHref = (type) => {
-        console.log("11110")
+        console.log('11110')
         switch (type) {
-            case "01":
+            case '01':
                 Taro.reLaunch({
-                    url: "/pages/home/index",
+                    url: '/pages/home/index',
                 });
                 break;
-            case "02":
+            case '02':
                 Taro.navigateTo({
-                    url: "/pages/category/index",
+                    url: '/pages/category/index',
                 });
                 break;
-            case "03":
-                Taro.navigateTo({
-                    url: "/pages/cart/index",
+            case '03':
+                Taro.reLaunch({
+                    url: '/pages/cart/index?id=' + this.state.id + '&&type=' + this.state.type,
                 });
                 break;
-            case "04":
+            case '04':
                 Taro.navigateTo({
-                    url: "/pages/order/index",
+                    url: '/pages/order/index',
                 });
                 break;
             default:
                 Taro.navigateTo({
 
-                    url: "/pages/home/index",
+                    url: '/pages/home/index',
                 });
         }
     };
@@ -77,65 +79,65 @@ class Bottomdetail extends React.Component {
 
         return (
 
-            <View className="bottom">
+            <View className='bottom'>
                 <AtButton
-                    className="bottomLeft"
-                    id="firstpage"
-                    onClick={this.goHref.bind(this, "01")}>
-                    <View className="bottonLeft">
+                    className='bottomLeft'
+                    id='firstpage'
+                    onClick={this.goHref.bind(this, '01')}>
+                    <View className='bottonLeft'>
                         <Image
                             src={this.state.home == true ? homeSelect : home}
-                            className="imageHome"
-                            style="width:23px; height:23px;"
+                            className='imageHome'
+                            style='width:23px; height:23px;'
                         />
-                        <View className="home" >
+                        <View className='home' >
                             {Get('languages').home}
                         </View>
                     </View>
                 </AtButton>
                 <AtButton
-                    className="bottomLeft" id="service"
-                    onClick={this.goHref.bind(this, "02")}>
-                    <View className="bottonLeft">
+                    className='bottomLeft' id='service'
+                    onClick={this.goHref.bind(this, '02')}>
+                    <View className='bottonLeft'>
                         <Image
                             src={this.state.service == true ? serviceSelect : service}
-                            className="imageService"
-                            style="width:23px; height:23px;"
+                            className='imageService'
+                            style='width:23px; height:23px;'
                         />
-                        <View className="service">
+                        <View className='service'>
                             {Get('languages').customerService}
                         </View>
                     </View>
                 </AtButton>
                 <AtButton
-                    className="bottomLeft"
-                    id="goodscar"
-                    onClick={this.goHref.bind(this, "03")}
+                    className='bottomLeft'
+                    id='goodscar'
+                    onClick={this.goHref.bind(this, '03')}
                 >
-                    <View className="bottonLeft">
+                    <View className='bottonLeft'>
                         <Image
                             src={this.state.shoppingcar == true ? shoppingcarSelect : shoppingcar}
-                            className="imageGoodscar"
+                            className='imageGoodscar'
                             onClick={this.handeChangeShoppingcar.bind(this)}
-                            style="width:23px; height:23px;"
+                            style='width:23px; height:23px;'
                         />
-                        <View className="goodcar">
-                            {Get("languages").goodscar}
+                        <View className='goodcar'>
+                            {Get('languages').goodscar}
                         </View>
                     </View>
                 </AtButton>
-                <View className="bottomRight">
+                <View className='bottomRight'>
                     <AtButton
-                        className="bottombuttonCar"
-                        onClick={this.btnClick.bind(this, "add")}
+                        className='bottombuttonCar'
+                        onClick={this.btnClick.bind(this, 'add')}
                     >
-                        {Get("languages").addcar}
+                        {Get('languages').addcar}
                     </AtButton>
                     <AtButton
-                        className="bottombuttonTobuy"
-                        onClick={this.goHref.bind(this, "04")}
+                        className='bottombuttonTobuy'
+                        onClick={this.goHref.bind(this, '04')}
                     >
-                        {Get("languages").tobuy}
+                        {Get('languages').tobuy}
                     </AtButton>
                 </View>
             </View>
