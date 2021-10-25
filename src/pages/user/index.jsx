@@ -10,6 +10,11 @@ import pendingPaymentIcon from '../../asset/images/icon/pending-payment.png'
 import pendingReceiptIcon from '../../asset/images/icon/pending-receipt.png'
 import pendingAppraiseIcon from '../../asset/images/icon/pending-appraise.png'
 import returnExchangeIcon from '../../asset/images/icon/return-exchange.png'
+import couponsIcon from '../../asset/images/icon/coupons.png'
+import addressIcon from '../../asset/images/icon/address.png'
+import customerServiceIcon from '../../asset/images/tabs/customer-service-select.png'
+
+
 
 import * as homeApi from './service';
 import './index.css'
@@ -94,6 +99,12 @@ export default class Index extends Component {
             {text:Get('languages').returnExchange, icon:returnExchangeIcon,path:'/pages/orders/index'},
         ]
 
+        const commonCardContent = [
+            {text:Get('languages').coupons, icon:couponsIcon,path:'/pages/orders/index'},
+            {text:Get('languages').address, icon:addressIcon,path:'/pages/orders/index'},
+            {text:Get('languages').customerService, icon:customerServiceIcon,path:'/pages/orders/index'}
+        ]
+
         return (
             this.state.loading
                 ? null
@@ -131,12 +142,7 @@ export default class Index extends Component {
                         />
                         <OptionsCard
                             title={Get('languages').commonFeatures}
-                            // content={[
-                            //     {text:'',icon:'',path:''},
-                            //     {text:'',icon:'',path:''},
-                            //     {text:'',icon:'',path:''},
-                            //     {text:'',icon:'',path:''},
-                            // ]}
+                            content={commonCardContent}
                         />
                     </View>
 

@@ -20,7 +20,6 @@ class GoodsCard extends React.Component {
         Taro.navigateTo({
             url: '/pages/detail/index?id=' + this.state.id + '&&type=' + this.state.type
         })
-        console.log(this.state.id)
     }
 
     render() {
@@ -70,8 +69,8 @@ class GoodsCard extends React.Component {
                     </View>
                     {
                         inventory > 4000
-                        ? <View></View>
-                        : <AtTag className='goodsCardTag' active='false' circle>tag</AtTag>
+                            ? <View></View>
+                            : <AtTag className='goodsCardTag' active='false' circle>tag</AtTag>
                     }
                     <View id='goodsInfoText'>
                         <View id='price'>

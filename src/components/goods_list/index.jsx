@@ -14,15 +14,14 @@ class GoodsList extends React.Component {
     }
 
     handleClick(value) {
-        this.tabsBar = null
         this.setState({
             selectKey: value
         })
     }
 
     render() {
-        const info = this.state.listInfo
-        const tabList = Object.keys(info)
+        const info = this.state.listInfo[this.state.selectKey]
+        const tabList = Object.keys(this.state.listInfo)
 
         let tabsBar = tabList.map((e, index) =>
             e === this.state.selectKey
@@ -37,10 +36,10 @@ class GoodsList extends React.Component {
         )
 
         const tabrContent = (
-            info[this.state.selectKey].map((e, index) => {
+            info.map((e) => {
                 return (
                     <GoodsCard
-                        key={index}
+                        key={e.id}
                         id={e.id}
                         focus={e.focus}
                         title={e.title}
