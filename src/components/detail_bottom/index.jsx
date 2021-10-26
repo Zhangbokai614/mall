@@ -59,7 +59,7 @@ class Bottomdetail extends React.Component {
                 break;
             case '03':
                 Taro.reLaunch({
-                    url: '/pages/cart/index?id=' + this.state.id + '&&type=' + this.state.type,
+                    url: '/pages/cart/index?id=',
                 });
                 break;
             case '04':
@@ -81,7 +81,7 @@ class Bottomdetail extends React.Component {
 
             <View className='bottom'>
                 <AtButton
-                    className='bottomLeft'
+                    className='bottomLeftHome'
                     id='firstpage'
                     onClick={this.goHref.bind(this, '01')}>
                     <View className='bottonLeft'>
@@ -96,7 +96,7 @@ class Bottomdetail extends React.Component {
                     </View>
                 </AtButton>
                 <AtButton
-                    className='bottomLeft' id='service'
+                    className='bottomLeftService' id='service'
                     onClick={this.goHref.bind(this, '02')}>
                     <View className='bottonLeft'>
                         <Image
@@ -110,7 +110,7 @@ class Bottomdetail extends React.Component {
                     </View>
                 </AtButton>
                 <AtButton
-                    className='bottomLeft'
+                    className='bottomLeftGoodscar'
                     id='goodscar'
                     onClick={this.goHref.bind(this, '03')}
                 >

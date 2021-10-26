@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Image } from '@tarojs/components'
 import { Swiper, SwiperItem } from '@tarojs/components'
 
-import "./index.css"
+import './index.css'
 class SwiperPosters extends React.Component {
     
     render() {

@@ -1,12 +1,12 @@
 import { View, Image, Text } from '@tarojs/components'
-import React from "react"
-import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList } from "taro-ui"
+import React from 'react'
+import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList } from 'taro-ui'
 
-import { Get } from "../../global-data/index"
-import Fruit from "../../asset/images/icon/fruit.png"
-import FreeMoney from "../../asset/images/icon/free.png"
-import SevenDays from "../../asset/images/icon/seven-days.png"
-import "./index.css"
+import { Get } from '../../global-data/index'
+import Fruit from '../../asset/images/icon/fruit.png'
+import FreeMoney from '../../asset/images/icon/free.png'
+import SevenDays from '../../asset/images/icon/seven-days.png'
+import './index.css'
 
 class GoodsSelection extends React.Component {
 
@@ -16,9 +16,9 @@ class GoodsSelection extends React.Component {
             atButtonSelect: false,
             atButtonDistribution: false,
             atButtonService: false,
-            select: "",
-            distribution: "",
-            service: "",
+            select: '',
+            distribution: '',
+            service: '',
         }
     };
 
@@ -72,130 +72,130 @@ class GoodsSelection extends React.Component {
 
     goHref = (type) => {
         switch (type) {
-            case "01":
+            case '01':
                 Taro.navigateTo({
-                    url: "/pages/home/index",
+                    url: '/pages/home/index',
                 });
                 break;
-            case "02":
+            case '02':
                 Taro.navigateTo({
-                    url: "/pages/category/index",
+                    url: '/pages/category/index',
                 });
                 break;
-            case "03":
+            case '03':
                 Taro.navigateTo({
-                    url: "/pages/cart/index",
+                    url: '/pages/cart/index',
                 });
                 break;
-            case "04":
+            case '04':
                 Taro.navigateTo({
-                    url: "/pages/order/index",
+                    url: '/pages/order/index',
                 });
                 break;
             default:
                 Taro.navigateTo({
-                    url: "/pages/home/index",
+                    url: '/pages/home/index',
                 });
         }
     };
     render() {
 
         return (
-            <View className="atradio">
-                <View className="goodsSelection">
+            <View className='atradio'>
+                <View className='goodsSelection'>
                     <AtList>
                         <AtListItem
-                            className="radioList"
-                            title={Get("languages").select}
+                            className='radioList'
+                            title={Get('languages').select}
                             onClick={this.handleClickSelect.bind(this)}
-                            arrow="right" />
+                            arrow='right' />
                         <AtFloatLayout
                             isOpened={this.state.atButtonSelect}
                             onClose={this.handleClickSelect.bind(this)}
-                            title={Get("languages").goodsSelection}
+                            title={Get('languages').goodsSelection}
                             >
                             <AtRadio
                                 options={[
-                                    { label: "", value: "option1", },
-                                    { label: "", value: "option2", },
-                                    { label: "", value: "option3", }
+                                    { label: '', value: 'option1', },
+                                    { label: '', value: 'option2', },
+                                    { label: '', value: 'option3', }
                                 ]}
                                 value={this.state.select}
                                 onClick={this.handleChangeSelect.bind(this)}
                             />
                             <AtButton
-                                className="goodscar"
-                                circle="true"
-                                onClick={this.goHref.bind(this, "01")}
+                                className='goodscar'
+                                circle='true'
+                                onClick={this.goHref.bind(this, '01')}
                             >
-                                {Get("languages").addcar}
+                                {Get('languages').addcar}
                             </AtButton>
                             <AtButton
-                                className="confirm"
-                                circle="true"
-                                onClick={this.goHref.bind(this, "04")}
+                                className='confirm'
+                                circle='true'
+                                onClick={this.goHref.bind(this, '04')}
                             >
-                                {Get("languages").tobuy}
+                                {Get('languages').tobuy}
                             </AtButton>
                         </AtFloatLayout>
                     </AtList>
                 </View>
-                <View className="distribution">
+                <View className='distribution'>
                     <AtListItem
-                        className="radioList"
-                        title={Get("languages").distribution}
+                        className='radioList'
+                        title={Get('languages').distribution}
                         onClick={this.handleClickDistribution.bind(this)}
-                        arrow="right"
+                        arrow='right'
                     />
                     <AtFloatLayout
                         isOpened={this.state.atButtonDistribution}
                         onClose={this.handleClickDistribution.bind(this)}
-                        title={Get("languages").deliveryTo}
+                        title={Get('languages').deliveryTo}
                     >
                         <AtRadio
                             options={[
-                                { label: "", value: "option1", },
-                                { label: "", value: "option2", }
+                                { label: '', value: 'option1', },
+                                { label: '', value: 'option2', }
                             ]}
                             value={this.state.distribution}
                             onClick={this.handleChangeDistribution.bind(this)}
                         />
                     </AtFloatLayout>
                 </View>
-                <View className="service">
+                <View className='service'>
                     <View
-                        className="serviceList"
+                        className='serviceList'
                         onClick={this.handleClickService.bind(this)}
                     >
-                        <View className="textService">
+                        <View className='textService'>
                             <Text >
-                                {Get("languages").service}
+                                {Get('languages').service}
                             </Text>
                         </View>
 
                         <Image
-                            className="imageFruit"
+                            className='imageFruit'
                             src={Fruit}
-                            style="width:20px; height:20px;"
+                            style='width:20px; height:20px;'
                         />
-                        <View className="serviceDetail">
-                            {Get("languages").compensation}
+                        <View className='serviceDetail'>
+                            {Get('languages').compensation}
                             </View>   
                         <Image
-                            className="imageFree"
+                            className='imageFree'
                             src={FreeMoney}
-                            style="width:20px; height:20px;"
+                            style='width:20px; height:20px;'
                         />
-                        <View className="serviceDetail">
-                            {Get("languages").freeMoney}
+                        <View className='serviceDetail'>
+                            {Get('languages').freeMoney}
                         </View>
                         <Image
-                            className="imageSevenDays"
+                            className='imageSevenDays'
                             src={SevenDays}
-                            style="width:22px; height:22px;"
+                            style='width:22px; height:22px;'
                         />
-                        <View className="serviceDetail">
-                            {Get("languages").returnGoods}
+                        <View className='serviceDetail'>
+                            {Get('languages').returnGoods}
                         </View>
                     </View>
                     <AtFloatLayout
