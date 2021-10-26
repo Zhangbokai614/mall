@@ -97,7 +97,9 @@ class Bottomdetail extends React.Component {
                 </AtButton>
                 <AtButton
                     className='bottomLeftService' id='service'
-                    onClick={this.goHref.bind(this, '02')}>
+                    open-type="contact" 
+                    bindcontact="handleContact"
+                    >
                     <View className='bottonLeft'>
                         <Image
                             src={this.state.service == true ? serviceSelect : service}
