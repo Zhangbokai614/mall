@@ -1,5 +1,5 @@
 .detailEvaluation {
-    height: 30vh;
+    height: 35vh;
     text-align: left;
     margin-top: 3vh;
     background-color: white;
@@ -12,7 +12,24 @@
 }
 .evaluationdetail {
     margin-left: 4vw;
+    margin-right: 12vw;
 }
 .evaluationTitle {
-    padding-top: 3vh;
+    padding-top: 4vh;
+}
+.starsdetail {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1vh;
+}
+.stars {
+    margin-left: 12vw;
+    
+}
+.starInterval {
+    margin-left: 4vw;
+}
+.score {
+    margin-left: 4vw;
 }

@@ -8,55 +8,65 @@
     background-color:white;
     z-index: 100;
 } 
-.bottomLeft {   
+.bottomLeftHome {   
     display: flex;
     flex-direction: column; 
-    margin-left: 1vw;
     margin-top: 2vh;
     height: 80%;
+    margin-left: 1vw;
+    width: 10vw;
+    border: none;
+}
+.bottomLeftService {   
+    display: flex;
+    flex-direction: column; 
+    margin-top: 2vh;
+    height: 80%;
+    width: 10vw;
+    margin-left: -20vw;
+    border: none;
+}
+.bottomLeftGoodscar {   
+    display: flex;
+    flex-direction: column; 
+    margin-top: 2vh;
+    height: 80%;
+    margin-left: -20vw;
+    width: 10vw;
     border: none;
 }
 .bottonLeft {
     display: flex;
 	flex-direction: column;
-	flex-wrap: nowrap;
-	justify-content: flex-end;
+	justify-content: center;
 	align-items: center;
-	align-content: space-between;
 }
  
 .bottombuttonCar {
     display: flex;
     margin-top: 2vh;
-    margin-left: 4vw;
     background-color: #e4ff49;
     padding-top: 1vh;
     font-size: 28px;
     border-radius: 40px;
     height: 80%;
-
+    margin-left: -20vw;
+    width: 50vw;
 }
 .bottombuttonTobuy {
     display: flex;
     margin-top: 2vh;
-    margin-left: 3vw;
+    margin-left: 1vw;
     background-color: #e95955;
     padding-top: 1vh;
     font-size: 28px;
     border-radius: 40px;
     height: 80%;
+    width: 50vw;
 }
 .bottomRight {
     display: flex;
     flex-direction: row;
     margin-bottom: 1vh;
-}
-.imageHome {
-    margin-left: 0vw;
-}
-.imageService {
-    margin-left: 0vw;
-}
-.imageGoodscar {
-    margin-left: 0vw;
+    width: 40vw;
 }
