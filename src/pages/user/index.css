@@ -1,56 +1,55 @@
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
 }
 
 .at-avatar {
-    height: 12vh;
-    width: 12vh;
-    margin-bottom: 1vh;
+  height: 12vh;
+  width: 12vh;
+  margin-bottom: 1vh;
 }
 
 #nameCard {
-    background-color: #ff4949;
-    border-radius: 0 0 72px 72px;
-    height: 28vh;
-    display: flex;
-    flex-flow: column;
-    justify-content: center;
-    align-items: center;
+  background-color: #ff4949;
+  border-radius: 0 0 72px 72px;
+  height: 28vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
 }
 
 #name {
-    color: white;
-    font-size: 2.6vh;
-    margin-bottom: 1vh;
+  color: white;
+  font-size: 2.6vh;
+  margin-bottom: 1vh;
 }
 
 #phone {
-    color: white;
-    font-size: 2vh;
-    margin-bottom: 2vh;
+  color: white;
+  font-size: 2vh;
+  margin-bottom: 2vh;
 }
 
 #content {
-    margin-top: -4vh;
-    width: 100%;
-    flex: 1;
-    display: flex;
-    flex-flow: column;
+  margin-top: -4vh;
+  width: 100%;
+  flex: 1;
+  display: flex;
+  flex-flow: column;
 }
 
 #activity {
-    height: 32vh;
-    border-radius: 20px 20px 20px 20px;
-    margin-bottom: 4vw;
-    margin-left: 4vw;
-    margin-right: 4vw;
+  height: 32vh;
+  border-radius: 20px 20px 20px 20px;
+  margin-bottom: 4vw;
+  margin-left: 4vw;
+  margin-right: 4vw;
 }
 
 .technicalSupport {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-top: 1vh;
-    margin-bottom: 1vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
-

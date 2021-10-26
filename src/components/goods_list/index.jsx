@@ -45,7 +45,6 @@ class GoodsList extends React.Component {
                         title={e.title}
                         imageSrc={e.images}
                         price={e.price}
-                        inventory={e.inventory}
                         marketPrice={e.marketPrice}
                         type={this.state.selectKey}
                     />

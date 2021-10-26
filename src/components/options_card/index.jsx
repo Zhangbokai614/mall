@@ -19,20 +19,26 @@ class OptionsCard extends React.Component {
 
     headHandleClick() {
         Taro.navigateTo({
-            url: this.props.headNavigatePath
+            url: this.state.headNavigatePath
+        })
+    }
+
+    optionHandleClick(index) {
+        Taro.navigateTo({
+            url: this.state.content[index].path
         })
     }
 
     render() {
         const cardContent = this.state.content === undefined ? null : this.state.content.map((e, index) => {
             return (
-                <View className='option' key={index}>
+                <View className='option' key={index} onClick={this.optionHandleClick.bind(this, index)}>
                     <Image
                         className='optionIcon'
                         src={e.icon}
                         mode='aspectFit'
                     />
-                    <View className='optionText .at-article__h3'>
+                    <View className='at-article__h3'>
                         {e.text}
                     </View>
                 </View>
@@ -45,9 +51,9 @@ class OptionsCard extends React.Component {
                     {this.state.title}
                     {
                         this.state.headNavigate
-                            ? <View className='at-article__h3' onClick={this.headHandleClick.bind(this)}>
+                            ? <View className='headNavigateText' onClick={this.headHandleClick.bind(this)}>
                                 {this.state.headNavigateText}
-                                <AtIcon value='chevron-right' size='18' color='#000'></AtIcon>
+                                <AtIcon value='chevron-right' size='12' color='#000'></AtIcon>
                             </View>
                             : null
                     }

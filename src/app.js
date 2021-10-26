@@ -11,17 +11,39 @@ import languages from './asset/languages/zn-cn.json'
 
 class App extends Component {
 
-  componentWillMount() {
+  componentDidShow() {
     Set('languages', languages)
 
-    try {
-      const res = Taro.getSystemInfoSync()
+    Taro.checkSession({
+      success: function () {
+      },
+      fail: this.login()
+    })
+  }
 
-      Set('windowHeight', res.windowHeight)
-      Set('windowWidth', res.windowWidth)
-    } catch (e) {
-      console.log(e)
-    }
+  login() {
+    Taro.login({
+      success: function (res) {
+        if (res.code) {
+          Taro.request({
+            method: 'POST',
+            url: 'http://192.168.0.46:8000/api/v1/user/login',
+            data: {
+              code: res.code
+            },
+            success: (res) => {
+              console.log(res)
+              Taro.setStorage({
+                key: "userToken",
+                data: res.data.token
+              })
+            },
+          })
+        } else {
+          console.log(res.errMsg)
+        }
+      }
+    })
   }
 
   render() {

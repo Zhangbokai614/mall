@@ -1,25 +1,25 @@
 .at-noticebar {
-    width:100%
+  width: 100%
 }
 
 .card {
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
 }
 
 #posters {
-    border-radius: 0 0 50px 50px;
-    margin-bottom: 1vh;
+  border-radius: 0 0 50px 50px;
+  margin-bottom: 1vh;
 }
 
 #activitys {
-    padding-right: 2vw;
-    padding-left: 2vw;
+  padding-right: 2vw;
+  padding-left: 2vw;
 }
 
 #activity {
-    height: 32vh;
-    border-radius: 20px 20px 20px 20px;
-    margin-bottom: 1vh;
-    margin-left: 2vw;
-    margin-right: 2vw;
+  height: 32vh;
+  border-radius: 20px 20px 20px 20px;
+  margin-bottom: 1vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
 }

@@ -22,6 +22,13 @@
   border-bottom: 4px solid #e2e2e2;
 }
 
+.headNavigateText {
+  font-size: 3vw;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
 #cardContent {
   border-radius: 0px 0px 40px 40px;
   height: 18vh;
@@ -35,7 +42,7 @@
 .option {
   display: flex;
   flex-flow: column;
-  justify-content: center;
+  justify-content: space-between;
   align-items: center;
 }
 

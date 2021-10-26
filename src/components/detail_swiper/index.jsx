@@ -4,25 +4,24 @@ import { Swiper, SwiperItem } from '@tarojs/components'
 
 import "./index.css"
 class SwiperPosters extends React.Component {
-    
     render() {
         const { images } = this.props
         const element = images.map((e, index) => {
             return (
                 <SwiperItem key={index}>
-                    <View className='b'>
                         <Image 
+                            className=''
                             src={e}
-                            style='width: 100vw; height: 100wh; background: #fff;'
+                            style='width: 100%; height:100%; background: #fff;'
+                            mode='aspectFit'
                             />
-                            </View>
                 </SwiperItem>
             )
         })
 
         return (
             <Swiper
-                className='shadow-lg'
+            className='swiper'
                 indicatorColor='#999'
                 indicatorActiveColor='#333'
                 circular
