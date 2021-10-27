@@ -18,7 +18,7 @@ class GoodsCard extends React.Component {
 
     handleClick() {
         Taro.navigateTo({
-            url: '/pages/detail/index?id=' + this.state.id + '&&type=' + this.state.type
+            url: '/pages/detail/index?id=' + this.state.id
         })
     }
 
@@ -51,8 +51,8 @@ class GoodsCard extends React.Component {
                             <View className='shpingCartIconBox'>
                                 <Image
                                     src={cart}
-                                    style='height: 62%'
-                                    mode='heightFix'
+                                    style='height: 3.2vh; width: 3.2vh'
+                                    mode='aspectFill'
                                 />
                             </View>
                         </View>
@@ -87,8 +87,8 @@ class GoodsCard extends React.Component {
                         <View className='shpingCartIconBox'>
                             <Image
                                 src={cart}
-                                style='height: 62%'
-                                mode='heightFix'
+                                // style='height: 3.2vh; width: 3.2vh'
+                            mode='aspectFit'
                             />
                         </View>
                     </View>

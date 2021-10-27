@@ -13,9 +13,9 @@ export default class Index extends Component {
   constructor(props) {
     super(props)
     this.state = {
-      current: 0,
-      goodsInfo: {},
+      focusCardInfo: [],
       noticebar: '',
+      posters: '',
       activity: '',
       loading: true
     }
@@ -34,12 +34,12 @@ export default class Index extends Component {
       title: Get('languages').loading,
     })
 
-    const goodsInfo = await homeApi.goodsInfo()
+    const focusCardInfo = await homeApi.focus()
     const noticebar = await homeApi.noticebar()
     const homeImages = await homeApi.homeImages()
 
     this.setState({
-      goodsInfo: goodsInfo.data,
+      focusCardInfo: focusCardInfo.data,
       noticebar: noticebar.data,
       posters: homeImages.data.posters,
       activity: homeImages.data.activity,
@@ -50,32 +50,19 @@ export default class Index extends Component {
   }
 
   render() {
-    const info = this.state.goodsInfo
-    const type = Object.keys(info)
-    let key = 0
-    let goodsListInfo = []
+    const focusCardInfo = this.state.focusCardInfo
 
-    const focusList = type.map((t) => {
-      goodsListInfo[t] = []
-      return info[t].map((e) => {
-        key += 1
-        if (e.focus && e.inventory !== 0) {
-          return (
-            <GoodsCard
-              key={e.id}
-              id={e.id}
-              focus={e.focus}
-              title={e.title}
-              imageSrc={e.images}
-              price={e.price}
-              marketPrice={e.marketPrice}
-              type={t}
-            />
-          )
-        } else if (!e.focus && e.inventory !== 0) {
-          goodsListInfo[t].push(e)
-        }
-      })
+    const focusCard = focusCardInfo.map((e) => {
+      return (
+        <GoodsCard
+          key={e.id}
+          id={e.id}
+          focus={true}
+          title={e.title}
+          imageSrc={e.images[0]}
+          price={e.price}
+        />
+      )
     })
 
     return (
@@ -106,10 +93,9 @@ export default class Index extends Component {
               src={this.state.activity}
               mode='widthFix'
             />
-            {focusList}
+            {focusCard}
           </View>
-
-          <GoodsList listInfo={goodsListInfo} />
+          <GoodsList/>
         </View>
     )
   }
