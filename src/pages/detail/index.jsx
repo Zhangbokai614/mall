@@ -1,9 +1,10 @@
 import React, { Component } from "react"
-import { View } from "@tarojs/components"
+import { View, Image } from "@tarojs/components"
 import Taro from "@tarojs/taro"
 import { getCurrentInstance } from '@tarojs/taro'
 import { AtDivider } from 'taro-ui'
 
+import Vertical from '../../asset/images/icon/vertical.png'
 import { SwiperPosters } from "../../components/detail_swiper"
 import { GoodsSelection } from "../../components/at_radio/index"
 import { Bottomdetail } from "../../components/detail_bottom/index"
@@ -84,6 +85,12 @@ export default class Index extends Component {
                     </View>
                     <View className='detailAfterSales'>
                         <View className='afterSales'>
+                            <Image
+                                className="vertical"
+                                src={Vertical}
+                                style='width:2vw; height:10vw;'
+                            >
+                            </Image>
                             <View className='afterSalesTitle'>
                                 {Get('languages').afterSales}
                             </View>
