@@ -82,7 +82,11 @@ export default class Index extends Component {
       this.state.loading
         ? null
         : <View id='root'>
-          <AtNoticebar marquee icon='volume-plus'>
+          <AtNoticebar
+            marquee
+            icon='volume-plus'
+            speed='30'
+          >
             {this.state.noticebar}
           </AtNoticebar>
 

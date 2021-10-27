@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { AtAvatar, AtCurtain, AtInput, AtModal, AtModalHeader, AtModalContent, AtModalAction } from 'taro-ui'
+import { AtButton, AtAvatar, AtInput, AtModal, AtModalHeader, AtModalContent, AtModalAction } from 'taro-ui'
 
 import { Get } from '../../global-data/index'
 import { OptionsCard } from '../../components/options_card'
@@ -122,15 +122,6 @@ export default class Index extends Component {
             <View id='phone' onClick={this.handleChange.bind(this)}>
               {this.state.phone}
             </View>
-            <AtCurtain
-              isOpened={this.state.isOpened}
-              onClose={this.onClose.bind(this)}
-            >
-              <AtInput
-                type='number'
-                placeholder={Get('languages').inputPhone}
-              />
-            </AtCurtain>
           </View>
           <View id='content'>
             <OptionsCard
@@ -152,10 +143,25 @@ export default class Index extends Component {
               content={commonCardContent}
             />
           </View>
-
           <View className='.at-article__info technicalSupport'>
             {Get('languages').technicalSupport}
           </View>
+
+          <AtModal
+            isOpened={this.state.isOpened}
+            onClose={this.onClose.bind(this)}
+          >
+            <AtModalHeader>标题</AtModalHeader>
+            <AtModalContent>
+              <AtInput
+                type='number'
+                placeholder={Get('languages').inputPhone}
+              />
+            </AtModalContent>
+            <AtModalAction>
+              <AtButton>确定</AtButton>
+            </AtModalAction>
+          </AtModal>
         </View>
     )
   }

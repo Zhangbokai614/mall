@@ -9,8 +9,7 @@ class SwiperPosters extends React.Component {
         const element = images.map((e, index) => {
             return (
                 <SwiperItem key={index}>
-                        <Image 
-                            className=''
+                        <Image
                             src={e}
                             style='width: 100%; height:100%; background: #fff;'
                             mode='aspectFit'

@@ -1,13 +1,13 @@
-.at-noticebar {
-  width: 100%
-}
+/* .at-noticebar {
+  width: 100vw;
+} */
 
 .card {
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
 }
 
 #posters {
-  border-radius: 0 0 64px 64px;
+  border-radius: 0 0 100px 100px;
   margin-bottom: 1vh;
 }
 
