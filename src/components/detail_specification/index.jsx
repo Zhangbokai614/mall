@@ -8,7 +8,18 @@ import './index.css'
 
 class Specification extends React.Component {
 
+    constructor(props) {
+        super(props)
+        this.state = {
+            id: this.props.id,
+            type: this.props.type
+        }
+    }
+
     render() {
+
+        const { id, productionCode, standardCode, shelfLife } = this.props
+
         return (
             <View className='detailSpecification'>
                 <View className='goodsSpecification'>
@@ -25,6 +36,9 @@ class Specification extends React.Component {
                 <AtDivider />
                 <View className='goodsDetaiInfo'>
                     {Get('languages').goodsId}
+                </View>
+                <View>
+              {id}
                 </View>
                 <View className='goodsDetaiInfo'>
                     {Get('languages').productionLicense}
