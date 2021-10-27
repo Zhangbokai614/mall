@@ -88,7 +88,7 @@ export default class Index extends Component {
                             <Image
                                 className="vertical"
                                 src={Vertical}
-                                style='width:2vw; height:10vw;'
+                                style='width:2vw; height:9vw;'
                             >
                             </Image>
                             <View className='afterSalesTitle'>
