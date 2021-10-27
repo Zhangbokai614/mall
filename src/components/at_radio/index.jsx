@@ -1,6 +1,7 @@
 import { View, Image, Text } from '@tarojs/components'
 import React from 'react'
 import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList } from 'taro-ui'
+import { getCurrentInstance } from '@tarojs/taro'
 
 import { Get } from '../../global-data/index'
 import Fruit from '../../asset/images/icon/fruit.png'
@@ -13,6 +14,9 @@ class GoodsSelection extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
+            current: 0,
+            goodsInfo: {},
+            loading: true,
             atButtonSelect: false,
             atButtonDistribution: false,
             atButtonService: false,
@@ -69,6 +73,33 @@ class GoodsSelection extends React.Component {
                 atButtonService: true,
             })
     };
+
+    componentDidMount() {
+        this.loading()
+    }
+
+    componentDidShow() {
+        this.loading()
+    }
+
+    async loading() {
+        Taro.showLoading({
+            title: Get('languages').loading,
+        })
+
+        const goodsInfo = await homeApi.goodsInfo()
+        const { id, type } = getCurrentInstance().router.params
+        this.setState({
+            goodsInfo: goodsInfo.data[type].filter((e) => e.id === +id),
+            loading: false,
+        })
+        Taro.hideLoading()
+    }
+
+    componentDidMount() {
+        console.log(getCurrentInstance().router.params)
+    }
+
 
     goHref = (type) => {
         switch (type) {
