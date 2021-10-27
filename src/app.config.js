@@ -17,9 +17,9 @@ export default {
   },
 
   tabBar: {
-    color: "rgba(68, 68, 68, 1)",
+    color: "#bfbfbf",
     selectedColor: "#ff4949",
-    backgroundColor: "white",
+    backgroundColor: "#ffffff",
     list: [
       {
         pagePath: "pages/home/index",

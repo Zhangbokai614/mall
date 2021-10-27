@@ -35,7 +35,7 @@ class GoodsCard extends React.Component {
                         mode='aspectFill'
                     />
                     <View className='focusInfo'>
-                        <View className='.at-article__h1 focusTitle'>
+                        <View className='focusTitle'>
                             {title}
                         </View>
                         <View id='focusInfoText'>
@@ -46,14 +46,15 @@ class GoodsCard extends React.Component {
                                 <View className='.at-article__h2 price'>
                                     {price}
                                 </View>
-                                <AtTag className='.at-article__h2' active='false' circle>tag</AtTag>
+                                <AtTag className='.at-article__h2' active='false'>tag</AtTag>
                             </View>
-                            <Image
-                                className='shoping-cart-icon'
-                                src={cart}
-                                style='height: 4vh'
-                                mode='heightFix'
-                            />
+                            <View className='shpingCartIconBox'>
+                                <Image
+                                    src={cart}
+                                    style='height: 62%'
+                                    mode='heightFix'
+                                />
+                            </View>
                         </View>
                     </View>
                 </View>
@@ -64,13 +65,15 @@ class GoodsCard extends React.Component {
                         src={imageSrc}
                         mode='aspectFit'
                     />
-                    <View className='.at-article__h1 cardTitle'>
+                    <View className='cardTitle'>
                         {title}
                     </View>
                     {
                         inventory > 4000
                             ? <View></View>
-                            : <AtTag className='goodsCardTag' active='false' circle>tag</AtTag>
+                            : <View className='goodsCardTagBox'>
+                                <AtTag className='goodsCardTag' active='false'>tag</AtTag>
+                            </View>
                     }
                     <View id='goodsInfoText'>
                         <View id='price'>
@@ -81,11 +84,10 @@ class GoodsCard extends React.Component {
                                 {price}
                             </View>
                         </View>
-                        <View>
+                        <View className='shpingCartIconBox'>
                             <Image
-                                className='shoping-cart-icon'
                                 src={cart}
-                                style='height: 80%'
+                                style='height: 62%'
                                 mode='heightFix'
                             />
                         </View>

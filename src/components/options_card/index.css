@@ -47,7 +47,12 @@
 }
 
 .optionIcon {
-  height: 5.2vh;
-  width: 5.2vh;
+  height: 4.8vh;
+  width: 4.8vh;
   margin-bottom: 2vh;
+}
+
+.cardContentText {
+  font-weight: normal;
+  font-size: 3.2vw;
 }

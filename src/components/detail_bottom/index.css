@@ -35,13 +35,14 @@
     width: 10vw;
     border: none;
 }
+
 .bottonLeft {
     display: flex;
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
 }
- 
+
 .bottombuttonCar {
     display: flex;
     margin-top: 2vh;
@@ -53,6 +54,7 @@
     margin-left: -20vw;
     width: 50vw;
 }
+
 .bottombuttonTobuy {
     display: flex;
     margin-top: 2vh;
@@ -64,6 +66,7 @@
     height: 80%;
     width: 50vw;
 }
+
 .bottomRight {
     display: flex;
     flex-direction: row;

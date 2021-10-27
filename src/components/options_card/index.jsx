@@ -38,7 +38,7 @@ class OptionsCard extends React.Component {
                         src={e.icon}
                         mode='aspectFit'
                     />
-                    <View className='at-article__h3'>
+                    <View className='cardContentText'>
                         {e.text}
                     </View>
                 </View>

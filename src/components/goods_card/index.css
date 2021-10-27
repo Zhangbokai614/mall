@@ -47,6 +47,11 @@
   text-align: left;
   overflow: hidden;
   margin-bottom: 1vh;
+  font-size: 4vw;
+  font-weight: 500;
+  text-indent: 1px;
+  letter-spacing: 0.46vw;
+  padding: 2vw;
 }
 
 .cardTitle {
@@ -55,6 +60,10 @@
   -webkit-line-clamp: 2;
   text-align: left;
   overflow: hidden;
+  font-size: 4vw;
+  font-weight: 500;
+  letter-spacing: 0.46vw;
+  padding: 2vw;
 }
 
 #focusInfoText {
@@ -75,17 +84,17 @@
 
 .price {
   color: #ff4949;
-  font-weight: bold;
-  font-size: 3.2vh;
+  font-weight: bolder;
+  font-size: 4.4vw;
   margin-bottom: 0.8vh;
 }
 
 .cny {
-  font-weight: 800;
-  font-size: 2vh;
+  font-weight: bold;
+  font-size: 3.2vw;
   color: #ff4949;
   margin-right: -1.4vh;
-  margin-bottom: 0.8vh;
+  margin-bottom: 0.4vh;
 }
 
 #price {
@@ -93,14 +102,21 @@
   flex-flow: row;
 }
 
-.shoping-cart-icon {
+.shpingCartIconBox {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
   align-items: flex-end;
   margin-right: 2vh;
-  margin-top: 0.8vh;
+}
+
+.goodsCardTagBox {
+  display: flex;
+  width: 100%;
 }
 
 .goodsCardTag {
-  width: 33%;
+  flex-shrink: inherit;
   margin-left: 2vw;
-  margin-top: 0.4vh;
+  border-radius: 10px;
 }

@@ -95,9 +95,9 @@ class Bottomdetail extends React.Component {
                         </View>
                     </View>
                 </AtButton>
-                <AtButton
+                <button
                     className='bottomLeftService' id='service'
-                    open-type="contact" 
+                    open-type="contact"
                     bindcontact="handleContact"
                     >
                     <View className='bottonLeft'>
@@ -110,7 +110,7 @@ class Bottomdetail extends React.Component {
                             {Get('languages').customerService}
                         </View>
                     </View>
-                </AtButton>
+                </button>
                 <AtButton
                     className='bottomLeftGoodscar'
                     id='goodscar'
