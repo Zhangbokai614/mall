@@ -3,9 +3,9 @@
     text-align: left;
     font-size: 30px;
     background-color: white;
-    margin-top: 1vh;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
 }
+
 .goodscar {
     background-color:#4CAF50;
     color: black;
@@ -14,6 +14,7 @@
     font-size: 30px;
     width: 50%;
 }
+
 .confirm {
     display: flex;
     align-items: center;
@@ -23,6 +24,7 @@
     font-size: 30px;
     width: 50%;
 }
+
 .textService {
     display: flex;
     align-items: center;
@@ -30,33 +32,52 @@
     margin-left: 2vw;
     width: 8vw;
 }
+
 .imageFruit {
-    margin-top: 24px;
     margin-left: 6vw;
-}
-.imageFree {
-    margin-top: 24px;
-    margin-left: 4vw;
-}
-.imageSevenDays {
-    margin-top: 24px;
-    margin-left: 4vw;
-}
-.serviceList {
-    margin-top: 1vh;
     display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.imageFree {
+    margin-left: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.imageSevenDays {
+    margin-left: 4vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+}
+
+.serviceList {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
     flex-direction: row;
     background-color: white;
     height: 6vh;
+    margin-left: -7vw;
     text-align: left;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
 }
+
 .serviceDetail {
     margin-left: 2vw;
     display: flex;
-    align-items: center;
+    justify-content: center;
+    align-items: center;     
     font-size: 25px;
 }
+
 .at-Floatlayout {
     z-index: 200;
+}
+
+.goodsSelection {
+    margin-top: 1vh;
 }

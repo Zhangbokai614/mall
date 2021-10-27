@@ -1,7 +1,8 @@
 import React, { Component } from "react"
-import { View, Text } from "@tarojs/components"
+import { View } from "@tarojs/components"
 import Taro from "@tarojs/taro"
 import { getCurrentInstance } from '@tarojs/taro'
+import { AtDivider } from 'taro-ui'
 
 import { SwiperPosters } from "../../components/detail_swiper"
 import { GoodsSelection } from "../../components/at_radio/index"
@@ -9,7 +10,6 @@ import { Bottomdetail } from "../../components/detail_bottom/index"
 import { Specification } from "../../components/detail_specification/index"
 import { ProductEvaluation } from "../../components/detail_evaluation/index"
 import { Introduction } from "../../components/detail_introduction/index"
-import { AfterSales } from "../../components/detail_aftersales"
 import * as homeApi from './service'
 import "./index.css"
 import { Get } from "../../global-data/index"
@@ -82,8 +82,20 @@ export default class Index extends Component {
                     <View>
                         <Introduction />
                     </View>
-                    <View>
-                        <AfterSales />
+                    <View className='detailAfterSales'>
+                        <View className='afterSales'>
+                            <View className='afterSalesTitle'>
+                                {Get('languages').afterSales}
+                            </View>
+                        </View>
+                        <AtDivider />
+                        <View className='afterSalesText'>
+                            {Get('languages').afterSalesDetail}
+                        </View>
+                        <View className='afterSalesText'>
+                            {Get('languages').freeMoney}
+                            {Get('languages').afterSalesFree}
+                        </View>
                     </View>
                     <Bottomdetail />
                 </View>

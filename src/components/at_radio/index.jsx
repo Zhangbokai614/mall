@@ -113,7 +113,7 @@ class GoodsSelection extends React.Component {
                             isOpened={this.state.atButtonSelect}
                             onClose={this.handleClickSelect.bind(this)}
                             title={Get('languages').goodsSelection}
-                            >
+                        >
                             <AtRadio
                                 options={[
                                     { label: '', value: 'option1', },
@@ -141,72 +141,76 @@ class GoodsSelection extends React.Component {
                     </AtList>
                 </View>
                 <View className='distribution'>
-                    <AtListItem
-                        className='radioList'
-                        title={Get('languages').distribution}
-                        onClick={this.handleClickDistribution.bind(this)}
-                        arrow='right'
-                    />
-                    <AtFloatLayout
-                        isOpened={this.state.atButtonDistribution}
-                        onClose={this.handleClickDistribution.bind(this)}
-                        title={Get('languages').deliveryTo}
-                    >
-                        <AtRadio
-                            options={[
-                                { label: '', value: 'option1', },
-                                { label: '', value: 'option2', }
-                            ]}
-                            value={this.state.distribution}
-                            onClick={this.handleChangeDistribution.bind(this)}
+                    <AtList>
+                        <AtListItem
+                            className='radioList'
+                            title={Get('languages').distribution}
+                            onClick={this.handleClickDistribution.bind(this)}
+                            arrow='right'
                         />
-                    </AtFloatLayout>
+                        <AtFloatLayout
+                            isOpened={this.state.atButtonDistribution}
+                            onClose={this.handleClickDistribution.bind(this)}
+                            title={Get('languages').deliveryTo}
+                        >
+                            <AtRadio
+                                options={[
+                                    { label: '', value: 'option1', },
+                                    { label: '', value: 'option2', }
+                                ]}
+                                value={this.state.distribution}
+                                onClick={this.handleChangeDistribution.bind(this)}
+                            />
+                        </AtFloatLayout>
+                    </AtList>
                 </View>
                 <View className='service'>
-                    <View
-                        className='serviceList'
-                        onClick={this.handleClickService.bind(this)}
-                    >
-                        <View className='textService'>
-                            <Text >
-                                {Get('languages').service}
-                            </Text>
-                        </View>
+                    <AtList>
+                        <View
+                            className='serviceList'
+                            onClick={this.handleClickService.bind(this)}
+                        >
+                            <View className='textService'>
+                                <Text >
+                                    {Get('languages').service}
+                                </Text>
+                            </View>
 
-                        <Image
-                            className='imageFruit'
-                            src={Fruit}
-                            style='width:20px; height:20px;'
-                        />
-                        <View className='serviceDetail'>
-                            {Get('languages').compensation}
-                            </View>   
-                        <Image
-                            className='imageFree'
-                            src={FreeMoney}
-                            style='width:20px; height:20px;'
-                        />
-                        <View className='serviceDetail'>
-                            {Get('languages').freeMoney}
+                            <Image
+                                className='imageFruit'
+                                src={Fruit}
+                                style='width:5vw; height:5vw;'
+                            />
+                            <View className='serviceDetail'>
+                                {Get('languages').compensation}
+                            </View>
+                            <Image
+                                className='imageFree'
+                                src={FreeMoney}
+                                style='width:5vw; height:5vw;'
+                            />
+                            <View className='serviceDetail'>
+                                {Get('languages').freeMoney}
+                            </View>
+                            <Image
+                                className='imageSevenDays'
+                                src={SevenDays}
+                                style='width:6vw; height: 6vw;'
+                            />
+                            <View className='serviceDetail'>
+                                {Get('languages').returnGoods}
+                            </View>
                         </View>
-                        <Image
-                            className='imageSevenDays'
-                            src={SevenDays}
-                            style='width:22px; height:22px;'
-                        />
-                        <View className='serviceDetail'>
-                            {Get('languages').returnGoods}
-                        </View>
-                    </View>
-                    <AtFloatLayout
-                        isOpened={this.state.atButtonService}
-                        onClose={this.handleClickService.bind(this)}                 
-                    >
-                        <AtRadio
-                            value={this.state.service}
-                            onClick={this.handleChangeService.bind(this)}
-                        />
-                    </AtFloatLayout>
+                        <AtFloatLayout
+                            isOpened={this.state.atButtonService}
+                            onClose={this.handleClickService.bind(this)}
+                        >
+                            <AtRadio
+                                value={this.state.service}
+                                onClick={this.handleChangeService.bind(this)}
+                            />
+                        </AtFloatLayout>
+                    </AtList>
                 </View>
             </View>
         )
