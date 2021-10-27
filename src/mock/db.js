@@ -17,9 +17,21 @@ module.exports = () => {
                 },
                 "title": '@csentence',
                 "inventory|0-10000": 10000,
-                "images": ['https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624772554-assets/web-upload/e5f89e0e-95e3-4874-bd7d-f9e35446299b.jpeg',
-                    Random.image('200x200', '#50B347', '#FFF', 'Mock'),
-                    Random.image('200x200', '#50AA47', '#FFF', 'Mock')
+                "images": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133351-assets/web-upload/ad357fa1-c2fc-4d57-9f62-3b47d6f53d93.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "detailImages": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715956-assets/web-upload/11bd94e9-8a08-44d8-8d81-c0df05ae1454.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715891-assets/web-upload/72a7b82d-7e76-4f86-be19-e2b8e0295b9a.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715991-assets/web-upload/1f8462d3-a9f0-4ac7-8682-ea332efb6806.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715995-assets/web-upload/d2ffd27e-7681-4718-bc67-e4c8f5b4a98c.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716031-assets/web-upload/25768f08-080a-4748-843e-bedbba4c5edf.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715981-assets/web-upload/b7214668-4e86-4d57-a657-4d7bba2755a6.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg"
                 ],
                 "focus|1-2": false,
                 "price|10-80": 80,
@@ -42,9 +54,20 @@ module.exports = () => {
                 "title": '@csentence',
                 "inventory|0-10000": 10000,
                 "images": [
-                    'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg',
-                    Random.image('200x200', '#50B347', '#FFF', 'Mock'),
-                    Random.image('200x200', '#50AA47', '#FFF', 'Mock')
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133351-assets/web-upload/ad357fa1-c2fc-4d57-9f62-3b47d6f53d93.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "detailImages": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715956-assets/web-upload/11bd94e9-8a08-44d8-8d81-c0df05ae1454.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715891-assets/web-upload/72a7b82d-7e76-4f86-be19-e2b8e0295b9a.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715991-assets/web-upload/1f8462d3-a9f0-4ac7-8682-ea332efb6806.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715995-assets/web-upload/d2ffd27e-7681-4718-bc67-e4c8f5b4a98c.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716031-assets/web-upload/25768f08-080a-4748-843e-bedbba4c5edf.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715981-assets/web-upload/b7214668-4e86-4d57-a657-4d7bba2755a6.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg"
                 ],
                 "focus": false,
                 "price|10-80": 80,
@@ -66,9 +89,21 @@ module.exports = () => {
                 },
                 "title": '@csentence',
                 "inventory|0-10000": 10000,
-                "images": ['https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624966034-assets/web-upload/62065657-0c31-43f8-87be-32fe1bcedc6e.jpeg',
-                    Random.image('200x200', '#50B347', '#FFF', 'Mock'),
-                    Random.image('200x200', '#50AA47', '#FFF', 'Mock')
+                "images": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133351-assets/web-upload/ad357fa1-c2fc-4d57-9f62-3b47d6f53d93.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "detailImages": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715956-assets/web-upload/11bd94e9-8a08-44d8-8d81-c0df05ae1454.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715891-assets/web-upload/72a7b82d-7e76-4f86-be19-e2b8e0295b9a.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715991-assets/web-upload/1f8462d3-a9f0-4ac7-8682-ea332efb6806.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715995-assets/web-upload/d2ffd27e-7681-4718-bc67-e4c8f5b4a98c.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716031-assets/web-upload/25768f08-080a-4748-843e-bedbba4c5edf.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715981-assets/web-upload/b7214668-4e86-4d57-a657-4d7bba2755a6.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg"
                 ],
                 "focus": false,
                 "price|10-80": 80,
@@ -90,9 +125,21 @@ module.exports = () => {
                 },
                 "title": '@csentence',
                 "inventory|0-10000": 10000,
-                "images": ['https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624970549-assets/web-upload/1feeadb1-9f70-4df2-89e8-90afb12cfa15.jpeg',
-                    Random.image('200x200', '#50B347', '#FFF', 'Mock'),
-                    Random.image('200x200', '#50AA47', '#FFF', 'Mock')
+                "images": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133351-assets/web-upload/ad357fa1-c2fc-4d57-9f62-3b47d6f53d93.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "detailImages": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715956-assets/web-upload/11bd94e9-8a08-44d8-8d81-c0df05ae1454.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715891-assets/web-upload/72a7b82d-7e76-4f86-be19-e2b8e0295b9a.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715991-assets/web-upload/1f8462d3-a9f0-4ac7-8682-ea332efb6806.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715995-assets/web-upload/d2ffd27e-7681-4718-bc67-e4c8f5b4a98c.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716031-assets/web-upload/25768f08-080a-4748-843e-bedbba4c5edf.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715981-assets/web-upload/b7214668-4e86-4d57-a657-4d7bba2755a6.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg"
                 ],
                 "focus": false,
                 "price|10-80": 80,
@@ -114,9 +161,21 @@ module.exports = () => {
                 },
                 "title": '@csentence',
                 "inventory|0-10000": 10000,
-                "images": ['https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624780002-assets/web-upload/ddb1742e-309c-4b5f-ad4b-de2b656e69db.jpeg',
-                    Random.image('200x200', '#50B347', '#FFF', 'Mock'),
-                    Random.image('200x200', '#50AA47', '#FFF', 'Mock')
+                "images": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133351-assets/web-upload/ad357fa1-c2fc-4d57-9f62-3b47d6f53d93.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "detailImages": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715956-assets/web-upload/11bd94e9-8a08-44d8-8d81-c0df05ae1454.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715891-assets/web-upload/72a7b82d-7e76-4f86-be19-e2b8e0295b9a.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715991-assets/web-upload/1f8462d3-a9f0-4ac7-8682-ea332efb6806.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715995-assets/web-upload/d2ffd27e-7681-4718-bc67-e4c8f5b4a98c.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716031-assets/web-upload/25768f08-080a-4748-843e-bedbba4c5edf.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715981-assets/web-upload/b7214668-4e86-4d57-a657-4d7bba2755a6.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg"
                 ],
                 "focus": true,
                 "price|10-80": 80,
@@ -138,9 +197,21 @@ module.exports = () => {
                 },
                 "title": '@csentence',
                 "inventory|0-10000": 10000,
-                "images": ['https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624973974-assets/web-upload/922f160e-4682-46a5-a11f-49cc55a263a0.jpeg',
-                    Random.image('200x200', '#50B347', '#FFF', 'Mock'),
-                    Random.image('200x200', '#50AA47', '#FFF', 'Mock')
+                "images": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133351-assets/web-upload/ad357fa1-c2fc-4d57-9f62-3b47d6f53d93.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "detailImages": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715956-assets/web-upload/11bd94e9-8a08-44d8-8d81-c0df05ae1454.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715891-assets/web-upload/72a7b82d-7e76-4f86-be19-e2b8e0295b9a.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715991-assets/web-upload/1f8462d3-a9f0-4ac7-8682-ea332efb6806.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715995-assets/web-upload/d2ffd27e-7681-4718-bc67-e4c8f5b4a98c.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716031-assets/web-upload/25768f08-080a-4748-843e-bedbba4c5edf.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715981-assets/web-upload/b7214668-4e86-4d57-a657-4d7bba2755a6.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg"
                 ],
                 "focus": false,
                 "price|10-80": 80,
