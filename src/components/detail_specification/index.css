@@ -1,13 +1,12 @@
 .detailSpecification {
     height: 30vh;
     text-align: left;
-    margin-top: 3vh;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.094);
 }
 .goodsSpecification {
-    font-size: 35px;
-    margin-top: 3vh;
+    font-size: 5vw;
+    margin-top: 2vh;
     margin-left: 4vw;
 }
 .goodsDetaiInfo {
