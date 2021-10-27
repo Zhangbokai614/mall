@@ -18,7 +18,7 @@ class Specification extends React.Component {
 
     render() {
 
-        const { id, productionCode, standardCode, shelfLife } = this.props
+        // const { id, productionCode, standardCode, shelfLife } = this.props
 
         return (
             <View className='detailSpecification'>
@@ -35,7 +35,7 @@ class Specification extends React.Component {
                 </View>
                 <AtDivider />
                 <View className='goodsDetaiInfo'>
-                    {Get('languages').goodsId}
+                    {/* {Get('languages').goodsId} */}
                 </View>
                 <View>
               {id}

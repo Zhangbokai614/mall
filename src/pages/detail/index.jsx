@@ -93,7 +93,7 @@ export default class Index extends Component {
                     <View
                         className="goodsintroduction"
                     >
-                        {postersImages[0].title}
+                        {info[0].title}
                     </View>
                     <View>
                         <GoodsSelection />
