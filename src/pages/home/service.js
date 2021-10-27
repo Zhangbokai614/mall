@@ -1,8 +1,8 @@
 import Request from '../../utils/request';
 
-export const goodsInfo = (data) => {
+export const focus = (data) => {
   return Request({
-    url: '/goodsInfo',
+    url: '/focus',
     method: 'GET',
     ...data
   });
@@ -18,7 +18,7 @@ export const noticebar = (data) => {
 
 export const homeImages = (data) => {
   return Request({
-    url: '/homeImages',
+    url: '/home_images',
     method: 'GET',
     ...data
   });

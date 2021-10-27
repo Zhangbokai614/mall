@@ -5,7 +5,116 @@ const Random = Mock.Random
 module.exports = () => {
 
     let data = Mock.mock({
-        "goodsInfo|1-12": [
+        "kind": ["综合推荐", "水果", "生鲜", "粮油", "海鲜", "其它"],
+        "focus": [
+            {
+                "kind": "综合推荐",
+                "id|+1": 1,
+                "title": '@csentence',
+                "images": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133351-assets/web-upload/ad357fa1-c2fc-4d57-9f62-3b47d6f53d93.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "price|10-80": 80,
+            },
+            {
+                "kind": "水果",
+                "id|+1": 200,
+                "title": '@csentence',
+                "images": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "price|10-80": 80,
+            },
+        ],
+        "goods_card|1-8": [
+            {
+                "kind": "综合推荐",
+                "id|+1": 1,
+                "title": '@csentence',
+                "images": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133351-assets/web-upload/ad357fa1-c2fc-4d57-9f62-3b47d6f53d93.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "price|10-80": 80,
+            },
+            {
+                "kind": "水果",
+                "id|+1": 200,
+                "title": '@csentence',
+                "images": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "price|10-80": 80,
+            },
+            {
+                "kind": "生鲜",
+                "id|+1": 300,
+                "title": '@csentence',
+                "images": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624966034-assets/web-upload/62065657-0c31-43f8-87be-32fe1bcedc6e.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "price|10-80": 80,
+            },
+            {
+                "kind": "粮油",
+                "id|+1": 400,
+                "title": '@csentence',
+                "images": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624970549-assets/web-upload/1feeadb1-9f70-4df2-89e8-90afb12cfa15.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "price|10-80": 80,
+            },
+            {
+                "kind": "海鲜",
+                "id|+1": 500,
+                "title": '@csentence',
+                "images": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624977744-assets/web-upload/680da5d6-7802-42be-8d12-29f3e28c9882.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "price|10-80": 80,
+            },
+            {
+                "kind": "其它",
+                "id|+1": 600,
+                "title": '@csentence',
+                "images": [
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624973974-assets/web-upload/922f160e-4682-46a5-a11f-49cc55a263a0.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1634624784015-assets/web-upload/dd93a2ab-a1eb-4ce6-bf8a-76751ad6de69.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133270-assets/web-upload/a04b49f4-112d-45c5-a82d-edf22a74a085.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/12696250-77d1-41d2-817e-6c518fd93c44.jpeg",
+                    "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg"
+                ],
+                "price|10-80": 80,
+            },
+        ],
+        "goods_info|1-8": [
             {
                 "kind": "综合推荐",
                 "id|+1": 1,
@@ -33,7 +142,6 @@ module.exports = () => {
                     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715981-assets/web-upload/b7214668-4e86-4d57-a657-4d7bba2755a6.jpeg",
                     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg"
                 ],
-                "focus|1-2": false,
                 "price|10-80": 80,
                 "sku": [
                     { "testA|10-20": 10 },
@@ -69,7 +177,6 @@ module.exports = () => {
                     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715981-assets/web-upload/b7214668-4e86-4d57-a657-4d7bba2755a6.jpeg",
                     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg"
                 ],
-                "focus": false,
                 "price|10-80": 80,
                 "sku": [
                     { "testA|10-20": 10 },
@@ -105,7 +212,6 @@ module.exports = () => {
                     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715981-assets/web-upload/b7214668-4e86-4d57-a657-4d7bba2755a6.jpeg",
                     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg"
                 ],
-                "focus": false,
                 "price|10-80": 80,
                 "sku": [
                     { "testA|10-20": 10 },
@@ -141,7 +247,6 @@ module.exports = () => {
                     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715981-assets/web-upload/b7214668-4e86-4d57-a657-4d7bba2755a6.jpeg",
                     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg"
                 ],
-                "focus": false,
                 "price|10-80": 80,
                 "sku": [
                     { "testA|10-20": 10 },
@@ -177,7 +282,6 @@ module.exports = () => {
                     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715981-assets/web-upload/b7214668-4e86-4d57-a657-4d7bba2755a6.jpeg",
                     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg"
                 ],
-                "focus": true,
                 "price|10-80": 80,
                 "sku": [
                     { "testA|10-20": 10 },
@@ -213,7 +317,6 @@ module.exports = () => {
                     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715981-assets/web-upload/b7214668-4e86-4d57-a657-4d7bba2755a6.jpeg",
                     "https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg"
                 ],
-                "focus": false,
                 "price|10-80": 80,
                 "sku": [
                     { "testA|10-20": 10 },
@@ -224,7 +327,7 @@ module.exports = () => {
             },
         ],
         "noticebar": ["因部分地区疫情，无法收寄快递影响物流，给您带来的不便敬请谅解，详细了解请联系客服。"],
-        "homeImages": {
+        "home_images": {
             "posters": 'https://cdn.nlark.com/yuque/0/2021/png/660331/1634622259552-assets/web-upload/268743d4-25d3-4753-8442-e1759a3e22e0.png',
             "activity": 'https://cdn.nlark.com/yuque/0/2021/png/660331/1634622273241-assets/web-upload/44716d8c-a3cb-43a3-ad88-7491fe01059b.png'
         }
