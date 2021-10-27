@@ -55,15 +55,39 @@ export default class Index extends Component {
 
     render() {
 
-        const postersImages = this.state.goodsInfo
-        console.log(postersImages)
+        const info = this.state.goodsInfo
+        const type = Object.keys(info)
+        let key = 0
+        let goodsListInfo = []
+    
+        const focusList = type.map((t) => {
+          goodsListInfo[t] = []
+          return info[t].map((e) => {
+            key += 1
+            if (e.focus && e.inventory !== 0) {
+              return (
+                <Specification
+                  key={e.id}
+                  id={e.id}
+                  productionCode={e.production_code}
+                  standardCode={e.standard_code}
+                  shelfLife={e.shelf_life}
+                  type={t}
+                />
+              )
+            } else if (!e.focus && e.inventory !== 0) {
+              goodsListInfo[t].push(e)
+            }
+          })
+        })
+
         return (
             this.state.loading
                 ? null
                 : <View className="index">
                     <View className="images">
                         <SwiperPosters
-                            images={postersImages[0].images}
+                            images={info[0].images}
                         />
                     </View>
                     <View
@@ -75,7 +99,11 @@ export default class Index extends Component {
                         <GoodsSelection />
                     </View>
                     <View >
-                        <Specification />
+                        <Specification 
+                        id={postersImages[0].id}
+                        productionCode={postersImages[0].production_code}
+                        standardCode={postersImages[0].shelf_life}
+                        />
                     </View>
                     <View>
                         <ProductEvaluation />
@@ -88,7 +116,7 @@ export default class Index extends Component {
                             <Image
                                 className="vertical"
                                 src={Vertical}
-                                style='width:2vw; height:10vw;'
+                                style='width:2vw; height:9vw;'
                             >
                             </Image>
                             <View className='afterSalesTitle'>

@@ -12,7 +12,7 @@
 }
 
 .detailAfterSales {
-    height: 28vh;
+    height: 35vh;
     text-align: left;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.094);
@@ -20,6 +20,7 @@
 
 .afterSales {
     font-size: 5vw;
+    height: 20%;
     display: flex;
     align-items: center;
     margin-top: 2vh;
