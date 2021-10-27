@@ -4,33 +4,46 @@
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.094);
 }
+
 .productEvaluation {
     font-size: 5vw;
     margin-top: 2vh;
+    height: 20%;
     display: flex;
     align-items: center;
     margin-left: 4vw;
 }
+
 .evaluationdetail {
     margin-left: 4vw;
     margin-right: 12vw;
 }
+
 .evaluationTitle {
     padding-top: 4vh;
 }
+
 .starsdetail {
     display: flex;
     flex-direction: row;
     align-items: center;
     margin-top: 1vh;
 }
+
 .stars {
     margin-left: 12vw;
     
 }
+
 .starInterval {
     margin-left: 4vw;
 }
+
 .score {
     margin-left: 4vw;
+}
+
+.vertical {
+    margin-top: 5vw;
+    margin-right: 4vw;
 }
