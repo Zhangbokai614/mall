@@ -1,7 +1,6 @@
 import { View, Image, Text } from '@tarojs/components'
 import React from 'react'
 import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList } from 'taro-ui'
-import { getCurrentInstance } from '@tarojs/taro'
 
 import { Get } from '../../global-data/index'
 import Fruit from '../../asset/images/icon/fruit.png'
@@ -14,9 +13,6 @@ class GoodsSelection extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            current: 0,
-            goodsInfo: {},
-            loading: true,
             atButtonSelect: false,
             atButtonDistribution: false,
             atButtonService: false,
@@ -74,33 +70,6 @@ class GoodsSelection extends React.Component {
             })
     };
 
-    componentDidMount() {
-        this.loading()
-    }
-
-    componentDidShow() {
-        this.loading()
-    }
-
-    async loading() {
-        Taro.showLoading({
-            title: Get('languages').loading,
-        })
-
-        const goodsInfo = await homeApi.goodsInfo()
-        const { id, type } = getCurrentInstance().router.params
-        this.setState({
-            goodsInfo: goodsInfo.data[type].filter((e) => e.id === +id),
-            loading: false,
-        })
-        Taro.hideLoading()
-    }
-
-    componentDidMount() {
-        console.log(getCurrentInstance().router.params)
-    }
-
-
     goHref = (type) => {
         switch (type) {
             case '01':
@@ -131,6 +100,17 @@ class GoodsSelection extends React.Component {
     };
     render() {
 
+        const { sku } = this.props
+        const infoSku = sku.map((e, index) => {
+            console.log(e)
+            return (
+
+                <AtButton
+                    className='skuButton'
+                    key={index}
+                    onClick={(e) => this.bind(e)}></AtButton>
+            )
+        })
         return (
             <View className='atradio'>
                 <View className='goodsSelection'>
@@ -144,26 +124,26 @@ class GoodsSelection extends React.Component {
                             isOpened={this.state.atButtonSelect}
                             onClose={this.handleClickSelect.bind(this)}
                             title={Get('languages').goodsSelection}
+                            className='floatlayoutbutton'
+                            height='high'
                         >
-                            <AtRadio
-                                options={[
-                                    { label: '', value: 'option1', },
-                                    { label: '', value: 'option2', },
-                                    { label: '', value: 'option3', }
-                                ]}
-                                value={this.state.select}
-                                onClick={this.handleChangeSelect.bind(this)}
-                            />
+                            <View className='floatlayoutHeight'>
+                                <View className='kindTitle'>
+                                    {Get('languages').kind}
+                                </View>
+                                <View className='skudetail'>
+                                    {infoSku}
+                                </View>
+                            </View>
                             <AtButton
                                 className='goodscar'
-                                circle='true'
                                 onClick={this.goHref.bind(this, '01')}
                             >
                                 {Get('languages').addcar}
                             </AtButton>
                             <AtButton
                                 className='confirm'
-                                circle='true'
+
                                 onClick={this.goHref.bind(this, '04')}
                             >
                                 {Get('languages').tobuy}

@@ -18,7 +18,7 @@ class Specification extends React.Component {
 
     render() {
 
-        // const { id, productionCode, standardCode, shelfLife } = this.props
+        const { id, productionCode, standardCode, temperature, days } = this.props
 
         return (
             <View className='detailSpecification'>
@@ -35,19 +35,39 @@ class Specification extends React.Component {
                 </View>
                 <AtDivider />
                 <View className='goodsDetaiInfo'>
-                    {/* {Get('languages').goodsId} */}
-                </View>
-                <View>
-              {id}
-                </View>
-                <View className='goodsDetaiInfo'>
-                    {Get('languages').productionLicense}
-                </View>
-                <View className='goodsDetaiInfo'>
-                    {Get('languages').productNumber}
+                    <View >
+                        {Get('languages').goodsId}
+                    </View>
+                    <View className='infoId'>
+                        {id}
+                    </View>
                 </View>
                 <View className='goodsDetaiInfo'>
-                    {Get('languages').shelfLife}
+                    <View>
+                        {Get('languages').productionLicense}
+                    </View>
+                    <View className='specificinfo'>
+                        {productionCode}
+                    </View>
+                </View>
+                <View className='goodsDetaiInfo'>
+                    <View>
+                        {Get('languages').productNumber}
+                    </View>
+                    <View className='specificinfo'>
+                        {standardCode}
+                    </View>
+                </View>
+                <View className='goodsDetaiInfo'>
+                    <View>
+                        {Get('languages').shelfLife}
+                    </View>
+                    <View className='infotemperature'>
+                    {temperature}
+                    </View>
+                    <View className="infoDays">
+                    {days}
+                    </View>
                 </View>
                 <View className='goodsDetaiInfo'>
                     {Get('languages').weight}

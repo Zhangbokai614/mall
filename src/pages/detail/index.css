@@ -2,13 +2,31 @@
     overflow:visible;
 }
 
+.priceAndShare {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-items: right;
+}
+
+.infoPrice {
+    color: #f94249;
+    font-size: 52px;
+}
+
+.imageShare {
+    margin-top: 1vh;
+    margin-left: 75vw;
+}
+
 .goodsintroduction {
     padding-left: 20px;
     background-color: white;
-    font-size: 45px;
+    font-size: 38px;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
+    color: #212121 100%;
 }
 
 .detailAfterSales {
@@ -20,7 +38,7 @@
 
 .afterSales {
     font-size: 5vw;
-    height: 20%;
+    height: 6vh;
     display: flex;
     align-items: center;
     margin-top: 2vh;
@@ -28,6 +46,7 @@
 }
 
 .afterSalesText {
+    margin-top: 2vh;
     margin-left: 4vw;
 }
 

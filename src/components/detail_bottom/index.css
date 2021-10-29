@@ -68,7 +68,8 @@
     justify-content: center;
     align-items: center;  
     margin-top: 2vh;
-    background-color: #e4ff49;
+    background-color: #ffd149;
+    color: white;
     font-size: 28px;
     border-radius: 50px;
     height: 80%;
@@ -82,7 +83,8 @@
     align-items: center;  
     margin-top: 2vh;
     margin-left: 1vw;
-    background-color: #e95955;
+    background-color: #ff5959;
+    color:white;
     font-size: 28px;
     border-radius: 50px;
     height: 80%;
