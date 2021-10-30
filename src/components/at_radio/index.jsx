@@ -1,6 +1,6 @@
 import { View, Image, Text } from '@tarojs/components'
 import React from 'react'
-import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList } from 'taro-ui'
+import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList, AtInputNumber, AtTag } from 'taro-ui'
 
 import { Get } from '../../global-data/index'
 import Fruit from '../../asset/images/icon/fruit.png'
@@ -19,6 +19,8 @@ class GoodsSelection extends React.Component {
             select: '',
             distribution: '',
             service: '',
+            value: 1,
+            tag: false,
         }
     };
 
@@ -70,6 +72,18 @@ class GoodsSelection extends React.Component {
             })
     };
 
+    handleChangeNumber(value) {
+        this.setState({
+            value
+        })
+    };
+
+    handleChange() {
+        this.setState({
+            tag: !this.state.tag
+        })
+    }
+
     goHref = (type) => {
         switch (type) {
             case '01':
@@ -104,11 +118,15 @@ class GoodsSelection extends React.Component {
         const infoSku = sku.map((e, index) => {
             console.log(e)
             return (
-
-                <AtButton
+                <AtTag
                     className='skuButton'
                     key={index}
-                    onClick={(e) => this.bind(e)}></AtButton>
+                    size='normal'
+                    active={this.state.tag}
+                    onClick={this.handleChange.bind(this)}
+                >
+                    {Object.keys(e)[0]}
+                </AtTag>
             )
         })
         return (
@@ -125,7 +143,6 @@ class GoodsSelection extends React.Component {
                             onClose={this.handleClickSelect.bind(this)}
                             title={Get('languages').goodsSelection}
                             className='floatlayoutbutton'
-                            height='high'
                         >
                             <View className='floatlayoutHeight'>
                                 <View className='kindTitle'>
@@ -133,6 +150,22 @@ class GoodsSelection extends React.Component {
                                 </View>
                                 <View className='skudetail'>
                                     {infoSku}
+                                </View>
+                                <View className='numberChange'>
+                                    <View className='number'>
+                                        {Get('languages').number}
+                                    </View>
+                                    <View className='numberLocation'>
+                                        <AtInputNumber
+                                            type='digit'
+                                            min={1}
+                                            max={99}
+                                            step={1}
+                                            width={100}
+                                            value={this.state.value}
+                                            onChange={this.handleChangeNumber.bind(this)}
+                                        />
+                                    </View>
                                 </View>
                             </View>
                             <AtButton
@@ -186,7 +219,6 @@ class GoodsSelection extends React.Component {
                                     {Get('languages').service}
                                 </Text>
                             </View>
-
                             <Image
                                 className='imageFruit'
                                 src={Fruit}

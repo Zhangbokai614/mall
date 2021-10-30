@@ -93,15 +93,33 @@
 
 .skudetail {
     margin-top: 2vh;
-    margin-left: -4vw;
+    margin-left: 9vw;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-row-gap: 2vh;
+}
+
+.skuButton {
+    width: 15vw;
+    border-radius: 50px;
+
+}
+
+.floatlayoutHeight {
+    height: 100vh;
+}
+
+.number {
+    margin-top: 4vh;
+    margin-left: 2vw;
+}
+
+.numberChange {
     display: flex;
     flex-direction: row;
 }
 
-.skuButton {
-    width: 13vw;
-    border-radius: 50px;
-}
-
-.floatlayoutHeight {
+.numberLocation {
+    margin-top: 3vh;
+    margin-left: 62vw;
 }
