@@ -326,11 +326,13 @@ module.exports = () => {
                 ]
             },
         ],
-        "noticebar": ["因部分地区疫情，无法收寄快递影响物流，给您带来的不便敬请谅解，详细了解请联系客服。"],
+        "noticebar": ['因部分地区疫情，无法收寄快递影响物流，给您带来的不便敬请谅解，详细了解请联系客服。'],
         "home_images": {
             "posters": 'https://cdn.nlark.com/yuque/0/2021/png/660331/1634622259552-assets/web-upload/268743d4-25d3-4753-8442-e1759a3e22e0.png',
             "activity": 'https://cdn.nlark.com/yuque/0/2021/png/660331/1634622273241-assets/web-upload/44716d8c-a3cb-43a3-ad88-7491fe01059b.png'
-        }
+        },
+        "after_sales_detail": ['折扣价：为折扣期间的价格如果没有特殊说明，折扣是在原价基础上计算出的优惠比例或者优惠金额；如果有疑问您可以在购买前询问客服。'],
+        "after_sales_free": ['包邮不包含偏远地区及海外地区。']
     })
 
     return data

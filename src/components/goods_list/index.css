@@ -4,16 +4,17 @@
   align-content: flex-center;
   align-items: center;
   justify-content: space-around;
-  background-color: white;
+  background-color: var(--card-bg-color);
   position: sticky;
   top: -0.1vh;
   height: 8vh;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
+  box-shadow: var(--shadow);
   padding-left: 2vw;
+  font-size: var(--highlight-font-size);
 }
 
 .select {
-  color: #ff4949;
+  color: var(--highlight-font-color);
   white-space: nowrap;
   height: 100%;
   flex: 1;
@@ -24,6 +25,7 @@
 }
 
 .unSelect {
+  color: var(--unselect-font-color);
   height: 100%;
   white-space: nowrap;
   flex: 1;
@@ -35,7 +37,7 @@
 
 
 #underscore {
-  background-color: #ff4949;
+  background-color: var(--highlight-font-color);
   height: 0.36vh;
   width: 88%;
   border-radius: 100px;
