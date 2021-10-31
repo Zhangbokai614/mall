@@ -99,14 +99,14 @@
     grid-row-gap: 2vh;
 }
 
-.skuButton {
+.skuTag {
     width: 15vw;
     border-radius: 50px;
 
 }
 
 .floatlayoutHeight {
-    height: 100vh;
+    height: 40vh;
 }
 
 .number {

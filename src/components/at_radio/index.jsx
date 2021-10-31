@@ -20,7 +20,7 @@ class GoodsSelection extends React.Component {
             distribution: '',
             service: '',
             value: 1,
-            tag: false,
+            sta: [],
         }
     };
 
@@ -78,9 +78,10 @@ class GoodsSelection extends React.Component {
         })
     };
 
-    handleChange() {
+    handleChange(index, sta) {
+        sta[index]=true
         this.setState({
-            tag: !this.state.tag
+            sta: sta
         })
     }
 
@@ -114,16 +115,17 @@ class GoodsSelection extends React.Component {
     };
     render() {
 
+        let sta = []
         const { sku } = this.props
         const infoSku = sku.map((e, index) => {
-            console.log(e)
+            sta[index] = false
             return (
                 <AtTag
-                    className='skuButton'
+                    className='skuTag'
                     key={index}
                     size='normal'
-                    active={this.state.tag}
-                    onClick={this.handleChange.bind(this)}
+                    active={this.state.sta[index]}
+                    onClick={this.handleChange.bind(this, index, sta)}
                 >
                     {Object.keys(e)[0]}
                 </AtTag>
