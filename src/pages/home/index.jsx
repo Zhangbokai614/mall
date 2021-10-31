@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import { View, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { AtNoticebar, AtFloatLayout } from 'taro-ui'
+import { AtNoticebar } from 'taro-ui'
 
 import { GoodsCard } from '../../components/goods_card/index'
 import { GoodsList } from '../../components/goods_list/index'

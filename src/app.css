@@ -1,8 +1,6 @@
 page {
     background-color: #f4f4f4;
-}
 
-#root{
     --highlight-color:#ff4949;
     --unselect-color:#434343;
     --posters-shadow: 0 2px 4px 0 rgba(105, 105, 105, 0.084);
