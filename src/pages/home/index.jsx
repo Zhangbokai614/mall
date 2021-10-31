@@ -17,7 +17,8 @@ export default class Index extends Component {
       noticebar: '',
       posters: '',
       activity: '',
-      loading: true
+      loading: true,
+      isOpened: false,
     }
   }
 
@@ -79,7 +80,6 @@ export default class Index extends Component {
 
           <Image
             id='posters'
-            className='card'
             style='width: 100%;background: #fff;'
             src={this.state.posters}
             mode='widthFix'
@@ -95,7 +95,8 @@ export default class Index extends Component {
             />
             {focusCard}
           </View>
-          <GoodsList/>
+
+          <GoodsList />
         </View>
     )
   }

@@ -1,37 +1,26 @@
-.align {
-  display: flex;
-  align-items: center;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-}
-
 .cube {
+  display: flex;
   width: 100%;
-  height: 4.5vh;
-  background: white;
+  height: 7vh;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
   margin-bottom: 0.7rem;
+  border-bottom-right-radius: 0.75rem;
+  border-bottom-left-radius: 0.75rem;
+  background: white;
 }
 
 .hint {
   margin-left: 0.375rem;
   font-size: 25px;
-  color: #989898;
+  color: var(--highlight-color);
 }
 
 .textright {
-  margin-right: 0.375rem;
+  position: absolute;
   right: 0;
+  margin-right: 0.375rem;
   font-size: 27.5px;
-  color: black;
+  color: var(--highlight-color);
 }

@@ -1,24 +1,24 @@
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
-  border-radius: 20px 20px 20px 20px;
-  background-color: white;
+  box-shadow: var(shadow);
+  border-radius: var(--card-border-radius);
+  background-color: var(--card-bg-color);
 }
 
 .cardImage {
   height: 46vw;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: var(--cardImage-border-radius);
 }
 
 .focusImage {
   height: 44vw;
-  border-radius: 20px 20px 0px 0px;
+  border-radius: var(--cardImage-border-radius);
 }
 
 .focusCard {
   display: flex;
   flex-flow: column;
   width: 92vw;
-  margin-bottom: 2vh;
+  margin-bottom: 1.6vh;
   margin-left: 2vw;
   margin-right: 2vw;
 }
@@ -26,10 +26,9 @@
 .focusInfo {
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
-  margin-top: -0.2vh;
+  justify-content: center;
   width: 100%;
-  margin-bottom: 0.8vh;
+  margin-bottom: 0.2vh;
 }
 
 .goodsCard {
@@ -46,12 +45,13 @@
   -webkit-line-clamp: 2;
   text-align: left;
   overflow: hidden;
-  margin-bottom: 1vh;
-  font-size: 4vw;
-  font-weight: 500;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
+  color: var(--title-font-color);
   text-indent: 1px;
-  letter-spacing: 0.46vw;
-  padding: 2vw;
+  letter-spacing: var(--font-letter-spacing);
+  padding-top: 1.6vw;
+  padding-left: 1.6vw;
 }
 
 .cardTitle {
@@ -60,10 +60,11 @@
   -webkit-line-clamp: 2;
   text-align: left;
   overflow: hidden;
-  font-size: 4vw;
-  font-weight: 500;
-  letter-spacing: 0.46vw;
-  padding: 2vw;
+  font-size: var(--title-font-size);
+  font-weight: var(--title-font-weight);
+  color: var(--title-font-color);
+  letter-spacing: var(--font-letter-spacing);
+  padding: 1.6vw;
 }
 
 #focusInfoText {
@@ -79,22 +80,21 @@
   flex-flow: row;
   justify-content: space-between;
   align-content: center;
-  margin-bottom: 0.8vh;
 }
 
 .price {
-  color: #ff4949;
-  font-weight: bolder;
-  font-size: 4.4vw;
+  color: var(--highlight-font-color);
+  font-weight: var(--highlight-font-weight);
+  font-size: var(--highlight-font-size);
   margin-bottom: 0.8vh;
 }
 
 .cny {
-  font-weight: bold;
-  font-size: 3.2vw;
-  color: #ff4949;
+  font-weight: var(--highlight-font-weight);
+  font-size: var(--highlight-font-size);
+  color: var(--highlight-font-color);
   margin-right: -1.4vh;
-  margin-bottom: 0.4vh;
+  margin-bottom: 0.8vh;
 }
 
 #price {
@@ -118,5 +118,16 @@
 .goodsCardTag {
   flex-shrink: inherit;
   margin-left: 2vw;
-  border-radius: 10px;
+}
+
+.at-tag {
+  display: flex;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--tag-radius);
+  color: var(--tag-color);
+  font-size: 24px;
+  border-color: var(--tag-color);
+  border-width: 4px;
 }

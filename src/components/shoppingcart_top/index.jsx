@@ -1,35 +1,29 @@
 import { View, Text } from "@tarojs/components";
 import React, { Component } from "react";
-import { Get } from "../../global-data";
 
+import { Get } from "../../global-data";
 import "./index.css";
 
-class Carttop extends Component {
+class CartTop extends Component {
   constructor(props) {
     super(props);
-    this.state = {
-      select: false
-    };
-  }
-
-  clink() {
-    this.setState({
-      select: !this.state.select
-    });
   }
 
   render() {
+    const { textState, clink } = this.props;
     return (
-      <View className="cube align flex-row relative">
-        <Text className="hint">{Get("languages").hint}</Text>
-        <Text className="textright absolute" onClick={this.clink.bind(this)}>
-          {this.state.select == false
-            ? Get("languages").edit
-            : Get("languages").achieve}
+      <View className="cube">
+        <Text className="hint">
+          {Get("languages").shoppingCart.cartTop.hint}
+        </Text>
+        <Text className="textright" onClick={clink}>
+          {textState === false
+            ? Get("languages").shoppingCart.cartTop.edit
+            : Get("languages").shoppingCart.cartTop.achieve}
         </Text>
       </View>
     );
   }
 }
 
-export { Carttop };
+export { CartTop };
