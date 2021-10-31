@@ -7,22 +7,29 @@
 }
 
 .goodscar {
-    background-color:#4CAF50;
-    color: black;
+    margin-top: 3vh;
+    padding-top: 1vh;
+    background-color:#ffd149;
+    color: white;
     text-align: center;
     display:inline-block;
     font-size: 30px;
     width: 50%;
+    height: 6vh;
+    border-radius: 50px;
 }
 
 .confirm {
-    display: flex;
-    align-items: center;
-    background-color:  #d60e1f;
+    margin-top: 2vh;
+    padding-top: 1vh;
+    background-color:  #ff5959;
+    color: white;
     text-align: center;
     display:inline-block;
     font-size: 30px;
     width: 50%;
+    height: 6vh;
+    border-radius: 50px;
 }
 
 .textService {
@@ -76,4 +83,43 @@
 
 .at-Floatlayout {
     z-index: 200;
+    height: 500px;
+}
+
+.kindTitle {
+    margin-top: 2vh;
+    margin-left: 2vw;
+}
+
+.skudetail {
+    margin-top: 2vh;
+    margin-left: 9vw;
+    display: grid;
+    grid-template-columns: 33.33% 33.33% 33.33%;
+    grid-row-gap: 2vh;
+}
+
+.skuButton {
+    width: 15vw;
+    border-radius: 50px;
+
+}
+
+.floatlayoutHeight {
+    height: 100vh;
+}
+
+.number {
+    margin-top: 4vh;
+    margin-left: 2vw;
+}
+
+.numberChange {
+    display: flex;
+    flex-direction: row;
+}
+
+.numberLocation {
+    margin-top: 3vh;
+    margin-left: 62vw;
 }

@@ -55,6 +55,12 @@
   border-radius: 0.5rem;
 }
 
+.actionCardImage {
+  width: 15vh;
+  height: 15vh;
+  margin: 0.75rem;
+}
+
 .frameright {
   width: 66vw;
   height: 18vh;
@@ -110,6 +116,11 @@
   margin-top: 0.5px;
   margin-bottom: 0.5px;
   overflow: hidden;
+}
+
+.actionBottom {
+  display: flex;
+  flex-direction: column-reverse;
 }
 
 /* ---------------------------------------------------------------- */

@@ -10,12 +10,23 @@ class Introduction extends React.Component {
 
     render() {
 
+        const { detailImages } = this.props
+        const detailInfoImages = detailImages.map((e, index) => {
+            return (
+                <Image
+                key={index}
+                src={e}
+                style='width: 100vw; height: 100vw; background: #fff;'
+                />
+            )
+        })
+
         return (
 
             <View className='detailIntroduce'>
                 <View className='goodsIntroduce'>
                     <Image
-                        className="vertical"
+                        className='vertical'
                         src={Vertical}
                         style='width:2vw; height:9vw;'
                     >
@@ -25,7 +36,9 @@ class Introduction extends React.Component {
                     </View>
                 </View>
                 <AtDivider />
-
+                <View>
+                   {detailInfoImages}
+                </View>
             </View>
         )
     }

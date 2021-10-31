@@ -1,37 +1,34 @@
+import Taro from "@tarojs/taro";
 import React, { Component } from "react";
 import { View, Image, Text } from "@tarojs/components";
-import { AtIcon, AtInputNumber, AtSwipeAction } from "taro-ui";
-import Taro from "@tarojs/taro";
+import { AtIcon, AtInputNumber, AtSwipeAction, AtFloatLayout } from "taro-ui";
 
+import { Get } from "../../global-data";
 import "./index.css";
 import "./index.scss";
 
 class Card extends Component {
   constructor(props) {
     super(props);
-    this.state = { select: "unselected", onclink: false, value: 1 };
+    this.state = {
+      circle: false,
+      standard: false,
+      value: 1
+    };
   }
 
-  tick() {
-    switch (this.state.select) {
-      case "unselected":
-        this.setState({
-          select: "selected"
-        });
-        break;
-      case "selected":
-        this.setState({
-          select: "unselected"
-        });
-        break;
-    }
-    console.log(this.state.select);
-  }
-
-  handleClose() {
-    this.setState({
-      onclink: !this.state.onclink
+  async reverse(stateName) {
+    await this.setState({
+      [stateName]: !this.state[stateName]
     });
+    const isBelowThreshold = currentValue => currentValue.state.circle === true;
+    const { handleClick } = this.props;
+    if (this.props.childs.every(isBelowThreshold)) {
+      handleClick(true);
+    }
+    if (!this.state.circle) {
+      handleClick(false);
+    }
   }
 
   number(value) {
@@ -40,11 +37,19 @@ class Card extends Component {
     });
   }
 
+  changeState(state) {
+    this.setState({
+      circle: state
+    });
+  }
+
+  componentDidMount() {
+    this.props.onRef(this);
+  }
+
   render() {
     const res = Taro.getSystemInfoSync();
     const { link, title, config, number } = this.props;
-    console.log(res.screenWidth);
-
     return (
       <View className="action">
         <AtSwipeAction
@@ -52,8 +57,7 @@ class Card extends Component {
           areaWidth={res.screenWidth}
           options={[
             {
-              text: "删除",
-              size: "80",
+              text: Get("languages").shoppingCart.cartCard.delete,
               style: {
                 backgroundColor: "#FF4949"
               }
@@ -61,8 +65,15 @@ class Card extends Component {
           ]}
         >
           <View className="flex-row frame align relative">
-            <View className="frameleft" onClick={this.tick.bind(this)}>
-              <View className={this.state.select}></View>
+            <View
+              className="frameleft"
+              onClick={this.reverse.bind(this, "circle")}
+            >
+              <View
+                className={
+                  this.state.circle === false ? "unselected" : "selected"
+                }
+              ></View>
             </View>
             <View className="align">
               <Image className="cardImage" mode="scaleToFill" src={link} />
@@ -72,10 +83,10 @@ class Card extends Component {
               <View>
                 <View
                   className="standard"
-                  onClick={this.handleClose.bind(this)}
+                  // onClick={this.reverse.bind(this, "standard")}
                 >
                   <Text className="standardtext">
-                    {config}{" "}
+                    {config}
                     <AtIcon
                       value="chevron-down"
                       size="18"
@@ -85,7 +96,9 @@ class Card extends Component {
                 </View>
               </View>
               <View className="absolute down relative">
-                <Text className="money">￥</Text>
+                <Text className="money">
+                  {Get("languages").shoppingCart.cartCard.moneySymbol}
+                </Text>
                 <Text className="number">{number}</Text>
                 <AtInputNumber
                   className="absolute counter"
@@ -99,6 +112,23 @@ class Card extends Component {
             </View>
           </View>
         </AtSwipeAction>
+        <AtFloatLayout isOpened={true} onClose={true}>
+          <View className="flex-row">
+            <Image className="actionCardImage " mode="scaleToFill" src={link} />
+            <View className="actionBottom">
+              <View>
+                <Text>已选择：</Text>
+                <Text>das撒擦速度开门</Text>
+              </View>
+              <View>
+                <Text className="money">
+                  {Get("languages").shoppingCart.cartCard.moneySymbol}
+                </Text>
+                <Text className="number">{number}</Text>
+              </View>
+            </View>
+          </View>
+        </AtFloatLayout>
       </View>
     );
   }

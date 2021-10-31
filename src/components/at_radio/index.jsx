@@ -1,7 +1,6 @@
 import { View, Image, Text } from '@tarojs/components'
 import React from 'react'
-import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList } from 'taro-ui'
-import { getCurrentInstance } from '@tarojs/taro'
+import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList, AtInputNumber, AtTag } from 'taro-ui'
 
 import { Get } from '../../global-data/index'
 import Fruit from '../../asset/images/icon/fruit.png'
@@ -14,15 +13,14 @@ class GoodsSelection extends React.Component {
     constructor(props) {
         super(props)
         this.state = {
-            current: 0,
-            goodsInfo: {},
-            loading: true,
             atButtonSelect: false,
             atButtonDistribution: false,
             atButtonService: false,
             select: '',
             distribution: '',
             service: '',
+            value: 1,
+            tag: false,
         }
     };
 
@@ -74,32 +72,17 @@ class GoodsSelection extends React.Component {
             })
     };
 
-    componentDidMount() {
-        this.loading()
-    }
-
-    componentDidShow() {
-        this.loading()
-    }
-
-    async loading() {
-        Taro.showLoading({
-            title: Get('languages').loading,
-        })
-
-        const goodsInfo = await homeApi.goodsInfo()
-        const { id, type } = getCurrentInstance().router.params
+    handleChangeNumber(value) {
         this.setState({
-            goodsInfo: goodsInfo.data[type].filter((e) => e.id === +id),
-            loading: false,
+            value
         })
-        Taro.hideLoading()
-    }
+    };
 
-    componentDidMount() {
-        console.log(getCurrentInstance().router.params)
+    handleChange() {
+        this.setState({
+            tag: !this.state.tag
+        })
     }
-
 
     goHref = (type) => {
         switch (type) {
@@ -131,6 +114,21 @@ class GoodsSelection extends React.Component {
     };
     render() {
 
+        const { sku } = this.props
+        const infoSku = sku.map((e, index) => {
+            console.log(e)
+            return (
+                <AtTag
+                    className='skuButton'
+                    key={index}
+                    size='normal'
+                    active={this.state.tag}
+                    onClick={this.handleChange.bind(this)}
+                >
+                    {Object.keys(e)[0]}
+                </AtTag>
+            )
+        })
         return (
             <View className='atradio'>
                 <View className='goodsSelection'>
@@ -144,26 +142,41 @@ class GoodsSelection extends React.Component {
                             isOpened={this.state.atButtonSelect}
                             onClose={this.handleClickSelect.bind(this)}
                             title={Get('languages').goodsSelection}
+                            className='floatlayoutbutton'
                         >
-                            <AtRadio
-                                options={[
-                                    { label: '', value: 'option1', },
-                                    { label: '', value: 'option2', },
-                                    { label: '', value: 'option3', }
-                                ]}
-                                value={this.state.select}
-                                onClick={this.handleChangeSelect.bind(this)}
-                            />
+                            <View className='floatlayoutHeight'>
+                                <View className='kindTitle'>
+                                    {Get('languages').kind}
+                                </View>
+                                <View className='skudetail'>
+                                    {infoSku}
+                                </View>
+                                <View className='numberChange'>
+                                    <View className='number'>
+                                        {Get('languages').number}
+                                    </View>
+                                    <View className='numberLocation'>
+                                        <AtInputNumber
+                                            type='digit'
+                                            min={1}
+                                            max={99}
+                                            step={1}
+                                            width={100}
+                                            value={this.state.value}
+                                            onChange={this.handleChangeNumber.bind(this)}
+                                        />
+                                    </View>
+                                </View>
+                            </View>
                             <AtButton
                                 className='goodscar'
-                                circle='true'
                                 onClick={this.goHref.bind(this, '01')}
                             >
                                 {Get('languages').addcar}
                             </AtButton>
                             <AtButton
                                 className='confirm'
-                                circle='true'
+
                                 onClick={this.goHref.bind(this, '04')}
                             >
                                 {Get('languages').tobuy}
@@ -206,7 +219,6 @@ class GoodsSelection extends React.Component {
                                     {Get('languages').service}
                                 </Text>
                             </View>
-
                             <Image
                                 className='imageFruit'
                                 src={Fruit}

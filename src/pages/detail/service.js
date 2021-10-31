@@ -1,8 +1,8 @@
 import Request from '../../utils/request'
 
-export const goodsInfo = (data) => {
+export const goodsInfo = (id, data) => {
     return Request({
-        url: '/goodsInfo',
+        url: '/goods_info?id=' + id,
         method: 'GET',
         ...data
     });
