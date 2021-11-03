@@ -18,7 +18,7 @@ class Specification extends React.Component {
 
     render() {
 
-        const { id, productionCode, standardCode, temperature, days } = this.props
+        const { id, productionCode, standardCode, temperature, days, weight } = this.props
 
         return (
             <View className='detailSpecification'>
@@ -70,7 +70,12 @@ class Specification extends React.Component {
                     </View>
                 </View>
                 <View className='goodsDetaiInfo'>
+                    <View>
                     {Get('languages').weight}
+                    </View>
+                    <View className='infoWeight'>
+                    {weight}
+                    </View>
                 </View>
 
             </View>

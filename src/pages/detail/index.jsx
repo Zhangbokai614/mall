@@ -23,6 +23,8 @@ export default class Index extends Component {
         this.state = {
             current: 0,
             goodsInfo: {},
+            afterSales: [],
+            afterSalesFree: [],
             loading: true,
         }
     }
@@ -42,12 +44,16 @@ export default class Index extends Component {
 
         const { id } = getCurrentInstance().router.params
         const goodsInfo = await homeApi.goodsInfo(+id)
+        const afterSales = await homeApi.afterSales()
+        const afterSalesFree = await homeApi.afterSalesFree()
+        console.log(afterSales)
         this.setState({
             goodsInfo: goodsInfo.data.filter((e) => e.id === +id),
+            afterSales: afterSales.data,
+            afterSalesFree: afterSalesFree.data,
             loading: false,
             
         })
-        console.log(goodsInfo[0])
         Taro.hideLoading()
     }
 
@@ -58,6 +64,8 @@ export default class Index extends Component {
     render() {
 
         const info = this.state.goodsInfo
+        const afterSalesDetail = this.state.afterSales
+        const afterSalesFree = this.state.afterSalesFree
         return (
             this.state.loading
                 ? null
@@ -94,6 +102,7 @@ export default class Index extends Component {
                             standardCode={info[0].standard_code}
                             temperature={info[0].shelf_life.temperature}
                             days={info[0].shelf_life.days}
+                            weight={info[0].weight}
                         />
                     </View>
                     <View>
@@ -115,11 +124,11 @@ export default class Index extends Component {
                         </View>
                         <AtDivider />
                         <View className='afterSalesText'>
-                            {info[0].afterSalesDetail}
+                            {afterSalesDetail}
                         </View>
                         <View className='afterSalesText'>
                             {Get('languages').freeMoney}
-                            {info[0].afterSalesFree}
+                            {afterSalesFree}
                         </View>
                     </View>
                     <Bottomdetail />

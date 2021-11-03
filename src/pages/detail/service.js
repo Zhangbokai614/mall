@@ -7,3 +7,20 @@ export const goodsInfo = (id, data) => {
         ...data
     });
 }
+
+export const afterSales = ( data) => {
+    return Request({
+        url: '/after_sales_detail',
+        method: 'GET',
+        ...data
+    });
+}
+
+export const afterSalesFree = ( data) => {
+    return Request({
+        url: '/after_sales_free',
+        method: 'GET',
+        ...data
+    });
+}
+
