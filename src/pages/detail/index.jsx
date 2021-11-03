@@ -9,7 +9,6 @@ import { SwiperPosters } from '../../components/detail_swiper'
 import { GoodsSelection } from '../../components/at_radio/index'
 import { Bottomdetail } from '../../components/detail_bottom/index'
 import { Specification } from '../../components/detail_specification/index'
-import { ProductEvaluation } from '../../components/detail_evaluation/index'
 import { Introduction } from '../../components/detail_introduction/index'
 import Share from '../../asset/images/icon/share-select.png'
 import * as homeApi from './service'
@@ -43,11 +42,12 @@ export default class Index extends Component {
 
         const { id } = getCurrentInstance().router.params
         const goodsInfo = await homeApi.goodsInfo(+id)
-        console.log(goodsInfo)
         this.setState({
             goodsInfo: goodsInfo.data.filter((e) => e.id === +id),
             loading: false,
+            
         })
+        console.log(goodsInfo[0])
         Taro.hideLoading()
     }
 
@@ -58,7 +58,6 @@ export default class Index extends Component {
     render() {
 
         const info = this.state.goodsInfo
-
         return (
             this.state.loading
                 ? null
@@ -85,7 +84,7 @@ export default class Index extends Component {
                     </View>
                     <View>
                         <GoodsSelection 
-                            sku={info[0].sku}
+                            image={info[0].images[0]}
                         />
                     </View>
                     <View >
@@ -96,9 +95,6 @@ export default class Index extends Component {
                             temperature={info[0].shelf_life.temperature}
                             days={info[0].shelf_life.days}
                         />
-                    </View>
-                    <View>
-                        <ProductEvaluation />
                     </View>
                     <View>
                         <Introduction

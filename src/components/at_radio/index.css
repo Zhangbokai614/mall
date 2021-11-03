@@ -7,8 +7,8 @@
 }
 
 .goodscar {
-    margin-top: 3vh;
     padding-top: 1vh;
+    margin-bottom: 2vh;
     background-color:#ffd149;
     color: white;
     text-align: center;
@@ -20,8 +20,8 @@
 }
 
 .confirm {
-    margin-top: 2vh;
     padding-top: 1vh;
+    margin-bottom: 2vh;
     background-color:  #ff5959;
     color: white;
     text-align: center;
@@ -83,7 +83,6 @@
 
 .at-Floatlayout {
     z-index: 200;
-    height: 500px;
 }
 
 .kindTitle {
@@ -91,26 +90,8 @@
     margin-left: 2vw;
 }
 
-.skudetail {
-    margin-top: 2vh;
-    margin-left: 9vw;
-    display: grid;
-    grid-template-columns: 33.33% 33.33% 33.33%;
-    grid-row-gap: 2vh;
-}
-
-.skuTag {
-    width: 15vw;
-    border-radius: 50px;
-
-}
-
-.floatlayoutHeight {
-    height: 40vh;
-}
-
 .number {
-    margin-top: 4vh;
+    margin-top: 1vh;
     margin-left: 2vw;
 }
 
@@ -120,6 +101,9 @@
 }
 
 .numberLocation {
-    margin-top: 3vh;
+    margin-bottom: 1vh;
     margin-left: 62vw;
+}
+.floatlayoutHeight {
+    
 }
