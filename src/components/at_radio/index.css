@@ -104,3 +104,14 @@
     margin-bottom: 1vh;
     margin-left: 62vw;
 }
+/* .floatlayoutbutton {
+    display: none;
+    position: fixed;
+    top: 20vh;
+    width: 100%;
+    bottom: 0;
+    background: white;
+}
+.floatlayoutbutton:target {
+    display: block;
+} */

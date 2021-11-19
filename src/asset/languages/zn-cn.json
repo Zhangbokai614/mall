@@ -4,8 +4,6 @@
   "hello": "你好",
   "home": "首页",
   "detail": "详情",
-  "service": "服务",
-  "select": "已选",
   "customerService": "客服",
   "tobuy": "立刻购买",
   "goodscar": "购物车",
@@ -50,6 +48,12 @@
   "goodsIntroduce": "商品介绍",
   "afterSales": "关于售后",
   "number": "数量",
+  "atradio": {
+    "title": {
+      "select": "已选",
+      "service": "服务"
+    }
+  },
   "shoppingCart": {
     "cartTop": {
       "hint": "商品库存有限，请尽快下单",

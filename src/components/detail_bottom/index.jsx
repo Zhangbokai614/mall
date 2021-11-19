@@ -40,9 +40,7 @@ class Bottomdetail extends React.Component {
     });
   };
 
-  handeChange
   goHref = (type) => {
-    console.log('11110')
     switch (type) {
       case '01':
         Taro.reLaunch({

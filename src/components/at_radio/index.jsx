@@ -76,6 +76,20 @@ class GoodsSelection extends React.Component {
       value
     })
   };
+  
+  btnClick = (value) => {
+    let num = this.state.value;
+    console.log(num)
+    num = value === 'add' ? (num += 1) : (num -= 1);
+    if (num < 1) {
+      num = 0;
+    }
+    let money = this.props.goodInfo.price;
+    this.setState({
+      totalNum: num,
+      totalMoney: (money * num).toFixed(2),
+    });
+  };
 
   goHref = (type) => {
     switch (type) {
@@ -91,7 +105,7 @@ class GoodsSelection extends React.Component {
         break;
       case '03':
         Taro.navigateTo({
-          url: '/pages/cart/index',
+          url: '/pages/cart/index?value=' + this.state.value
         });
         break;
       case '04':
@@ -108,13 +122,15 @@ class GoodsSelection extends React.Component {
   render() {
 
     const { image } = this.props
+    const value = this.state.value
+    console.log(value)
     return (
       <View className='atradio'>
         <View className='goodsSelection'>
           <AtList>
             <AtListItem
               className='radioList'
-              title={Get('languages').select}
+              title={Get('languages').atradio.title.select}
               onClick={this.handleClickSelect.bind(this)}
               arrow='right' />
             <AtFloatLayout
@@ -149,7 +165,7 @@ class GoodsSelection extends React.Component {
               </View>
               <AtButton
                 className='goodscar'
-                onClick={this.goHref.bind(this, '01')}
+                onClick={this.goHref.bind(this, '03')}
               >
                 {Get('languages').addcar}
               </AtButton>
@@ -162,30 +178,6 @@ class GoodsSelection extends React.Component {
             </AtFloatLayout>
           </AtList>
         </View>
-        <View className='distribution'>
-          <AtList>
-            <AtListItem
-              className='radioList'
-              title={Get('languages').distribution}
-              onClick={this.handleClickDistribution.bind(this)}
-              arrow='right'
-            />
-            <AtFloatLayout
-              isOpened={this.state.atButtonDistribution}
-              onClose={this.handleClickDistribution.bind(this)}
-              title={Get('languages').deliveryTo}
-            >
-              <AtRadio
-                options={[
-                  { label: '', value: 'option1', },
-                  { label: '', value: 'option2', }
-                ]}
-                value={this.state.distribution}
-                onClick={this.handleChangeDistribution.bind(this)}
-              />
-            </AtFloatLayout>
-          </AtList>
-        </View>
         <View className='service'>
           <AtList>
             <View
@@ -194,7 +186,7 @@ class GoodsSelection extends React.Component {
             >
               <View className='textService'>
                 <Text >
-                  {Get('languages').service}
+                  {Get('languages').atradio.title.service}
                 </Text>
               </View>
               <Image
