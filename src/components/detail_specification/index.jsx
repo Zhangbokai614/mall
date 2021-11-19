@@ -30,13 +30,13 @@ class Specification extends React.Component {
                     >
                     </Image>
                     <View className='specificationTitle'>
-                        {Get('languages').goodsSpecification}
+                        {Get('languages').detailPage.goodsSpecification}
                     </View>
                 </View>
                 <AtDivider />
                 <View className='goodsDetaiInfo'>
                     <View >
-                        {Get('languages').goodsId}
+                        {Get('languages').detailPage.goodsId}
                     </View>
                     <View className='infoId'>
                         {id}
@@ -44,7 +44,7 @@ class Specification extends React.Component {
                 </View>
                 <View className='goodsDetaiInfo'>
                     <View>
-                        {Get('languages').productionLicense}
+                        {Get('languages').detailPage.productionLicense}
                     </View>
                     <View className='specificinfo'>
                         {productionCode}
@@ -52,7 +52,7 @@ class Specification extends React.Component {
                 </View>
                 <View className='goodsDetaiInfo'>
                     <View>
-                        {Get('languages').productNumber}
+                        {Get('languages').detailPage.productNumber}
                     </View>
                     <View className='specificinfo'>
                         {standardCode}
@@ -60,7 +60,7 @@ class Specification extends React.Component {
                 </View>
                 <View className='goodsDetaiInfo'>
                     <View>
-                        {Get('languages').shelfLife}
+                        {Get('languages').detailPage.shelfLife}
                     </View>
                     <View className='infotemperature'>
                     {temperature}
@@ -71,7 +71,7 @@ class Specification extends React.Component {
                 </View>
                 <View className='goodsDetaiInfo'>
                     <View>
-                    {Get('languages').weight}
+                    {Get('languages').detailPage.weight}
                     </View>
                     <View className='infoWeight'>
                     {weight}

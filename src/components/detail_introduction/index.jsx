@@ -32,7 +32,7 @@ class Introduction extends React.Component {
                     >
                     </Image>
                     <View className='introduceTitle'>
-                        {Get('languages').goodsIntroduce}
+                        {Get('languages').detailPage.goodsIntroduce}
                     </View>
                 </View>
                 <AtDivider />

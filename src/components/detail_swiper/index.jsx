@@ -7,7 +7,6 @@ class SwiperPosters extends React.Component {
     render() {
 
         const { images } = this.props
-        console.log("————————", images)
         const element = images.map((e, index) => {
             return (
                 <SwiperItem key={index}>

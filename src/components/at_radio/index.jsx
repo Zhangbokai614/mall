@@ -130,13 +130,13 @@ class GoodsSelection extends React.Component {
           <AtList>
             <AtListItem
               className='radioList'
-              title={Get('languages').atradio.title.select}
+              title={Get('languages').detailPage.select}
               onClick={this.handleClickSelect.bind(this)}
               arrow='right' />
             <AtFloatLayout
               isOpened={this.state.atButtonSelect}
               onClose={this.handleClickSelect.bind(this)}
-              title={Get('languages').goodsSelection}
+              title={Get('languages').detailPage.goodsSelection}
               className='floatlayoutbutton'
             >
               <View>
@@ -148,7 +148,7 @@ class GoodsSelection extends React.Component {
               <View className='floatlayoutHeight'>
                 <View className='numberChange'>
                   <View className='number'>
-                    {Get('languages').number}
+                    {Get('languages').detailPage.number}
                   </View>
                   <View className='numberLocation'>
                     <AtInputNumber
@@ -167,13 +167,13 @@ class GoodsSelection extends React.Component {
                 className='goodscar'
                 onClick={this.goHref.bind(this, '03')}
               >
-                {Get('languages').addcar}
+                {Get('languages').detailPage.addcar}
               </AtButton>
               <AtButton
                 className='confirm'
                 onClick={this.goHref.bind(this, '04')}
               >
-                {Get('languages').tobuy}
+                {Get('languages').detailPage.tobuy}
               </AtButton>
             </AtFloatLayout>
           </AtList>
@@ -186,7 +186,7 @@ class GoodsSelection extends React.Component {
             >
               <View className='textService'>
                 <Text >
-                  {Get('languages').atradio.title.service}
+                  {Get('languages').detailPage.service}
                 </Text>
               </View>
               <Image
@@ -195,7 +195,7 @@ class GoodsSelection extends React.Component {
                 style='width:5vw; height:5vw;'
               />
               <View className='serviceDetail'>
-                {Get('languages').compensation}
+                {Get('languages').detailPage.compensation}
               </View>
               <Image
                 className='imageFree'
@@ -203,7 +203,7 @@ class GoodsSelection extends React.Component {
                 style='width:5vw; height:5vw;'
               />
               <View className='serviceDetail'>
-                {Get('languages').freeMoney}
+                {Get('languages').detailPage.freeMoney}
               </View>
               <Image
                 className='imageSevenDays'
@@ -211,7 +211,7 @@ class GoodsSelection extends React.Component {
                 style='width:6vw; height: 6vw;'
               />
               <View className='serviceDetail'>
-                {Get('languages').returnGoods}
+                {Get('languages').detailPage.returnGoods}
               </View>
             </View>
             <AtFloatLayout

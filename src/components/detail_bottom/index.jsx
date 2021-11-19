@@ -86,7 +86,7 @@ class Bottomdetail extends React.Component {
               style='width:5vw; height:5vw;'
             />
             <View className='detailHome' >
-              {Get('languages').home}
+              {Get('languages').detailPage.home}
             </View>
           </View>
         </button>
@@ -102,7 +102,7 @@ class Bottomdetail extends React.Component {
               style='width:5vw; height:5vw;'
             />
             <View className='detailService'>
-              {Get('languages').customerService}
+              {Get('languages').detailPage.customerService}
             </View>
           </View>
         </button>
@@ -119,7 +119,7 @@ class Bottomdetail extends React.Component {
               style='width:5vw; height:5vw;'
             />
             <View className='detailGoodscar'>
-              {Get('languages').goodscar}
+              {Get('languages').detailPage.goodscar}
             </View>
           </View>
         </button>
@@ -128,13 +128,13 @@ class Bottomdetail extends React.Component {
             className='bottombuttonCar'
             onClick={this.btnClick.bind(this, 'add')}
           >
-            {Get('languages').addcar}
+            {Get('languages').detailPage.addcar}
           </AtButton>
           <AtButton
             className='bottombuttonTobuy'
             onClick={this.goHref.bind(this, '04')}
           >
-            {Get('languages').tobuy}
+            {Get('languages').detailPage.tobuy}
           </AtButton>
         </View>
       </View>

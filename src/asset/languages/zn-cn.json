@@ -4,20 +4,17 @@
   "hello": "你好",
   "home": "首页",
   "detail": "详情",
-  "customerService": "客服",
-  "tobuy": "立刻购买",
-  "goodscar": "购物车",
-  "addcar": "加入购物车",
-  "goodsselection": "商品选择",
-  "goodsintroduction": "商品简介",
+  
+  
+  
+  
+  
   "distribution": "配送",
   "deliveryTo": "配送至",
   "goshopping": "去逛逛",
   "youmightlike": "你或许会喜欢",
   "shoppingcartisempty": "购物车当前是空的",
   "hurryupandbuysomebaby": "赶紧买点宝贝慰劳下自己吧",
-  "goodsSpecification": "商品规格",
-  "goodsId": "商品编号",
   "myself": "我的",
   "defaultName": "点击登录",
   "bindPhone": "绑定手机号",
@@ -33,26 +30,32 @@
   "pendingReceipt": "待收货",
   "returnExchange": "退换货",
   "descText": "完善头像、昵称信息",
-  "compensation": "坏果包赔",
-  "freeMoney": "包邮",
-  "returnGoods": "支持七天无理由退货",
-  "productionLicense": "生产许可证",
-  "productNumber": "产品标准号",
-  "shelfLife": "保质期",
-  "weight": "重量",
   "goodsEvaluation": "商品评价",
   "serviceAttitude": "服务态度",
   "deliverySpeed": "发货速度",
   "logisticsSpeed": "物流速度",
   "thePacking": "包装情况",
-  "goodsIntroduce": "商品介绍",
   "afterSales": "关于售后",
-  "number": "数量",
-  "atradio": {
-    "title": {
-      "select": "已选",
-      "service": "服务"
-    }
+  "detailPage": {
+    "home": "首页",
+    "customerService": "客服",
+    "goodscar": "购物车",
+    "addcar": "加入购物车",
+    "tobuy": "立刻购买",
+    "goodsselection": "商品选择",
+    "select": "已选",
+    "service": "服务",
+    "compensation": "坏果包赔",
+    "freeMoney": "包邮",
+    "returnGoods": "支持七天无理由退货",
+    "goodsSpecification": "商品规格",
+    "goodsId": "商品编号",
+    "productionLicense": "生产许可证",
+    "goodsIntroduce": "商品介绍",
+    "weight": "重量",
+    "shelfLife": "保质期",
+    "productNumber": "产品标准号",
+    "number": "数量"
   },
   "shoppingCart": {
     "cartTop": {
