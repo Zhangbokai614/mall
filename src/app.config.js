@@ -12,12 +12,12 @@ export default {
   window: {
     backgroundTextStyle: "light",
     navigationBarBackgroundColor: "#ff4949",
-    navigationBarTitleText: "WeChat",
+    navigationBarTitleText: "Page",
     navigationBarTextStyle: "white"
   },
 
   tabBar: {
-    color: "#bfbfbf",
+    color: "#595959",
     selectedColor: "#ff4949",
     backgroundColor: "#ffffff",
     list: [
@@ -29,13 +29,13 @@ export default {
       },
       {
         pagePath: "pages/cart/index",
-        text: languages.goodscar,
+        text: languages.cart,
         iconPath: "./asset/images/tabs/shopping-cart.png",
         selectedIconPath: "./asset/images/tabs/shopping-cart-select.png"
       },
       {
         pagePath: "pages/user/index",
-        text: languages.myself,
+        text: languages.user.myself,
         iconPath: './asset/images/tabs/user.png',
         selectedIconPath: './asset/images/tabs/user-select.png'
       }

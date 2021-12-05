@@ -3,8 +3,9 @@ page {
 
     --highlight-color:#ff4949;
     --unselect-color:#434343;
+
     --posters-shadow: 0 2px 4px 0 rgba(105, 105, 105, 0.084);
-    --shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
+    --shadow: 0 4px 6px 0 rgba(17, 17, 17, 0.04);
 
     /* card */
     --posters-border-radius: 0 0 100px 100px;
@@ -14,18 +15,12 @@ page {
     --cardImage-border-radius: 20px 20px 0px 0px;
 
     /* font */
-    --font-letter-spacing: 0.46vw;
-
     --highlight-font-color: var(--highlight-color);
     --unselect-font-color: var(--unselect-color);
-    --highlight-font-size: 32px;
+
+    --highlight-font-size: 14pt;
     --highlight-font-weight: 600;
 
-    --title-font-color: #141414;
-    --title-font-size: 28px;
-    --title-font-weight: 600;
-
     /* tag */
-    --tag-color: var(--highlight-color);
     --tag-radius: 10px;
 }

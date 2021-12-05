@@ -46,13 +46,11 @@ export default class Index extends Component {
         const goodsInfo = await homeApi.goodsInfo(+id)
         const afterSales = await homeApi.afterSales()
         const afterSalesFree = await homeApi.afterSalesFree()
-        console.log(afterSales)
         this.setState({
             goodsInfo: goodsInfo.data.filter((e) => e.id === +id),
             afterSales: afterSales.data,
             afterSalesFree: afterSalesFree.data,
             loading: false,
-            
         })
         Taro.hideLoading()
     }
@@ -119,7 +117,7 @@ export default class Index extends Component {
                             >
                             </Image>
                             <View className='afterSalesTitle'>
-                                {Get('languages').afterSales}
+                                {Get('languages').detailPage.afterSales}
                             </View>
                         </View>
                         <AtDivider />

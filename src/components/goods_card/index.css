@@ -39,32 +39,10 @@
   margin-bottom: 1.6vh;
 }
 
-.focusTitle {
+.title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  text-align: left;
-  overflow: hidden;
-  font-size: var(--title-font-size);
-  font-weight: var(--title-font-weight);
-  color: var(--title-font-color);
-  text-indent: 1px;
-  letter-spacing: var(--font-letter-spacing);
-  padding-top: 1.6vw;
-  padding-left: 1.6vw;
-}
-
-.cardTitle {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 2;
-  text-align: left;
-  overflow: hidden;
-  font-size: var(--title-font-size);
-  font-weight: var(--title-font-weight);
-  color: var(--title-font-color);
-  letter-spacing: var(--font-letter-spacing);
-  padding: 1.6vw;
 }
 
 #focusInfoText {
@@ -126,8 +104,7 @@
   justify-content: center;
   align-items: center;
   border-radius: var(--tag-radius);
-  color: var(--tag-color);
-  font-size: 24px;
+  color: var(--highlight-color);
   border-color: var(--tag-color);
-  border-width: 4px;
+  border-width: 2px;
 }
