@@ -16,7 +16,7 @@
     font-size: 30px;
     width: 50%;
     height: 6vh;
-    border-radius: 50px;
+    border-radius: var(--detail-border-radius);
 }
 
 .confirm {
@@ -29,7 +29,7 @@
     font-size: 30px;
     width: 50%;
     height: 6vh;
-    border-radius: 50px;
+    border-radius: var(--detail-border-radius);
 }
 
 .textService {

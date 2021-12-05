@@ -71,7 +71,7 @@
     background-color: #ffd149;
     color: white;
     font-size: 28px;
-    border-radius: 50px;
+    border-radius: var(--detail-border-radius);
     height: 80%;
     margin-left: -20vw;
     width: 50vw;
@@ -86,7 +86,7 @@
     background-color: var(--highlight-color);
     color:white;
     font-size: 28px;
-    border-radius: 50px;
+    border-radius: var(--detail-border-radius);
     height: 80%;
     width: 50vw;
 }

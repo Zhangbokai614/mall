@@ -23,4 +23,7 @@ page {
 
     /* tag */
     --tag-radius: 10px;
+
+    /* detail */
+    --detail-border-radius: 50px;
 }
