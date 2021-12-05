@@ -51,7 +51,7 @@ class GoodsCard extends React.Component {
               <View className='shpingCartIconBox'>
                 <Image
                   src={cart}
-                  style='height: 3.2vh; width: 3.2vh'
+                  style='height: 28px; width: 28px'
                 />
               </View>
             </View>
@@ -86,7 +86,7 @@ class GoodsCard extends React.Component {
             <View className='shpingCartIconBox'>
               <Image
                 src={cart}
-                style='height: 3.2vh; width: 3.2vh'
+                style='height: 28px; width: 28px'
               />
             </View>
           </View>
