@@ -84,7 +84,7 @@ export default class Index extends Component {
                         />
                     </View>
                     <View
-                        className='goodsintroduction'
+                        className='goodsintroduction at-article__h2'
                     >
                         {info[0].title}
                     </View>
@@ -93,7 +93,7 @@ export default class Index extends Component {
                             image={info[0].images[0]}
                         />
                     </View>
-                    <View >
+                    <View>
                         <Specification
                             id={info[0].id}
                             productionCode={info[0].production_code}
@@ -116,15 +116,15 @@ export default class Index extends Component {
                                 style='width:2vw; height:9vw;'
                             >
                             </Image>
-                            <View className='afterSalesTitle'>
+                            <View className='afterSalesTitle at-article__h2'>
                                 {Get('languages').detailPage.afterSales}
                             </View>
                         </View>
                         <AtDivider />
-                        <View className='afterSalesText'>
+                        <View className='afterSalesText at-article__h2'>
                             {afterSalesDetail}
                         </View>
-                        <View className='afterSalesText'>
+                        <View className='afterSalesText at-article__h2'>
                             {Get('languages').freeMoney}
                             {afterSalesFree}
                         </View>

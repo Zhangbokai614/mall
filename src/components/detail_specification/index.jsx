@@ -29,12 +29,12 @@ class Specification extends React.Component {
                         style='width:2vw; height:9vw;'
                     >
                     </Image>
-                    <View className='specificationTitle'>
+                    <View className='specificationTitle at-article__h2'>
                         {Get('languages').detailPage.goodsSpecification}
                     </View>
                 </View>
                 <AtDivider />
-                <View className='goodsDetaiInfo'>
+                <View className='goodsDetaiInfo at-article__h2'>
                     <View >
                         {Get('languages').detailPage.goodsId}
                     </View>
@@ -42,7 +42,7 @@ class Specification extends React.Component {
                         {id}
                     </View>
                 </View>
-                <View className='goodsDetaiInfo'>
+                <View className='goodsDetaiInfo at-article__h2'>
                     <View>
                         {Get('languages').detailPage.productionLicense}
                     </View>
@@ -50,7 +50,7 @@ class Specification extends React.Component {
                         {productionCode}
                     </View>
                 </View>
-                <View className='goodsDetaiInfo'>
+                <View className='goodsDetaiInfo at-article__h2'>
                     <View>
                         {Get('languages').detailPage.productNumber}
                     </View>
@@ -58,7 +58,7 @@ class Specification extends React.Component {
                         {standardCode}
                     </View>
                 </View>
-                <View className='goodsDetaiInfo'>
+                <View className='goodsDetaiInfo at-article__h2'>
                     <View>
                         {Get('languages').detailPage.shelfLife}
                     </View>
@@ -69,7 +69,7 @@ class Specification extends React.Component {
                     {days}
                     </View>
                 </View>
-                <View className='goodsDetaiInfo'>
+                <View className='goodsDetaiInfo at-article__h2'>
                     <View>
                     {Get('languages').detailPage.weight}
                     </View>
