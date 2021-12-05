@@ -47,6 +47,7 @@ export default class Index extends Component {
       loading: false,
     })
 
+    console.log(this.state.activity)
     Taro.hideLoading()
   }
 

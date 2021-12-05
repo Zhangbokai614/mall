@@ -36,7 +36,7 @@ class Cartnull extends Component {
           circle="true"
           onClick={this.jump.bind(this)}
         >
-          {Get("languages").goshopping}
+          {Get("languages").shoppingCart.goshopping}
         </AtButton>
       </View>
     );

@@ -119,7 +119,7 @@ export default class Index extends Component {
                             >
                             </Image>
                             <View className='afterSalesTitle'>
-                                {Get('languages').afterSales}
+                                {Get('languages').detailPage.afterSales}
                             </View>
                         </View>
                         <AtDivider />

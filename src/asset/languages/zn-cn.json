@@ -1,41 +1,31 @@
 {
   "loading": "正在加载",
-  "kind": "种类",
-  "hello": "你好",
   "home": "首页",
   "detail": "详情",
-  
-  
-  
-  
-  
-  "distribution": "配送",
-  "deliveryTo": "配送至",
-  "goshopping": "去逛逛",
-  "youmightlike": "你或许会喜欢",
-  "shoppingcartisempty": "购物车当前是空的",
-  "hurryupandbuysomebaby": "赶紧买点宝贝慰劳下自己吧",
-  "myself": "我的",
-  "defaultName": "点击登录",
-  "bindPhone": "绑定手机号",
-  "inputPhone": "请输入正在使用的手机号",
-  "myorDers": "我的订单",
-  "allDers": "全部订单",
-  "commonFeatures": "常用功能",
-  "technicalSupport": "风顺（天津）网络科技提供技术支持",
-  "address": "收获地址",
-  "coupons": "优惠券",
-  "pendingPayment": "待付款",
-  "pendingAppraise": "待评价",
-  "pendingReceipt": "待收货",
-  "returnExchange": "退换货",
-  "descText": "完善头像、昵称信息",
-  "goodsEvaluation": "商品评价",
-  "serviceAttitude": "服务态度",
-  "deliverySpeed": "发货速度",
-  "logisticsSpeed": "物流速度",
-  "thePacking": "包装情况",
-  "afterSales": "关于售后",
+  "cart":"购物车",
+  "user": {
+    "myself": "我的",
+    "order": {
+      "myOrders": "我的订单",
+      "allOrders": "全部订单",
+      "pendingPayment": "待付款",
+      "pendingReceipt": "待收货",
+      "returnExchange": "退换货"
+    },
+    "asset": {
+      "commonFeatures": "常用功能",
+      "coupons": "优惠券",
+      "address": "收获地址",
+      "customerService": "我的客服"
+    },
+    "userInfo": {
+      "defaultName": "点击登录",
+      "bindPhone": "绑定手机号",
+      "inputPhone": "请输入正在使用的手机号",
+      "descText": "完善头像、昵称信息"
+    },
+    "technicalSupport": "风顺（天津）网络科技提供技术支持"
+  },
   "detailPage": {
     "home": "首页",
     "customerService": "客服",
@@ -55,9 +45,13 @@
     "weight": "重量",
     "shelfLife": "保质期",
     "productNumber": "产品标准号",
-    "number": "数量"
+    "number": "数量",
+    "afterSales": "关于售后"
   },
   "shoppingCart": {
+    "goshopping": "去逛逛",
+    "shoppingcartisempty": "购物车当前是空的",
+    "hurryupandbuysomebaby": "赶紧买点宝贝慰劳下自己吧",
     "cartTop": {
       "hint": "商品库存有限，请尽快下单",
       "edit": "编辑",
@@ -67,7 +61,6 @@
       "delete": "删除",
       "moneySymbol": "￥"
     },
-    "cartLike": {},
     "cartSettlement": {
       "selecTall": "全选",
       "total": "合计",

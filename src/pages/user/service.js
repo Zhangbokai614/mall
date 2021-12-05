@@ -2,7 +2,7 @@ import Request from '../../utils/request';
 
 export const activityImages = (data) => {
   return Request({
-    url: '/homeImages',
+    url: '/home_Images',
     method: 'GET',
     ...data
   });

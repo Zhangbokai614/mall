@@ -29,13 +29,13 @@ export default {
       },
       {
         pagePath: "pages/cart/index",
-        text: languages.goodscar,
+        text: languages.cart,
         iconPath: "./asset/images/tabs/shopping-cart.png",
         selectedIconPath: "./asset/images/tabs/shopping-cart-select.png"
       },
       {
         pagePath: "pages/user/index",
-        text: languages.myself,
+        text: languages.user.myself,
         iconPath: './asset/images/tabs/user.png',
         selectedIconPath: './asset/images/tabs/user-select.png'
       }

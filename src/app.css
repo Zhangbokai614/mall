@@ -18,6 +18,7 @@ page {
 
     --highlight-font-color: var(--highlight-color);
     --unselect-font-color: var(--unselect-color);
+
     --highlight-font-size: 32px;
     --highlight-font-weight: 600;
 

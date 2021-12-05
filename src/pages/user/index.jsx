@@ -5,10 +5,10 @@ import { AtButton, AtAvatar, AtInput, AtModal, AtModalHeader, AtModalContent, At
 
 import { Get } from '../../global-data/index'
 import { OptionsCard } from '../../components/options_card'
+
 import avatar from '../../asset/images/icon/default-avatar.png'
 import pendingPaymentIcon from '../../asset/images/icon/pending-payment.png'
 import pendingReceiptIcon from '../../asset/images/icon/pending-receipt.png'
-import pendingAppraiseIcon from '../../asset/images/icon/pending-appraise.png'
 import returnExchangeIcon from '../../asset/images/icon/return-exchange.png'
 import couponsIcon from '../../asset/images/icon/coupons.png'
 import addressIcon from '../../asset/images/icon/address.png'
@@ -17,22 +17,20 @@ import customerServiceIcon from '../../asset/images/tabs/customer-service-select
 import * as homeApi from './service';
 import './index.css'
 
+const text = Get('languages').user
+
 export default class Index extends Component {
   constructor(props) {
     super(props)
     this.state = {
       avatarUrl: avatar,
-      nickName: Get('languages').defaultName,
+      nickName: text.userInfo.defaultName,
       hasUserInfo: false,
       loading: true,
       activity: '',
-      phone: Get('languages').bindPhone,
+      phone: text.userInfo.bindPhone,
       isOpened: false,
     }
-  }
-
-  componentDidMount() {
-    this.loading()
   }
 
   componentDidShow() {
@@ -56,7 +54,7 @@ export default class Index extends Component {
 
   getUserProfile() {
     wx.getUserProfile({
-      desc: Get('languages').descText,
+      desc: text.userInfo.descText,
       success: (res) => {
         console.log(res)
         this.setState({
@@ -84,16 +82,15 @@ export default class Index extends Component {
 
   render() {
     const ordersCardContent = [
-      { text: Get('languages').pendingPayment, icon: pendingPaymentIcon, path: '/pages/orders/index' },
-      { text: Get('languages').pendingReceipt, icon: pendingReceiptIcon, path: '/pages/orders/index' },
-      { text: Get('languages').pendingAppraise, icon: pendingAppraiseIcon, path: '/pages/orders/index' },
-      { text: Get('languages').returnExchange, icon: returnExchangeIcon, path: '/pages/orders/index' },
+      { text: text.order.pendingPayment, icon: pendingPaymentIcon, path: '/pages/orders/index' },
+      { text: text.order.pendingReceipt, icon: pendingReceiptIcon, path: '/pages/orders/index' },
+      { text: text.order.returnExchange, icon: returnExchangeIcon, path: '/pages/orders/index' },
     ]
 
     const commonCardContent = [
-      { text: Get('languages').coupons, icon: couponsIcon, path: '/pages/orders/index' },
-      { text: Get('languages').address, icon: addressIcon, path: '/pages/orders/index' },
-      { text: Get('languages').customerService, icon: customerServiceIcon, path: '/pages/orders/index' }
+      { text: text.asset.coupons, icon: couponsIcon, path: '/pages/orders/index' },
+      { text: text.asset.address, icon: addressIcon, path: '/pages/orders/index' },
+      { text: text.asset.customerService, icon: customerServiceIcon, path: '/pages/orders/index' }
     ]
 
     try {
@@ -125,26 +122,33 @@ export default class Index extends Component {
           </View>
           <View id='content'>
             <OptionsCard
-              title={Get('languages').myorDers}
+              title={text.order.myOrders}
               headNavigate='true'
-              headNavigateText={Get('languages').allDers}
+              headNavigateText={text.order.allOrders}
               headNavigatePath='/pages/orders/index'
               content={ordersCardContent}
             />
-            <Image
-              id='activity'
-              className='card'
-              style='width: 92%;background: #fff;'
-              src={this.state.activity}
-              mode='widthFix'
-            />
+
+            {
+              this.state.activity
+                ? <Image
+                  id='activity'
+                  className='card'
+                  style='width: 92%;background: #fff;'
+                  src={this.state.activity}
+                  mode='widthFix'
+                />
+                : null
+            }
+
             <OptionsCard
-              title={Get('languages').commonFeatures}
+              title={text.asset.commonFeatures}
               content={commonCardContent}
             />
-          </View>
-          <View className='.at-article__info technicalSupport'>
-            {Get('languages').technicalSupport}
+
+            <View className='.at-article__info technicalSupport'>
+              {text.technicalSupport}
+            </View>
           </View>
 
           <AtModal
@@ -155,7 +159,7 @@ export default class Index extends Component {
             <AtModalContent>
               <AtInput
                 type='number'
-                placeholder={Get('languages').inputPhone}
+                placeholder={text.userInfo.inputPhone}
               />
             </AtModalContent>
             <AtModalAction>
