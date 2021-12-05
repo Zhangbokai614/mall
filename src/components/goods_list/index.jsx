@@ -60,14 +60,12 @@ class GoodsList extends React.Component {
   render() {
     const info = this.state.goodsCardInfo
 
-    console.log(this.state.selectKind, info)
-
     let tabsBar = this.state.kind.map((e, index) =>
       e === this.state.selectKind
         ? <View className='select' key={index} onClick={this.handleClick.bind(this, e)}>
           <View></View>
           {e}
-          <View id='underscore' ></View>
+          <View id='underscore'></View>
         </View>
         : <View className='unSelect' key={index} onClick={this.handleClick.bind(this, e)}>
           {e}

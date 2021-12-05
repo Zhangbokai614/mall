@@ -1,25 +1,22 @@
 #tabsBar {
   display: flex;
   flex-flow: row;
-  align-content: flex-center;
+  flex-wrap: nowrap;
   align-items: center;
   justify-content: space-around;
   background-color: var(--card-bg-color);
   position: sticky;
   top: -0.1vh;
-  height: 8vh;
+  height: 7.2vh;
   box-shadow: var(--shadow);
-  padding-left: 2vw;
-  font-size: var(--highlight-font-size);
 }
 
 .select {
-  color: var(--highlight-font-color);
-  white-space: nowrap;
-  height: 100%;
-  flex: 1;
   display: flex;
   flex-flow: column;
+  color: var(--highlight-font-color);
+  height: 100%;
+  white-space: nowrap;
   justify-content: space-between;
   align-items: center;
 }
@@ -28,7 +25,6 @@
   color: var(--unselect-font-color);
   height: 100%;
   white-space: nowrap;
-  flex: 1;
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -41,6 +37,7 @@
   height: 0.36vh;
   width: 88%;
   border-radius: 100px;
+  justify-self: center
 }
 
 #cardList {

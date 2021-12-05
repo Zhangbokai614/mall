@@ -35,7 +35,7 @@ class GoodsCard extends React.Component {
             mode='aspectFill'
           />
           <View className='focusInfo'>
-            <View className='focusTitle'>
+            <View className='.at-article__h1 title'>
               {title}
             </View>
             <View id='focusInfoText'>
@@ -64,7 +64,7 @@ class GoodsCard extends React.Component {
             src={imageSrc}
             mode='aspectFit'
           />
-          <View className='cardTitle'>
+          <View className='.at-article__h1 title'>
             {title}
           </View>
           {
