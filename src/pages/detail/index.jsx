@@ -74,7 +74,7 @@ export default class Index extends Component {
                         />
                     </View>
                     <View className='priceAndShare'>
-                        <View className='infoPrice'>
+                        <View className='infoPrice at-article__h2'> 
                             ￥{info[0].price}
                         </View>
                         <Image

@@ -83,7 +83,7 @@
     align-items: center;  
     margin-top: 2vh;
     margin-left: 1vw;
-    background-color: #ff5959;
+    background-color: var(--highlight-color);
     color:white;
     font-size: 28px;
     border-radius: 50px;

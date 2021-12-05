@@ -22,7 +22,7 @@
 .confirm {
     padding-top: 1vh;
     margin-bottom: 2vh;
-    background-color:  #ff5959;
+    background-color: var(--highlight-color);
     color: white;
     text-align: center;
     display:inline-block;
