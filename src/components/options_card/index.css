@@ -6,7 +6,8 @@
   margin-left: 4vw;
   margin-right: 4vw;
   margin-bottom: 4vw;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
+  box-shadow: var(--shadow);
+  background-color: var(--card-bg-color);
 }
 
 #cardHead {
@@ -16,7 +17,6 @@
   flex-flow: row;
   justify-content: space-between;
   align-items: center;
-  background-color: white;
   padding-left: 4vw;
   padding-right: 2vw;
   border-bottom: 4px solid #e2e2e2;
@@ -32,7 +32,6 @@
 #cardContent {
   border-radius: 0px 0px 40px 40px;
   height: 18vh;
-  background-color: white;
   display: flex;
   flex-flow: row;
   justify-content: space-evenly;
@@ -50,9 +49,4 @@
   height: 4.8vh;
   width: 4.8vh;
   margin-bottom: 2vh;
-}
-
-.cardContentText {
-  font-weight: normal;
-  font-size: 3.2vw;
 }

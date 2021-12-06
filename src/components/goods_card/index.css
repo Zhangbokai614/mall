@@ -1,34 +1,13 @@
-.card {
-  box-shadow: var(shadow);
-  border-radius: var(--card-border-radius);
-  background-color: var(--card-bg-color);
-}
-
-.cardImage {
+.goodsImage {
   height: 46vw;
-  border-radius: var(--cardImage-border-radius);
-}
-
-.focusImage {
-  height: 44vw;
   border-radius: var(--cardImage-border-radius);
 }
 
 .focusCard {
   display: flex;
   flex-flow: column;
-  width: 92vw;
-  margin-bottom: 1.6vh;
-  margin-left: 2vw;
-  margin-right: 2vw;
-}
-
-.focusInfo {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  width: 100%;
-  margin-bottom: 0.2vh;
+  width: 94vw;
+  margin-bottom: 2.8vw;
 }
 
 .goodsCard {
@@ -36,7 +15,9 @@
   flex-flow: column;
   justify-content: space-between;
   width: 46vw;
-  margin-bottom: 1.6vh;
+  margin-bottom: 2.8vw;
+  margin-left: 1.4vw;
+  margin-right: 1.4vw;
 }
 
 .title {
@@ -45,19 +26,13 @@
   -webkit-line-clamp: 2;
 }
 
-#focusInfoText {
-  width: 100%;
-  display: flex;
-  flex-flow: row;
-  justify-content: space-between;
-}
-
 #goodsInfoText {
   width: 100%;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
   align-content: center;
+  padding-right: 2vw;
 }
 
 .price {
@@ -75,31 +50,14 @@
   margin-bottom: 0.8vh;
 }
 
-#price {
+#prices {
   display: flex;
   flex-flow: row;
 }
 
-.shpingCartIconBox {
-  display: flex;
-  flex-flow: column;
-  justify-content: center;
-  align-items: flex-end;
-  margin-right: 2vh;
-}
-
-.goodsCardTagBox {
-  display: flex;
-  width: 100%;
-}
-
-.goodsCardTag {
-  flex-shrink: inherit;
-  margin-left: 2vw;
-}
-
 .at-tag {
   display: flex;
+  flex-shrink: inherit;
   flex-flow: row;
   justify-content: center;
   align-items: center;

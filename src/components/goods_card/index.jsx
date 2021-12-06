@@ -4,7 +4,6 @@ import { View, Image } from '@tarojs/components'
 import { AtTag } from 'taro-ui'
 
 import './index.css'
-import cart from '../../asset/images/icon/cart.png'
 
 class GoodsCard extends React.Component {
   constructor(props) {
@@ -24,73 +23,35 @@ class GoodsCard extends React.Component {
 
   render() {
     const { title, imageSrc, price, inventory } = this.props
+    const kind = this.state.focus ? 'focus' : 'goods'
 
     return (
-      this.state.focus
-        ? <View className='card focusCard' onClick={this.handleClick.bind(this)}>
-          <Image
-            className='focusImage'
-            style='width: 100%; background: #fff;'
-            src={imageSrc}
-            mode='aspectFill'
-          />
-          <View className='focusInfo'>
-            <View className='.at-article__h2 title'>
-              {title}
-            </View>
-            <View id='focusInfoText'>
-              <View id='price'>
-                <View className='.at-article__h2 cny price'>
-                  ￥
-                </View>
-                <View className='.at-article__h2 price'>
-                  {price}
-                </View>
-                <AtTag className='.at-article__h2' active='false'>tag</AtTag>
-              </View>
-              <View className='shpingCartIconBox'>
-                <Image
-                  src={cart}
-                  style='height: 28px; width: 28px'
-                />
-              </View>
-            </View>
-          </View>
+      <View className={'card ' + kind + 'Card'} onClick={this.handleClick.bind(this)}>
+        <Image
+          className='goodsImage'
+          style='width: 100%; background: #fff;'
+          src={imageSrc}
+          mode='aspectFill'
+        />
+        <View className='.at-article__h2 title'>
+          {title}
         </View>
-        : <View className='card goodsCard' onClick={this.handleClick.bind(this)}>
-          <Image
-            className='cardImage'
-            style='width: 100%; background: #fff;'
-            src={imageSrc}
-            mode='aspectFit'
-          />
-          <View className='.at-article__h1 title'>
-            {title}
+        <View id='goodsInfoText'>
+          <View id='prices'>
+            <View className='.at-article__h2 cny price'>
+              ￥
+            </View>
+            <View className='.at-article__h2 price'>
+              {price}
+            </View>
           </View>
           {
             inventory > 4000
-              ? <View></View>
-              : <View className='goodsCardTagBox'>
-                <AtTag className='goodsCardTag' active='false'>tag</AtTag>
-              </View>
+              ? null
+              : <AtTag className='.at-article__p' active='false'>tag</AtTag>
           }
-          <View id='goodsInfoText'>
-            <View id='price'>
-              <View className='.at-article__h2 cny price'>
-                ￥
-              </View>
-              <View className='.at-article__h2 price'>
-                {price}
-              </View>
-            </View>
-            <View className='shpingCartIconBox'>
-              <Image
-                src={cart}
-                style='height: 28px; width: 28px'
-              />
-            </View>
-          </View>
         </View>
+      </View>
     )
   }
 }

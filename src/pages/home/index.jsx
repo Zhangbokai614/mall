@@ -15,7 +15,6 @@ export default class Index extends Component {
       focusCardInfo: [],
       noticebar: '',
       posters: '',
-      activity: '',
       loading: true,
       isOpened: false,
     }
@@ -43,7 +42,6 @@ export default class Index extends Component {
       loading: false,
     })
 
-    console.log(this.state.activity)
     Taro.hideLoading()
   }
 
@@ -67,19 +65,19 @@ export default class Index extends Component {
       this.state.loading
         ? null
         : <View id='root'>
-
           <Image
             id='posters'
-            style='width: 100%;background: #fff;'
+            style='width: 100%'
             src={this.state.posters}
             mode='widthFix'
           />
 
-          <View id='activitys'>
-            {focusCard}
+          <View id='goods'>
+            <View id='activitys'>
+              {focusCard}
+            </View>
+            <GoodsList />
           </View>
-
-          <GoodsList />
         </View>
     )
   }

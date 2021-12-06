@@ -1,16 +1,8 @@
 import Request from '../../utils/request';
 
-export const kind = (data) => {
+export const goodsCard = (data) => {
   return Request({
-    url: '/kind',
-    method: 'GET',
-    ...data
-  });
-}
-
-export const goodsCard = (kind, data) => {
-  return Request({
-    url: '/goods_card?kind='+ kind,
+    url: '/goods_card',
     method: 'GET',
     ...data
   });

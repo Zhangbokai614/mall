@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
-import { View, Image } from '@tarojs/components'
+import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { AtButton, AtAvatar, AtInput, AtModal, AtModalHeader, AtModalContent, AtModalAction } from 'taro-ui'
+import { AtAvatar } from 'taro-ui'
 
 import { Get } from '../../global-data/index'
 import { OptionsCard } from '../../components/options_card'
@@ -10,11 +10,12 @@ import avatar from '../../asset/images/icon/default-avatar.png'
 import pendingPaymentIcon from '../../asset/images/icon/pending-payment.png'
 import pendingReceiptIcon from '../../asset/images/icon/pending-receipt.png'
 import returnExchangeIcon from '../../asset/images/icon/return-exchange.png'
+import allOrders from '../../asset/images/icon/all-orders.png'
 import couponsIcon from '../../asset/images/icon/coupons.png'
 import addressIcon from '../../asset/images/icon/address.png'
 import customerServiceIcon from '../../asset/images/tabs/customer-service-select.png'
 
-import * as homeApi from './service';
+// import * as homeApi from './service';
 import './index.css'
 
 const text = Get('languages').user
@@ -71,7 +72,7 @@ export default class Index extends Component {
       { text: text.order.pendingPayment, icon: pendingPaymentIcon, path: '/pages/orders/index' },
       { text: text.order.pendingReceipt, icon: pendingReceiptIcon, path: '/pages/orders/index' },
       { text: text.order.returnExchange, icon: returnExchangeIcon, path: '/pages/orders/index' },
-      { text: text.order.allOrders, icon: returnExchangeIcon, path: '/pages/orders/index'},
+      { text: text.order.allOrders, icon: allOrders, path: '/pages/orders/index'},
     ]
 
     const commonCardContent = [
