@@ -31,7 +31,7 @@ class Introduction extends React.Component {
                         style='width:2vw; height:9vw;'
                     >
                     </Image>
-                    <View className='introduceTitle'>
+                    <View className='introduceTitle at-article__h2'>
                         {Get('languages').detailPage.goodsIntroduce}
                     </View>
                 </View>

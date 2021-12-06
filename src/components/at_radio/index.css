@@ -16,20 +16,20 @@
     font-size: 30px;
     width: 50%;
     height: 6vh;
-    border-radius: 50px;
+    border-radius: var(--detail-border-radius);
 }
 
 .confirm {
     padding-top: 1vh;
     margin-bottom: 2vh;
-    background-color:  #ff5959;
+    background-color: var(--highlight-color);
     color: white;
     text-align: center;
     display:inline-block;
     font-size: 30px;
     width: 50%;
     height: 6vh;
-    border-radius: 50px;
+    border-radius: var(--detail-border-radius);
 }
 
 .textService {

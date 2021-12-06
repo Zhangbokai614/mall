@@ -10,7 +10,7 @@
 }
 
 .infoPrice {
-    color: #f94249;
+    color: var(--highlight-color);
     font-size: 52px;
 }
 
