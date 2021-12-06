@@ -45,7 +45,7 @@ export default class Index extends Component {
     // const activityImages = await homeApi.activityImages()
 
     this.setState({
-    //   activity: activityImages.data.activity,
+      //   activity: activityImages.data.activity,
       loading: false,
     })
 
@@ -69,10 +69,10 @@ export default class Index extends Component {
 
   render() {
     const ordersCardContent = [
-      { text: text.order.pendingPayment, icon: pendingPaymentIcon, path: '/pages/orders/index' },
-      { text: text.order.pendingReceipt, icon: pendingReceiptIcon, path: '/pages/orders/index' },
-      { text: text.order.returnExchange, icon: returnExchangeIcon, path: '/pages/orders/index' },
-      { text: text.order.allOrders, icon: allOrders, path: '/pages/orders/index'},
+      { text: text.order.pendingPayment, icon: pendingPaymentIcon, path: '/pages/orders/index?selectKind=' + text.order.pendingPayment },
+      { text: text.order.pendingReceipt, icon: pendingReceiptIcon, path: '/pages/orders/index?selectKind=' + text.order.pendingReceipt },
+      { text: text.order.returnExchange, icon: returnExchangeIcon, path: '/pages/orders/index?selectKind=' + text.order.returnExchange },
+      { text: text.order.allOrders, icon: allOrders, path: '/pages/orders/index?selectKind=' + text.order.allOrders },
     ]
 
     const commonCardContent = [

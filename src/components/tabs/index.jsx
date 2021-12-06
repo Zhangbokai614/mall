@@ -1,7 +1,6 @@
 import React from 'react'
 import { View } from '@tarojs/components'
 
-import { Get } from '../../global-data/index'
 import './index.css'
 
 class Tabs extends React.Component {
@@ -10,7 +9,7 @@ class Tabs extends React.Component {
     this.state = {
       kind: props.kind,
       selectKind: props.selectKind,
-      content: props.content,
+      content: '',
       loading: true
     }
   }
@@ -40,7 +39,7 @@ class Tabs extends React.Component {
           {tabsBar}
         </View>
         <View id='tabsContent'>
-          {content}
+          {this.state.content}
         </View>
       </View>
     )

@@ -12,6 +12,7 @@ export default class Index extends Component {
   constructor(props) {
     super(props)
     this.state = {
+      goodsCardInfo: [],
       focusCardInfo: [],
       noticebar: '',
       posters: '',
@@ -33,10 +34,12 @@ export default class Index extends Component {
       title: Get('languages').loading,
     })
 
+    const goodsCardInfo = await homeApi.goodsCardInfo()
     const focusCardInfo = await homeApi.focus()
     const homeImages = await homeApi.homeImages()
 
     this.setState({
+      goodsCardInfo: goodsCardInfo.data,
       focusCardInfo: focusCardInfo.data,
       posters: homeImages.data,
       loading: false,
@@ -46,6 +49,7 @@ export default class Index extends Component {
   }
 
   render() {
+    const goodsCardInfo = this.state.goodsCardInfo
     const focusCardInfo = this.state.focusCardInfo
 
     const focusCard = focusCardInfo.map((e) => {
@@ -76,7 +80,7 @@ export default class Index extends Component {
             <View id='activitys'>
               {focusCard}
             </View>
-            <GoodsList />
+            <GoodsList goodsCardInfo={goodsCardInfo}/>
           </View>
         </View>
     )

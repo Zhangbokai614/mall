@@ -1,41 +1,17 @@
 import React from 'react'
 import { View } from '@tarojs/components'
-import Taro from '@tarojs/taro'
 
 import { GoodsCard } from '../goods_card/index'
-import { Get } from '../../global-data/index'
-import * as goodsCardApi from './service'
+
 import './index.css'
 
 class GoodsList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      goodsCardInfo: [],
+      goodsCardInfo: props.goodsCardInfo,
       loading: true
     }
-  }
-
-  componentDidMount() {
-    this.loading()
-  }
-
-  componentDidShow() {
-    this.loading()
-  }
-
-  async loading() {
-    Taro.showLoading({
-      title: Get('languages').loading,
-    })
-
-    const goodsCardInfo = await goodsCardApi.goodsCard()
-    this.setState({
-      goodsCardInfo: goodsCardInfo.data,
-      loading: false,
-    })
-
-    Taro.hideLoading()
   }
 
   render() {
