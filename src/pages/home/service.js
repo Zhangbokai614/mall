@@ -8,14 +8,6 @@ export const focus = (data) => {
   });
 }
 
-export const noticebar = (data) => {
-  return Request({
-    url: '/noticebar',
-    method: 'GET',
-    ...data
-  });
-}
-
 export const homeImages = (data) => {
   return Request({
     url: '/home_images',

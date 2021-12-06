@@ -8,6 +8,13 @@
   margin-bottom: 1vh;
 }
 
+#body {
+  display: flex;
+  flex-flow: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
 #nameCard {
   background-color: #ff4949;
   border-radius: 0 0 72px 72px;
@@ -52,4 +59,5 @@
   align-items: center;
   margin-top: 1vh;
   margin-bottom: 1vh;
+  justify-self: end;
 }

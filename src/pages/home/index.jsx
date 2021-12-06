@@ -1,7 +1,6 @@
 import React, { Component } from 'react'
 import { View, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
-import { AtNoticebar } from 'taro-ui'
 
 import { GoodsCard } from '../../components/goods_card/index'
 import { GoodsList } from '../../components/goods_list/index'
@@ -36,14 +35,11 @@ export default class Index extends Component {
     })
 
     const focusCardInfo = await homeApi.focus()
-    const noticebar = await homeApi.noticebar()
     const homeImages = await homeApi.homeImages()
 
     this.setState({
       focusCardInfo: focusCardInfo.data,
-      noticebar: noticebar.data,
-      posters: homeImages.data.posters,
-      activity: homeImages.data.activity,
+      posters: homeImages.data,
       loading: false,
     })
 
@@ -71,13 +67,6 @@ export default class Index extends Component {
       this.state.loading
         ? null
         : <View id='root'>
-          <AtNoticebar
-            marquee
-            icon='volume-plus'
-            speed='30'
-          >
-            {this.state.noticebar}
-          </AtNoticebar>
 
           <Image
             id='posters'
@@ -87,13 +76,6 @@ export default class Index extends Component {
           />
 
           <View id='activitys'>
-            <Image
-              id='activity'
-              className='card'
-              style='width: 96%;background: #fff;'
-              src={this.state.activity}
-              mode='widthFix'
-            />
             {focusCard}
           </View>
 

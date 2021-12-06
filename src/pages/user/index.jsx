@@ -27,7 +27,6 @@ export default class Index extends Component {
       nickName: text.userInfo.defaultName,
       hasUserInfo: false,
       loading: true,
-      activity: '',
       phone: text.userInfo.bindPhone,
       isOpened: false,
     }
@@ -42,10 +41,10 @@ export default class Index extends Component {
       title: Get('languages').loading,
     })
 
-    const activityImages = await homeApi.activityImages()
+    // const activityImages = await homeApi.activityImages()
 
     this.setState({
-      activity: activityImages.data.activity,
+    //   activity: activityImages.data.activity,
       loading: false,
     })
 
@@ -67,24 +66,12 @@ export default class Index extends Component {
     })
   }
 
-  handleChange(e) {
-    e.stopPropagation()
-    this.setState({
-      isOpened: true
-    })
-  }
-
-  onClose() {
-    this.setState({
-      isOpened: false
-    })
-  }
-
   render() {
     const ordersCardContent = [
       { text: text.order.pendingPayment, icon: pendingPaymentIcon, path: '/pages/orders/index' },
       { text: text.order.pendingReceipt, icon: pendingReceiptIcon, path: '/pages/orders/index' },
       { text: text.order.returnExchange, icon: returnExchangeIcon, path: '/pages/orders/index' },
+      { text: text.order.allOrders, icon: returnExchangeIcon, path: '/pages/orders/index'},
     ]
 
     const commonCardContent = [
@@ -105,7 +92,7 @@ export default class Index extends Component {
     return (
       this.state.loading
         ? null
-        : <View>
+        : <View id='body'>
           <View id='nameCard' className='card'>
             <AtAvatar
               circle
@@ -116,56 +103,22 @@ export default class Index extends Component {
             <View id='name' onClick={this.getUserProfile.bind(this)}>
               {this.state.nickName}
             </View>
-            <View id='phone' onClick={this.handleChange.bind(this)}>
-              {this.state.phone}
-            </View>
           </View>
           <View id='content'>
             <OptionsCard
               title={text.order.myOrders}
-              headNavigate='true'
-              headNavigateText={text.order.allOrders}
-              headNavigatePath='/pages/orders/index'
               content={ordersCardContent}
             />
-
-            {
-              this.state.activity
-                ? <Image
-                  id='activity'
-                  className='card'
-                  style='width: 92%;background: #fff;'
-                  src={this.state.activity}
-                  mode='widthFix'
-                />
-                : null
-            }
 
             <OptionsCard
               title={text.asset.commonFeatures}
               content={commonCardContent}
             />
-
-            <View className='.at-article__info technicalSupport'>
-              {text.technicalSupport}
-            </View>
           </View>
 
-          <AtModal
-            isOpened={this.state.isOpened}
-            onClose={this.onClose.bind(this)}
-          >
-            <AtModalHeader>标题</AtModalHeader>
-            <AtModalContent>
-              <AtInput
-                type='number'
-                placeholder={text.userInfo.inputPhone}
-              />
-            </AtModalContent>
-            <AtModalAction>
-              <AtButton>确定</AtButton>
-            </AtModalAction>
-          </AtModal>
+          <View className='.at-article__info technicalSupport'>
+            {text.technicalSupport}
+          </View>
         </View>
     )
   }
