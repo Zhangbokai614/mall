@@ -1,7 +1,0 @@
-$hd: 2 !default;
-
-$font-size-base: 20px * $hd !default;
-
-$at-swipe-action-font-size: $font-size-base !default;
-
-@import "~taro-ui/dist/style/components/swipe-action.scss";

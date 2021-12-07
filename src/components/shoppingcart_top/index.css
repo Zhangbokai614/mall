@@ -11,16 +11,22 @@
   background: white;
 }
 
+.sticky {
+  z-index: 999;
+  position: sticky;
+  top: 0px;
+}
+
 .hint {
-  margin-left: 0.375rem;
+  margin-left: 0.5rem;
   font-size: 25px;
-  color: var(--color);
+  color: var(--highlight-color);
 }
 
 .textright {
   position: absolute;
   right: 0;
-  margin-right: 0.375rem;
+  margin-right: 1rem;
   font-size: 27.5px;
-  color: var(--color);
+  color: var(--highlight-color);
 }

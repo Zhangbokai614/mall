@@ -1,4 +1,5 @@
 .align {
+  z-index: 20;
   display: flex;
   align-items: center;
 }
@@ -41,7 +42,7 @@
 .selectall {
   --tw-text-opacity: 1;
   font-size: 0.875rem;
-  font: tahoma, arial, "Hiragino Sans GB", "\5b8b\4f53", sans-serif;
+  font: tahoma, arial, 'Hiragino Sans GB', '\5b8b\4f53', sans-serif;
   font-weight: 500;
 }
 
@@ -70,7 +71,7 @@
   border-radius: 100%;
   position: relative;
   background: #ff4949;
-  background-image: url("./check.svg");
+  background-image: url('./check.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 75%;
