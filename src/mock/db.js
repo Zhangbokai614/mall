@@ -311,7 +311,7 @@ module.exports = () => {
       '折扣价：为折扣期间的价格如果没有特殊说明，折扣是在原价基础上计算出的优惠比例或者优惠金额；如果有疑问您可以在购买前询问客服。',
     ],
     after_sales_free: ['：包邮不包含偏远地区及海外地区。'],
-    'shopping_Card|20-50': [
+    'shopping_card|20-50': [
       {
         circle: false,
         'value|50-80': 66,
