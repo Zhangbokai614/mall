@@ -5,20 +5,21 @@
   align-items: center;
   flex-direction: row;
   position: relative;
-  margin-bottom: 0.7rem;
-  border-bottom-right-radius: 0.75rem;
-  border-bottom-left-radius: 0.75rem;
-  background: white;
+  margin-bottom: 1.5vh;
+  box-shadow: var(--shadow);
+  border-bottom-right-radius: var(--card-border);
+  border-bottom-left-radius: var(--card-border);
+  background: var(--card-bg-color);
 }
 
 .sticky {
-  z-index: 999;
+  z-index: 40;
   position: sticky;
   top: 0px;
 }
 
 .hint {
-  margin-left: 0.5rem;
+  margin-left: 2vw;
   font-size: 25px;
   color: var(--highlight-color);
 }
@@ -26,7 +27,7 @@
 .textright {
   position: absolute;
   right: 0;
-  margin-right: 1rem;
+  margin-right: 4vw;
   font-size: 27.5px;
   color: var(--highlight-color);
 }

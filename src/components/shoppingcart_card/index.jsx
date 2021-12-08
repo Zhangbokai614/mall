@@ -5,6 +5,8 @@ import { AtInputNumber } from 'taro-ui';
 import { Get } from '../../global-data';
 import './index.css';
 
+const text = Get('languages').shoppingCart.cartCard;
+
 class Card extends Component {
   constructor(props) {
     super(props);
@@ -38,7 +40,7 @@ class Card extends Component {
             </View>
           </View>
           <View className='absolute down relative'>
-            <Text className='money'>{Get('languages').shoppingCart.cartCard.moneySymbol}</Text>
+            <Text className='money'>{text.moneySymbol}</Text>
             <Text className='number'>{number}</Text>
             <AtInputNumber
               className='absolute counter'

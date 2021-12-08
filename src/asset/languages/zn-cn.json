@@ -2,7 +2,7 @@
   "loading": "正在加载",
   "home": "首页",
   "detail": "详情",
-  "cart":"购物车",
+  "cart": "购物车",
   "user": {
     "myself": "我的",
     "order": {
@@ -49,16 +49,17 @@
     "afterSales": "关于售后"
   },
   "shoppingCart": {
-    "goshopping": "去逛逛",
-    "shoppingcartisempty": "购物车当前是空的",
-    "hurryupandbuysomebaby": "赶紧买点宝贝慰劳下自己吧",
+    "cartNull": {
+      "goshopping": "去逛逛",
+      "shoppingcartisempty": "购物车当前是空的",
+      "hurryupandbuysomebaby": "赶紧买点宝贝慰劳下自己吧"
+    },
     "cartTop": {
       "hint": "商品库存有限，请尽快下单",
       "edit": "编辑",
       "achieve": "完成"
     },
     "cartCard": {
-      "delete": "删除",
       "moneySymbol": "￥"
     },
     "cartSettlement": {

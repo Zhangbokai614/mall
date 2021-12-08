@@ -5,6 +5,8 @@ import { AtButton } from 'taro-ui';
 import { Get } from '../../global-data';
 import './index.css';
 
+const text = Get('languages').shoppingCart.cartSettlement;
+
 class Settlement extends Component {
   constructor(props) {
     super(props);
@@ -17,12 +19,12 @@ class Settlement extends Component {
       <>
         <View className='absolute flex-row'>
           <View>
-            <Text className='selectall'>{Get('languages').shoppingCart.cartSettlement.total}：</Text>
-            <Text className='selectall red'>{Get('languages').shoppingCart.cartSettlement.moneySymbol}</Text>
-            <Text className='number red'>{number == undefined ? 0 : number}</Text>
+            <Text className='at-article__h2 at-article__h2-margin'>{text.total}：</Text>
+            <Text className='money'>{text.moneySymbol}</Text>
+            <Text className='number'>{number == undefined ? 0 : number}</Text>
           </View>
           <AtButton className='bottom' type='primary' size='normal' circle='true'>
-            {Get('languages').shoppingCart.cartSettlement.settlement}
+            {text.settlement}
           </AtButton>
         </View>
       </>
@@ -32,7 +34,7 @@ class Settlement extends Component {
       <>
         <View className='absolute flex-row'>
           <AtButton className='bottom' type='secondary' size='normal' circle='true' onClick={cardDelete}>
-            {Get('languages').shoppingCart.cartSettlement.delete}
+            {text.delete}
           </AtButton>
         </View>
       </>
@@ -43,7 +45,7 @@ class Settlement extends Component {
         <View onClick={circleClink}>
           <View className={circleState === false ? 'unselected' + ' ' + 'margin' : 'selected' + ' ' + 'margin'}></View>
         </View>
-        <Text className='selectall '>{Get('languages').shoppingCart.cartSettlement.selecTall}</Text>
+        <Text className='at-article__h2 at-article__h2-margin'>{text.selecTall}</Text>
         {this.props.topText === false ? settlement : del}
       </View>
     );

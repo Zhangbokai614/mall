@@ -5,8 +5,9 @@
   display: flex;
   position: relative;
   align-items: center;
-  border-radius: 20px;
-  background: white;
+  border-radius: var(--card-border-radius);
+  box-shadow: var(--posters-shadow);
+  background: var(--card-bg-color);
 }
 
 .frameleft {
@@ -25,7 +26,7 @@
 .cardImage {
   width: 18vh;
   height: 18vh;
-  border-radius: 0.5rem;
+  border-radius: var(--card-border-radius);
 }
 
 .frameright {
@@ -49,7 +50,7 @@
 
 .standard {
   display: flex;
-  background: #f5f5f5;
+  background: var(--confing-color);
 }
 
 .at-article__p {
@@ -72,13 +73,13 @@
 }
 
 .money {
-  color: red;
-  font-size: 1rem;
+  color: var(--highlight-color);
+  font-size: var(--ShoppingCard-string-font-size);
 }
 
 .number {
-  color: red;
-  font-size: 1.5rem;
+  color: var(--highlight-color);
+  font-size: var(--ShoppingCard-number-font-size);
 }
 
 .counter {
@@ -90,11 +91,11 @@
 .unselected {
   width: 45px;
   height: 45px;
-  background: #ffffff;
+  background: var(--card-bg-color);
   border: solid;
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: #cfcfcf;
+  border-color: var(--card-border-color);
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
@@ -103,9 +104,9 @@
 .invalidation {
   width: 45px;
   height: 45px;
-  background: #f1f1f1;
+  background: var(--card-bg-color);
   border: solid;
-  border-width: 1px;
+  border-width: 2px;
   --tw-border-opacity: 1;
   border-color: rgba(156, 163, 175, var(--tw-border-opacity));
   -moz-border-radius: 50px;
@@ -117,7 +118,7 @@
   width: 45px;
   height: 45px;
   border-radius: 100%;
-  background: #ff4949;
+  background: var(--highlight-color);
   background-image: url('./check.svg');
   background-position: center center;
   background-repeat: no-repeat;

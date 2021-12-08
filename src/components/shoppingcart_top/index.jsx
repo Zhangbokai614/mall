@@ -4,6 +4,8 @@ import React, { Component } from 'react';
 import { Get } from '../../global-data';
 import './index.css';
 
+const text = Get('languages').shoppingCart.cartTop;
+
 class CartTop extends Component {
   constructor(props) {
     super(props);
@@ -14,11 +16,9 @@ class CartTop extends Component {
     return (
       <View className='sticky'>
         <View className='cube'>
-          <Text className='hint'>{Get('languages').shoppingCart.cartTop.hint}</Text>
+          <Text className='hint'>{text.hint}</Text>
           <Text className='textright' onClick={clink}>
-            {textState === false
-              ? Get('languages').shoppingCart.cartTop.edit
-              : Get('languages').shoppingCart.cartTop.achieve}
+            {textState === false ? text.edit : text.achieve}
           </Text>
         </View>
       </View>
