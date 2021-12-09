@@ -1,5 +1,5 @@
 import React from 'react'
-import { View, Image } from '@tarojs/components'
+import { Image } from '@tarojs/components'
 import { Swiper, SwiperItem } from '@tarojs/components'
 
 import './index.css'
