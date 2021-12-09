@@ -10,17 +10,10 @@ export const goodsInfo = (id, data) => {
 
 export const afterSales = ( data) => {
     return Request({
-        url: '/after_sales_detail',
+        url: '/after_sales',
         method: 'GET',
         ...data
     });
 }
 
-export const afterSalesFree = ( data) => {
-    return Request({
-        url: '/after_sales_free',
-        method: 'GET',
-        ...data
-    });
-}
 

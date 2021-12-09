@@ -23,7 +23,6 @@ export default class Index extends Component {
             current: 0,
             goodsInfo: {},
             afterSales: [],
-            afterSalesFree: [],
             loading: true,
         }
     }
@@ -44,11 +43,10 @@ export default class Index extends Component {
         const { id } = getCurrentInstance().router.params
         const goodsInfo = await homeApi.goodsInfo(+id)
         const afterSales = await homeApi.afterSales()
-        const afterSalesFree = await homeApi.afterSalesFree()
         this.setState({
             goodsInfo: goodsInfo.data.filter((e) => e.id === +id),
-            afterSales: afterSales.data,
-            afterSalesFree: afterSalesFree.data,
+            afterSales: afterSales.data.detail,
+            afterSalesFree: afterSales.data.free,
             loading: false,
         })
         Taro.hideLoading()
