@@ -9,7 +9,7 @@ class Tabs extends React.Component {
     this.state = {
       kind: props.kind,
       selectKind: props.selectKind,
-      content: '',
+      content: props.content,
       loading: true
     }
   }
@@ -34,13 +34,8 @@ class Tabs extends React.Component {
     )
 
     return (
-      <View>
-        <View id='tabsBar'>
-          {tabsBar}
-        </View>
-        <View id='tabsContent'>
-          {this.state.content}
-        </View>
+      <View id='tabsBar'>
+        {tabsBar}
       </View>
     )
   }

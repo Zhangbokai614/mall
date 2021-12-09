@@ -1,24 +1,16 @@
 import Request from '../../utils/request';
 
-export const goodsInfo = (data) => {
+export const orderInfo = (data) => {
   return Request({
-    url: '/goodsInfo',
+    url: '/order',
     method: 'GET',
     ...data
   });
 }
 
-export const noticebar = (data) => {
+export const goodsInfo = (goodsId, data) => {
   return Request({
-    url: '/noticebar',
-    method: 'GET',
-    ...data
-  });
-}
-
-export const homeImages = (data) => {
-  return Request({
-    url: '/homeImages',
+    url: '/goods_card?id=' + goodsId,
     method: 'GET',
     ...data
   });

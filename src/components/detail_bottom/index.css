@@ -1,122 +1,122 @@
 .bottom {
-    position: absolute;
-    position: sticky;
-    bottom: 0px; 
-    display: flex; 
-    flex-direction: row;
-    padding-bottom: 3vh;
-    background-color:white;
-    z-index: 100;
-} 
+  position: absolute;
+  position: sticky;
+  bottom: 0px;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 3vh;
+  background-color: white;
+  z-index: 100;
+}
 
-.bottomLeftHome {   
-    display: flex;
-    flex-direction: column; 
-    margin-top: 2vh;
-    height: 8vh;
-    margin-left: 1vw;
-    width: 12vw;
-    border: none;
-    justify-content: space-between;
-    align-items: center;
-    padding-bottom: 3vh;
-    background-color: white;
+.bottomLeftHome {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+  height: 8vh;
+  margin-left: 1vw;
+  width: 12vw;
+  border: none;
+  justify-content: space-between;
+  align-items: center;
+  padding-bottom: 3vh;
+  background-color: white;
 }
 
 .bottomLeftHome::after {
-    border: none;
+  border: none;
 }
 
-.bottomLeftService {  
-    display: flex;
-    flex-direction: column; 
-    margin-top: 2vh;
-    height: 8vh;
-    width: 12vw;
-    margin-left: -20vw;
-    align-items: center;
-    padding-bottom: 3vh;
-    background-color: white;
+.bottomLeftService {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+  height: 8vh;
+  width: 12vw;
+  margin-left: -20vw;
+  align-items: center;
+  padding-bottom: 3vh;
+  background-color: white;
 }
 
-.bottomLeftGoodscar {   
-    display: flex;
-    flex-direction: column; 
-    margin-top: 2vh;
-    height: 8vh;
-    margin-left: -20vw;
-    width: 12vw;
-    border: none;
-    justify-content: space-between;
-    padding-bottom: 3vh;
-    background-color: white;
+.bottomLeftGoodscar {
+  display: flex;
+  flex-direction: column;
+  margin-top: 2vh;
+  height: 8vh;
+  margin-left: -20vw;
+  width: 12vw;
+  border: none;
+  justify-content: space-between;
+  padding-bottom: 3vh;
+  background-color: white;
 }
 
 .bottomLeftGoodscar::after {
-    border: none;
+  border: none;
 }
 
 .bottonLeft {
-    display: flex;
-	flex-direction: column;
-	justify-content: center;
-	align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
 .bottombuttonCar {
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    margin-top: 2vh;
-    background-color: #ffd149;
-    color: white;
-    font-size: 28px;
-    border-radius: var(--detail-border-radius);
-    height: 80%;
-    margin-left: -20vw;
-    width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  background-color: #ffd149;
+  color: white;
+  font-size: 28px;
+  border-radius: var(--detail-border-radius);
+  height: 80%;
+  margin-left: -20vw;
+  width: 50vw;
 }
 
 .bottombuttonTobuy {
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    margin-top: 2vh;
-    margin-left: 1vw;
-    background-color: var(--highlight-color);
-    color:white;
-    font-size: 28px;
-    border-radius: var(--detail-border-radius);
-    height: 80%;
-    width: 50vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 2vh;
+  margin-left: 1vw;
+  background-color: var(--highlight-color);
+  color: white;
+  font-size: 28px;
+  border-radius: var(--detail-border-radius);
+  height: 80%;
+  width: 50vw;
 }
 
 .bottomRight {
-    display: flex;
-    justify-content:center;
-    flex-direction: row;
-    margin-bottom: 1vh;
-    width: 40vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  margin-bottom: 1vh;
+  width: 40vw;
 }
 
 .bottomLeftService::after {
-    border: none;
+  border: none;
 }
 
 .detailHome {
-    margin-bottom: 1vh;
-    font-size: 2vh;
-    white-space: nowrap;
+  margin-bottom: 1vh;
+  font-size: 2vh;
+  white-space: nowrap;
 }
 
 .detailService {
-    margin-bottom: 1vh;
-    font-size: 2vh;
-    white-space: nowrap;
+  margin-bottom: 1vh;
+  font-size: 2vh;
+  white-space: nowrap;
 }
 
 .detailGoodscar {
-    margin-bottom: 1vh;
-    font-size: 2vh;
-    white-space: nowrap;
+  margin-bottom: 1vh;
+  font-size: 2vh;
+  white-space: nowrap;
 }
