@@ -32,14 +32,12 @@
   display: flex;
   flex-flow: row;
   width: 100%;
-  height: 12vh;
-  /* background-color: cyan; */
+  height: 16vh;
 }
 
 #goods-title-specs {
   display: flex;
   flex-flow: column;
-  justify-content: space-between;
 }
 
 #goods-title {
@@ -51,6 +49,7 @@
 
 #goods-specs {
   color: darkgrey;
+  margin-top: 4vh;
 }
 
 #goods-info-image {
@@ -61,7 +60,7 @@
 #total {
   display: flex;
   flex-flow: row-reverse;
-  margin-top: 4vw;
+  margin-top: 2vw;
   font-weight: 500;
 }
 
@@ -92,28 +91,4 @@
 .card-button {
   margin-left: 4vw;
   color: #ffffff;
-}
-
-#red-tag {
-  display: flex;
-  flex-shrink: inherit;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-  border-radius: var(--tag-radius);
-  color: var(--highlight-color);
-  border-color: var(--tag-color);
-  border-width: 2px;
-}
-
-#green-tag {
-  display: flex;
-  flex-shrink: inherit;
-  flex-flow: row;
-  justify-content: center;
-  align-items: center;
-  border-radius: var(--tag-radius);
-  color: chartreuse;
-  border-color: chartreuse;
-  border-width: 2px;
 }
