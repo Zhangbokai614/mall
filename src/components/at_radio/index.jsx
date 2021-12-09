@@ -1,6 +1,6 @@
 import { View, Image, Text } from '@tarojs/components'
 import React from 'react'
-import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList, AtInputNumber } from 'taro-ui'
+import { AtButton, AtIcon, AtListItem, AtFloatLayout, AtRadio, AtList, AtInputNumber } from 'taro-ui'
 
 import { Get } from '../../global-data/index'
 import Fruit from '../../asset/images/icon/fruit.png'
@@ -229,6 +229,12 @@ class GoodsSelection extends React.Component {
               <View className='serviceDetail'>
                 {Get('languages').detailPage.returnGoods}
               </View>
+              <AtIcon
+              className='iconCheron'
+              value='chevron-right'
+              size='15'
+              color='#bfbfbf'
+              ></AtIcon>
             </View>
             <AtFloatLayout
               isOpened={this.state.atButtonService}
