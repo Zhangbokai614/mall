@@ -16,9 +16,9 @@ export const focus = (data) => {
   });
 }
 
-export const homeImages = (data) => {
+export const banner = (data) => {
   return Request({
-    url: '/home_images',
+    url: '/banner',
     method: 'GET',
     ...data
   });

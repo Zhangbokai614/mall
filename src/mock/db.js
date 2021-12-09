@@ -4,10 +4,8 @@ const Random = Mock.Random;
 
 module.exports = () => {
     let data = Mock.mock({
-        kind: ['综合推荐', '水果', '生鲜', '粮油', '海鲜', '其它'],
         focus: [
             {
-                kind: '综合推荐',
                 'id|+1': 1,
                 title: '@csentence',
                 images: [
@@ -18,11 +16,11 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg',
                 ],
                 'price|10-80': 80,
+                'inventory|0-10000': 10000,
             },
         ],
         'goods_card|1-8': [
             {
-                kind: '综合推荐',
                 'id|+1': 1,
                 title: '@csentence',
                 images: [
@@ -33,9 +31,9 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg',
                 ],
                 'price|10-80': 80,
+                'inventory|0-10000': 10000,
             },
             {
-                kind: '水果',
                 'id|+1': 200,
                 title: '@csentence',
                 images: [
@@ -46,9 +44,9 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg',
                 ],
                 'price|10-80': 80,
+                'inventory|0-10000': 10000,
             },
             {
-                kind: '生鲜',
                 'id|+1': 300,
                 title: '@csentence',
                 images: [
@@ -59,9 +57,9 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg',
                 ],
                 'price|10-80': 80,
+                'inventory|0-10000': 10000,
             },
             {
-                kind: '粮油',
                 'id|+1': 400,
                 title: '@csentence',
                 images: [
@@ -72,9 +70,9 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg',
                 ],
                 'price|10-80': 80,
+                'inventory|0-10000': 10000,
             },
             {
-                kind: '海鲜',
                 'id|+1': 500,
                 title: '@csentence',
                 images: [
@@ -85,9 +83,9 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg',
                 ],
                 'price|10-80': 80,
+                'inventory|0-10000': 10000,
             },
             {
-                kind: '其它',
                 'id|+1': 600,
                 title: Random.csentence(),
                 images: [
@@ -98,9 +96,9 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg',
                 ],
                 'price|10-80': 80,
+                'inventory|0-10000': 10000,
             },
             {
-                kind: '其它',
                 'id|+1': 600,
                 title: Random.csentence(3, 5),
                 images: [
@@ -111,18 +109,12 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg',
                 ],
                 'price|10-80': 80,
+                'inventory|0-10000': 10000,
             },
         ],
         'goods_info|1-8': [
             {
-                kind: '综合推荐',
                 'id|+1': 1,
-                production_code: 'aaa-bbb-123',
-                standard_code: 'GB-2011-034',
-                shelf_life: {
-                    temperature: '4°',
-                    days: '7',
-                },
                 title: '@csentence',
                 'inventory|0-10000': 10000,
                 images: [
@@ -143,17 +135,10 @@ module.exports = () => {
                 ],
                 'price|10-80': 80,
                 'weight|1-4': 2,
-                sku: [{ 'testA|10-20': 10 }, { 'testB|10-20': 10 }, { 'testC|10-20': 10 }, { 'testD|10-20': 10 }],
+                specs: '6 斤装',
             },
             {
-                kind: '水果',
                 'id|+1': 200,
-                production_code: 'aaa-bbb-123',
-                standard_code: 'GB-2011-034',
-                shelf_life: {
-                    temperature: '4°',
-                    days: '7',
-                },
                 title: '@csentence',
                 'inventory|0-10000': 10000,
                 images: [
@@ -173,18 +158,10 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg',
                 ],
                 'price|10-80': 80,
-                'weight|1-4': 2,
-                sku: [{ 'testA|10-20': 10 }, { 'testB|10-20': 10 }, { 'testC|10-20': 10 }, { 'testD|10-20': 10 }],
+                specs: '4 斤装',
             },
             {
-                kind: '生鲜',
                 'id|+1': 300,
-                production_code: 'aaa-bbb-123',
-                standard_code: 'GB-2011-034',
-                shelf_life: {
-                    temperature: '4',
-                    days: '7',
-                },
                 title: '@csentence',
                 'inventory|0-10000': 10000,
                 images: [
@@ -204,18 +181,10 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg',
                 ],
                 'price|10-80': 80,
-                'weight|1-4': 2,
-                sku: [{ 'testA|10-20': 10 }, { 'testB|10-20': 10 }, { 'testC|10-20': 10 }, { 'testD|10-20': 10 }],
+                specs: '2 斤装',
             },
             {
-                kind: '粮油',
                 'id|+1': 400,
-                production_code: 'aaa-bbb-123',
-                standard_code: 'GB-2011-034',
-                shelf_life: {
-                    temperature: '4°',
-                    days: '7',
-                },
                 title: '@csentence',
                 'inventory|0-10000': 10000,
                 images: [
@@ -235,18 +204,10 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg',
                 ],
                 'price|10-80': 80,
-                'weight|1-4': 2,
-                sku: [{ 'testA|10-20': 10 }, { 'testB|10-20': 10 }, { 'testC|10-20': 10 }, { 'testD|10-20': 10 }],
+                specs: '7 斤装',
             },
             {
-                kind: '海鲜',
                 'id|+1': 500,
-                production_code: 'aaa-bbb-123',
-                standard_code: 'GB-2011-034',
-                shelf_life: {
-                    temperature: '4°',
-                    days: '7',
-                },
                 title: '@csentence',
                 'inventory|0-10000': 10000,
                 images: [
@@ -267,17 +228,10 @@ module.exports = () => {
                 ],
                 'price|10-80': 80,
                 'weight|1-4': 2,
-                sku: [{ 'testA|10-20': 10 }, { 'testB|10-20': 10 }, { 'testC|10-20': 10 }, { 'testD|10-20': 10 }],
+                specs: '10 斤装',
             },
             {
-                kind: '其它',
                 'id|+1': 600,
-                production_code: 'aaa-bbb-123',
-                standard_code: 'GB-2011-034',
-                shelf_life: {
-                    temperature: '4°',
-                    days: '7',
-                },
                 title: Random.csentence(3, 5),
                 'inventory|0-10000': 10000,
                 images: [
@@ -303,66 +257,53 @@ module.exports = () => {
                 order_code: '00000000001',
                 order_state: '01',
                 payment_time: Mock.mock('@datetime()'),
-                receipt_time: Mock.mock('@datetime()'),
-                refund_time: Mock.mock('@datetime()'),
                 goods_id: 1,
-                specs: '一斤装',
+                specs: '1 斤装',
                 "number|1-10": 3,
                 "cost|10-100": 42,
-                "finish|1-2": true,
             },
             {
                 order_code: '00000000002',
                 order_state: '02',
                 payment_time: Mock.mock('@datetime()'),
-                receipt_time: Mock.mock('@datetime()'),
-                refund_time: Mock.mock('@datetime()'),
                 goods_id: 200,
-                specs: '三斤装',
+                specs: '3 斤装',
                 "number|1-10": 3,
                 "cost|10-100": 51,
-                "finish|1-2": true,
             },
             {
                 order_code: '00000000003',
                 order_state: '03',
                 payment_time: Mock.mock('@datetime()'),
-                receipt_time: Mock.mock('@datetime()'),
-                refund_time: Mock.mock('@datetime()'),
                 goods_id: 300,
-                specs: '五斤装',
+                specs: '5 斤装',
                 "number|1-10": 3,
                 "cost|10-100": 67,
-                "finish|1-2": true,
             },
             {
                 order_code: '00000000004',
                 order_state: '04',
                 payment_time: Mock.mock('@datetime()'),
-                receipt_time: Mock.mock('@datetime()'),
-                refund_time: Mock.mock('@datetime()'),
                 goods_id: 400,
-                specs: '一斤装',
+                specs: '1 斤装',
                 "number|1-10": 3,
                 "cost|10-100": 27,
-                "finish|1-2": true,
             },
             {
                 order_code: '00000000005',
                 order_state: '01',
                 payment_time: Mock.mock('@datetime()'),
-                receipt_time: Mock.mock('@datetime()'),
-                refund_time: Mock.mock('@datetime()'),
                 goods_id: 500,
-                specs: '十斤装',
+                specs: '10 斤装',
                 "number|1-10": 3,
                 "cost|10-100": 39,
-                "finish|1-2": true,
             },
         ],
-        "home_images": ['https://cdn.nlark.com/yuque/0/2021/png/660331/1634622259552-assets/web-upload/268743d4-25d3-4753-8442-e1759a3e22e0.png'],
-        "after_sales_detail": ['折扣价：为折扣期间的价格如果没有特殊说明，折扣是在原价基础上计算出的优惠比例或者优惠金额；如果有疑问您可以在购买前询问客服。'],
-        "after_sales_free": ['：包邮不包含偏远地区及海外地区。'],
+        "banner": ['https://cdn.nlark.com/yuque/0/2021/png/660331/1634622259552-assets/web-upload/268743d4-25d3-4753-8442-e1759a3e22e0.png'],
+        "after_sales": {
+            "detail": '折扣价：为折扣期间的价格如果没有特殊说明，折扣是在原价基础上计算出的优惠比例或者优惠金额；如果有疑问您可以在购买前询问客服。',
+            "free": '：包邮不包含偏远地区及海外地区。',
+        },
         'shopping_card|20-50': [
             {
                 circle: false,

@@ -1,7 +1,6 @@
 import React from 'react'
 // import Taro from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
-import { AtTag } from 'taro-ui'
 import { CuButton, CuTag } from "taro-color-ui";
 
 import { Get } from '../../global-data/index'
@@ -48,11 +47,11 @@ class OrderCard extends React.Component {
             {text.order_code + ': ' + this.state.order_code}
           </View>
           {
-            this.state.order_state = "04"
-              ? <CuTag type="ghost">
+            this.state.order_state == "04"
+              ? <CuTag radius='true' color="olive" type="light">
                 {stateMap[this.state.order_state]}
               </CuTag>
-              : <CuTag type="ghost">
+              : <CuTag radius='true' color="red" type="light">
                 {stateMap[this.state.order_state]}
               </CuTag>
           }
@@ -61,7 +60,7 @@ class OrderCard extends React.Component {
           <View id='goods-info'>
             <Image
               id='goods-info-image'
-              style='width: 12vh'
+              style='width: 16vh'
               src={this.state.goods_image}
               mode='widthFix'
             />

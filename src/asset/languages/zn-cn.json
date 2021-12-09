@@ -13,7 +13,7 @@
       "pendingReceipt": "待收货",
       "pendingShipments": "待发货",
       "returnExchange": "退换货",
-      "completed":"订单已完成",
+      "completed":"已完成",
       "order_code":"订单号",
       "total":"共 ",
       "sum_total":" 件商品,合计  ￥"

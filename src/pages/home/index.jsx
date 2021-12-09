@@ -17,7 +17,7 @@ export default class Index extends Component {
       goodsCardInfo: [],
       focusCardInfo: [],
       noticebar: '',
-      posters: '',
+      banner: '',
       loading: true,
       isOpened: false,
     }
@@ -38,12 +38,12 @@ export default class Index extends Component {
 
     const goodsCardInfo = await homeApi.goodsCardInfo()
     const focusCardInfo = await homeApi.focus()
-    const homeImages = await homeApi.homeImages()
+    const banner = await homeApi.banner()
 
     this.setState({
       goodsCardInfo: goodsCardInfo.data,
       focusCardInfo: focusCardInfo.data,
-      posters: homeImages.data,
+      banner: banner.data,
       loading: false,
     })
 
@@ -72,9 +72,9 @@ export default class Index extends Component {
         ? null
         : <View id='root'>
           <Image
-            id='posters'
+            id='banner'
             style='width: 100%'
-            src={this.state.posters}
+            src={this.state.banner}
             mode='widthFix'
           />
 

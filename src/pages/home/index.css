@@ -2,7 +2,7 @@
   margin-top: -0.001px;
 }
 
-#posters {
+#banner {
   border-radius: var(--posters-border-radius);
   box-shadow: var(--posters-shadow);
   margin-bottom: 2.8vw;
