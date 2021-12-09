@@ -2,6 +2,7 @@ import React from 'react'
 // import Taro from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
 import { AtTag } from 'taro-ui'
+import { CuButton, CuTag } from "taro-color-ui";
 
 import { Get } from '../../global-data/index'
 
@@ -33,29 +34,42 @@ class OrderCard extends React.Component {
 
   render() {
     const paymentTime = new Date(this.state.payment_time)
+    const stateMap = {
+      "01": text.pendingPayment,
+      "02": text.pendingReceipt,
+      "03": text.pendingShipments,
+      "04": text.completed,
+    }
+
     return (
       <View id='order-card'>
         <View id="card-head">
           <View>
             {text.order_code + ': ' + this.state.order_code}
           </View>
-          <AtTag>
-            {this.state.order_state}
-          </AtTag>
+          {
+            this.state.order_state = "04"
+              ? <CuTag type="ghost">
+                {stateMap[this.state.order_state]}
+              </CuTag>
+              : <CuTag type="ghost">
+                {stateMap[this.state.order_state]}
+              </CuTag>
+          }
         </View>
         <View id='card-content'>
           <View id='goods-info'>
             <Image
               id='goods-info-image'
-              style='width: 14vh'
+              style='width: 12vh'
               src={this.state.goods_image}
               mode='widthFix'
             />
             <View id='goods-title-specs'>
-              <View id='goods-info-title'>
+              <View id='goods-title'>
                 {this.state.goods_title}
               </View>
-              <View>
+              <View id='goods-specs'>
                 {this.state.specs}
               </View>
             </View>
@@ -67,6 +81,10 @@ class OrderCard extends React.Component {
         <View id='card-foot'>
           <View id='payment-time'>
             {(paymentTime.getMonth() + 1) + '-' + paymentTime.getDay() + " " + paymentTime.getHours() + ":" + paymentTime.getMinutes()}
+          </View>
+          <View id='cad-button'>
+            <CuButton className='card-button' color='yellow' size="normal" round inline>物流详情</CuButton>
+            <CuButton className='card-button' color='red' size="normal" round inline>确认收货</CuButton>
           </View>
         </View>
       </View>

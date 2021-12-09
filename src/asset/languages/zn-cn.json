@@ -3,6 +3,7 @@
   "home": "首页",
   "detail": "详情",
   "cart": "购物车",
+  "activity": "限时促销",
   "user": {
     "myself": "我的",
     "order": {
@@ -10,7 +11,9 @@
       "allOrders": "全部订单",
       "pendingPayment": "待付款",
       "pendingReceipt": "待收货",
+      "pendingShipments": "待发货",
       "returnExchange": "退换货",
+      "completed":"订单已完成",
       "order_code":"订单号",
       "total":"共 ",
       "sum_total":" 件商品,合计  ￥"

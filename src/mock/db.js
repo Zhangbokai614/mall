@@ -33,7 +33,6 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg',
                 ],
                 'price|10-80': 80,
-                'weight|1-4': 2,
             },
             {
                 kind: '水果',
@@ -47,7 +46,6 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg',
                 ],
                 'price|10-80': 80,
-                'weight|1-4': 2,
             },
             {
                 kind: '生鲜',
@@ -61,7 +59,6 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635323133316-assets/web-upload/08ad0391-8520-45da-ae2c-047c44be9041.jpeg',
                 ],
                 'price|10-80': 80,
-                'weight|1-4': 2,
             },
             {
                 kind: '粮油',
@@ -366,9 +363,6 @@ module.exports = () => {
         "home_images": ['https://cdn.nlark.com/yuque/0/2021/png/660331/1634622259552-assets/web-upload/268743d4-25d3-4753-8442-e1759a3e22e0.png'],
         "after_sales_detail": ['折扣价：为折扣期间的价格如果没有特殊说明，折扣是在原价基础上计算出的优惠比例或者优惠金额；如果有疑问您可以在购买前询问客服。'],
         "after_sales_free": ['：包邮不包含偏远地区及海外地区。'],
-        'price|10-80': 80,
-        'weight|1-4': 2,
-        sku: [{ 'testA|10-20': 10 }, { 'testB|10-20': 10 }, { 'testC|10-20': 10 }, { 'testD|10-20': 10 }],
         'shopping_card|20-50': [
             {
                 circle: false,

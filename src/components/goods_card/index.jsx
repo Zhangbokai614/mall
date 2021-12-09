@@ -3,6 +3,8 @@ import Taro from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
 import { AtTag } from 'taro-ui'
 
+import { Get } from '../../global-data/index'
+
 import './index.css'
 
 class GoodsCard extends React.Component {
@@ -46,9 +48,9 @@ class GoodsCard extends React.Component {
             </View>
           </View>
           {
-            inventory > 4000
+            price < 40
               ? null
-              : <AtTag className='.at-article__p' active='false'>tag</AtTag>
+              : <AtTag className='.at-article__p' active='false'>{Get('languages').activity}</AtTag>
           }
         </View>
       </View>

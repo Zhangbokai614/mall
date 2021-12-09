@@ -39,7 +39,10 @@
   color: var(--highlight-font-color);
   font-weight: var(--highlight-font-weight);
   font-size: var(--highlight-font-size);
-  margin-bottom: 0.8vh;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  margin-bottom: 1.2vh;
 }
 
 .cny {
@@ -47,7 +50,7 @@
   font-size: var(--highlight-font-size);
   color: var(--highlight-font-color);
   margin-right: -1.4vh;
-  margin-bottom: 0.8vh;
+  margin-bottom: 1.2vh;
 }
 
 #prices {

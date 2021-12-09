@@ -32,7 +32,8 @@
   display: flex;
   flex-flow: row;
   width: 100%;
-  height: 14vh;
+  height: 12vh;
+  /* background-color: cyan; */
 }
 
 #goods-title-specs {
@@ -41,11 +42,15 @@
   justify-content: space-between;
 }
 
-#goods-info-title {
+#goods-title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   font-weight: 500;
+}
+
+#goods-specs {
+  color: darkgrey;
 }
 
 #goods-info-image {
@@ -56,6 +61,7 @@
 #total {
   display: flex;
   flex-flow: row-reverse;
+  margin-top: 4vw;
   font-weight: 500;
 }
 
@@ -67,9 +73,28 @@
   display: flex;
   flex-flow: row;
   justify-content: space-between;
+  align-content: center;
 }
 
-.at-tag {
+#payment-time {
+  color: darkgrey;
+  align-items: center;
+  line-height: 4vh;
+}
+
+#card-button {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  align-content: center;
+}
+
+.card-button {
+  margin-left: 4vw;
+  color: #ffffff;
+}
+
+#red-tag {
   display: flex;
   flex-shrink: inherit;
   flex-flow: row;
@@ -78,5 +103,17 @@
   border-radius: var(--tag-radius);
   color: var(--highlight-color);
   border-color: var(--tag-color);
+  border-width: 2px;
+}
+
+#green-tag {
+  display: flex;
+  flex-shrink: inherit;
+  flex-flow: row;
+  justify-content: center;
+  align-items: center;
+  border-radius: var(--tag-radius);
+  color: chartreuse;
+  border-color: chartreuse;
   border-width: 2px;
 }

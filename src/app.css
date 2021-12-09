@@ -1,5 +1,6 @@
 page {
   background-color: #f4f4f4;
+  font-family: SimHei;
 
   --highlight-color: #ff4949;
   --unselect-color: #434343;
@@ -23,8 +24,8 @@ page {
   --highlight-font-color: var(--highlight-color);
   --unselect-font-color: var(--unselect-color);
 
-  --highlight-font-size: 14pt;
-  --highlight-font-weight: 600;
+  --highlight-font-size: 12pt;
+  --highlight-font-weight: 500;
 
   /* tag */
   --tag-radius: 10px;
