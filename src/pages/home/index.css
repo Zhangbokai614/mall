@@ -3,7 +3,7 @@
 }
 
 #posters {
-  border-radius: var(--card-border-radius);
+  border-radius: var(--posters-border-radius);
   box-shadow: var(--posters-shadow);
   margin-bottom: 2.8vw;
 }
