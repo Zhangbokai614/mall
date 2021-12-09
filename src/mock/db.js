@@ -300,8 +300,10 @@ module.exports = () => {
             },
         ],
         "banner": ['https://cdn.nlark.com/yuque/0/2021/png/660331/1634622259552-assets/web-upload/268743d4-25d3-4753-8442-e1759a3e22e0.png'],
-        "after_sales_detail": ['折扣价：为折扣期间的价格如果没有特殊说明，折扣是在原价基础上计算出的优惠比例或者优惠金额；如果有疑问您可以在购买前询问客服。'],
-        "after_sales_free": ['：包邮不包含偏远地区及海外地区。'],
+        "after_sales": {
+            "detail": '折扣价：为折扣期间的价格如果没有特殊说明，折扣是在原价基础上计算出的优惠比例或者优惠金额；如果有疑问您可以在购买前询问客服。',
+            "free": '：包邮不包含偏远地区及海外地区。',
+        },
         'shopping_card|20-50': [
             {
                 circle: false,
