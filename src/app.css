@@ -1,29 +1,34 @@
 page {
-    background-color: #f4f4f4;
+  background-color: #f4f4f4;
 
-    --highlight-color:#ff4949;
-    --unselect-color:#434343;
+  --highlight-color: #ff4949;
+  --unselect-color: #434343;
+  --confing-color: #f7f7f7;
 
-    --posters-shadow: 0 2px 4px 0 rgba(105, 105, 105, 0.084);
-    --shadow: 0 4px 6px 0 rgba(17, 17, 17, 0.04);
+  --posters-shadow: 0 2px 4px 0 rgba(105, 105, 105, 0.084);
+  --shadow: 0 4px 6px 0 rgba(17, 17, 17, 0.04);
 
-    /* card */
-    --posters-border-radius: 0 0 100px 100px;
+  /* card */
+  --posters-border-radius: 0 0 100px 100px;
 
-    --card-bg-color: #FFFFFF;
-    --card-border-radius: 20px 20px 20px 20px;
-    --cardImage-border-radius: 20px 20px 0px 0px;
+  --card-bg-color: #ffffff;
+  --card-border-color: #bfbfbf;
+  --card-border: 20px;
+  --card-border-radius: 20px 20px 20px 20px;
+  --cardImage-border-radius: 20px 20px 0px 0px;
+  --ShoppingCard-string-font-size: 1rem;
+  --ShoppingCard-number-font-size: 1.5rem;
 
-    /* font */
-    --highlight-font-color: var(--highlight-color);
-    --unselect-font-color: var(--unselect-color);
+  /* font */
+  --highlight-font-color: var(--highlight-color);
+  --unselect-font-color: var(--unselect-color);
 
-    --highlight-font-size: 14pt;
-    --highlight-font-weight: 600;
+  --highlight-font-size: 14pt;
+  --highlight-font-weight: 600;
 
-    /* tag */
-    --tag-radius: 10px;
+  /* tag */
+  --tag-radius: 10px;
 
-    /* detail */
-    --detail-border-radius: 50px;
+  /* detail */
+  --detail-border-radius: 50px;
 }
