@@ -178,6 +178,22 @@ class GoodsSelection extends React.Component {
             </AtFloatLayout>
           </AtList>
         </View>
+        <View className='distribution'>
+          <AtList>
+            <AtListItem
+              className='radioList'
+              title={Get('languages').detailPage.distribution}
+              onClick={this.handleClickDistribution.bind(this)}
+              arrow='right'
+            />
+            <AtFloatLayout
+              isOpened={this.state.atButtonDistribution}
+              onClose={this.handleClickDistribution.bind(this)}
+              title={Get('languages').deliveryTo}
+            >
+            </AtFloatLayout>
+          </AtList>
+        </View>
         <View className='service'>
           <AtList>
             <View

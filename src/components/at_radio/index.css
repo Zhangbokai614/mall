@@ -1,8 +1,22 @@
 .radioList {
     height: 6vh;
+    display: flex;
+    align-items: center;
     text-align: left;
     font-size: 30px;
     background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
+}
+
+.serviceList {
+    display: flex;
+    justify-content: center;
+    align-items: center;  
+    flex-direction: row;
+    background-color: white;
+    height: 6vh;
+    margin-left: -7vw;
+    text-align: left;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
 }
 
@@ -59,18 +73,6 @@
     display: flex;
     justify-content: center;
     align-items: center;  
-}
-
-.serviceList {
-    display: flex;
-    justify-content: center;
-    align-items: center;  
-    flex-direction: row;
-    background-color: white;
-    height: 6vh;
-    margin-left: -7vw;
-    text-align: left;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
 }
 
 .serviceDetail {
