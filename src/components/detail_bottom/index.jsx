@@ -85,7 +85,7 @@ class Bottomdetail extends React.Component {
               className='imageHome'
               style='width:5vw; height:5vw;'
             />
-            <View className='detailHome at-article__h2' >
+            <View className='detailHome' >
               {Get('languages').detailPage.home}
             </View>
           </View>
@@ -101,7 +101,7 @@ class Bottomdetail extends React.Component {
               className='imageService'
               style='width:5vw; height:5vw;'
             />
-            <View className='detailService at-article__h2'>
+            <View className='detailService'>
               {Get('languages').detailPage.customerService}
             </View>
           </View>
@@ -118,12 +118,12 @@ class Bottomdetail extends React.Component {
               onClick={this.handeChangeShoppingcar.bind(this)}
               style='width:5vw; height:5vw;'
             />
-            <View className='detailGoodscar at-article__h2'>
+            <View className='detailGoodscar'>
               {Get('languages').detailPage.goodscar}
             </View>
           </View>
         </button>
-        <View className='bottomRight at-article__h2'>
+        <View className='bottomRight'>
           <AtButton
             className='bottombuttonCar'
             onClick={this.btnClick.bind(this, 'add')}

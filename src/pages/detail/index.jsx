@@ -8,7 +8,6 @@ import Vertical from '../../asset/images/icon/vertical.png'
 import { SwiperPosters } from '../../components/detail_swiper'
 import { GoodsSelection } from '../../components/at_radio/index'
 import { Bottomdetail } from '../../components/detail_bottom/index'
-import { Specification } from '../../components/detail_specification/index'
 import { Introduction } from '../../components/detail_introduction/index'
 import Share from '../../asset/images/icon/share-select.png'
 import * as homeApi from './service'
@@ -74,7 +73,7 @@ export default class Index extends Component {
                         />
                     </View>
                     <View className='priceAndShare'>
-                        <View className='infoPrice at-article__h2'> 
+                        <View className='infoPrice'> 
                             ￥{info[0].price}
                         </View>
                         <Image
@@ -84,23 +83,13 @@ export default class Index extends Component {
                         />
                     </View>
                     <View
-                        className='goodsintroduction at-article__h2'
+                        className='goodsintroduction'
                     >
                         {info[0].title}
                     </View>
                     <View>
                         <GoodsSelection 
                             image={info[0].images[0]}
-                        />
-                    </View>
-                    <View>
-                        <Specification
-                            id={info[0].id}
-                            productionCode={info[0].production_code}
-                            standardCode={info[0].standard_code}
-                            temperature={info[0].shelf_life.temperature}
-                            days={info[0].shelf_life.days}
-                            weight={info[0].weight}
                         />
                     </View>
                     <View>
@@ -116,7 +105,7 @@ export default class Index extends Component {
                                 style='width:2vw; height:9vw;'
                             >
                             </Image>
-                            <View className='afterSalesTitle at-article__h2'>
+                            <View className='afterSalesTitle'>
                                 {Get('languages').detailPage.afterSales}
                             </View>
                         </View>
@@ -125,7 +114,7 @@ export default class Index extends Component {
                             {afterSalesDetail}
                         </View>
                         <View className='afterSalesText at-article__h2'>
-                            {Get('languages').freeMoney}
+                            {Get('languages').detailPage.freeMoney}
                             {afterSalesFree}
                         </View>
                     </View>

@@ -1,6 +1,6 @@
 import { View, Image, Text } from '@tarojs/components'
 import React from 'react'
-import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList, AtInputNumber, AtTag } from 'taro-ui'
+import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList, AtInputNumber } from 'taro-ui'
 
 import { Get } from '../../global-data/index'
 import Fruit from '../../asset/images/icon/fruit.png'
@@ -126,7 +126,7 @@ class GoodsSelection extends React.Component {
     console.log(value)
     return (
       <View className='atradio'>
-        <View className='goodsSelection at-article__h2'>
+        <View className='goodsSelection'>
           <AtList>
             <AtListItem
               className='radioList'
@@ -147,7 +147,7 @@ class GoodsSelection extends React.Component {
               </View>
               <View className='floatlayoutHeight'>
                 <View className='numberChange'>
-                  <View className='number at-article__h2'>
+                  <View className='number'>
                     {Get('languages').detailPage.number}
                   </View>
                   <View className='numberLocation'>
@@ -184,7 +184,7 @@ class GoodsSelection extends React.Component {
               className='serviceList'
               onClick={this.handleClickService.bind(this)}
             >
-              <View className='textService at-article__h2'>
+              <View className='textService'>
                 <Text >
                   {Get('languages').detailPage.service}
                 </Text>
@@ -194,7 +194,7 @@ class GoodsSelection extends React.Component {
                 src={Fruit}
                 style='width:5vw; height:5vw;'
               />
-              <View className='serviceDetail at-article__h2'>
+              <View className='serviceDetail'>
                 {Get('languages').detailPage.compensation}
               </View>
               <Image
@@ -202,7 +202,7 @@ class GoodsSelection extends React.Component {
                 src={FreeMoney}
                 style='width:5vw; height:5vw;'
               />
-              <View className='serviceDetail at-article__h2'>
+              <View className='serviceDetail'>
                 {Get('languages').detailPage.freeMoney}
               </View>
               <Image
@@ -210,7 +210,7 @@ class GoodsSelection extends React.Component {
                 src={SevenDays}
                 style='width:6vw; height: 6vw;'
               />
-              <View className='serviceDetail at-article__h2'>
+              <View className='serviceDetail'>
                 {Get('languages').detailPage.returnGoods}
               </View>
             </View>
