@@ -1,9 +1,16 @@
+.atradio{
+    margin-top: 2vh;
+}
+
 .radioList {
-    padding-top: 1.5vh;
-    padding-bottom: 1.5vh;
-    font-size: 30px;
+    display: flex;
+    align-items: center;  
+    flex-direction: row;
+    height: 6vh;
+    text-align: left;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
+    
 }
 
 .serviceList {
@@ -44,12 +51,12 @@
     border-radius: var(--detail-border-radius);
 }
 
+.textSelect {
+    margin-left: 2vw;
+}
+
 .textService {
-    display: flex;
-    align-items: center;
-    font-size: 30px;
     margin-left: 8vw;
-    width: 8vw;
 }
 
 .imageFruit {
@@ -80,11 +87,14 @@
     align-items: center;     
     font-size: 25px;
 }
+
 .iconCheron {
+    position: absolute;
+    margin-left: 95vw;
+}
+
+.iconCheronSe {
     margin-left: 4vw;
-    display: flex;
-    justify-content: center;
-    align-items: center;
 }
 
 .at-Floatlayout {
@@ -110,14 +120,7 @@
     margin-bottom: 1vh;
     margin-left: 62vw;
 }
-/* .floatlayoutbutton {
-    display: none;
-    position: fixed;
-    top: 20vh;
-    width: 100%;
-    bottom: 0;
-    background: white;
+
+.specs {
+    margin-left: 5vw;
 }
-.floatlayoutbutton:target {
-    display: block;
-} */
