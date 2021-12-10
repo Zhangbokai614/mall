@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Image } from '@tarojs/components'
+import { View, Image, Button } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import { getCurrentInstance } from '@tarojs/taro'
 import { AtDivider } from 'taro-ui'
@@ -74,11 +74,15 @@ export default class Index extends Component {
                         <View className='infoPrice'> 
                             ￥{info[0].price}
                         </View>
+                        <button 
+                        open-type='share'
+                        className='buttonShare'>
                         <Image
                         className='imageShare'
                         src={Share}
                         style='width:6vw; height:6vw;'
                         />
+                        </button>
                     </View>
                     <View
                         className='goodsintroduction'
@@ -88,6 +92,7 @@ export default class Index extends Component {
                     <View>
                         <GoodsSelection 
                             image={info[0].images[0]}
+                            specs={info[0].specs}
                         />
                     </View>
                     <View>

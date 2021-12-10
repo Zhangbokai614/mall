@@ -14,10 +14,10 @@
     font-size: 52px;
 }
 
-.imageShare {
+/* .imageShare {
     margin-top: 1vh;
     margin-left: 75vw;
-}
+} */
 
 .goodsintroduction {
     padding-left: 20px;
@@ -53,3 +53,14 @@
 .afterSalesTitle {
     padding-top: 3vh;
 }
+
+.buttonShare {
+    margin-left: 73vw;
+    height: 4vh;
+    width: 12vw;
+    background-color: white;
+}
+
+.buttonShare::after{
+    border: none;
+  } 
