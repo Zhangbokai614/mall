@@ -76,7 +76,7 @@ class GoodsSelection extends React.Component {
       value
     })
   };
-  
+
   btnClick = (value) => {
     let num = this.state.value;
     console.log(num)
@@ -122,17 +122,32 @@ class GoodsSelection extends React.Component {
   render() {
 
     const { image } = this.props
-    const value = this.state.value
-    console.log(value)
+    const { specs } = this.props
     return (
       <View className='atradio'>
-        <View className='goodsSelection'>
-          <AtList>
-            <AtListItem
+        <View className='goodsSelection' >
+          <AtList hasBorder={false}>
+            <View
               className='radioList'
-              title={Get('languages').detailPage.select}
               onClick={this.handleClickSelect.bind(this)}
-              arrow='right' />
+            >
+              <View className='textSelect'>
+                <Text >
+                  {Get('languages').detailPage.select}
+                </Text>
+              </View>
+              <View className='specs'>
+                <Text>
+                  {specs}
+                </Text>
+              </View>
+              <AtIcon
+                className='iconCheron'
+                value='chevron-right'
+                size='15'
+                color='#bfbfbf'
+              />
+            </View>
             <AtFloatLayout
               isOpened={this.state.atButtonSelect}
               onClose={this.handleClickSelect.bind(this)}
@@ -179,13 +194,28 @@ class GoodsSelection extends React.Component {
           </AtList>
         </View>
         <View className='distribution'>
-          <AtList>
-            <AtListItem
+          <AtList hasBorder={false}>
+            <View
               className='radioList'
-              title={Get('languages').detailPage.distribution}
               onClick={this.handleClickDistribution.bind(this)}
-              arrow='right'
-            />
+            >
+              <View className='textSelect'>
+                <Text>
+                {Get('languages').detailPage.distribution}
+                </Text>
+              </View>
+              <View className='specsDi'>
+                <Text>
+                  
+                </Text>
+                </View>
+              <AtIcon
+                className='iconCheron'
+                value='chevron-right'
+                size='15'
+                color='#bfbfbf'
+              />
+            </View>
             <AtFloatLayout
               isOpened={this.state.atButtonDistribution}
               onClose={this.handleClickDistribution.bind(this)}
@@ -195,8 +225,8 @@ class GoodsSelection extends React.Component {
           </AtList>
         </View>
         <View className='service'>
-          <AtList>
-            <View
+          <AtList hasBorder={false}>
+            <View 
               className='serviceList'
               onClick={this.handleClickService.bind(this)}
             >
@@ -230,11 +260,11 @@ class GoodsSelection extends React.Component {
                 {Get('languages').detailPage.returnGoods}
               </View>
               <AtIcon
-              className='iconCheron'
-              value='chevron-right'
-              size='15'
-              color='#bfbfbf'
-              ></AtIcon>
+                className='iconCheronSe'
+                value='chevron-right'
+                size='15'
+                color='#bfbfbf'
+              />
             </View>
             <AtFloatLayout
               isOpened={this.state.atButtonService}
