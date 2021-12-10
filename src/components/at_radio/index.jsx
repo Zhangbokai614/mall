@@ -55,22 +55,6 @@ class GoodsSelection extends React.Component {
       })
   };
 
-  handleChangeService(service) {
-    this.setState({
-      service
-    })
-  };
-
-  handleClickService() {
-    this.state.atButtonService
-      ? this.setState({
-        atButtonService: false,
-      })
-      : this.setState({
-        atButtonService: true,
-      })
-  };
-
   handleChangeNumber(value) {
     this.setState({
       value
@@ -228,7 +212,6 @@ class GoodsSelection extends React.Component {
           <AtList hasBorder={false}>
             <View 
               className='serviceList'
-              onClick={this.handleClickService.bind(this)}
             >
               <View className='textService'>
                 <Text >
@@ -259,22 +242,7 @@ class GoodsSelection extends React.Component {
               <View className='serviceDetail'>
                 {Get('languages').detailPage.returnGoods}
               </View>
-              <AtIcon
-                className='iconCheronSe'
-                value='chevron-right'
-                size='15'
-                color='#bfbfbf'
-              />
             </View>
-            <AtFloatLayout
-              isOpened={this.state.atButtonService}
-              onClose={this.handleClickService.bind(this)}
-            >
-              <AtRadio
-                value={this.state.service}
-                onClick={this.handleChangeService.bind(this)}
-              />
-            </AtFloatLayout>
           </AtList>
         </View>
       </View>
