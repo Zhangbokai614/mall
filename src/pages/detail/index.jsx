@@ -1,5 +1,5 @@
 import React, { Component } from 'react'
-import { View, Image, Button } from '@tarojs/components'
+import { View, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import { getCurrentInstance } from '@tarojs/taro'
 import { AtDivider } from 'taro-ui'

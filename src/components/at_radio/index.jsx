@@ -1,6 +1,6 @@
 import { View, Image, Text } from '@tarojs/components'
 import React from 'react'
-import { AtButton, AtIcon, AtListItem, AtFloatLayout, AtRadio, AtList, AtInputNumber } from 'taro-ui'
+import { AtButton, AtIcon, AtFloatLayout, AtList, AtInputNumber } from 'taro-ui'
 
 import { Get } from '../../global-data/index'
 import Fruit from '../../asset/images/icon/fruit.png'
