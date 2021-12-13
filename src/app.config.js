@@ -7,6 +7,7 @@ export default {
     "pages/user/index",
     "pages/detail/index",
     "pages/orders/index",
+    "pages/order-detail/index",
   ],
 
   window: {

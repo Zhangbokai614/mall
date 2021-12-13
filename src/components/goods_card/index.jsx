@@ -24,7 +24,7 @@ class GoodsCard extends React.Component {
   }
 
   render() {
-    const { title, imageSrc, price, inventory } = this.props
+    const { title, imageSrc, price } = this.props
     const kind = this.state.focus ? 'focus' : 'goods'
 
     return (

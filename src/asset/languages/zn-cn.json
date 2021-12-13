@@ -4,6 +4,7 @@
   "detail": "详情",
   "cart": "购物车",
   "activity": "限时促销",
+  "cny": "￥",
   "user": {
     "myself": "我的",
     "order": {
@@ -13,10 +14,23 @@
       "pendingReceipt": "待收货",
       "pendingShipments": "待发货",
       "returnExchange": "退换货",
-      "completed":"已完成",
-      "order_code":"订单号",
+      "completed": "已完成",
+      "orderCode": "订单编号",
+      "orderTime": "订单时间",
       "total":"共 ",
-      "sum_total":" 件商品,合计  ￥"
+      "sumTotal":" 件商品,合计",
+      "confirmTheReceiptOfGoods": "确认收货",
+      "CheckLogistics": "查看物流",
+      "logisticsInfo": "物流信息",
+      "goodsInfo": "商品信息",
+      "orderInfo": "订单信息",
+      "contactTheMerchant": "联系商家",
+      "paymentType": "支付方式",
+      "paymentTime": "支付时间",
+      "commodityPrice": "商品金额",
+      "postage": "邮费",
+      "orderLumpSum":"订单总金额",
+      "limitDiscounts": "限时折扣"
     },
     "asset": {
       "commonFeatures": "常用功能",
@@ -25,9 +39,6 @@
       "customerService": "我的客服"
     },
     "userInfo": {
-      "defaultName": "点击登录",
-      "bindPhone": "绑定手机号",
-      "inputPhone": "请输入正在使用的手机号",
       "descText": "完善头像、昵称信息"
     },
     "technicalSupport": "风顺（天津）网络科技提供技术支持"

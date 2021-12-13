@@ -9,6 +9,7 @@
   top: -0.1vh;
   height: 7.2vh;
   box-shadow: var(--shadow);
+  z-index: 100;
 }
 
 .select {
