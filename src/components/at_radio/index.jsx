@@ -25,21 +25,7 @@ class GoodsSelection extends React.Component {
     this.setState({
       value
     })
-  };
-
-  btnClick = (value) => {
-    let num = this.state.value;
-    console.log(num)
-    num = value === 'add' ? (num += 1) : (num -= 1);
-    if (num < 1) {
-      num = 0;
-    }
-    let money = this.props.goodInfo.price;
-    this.setState({
-      totalNum: num,
-      totalMoney: (money * num).toFixed(2),
-    });
-  };
+  };  
 
   goHref = (type) => {
     switch (type) {
