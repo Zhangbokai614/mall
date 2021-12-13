@@ -11,9 +11,9 @@ import { Bottomdetail } from '../../components/detail_bottom/index'
 import { Introduction } from '../../components/detail_introduction/index'
 import Share from '../../asset/images/icon/share-select.png'
 import * as homeApi from './service'
-import './index.css'
 import { Get } from '../../global-data/index'
 
+import './index.css'
 
 export default class Index extends Component {
 
@@ -65,11 +65,9 @@ export default class Index extends Component {
             this.state.loading
                 ? null
                 : <View className='index'>
-                    <View className='images'>
-                        <SwiperPosters
-                            images={info[0].images}
-                        />
-                    </View>
+                    <SwiperPosters
+                        images={info[0].images}
+                    />
                     <View className='priceAndShare'>
                         <View className='infoPrice'>
                             ￥{info[0].price}
@@ -84,24 +82,18 @@ export default class Index extends Component {
                             />
                         </button>
                     </View>
-                    <View
-                        className='goodsintroduction'
-                    >
+                    <View className='goodsintroduction'>
                         {info[0].title}
                     </View>
-                    <View>
-                        <GoodsSelection
-                            image={info[0].images[0]}
-                            specs={info[0].specs}
-                            inventory={info[0].inventory}
-                            price={info[0].price}
-                        />
-                    </View>
-                    <View>
-                        <Introduction
-                            detailImages={info[0].detailImages}
-                        />
-                    </View>
+                    <GoodsSelection
+                        image={info[0].images[0]}
+                        specs={info[0].specs}
+                        inventory={info[0].inventory}
+                        price={info[0].price}
+                    />
+                    <Introduction
+                        detailImages={info[0].detailImages}
+                    />
                     <View className='detailAfterSales'>
                         <View className='afterSales'>
                             <Image
@@ -115,10 +107,10 @@ export default class Index extends Component {
                             </View>
                         </View>
                         <AtDivider />
-                        <View className='afterSalesText at-article__h2'>
+                        <View className='afterSalesText'>
                             {afterSalesDetail}
                         </View>
-                        <View className='afterSalesText at-article__h2'>
+                        <View className='afterSalesText'>
                             {Get('languages').detailPage.freeMoney}
                             {afterSalesFree}
                         </View>

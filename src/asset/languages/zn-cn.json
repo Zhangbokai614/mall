@@ -2,6 +2,7 @@
   "loading": "正在加载",
   "home": "首页",
   "detail": "详情",
+  "features": "特色",
   "cart": "购物车",
   "activity": "限时促销",
   "user": {
@@ -52,6 +53,9 @@
     "goodsIntroduce": "商品介绍",
     "productionLicense": "生产许可证", 
     "returnGoods": "不支持七天无理由退货"
+  },
+  "feature": {
+
   },
   "shoppingCart": {
     "cartNull": {
