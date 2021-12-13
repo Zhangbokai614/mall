@@ -6,7 +6,7 @@ import Taro from '@tarojs/taro'
 import { Get } from '../../global-data/index'
 import shoppingcar from '../../asset/images/icon/detail-shopping-cart.png'
 import home from '../../asset/images/tabs/home-select.png'
-import service from '../../asset/images/icon/customer-service.png'
+import service from '../../asset/images/icon/detail-customer-service-select.png'
 import './index.css'
 class Bottomdetail extends React.Component {
   
