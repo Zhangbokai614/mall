@@ -27,28 +27,34 @@
 
 .goodscar {
     padding-top: 1vh;
-    margin-bottom: 2vh;
+    margin-top: 29vh;
+    margin-left: 8%;
     background-color:#ffd149;
     color: white;
-    text-align: center;
     display:inline-block;
+    justify-content: center;
+    align-items: center; 
     font-size: 30px;
-    width: 50%;
+    width: 40%;
     height: 6vh;
     border-radius: var(--detail-border-radius);
+    position: absolute;
 }
 
 .confirm {
     padding-top: 1vh;
-    margin-bottom: 2vh;
+    margin-top: 29vh;
+    margin-left: 53%;
     background-color: var(--highlight-color);
     color: white;
-    text-align: center;
     display:inline-block;
+    justify-content: center;
+    align-items: center; 
     font-size: 30px;
-    width: 50%;
+    width: 40%;
     height: 6vh;
     border-radius: var(--detail-border-radius);
+    position: absolute;
 }
 
 .textSelect {
@@ -56,7 +62,7 @@
 }
 
 .textService {
-    margin-left: 0vw;
+    margin-left: 2vw;
 }
 
 .imageFruit {
@@ -78,6 +84,11 @@
     display: flex;
     justify-content: center;
     align-items: center;  
+}
+
+.skuImage {
+    margin-top: -3vh;
+    margin-left: 5vw;
 }
 
 .serviceDetail {
@@ -121,7 +132,7 @@
     margin-left: 5vw;
 }
 
-/* .moveFromBottom {
+.moveFromBottom {
     position: fixed;
     left: 0;
     right: 0;
@@ -147,6 +158,7 @@
 }
 
 .mask {
+    z-index: 800;
     position: fixed;
     top: 0;
     left: 0;
@@ -161,4 +173,4 @@
 
 .block {
     display: block;
-} */
+}

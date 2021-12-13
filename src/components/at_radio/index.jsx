@@ -1,11 +1,11 @@
 import { View, Image, Text } from '@tarojs/components'
 import React from 'react'
-import { AtButton, AtIcon, AtFloatLayout, AtList, AtInputNumber } from 'taro-ui'
+import { AtButton, AtIcon, AtList, AtInputNumber } from 'taro-ui'
 
 import { Get } from '../../global-data/index'
 import Fruit from '../../asset/images/icon/fruit.png'
 import FreeMoney from '../../asset/images/icon/free.png'
-import SevenDays from '../../asset/images/icon/seven-days.png'
+import SevenDays from '../../asset/images/icon/notseven-days.png'
 import './index.css'
 
 class GoodsSelection extends React.Component {
@@ -20,39 +20,11 @@ class GoodsSelection extends React.Component {
       distribution: '',
       service: '',
       value: 1,
+      displaySelect: 'mask none',
+      classstyleSelect: 'box moveFromBottom',
+      displayDistribution: 'mask none',
+      classstyleDistribution: 'box moveFromBottom',
     }
-  };
-
-  handleChangeSelect(select) {
-    this.setState({
-      select
-    })
-  };
-
-  handleClickSelect() {
-    this.state.atButtonSelect
-      ? this.setState({
-        atButtonSelect: false,
-      })
-      : this.setState({
-        atButtonSelect: true,
-      })
-  };
-
-  handleChangeDistribution(distribution) {
-    this.setState({
-      distribution
-    })
-  };
-
-  handleClickDistribution() {
-    this.state.atButtonDistribution
-      ? this.setState({
-        atButtonDistribution: false,
-      })
-      : this.setState({
-        atButtonDistribution: true,
-      })
   };
 
   handleChangeNumber(value) {
@@ -103,6 +75,35 @@ class GoodsSelection extends React.Component {
         });
     }
   };
+
+  offSelect() {
+    this.setState({
+      displaySelect: 'mask none',
+      classstyleSelect: 'box moveFromBottom',
+    })
+  };
+
+  openSelect() {
+    this.setState({
+      displaySelect: 'mask block',
+      classstyleSelect: 'box moveFromBottom showMove'
+    })
+  };
+
+  offDistribution() {
+    this.setState({
+      displayDistribution: 'mask none',
+      classstyleDistribution: 'box moveFromBottom',
+    })
+  };
+
+  openDistribution() {
+    this.setState({
+      displayDistribution: 'mask block',
+      classstyleDistribution: 'box moveFromBottom showMove'
+    })
+  };
+
   render() {
 
     const { image } = this.props
@@ -113,7 +114,7 @@ class GoodsSelection extends React.Component {
           <AtList hasBorder={false}>
             <View
               className='radioList'
-              onClick={this.handleClickSelect.bind(this)}
+              onClick={this.openSelect.bind(this)}
             >
               <View className='textSelect'>
                 <Text >
@@ -132,34 +133,41 @@ class GoodsSelection extends React.Component {
                 color='#bfbfbf'
               />
             </View>
-            <AtFloatLayout
-              isOpened={this.state.atButtonSelect}
-              onClose={this.handleClickSelect.bind(this)}
-              title={Get('languages').detailPage.goodsSelection}
-              className='floatlayoutbutton'
-            >
-              <View>
+            <View
+              onClick={this.offSelect.bind(this)}
+              className={this.state.displaySelect}
+            />
+            <View className={this.state.classstyleSelect}>
+              <View className='skuImage'>
                 <Image
                   src={image}
                   style="height: 16vh; width: 16vh"
                 />
               </View>
-              <View className='floatlayoutHeight'>
-                <View className='numberChange'>
-                  <View className='number'>
-                    {Get('languages').detailPage.number}
-                  </View>
-                  <View className='numberLocation'>
-                    <AtInputNumber
-                      type='digit'
-                      min={1}
-                      max={99}
-                      step={1}
-                      width={100}
-                      value={this.state.value}
-                      onChange={this.handleChangeNumber.bind(this)}
-                    />
-                  </View>
+              <View>
+                <View className='textSpecs'>
+                  <Text>
+                    {Get('languages').detailPage.specifications}
+                  </Text>
+                </View>
+                <View className='detailSpecs'>
+                  {specs}
+                </View>
+              </View>
+              <View className='numberChange'>
+                <View class Name='number'>
+                  {Get('languages').detailPage.number}
+                </View>
+                <View className='numberLocation'>
+                  <AtInputNumber
+                    type='digit'
+                    min={1}
+                    max={99}
+                    step={1}
+                    width={100}
+                    value={this.state.value}
+                    onChange={this.handleChangeNumber.bind(this)}
+                  />
                 </View>
               </View>
               <AtButton
@@ -174,25 +182,25 @@ class GoodsSelection extends React.Component {
               >
                 {Get('languages').detailPage.tobuy}
               </AtButton>
-            </AtFloatLayout>
+            </View>
           </AtList>
         </View>
         <View className='distribution'>
           <AtList hasBorder={false}>
             <View
               className='radioList'
-              onClick={this.handleClickDistribution.bind(this)}
+              onClick={this.openDistribution.bind(this)}
             >
-              <View className='textSelect'>
+              <View className='textSelect '>
                 <Text>
-                {Get('languages').detailPage.distribution}
+                  {Get('languages').detailPage.distribution}
                 </Text>
               </View>
               <View className='specsDi'>
                 <Text>
-                  
+
                 </Text>
-                </View>
+              </View>
               <AtIcon
                 className='iconCheron'
                 value='chevron-right'
@@ -200,20 +208,24 @@ class GoodsSelection extends React.Component {
                 color='#bfbfbf'
               />
             </View>
-            <AtFloatLayout
-              isOpened={this.state.atButtonDistribution}
-              onClose={this.handleClickDistribution.bind(this)}
+            <View
+              onClick={this.offDistribution.bind(this)}
               title={Get('languages').deliveryTo}
+              className={this.state.displayDistribution}
+            />
+            <View
+              className={this.state.classstyleDistribution}
             >
-            </AtFloatLayout>
+
+            </View>
           </AtList>
         </View>
         <View className='service'>
           <AtList hasBorder={false}>
-            <View 
+            <View
               className='serviceList'
             >
-              <View className='textService'>
+              <View className='textService '>
                 <Text >
                   {Get('languages').detailPage.service}
                 </Text>
@@ -237,7 +249,7 @@ class GoodsSelection extends React.Component {
               <Image
                 className='imageSevenDays'
                 src={SevenDays}
-                style='width:6vw; height: 6vw;'
+                style='width:5vw; height: 5vw;'
               />
               <View className='serviceDetail'>
                 {Get('languages').detailPage.returnGoods}

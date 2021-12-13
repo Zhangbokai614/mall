@@ -6,7 +6,7 @@
   flex-direction: row;
   padding-bottom: 3vh;
   background-color: white;
-  z-index: 10;
+  z-index: 100;
 }
 
 .bottomLeftHome {
