@@ -34,9 +34,10 @@
   },
   "detailPage": {
     "home": "首页",
-
-    "service": "服务",
     "select": "已选",
+    "number": "数量",
+    "service": "服务",
+    "inventory": "库存",
     "freeMoney": "包邮",
     "tobuy": "立刻购买",
     "goodscar": "购物车",

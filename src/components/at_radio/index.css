@@ -10,7 +10,6 @@
     text-align: left;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
-    
 }
 
 .serviceList {
@@ -27,7 +26,7 @@
 
 .goodscar {
     padding-top: 1vh;
-    margin-top: 29vh;
+    margin-top: 17vh;
     margin-left: 8%;
     background-color:#ffd149;
     color: white;
@@ -43,7 +42,7 @@
 
 .confirm {
     padding-top: 1vh;
-    margin-top: 29vh;
+    margin-top: 17vh;
     margin-left: 53%;
     background-color: var(--highlight-color);
     color: white;
@@ -113,19 +112,9 @@
     margin-left: 2vw;
 }
 
-.number {
-    margin-top: 1vh;
-    margin-left: 2vw;
-}
-
-.numberChange {
-    display: flex;
-    flex-direction: row;
-}
-
 .numberLocation {
     margin-bottom: 1vh;
-    margin-left: 62vw;
+    margin-left: 60vw;
 }
 
 .specs {
@@ -173,4 +162,56 @@
 
 .block {
     display: block;
+}
+
+.detailPrice {
+    display: flex;
+}
+
+.goodsprice {
+    color: #ff4949;
+    margin-top: 11vh;
+    margin-left: 3vw;
+}
+
+.textInventory {
+    margin-top: 3vh;
+    display: flex;
+}
+
+.inventory {
+    margin-top: 1vw;
+    margin-left: 5vw;
+}
+
+.detailInventory {
+    margin-top: 1vw;
+    margin-left: 6vw;
+}
+
+.skuText {
+    margin-top: 3vh;
+    display: flex; 
+}
+
+.textSpecs {
+    margin-top: 1vw;
+    margin-left: 5vw;
+}
+
+.detailSpecs {
+    margin-top: 1vw;
+    margin-left: 6vw;
+    color: #ff4949;
+    border: 2px solid #ff4949;
+}
+
+.numberChange {
+    display: flex;
+    margin-top: 3vh;
+}
+
+.number {
+    margin-top: 1vw;
+    margin-left: 5vw;
 }

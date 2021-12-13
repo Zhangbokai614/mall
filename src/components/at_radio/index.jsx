@@ -13,12 +13,6 @@ class GoodsSelection extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      atButtonSelect: false,
-      atButtonDistribution: false,
-      atButtonService: false,
-      select: '',
-      distribution: '',
-      service: '',
       value: 1,
       displaySelect: 'mask none',
       classstyleSelect: 'box moveFromBottom',
@@ -108,6 +102,8 @@ class GoodsSelection extends React.Component {
 
     const { image } = this.props
     const { specs } = this.props
+    const { inventory } = this.props
+    const { price } = this.props
     return (
       <View className='atradio'>
         <View className='goodsSelection' >
@@ -138,24 +134,37 @@ class GoodsSelection extends React.Component {
               className={this.state.displaySelect}
             />
             <View className={this.state.classstyleSelect}>
-              <View className='skuImage'>
-                <Image
-                  src={image}
-                  style="height: 16vh; width: 16vh"
-                />
+              <View className='detailPrice'>
+                <View className='skuImage'>
+                  <Image
+                    src={image}
+                    style="height: 16vh; width: 16vh"
+                  />
+                </View>
+                <View className='goodsprice'>
+                  ￥{price}
+                </View>
               </View>
-              <View>
-                <View className='textSpecs'>
-                  <Text>
+              <View className='textInventory'>
+                <View className='inventory'>
+                    {Get('languages').detailPage.inventory}
+                </View>
+                <View className='detailInventory'>
+                  {inventory}
+                </View>
+              </View>
+              <View className='skuText'>
+                <View className='textSpecs'>                
                     {Get('languages').detailPage.specifications}
-                  </Text>
                 </View>
-                <View className='detailSpecs'>
+                <AtButton
+                  size='small'
+                  className='detailSpecs'>
                   {specs}
-                </View>
+                </AtButton>
               </View>
               <View className='numberChange'>
-                <View class Name='number'>
+                <View className='number'>
                   {Get('languages').detailPage.number}
                 </View>
                 <View className='numberLocation'>
@@ -192,14 +201,9 @@ class GoodsSelection extends React.Component {
               onClick={this.openDistribution.bind(this)}
             >
               <View className='textSelect '>
-                <Text>
                   {Get('languages').detailPage.distribution}
-                </Text>
               </View>
               <View className='specsDi'>
-                <Text>
-
-                </Text>
               </View>
               <AtIcon
                 className='iconCheron'
@@ -216,7 +220,6 @@ class GoodsSelection extends React.Component {
             <View
               className={this.state.classstyleDistribution}
             >
-
             </View>
           </AtList>
         </View>
@@ -226,9 +229,7 @@ class GoodsSelection extends React.Component {
               className='serviceList'
             >
               <View className='textService '>
-                <Text >
                   {Get('languages').detailPage.service}
-                </Text>
               </View>
               <Image
                 className='imageFruit'

@@ -93,6 +93,8 @@ export default class Index extends Component {
                         <GoodsSelection
                             image={info[0].images[0]}
                             specs={info[0].specs}
+                            inventory={info[0].inventory}
+                            price={info[0].price}
                         />
                     </View>
                     <View>
