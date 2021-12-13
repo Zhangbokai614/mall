@@ -34,21 +34,23 @@
   },
   "detailPage": {
     "home": "首页",
-    "customerService": "客服",
+
+    "service": "服务",
+    "select": "已选",
+    "freeMoney": "包邮",
+    "tobuy": "立刻购买",
     "goodscar": "购物车",
     "addcar": "加入购物车",
-    "tobuy": "立刻购买",
-    "goodsselection": "商品选择",
-    "select": "已选",
-    "distribution": "配送",
-    "service": "服务",
-    "compensation": "坏果包赔",
-    "freeMoney": "包邮",
-    "returnGoods": "支持七天无理由退货",
     "goodsId": "商品编号",
-    "productionLicense": "生产许可证",
+    "distribution": "配送",
+    "specifications": "规格",
+    "afterSales": "关于售后",
+    "compensation": "坏果包赔",
+    "customerService": "客服",
+    "goodsselection": "商品选择",
     "goodsIntroduce": "商品介绍",
-    "afterSales": "关于售后"
+    "productionLicense": "生产许可证", 
+    "returnGoods": "不支持七天无理由退货"
   },
   "shoppingCart": {
     "cartNull": {
