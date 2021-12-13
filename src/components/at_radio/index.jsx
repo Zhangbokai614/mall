@@ -1,11 +1,11 @@
 import { View, Image, Text } from '@tarojs/components'
 import React from 'react'
-import { AtButton, AtListItem, AtFloatLayout, AtRadio, AtList, AtInputNumber } from 'taro-ui'
+import { AtButton, AtIcon, AtList, AtInputNumber } from 'taro-ui'
 
 import { Get } from '../../global-data/index'
 import Fruit from '../../asset/images/icon/fruit.png'
 import FreeMoney from '../../asset/images/icon/free.png'
-import SevenDays from '../../asset/images/icon/seven-days.png'
+import SevenDays from '../../asset/images/icon/notseven-days.png'
 import './index.css'
 
 class GoodsSelection extends React.Component {
@@ -13,83 +13,19 @@ class GoodsSelection extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      atButtonSelect: false,
-      atButtonDistribution: false,
-      atButtonService: false,
-      select: '',
-      distribution: '',
-      service: '',
       value: 1,
+      displaySelect: 'mask none',
+      classstyleSelect: 'box moveFromBottom',
+      displayDistribution: 'mask none',
+      classstyleDistribution: 'box moveFromBottom',
     }
-  };
-
-  handleChangeSelect(select) {
-    this.setState({
-      select
-    })
-  };
-
-  handleClickSelect() {
-    this.state.atButtonSelect
-      ? this.setState({
-        atButtonSelect: false,
-      })
-      : this.setState({
-        atButtonSelect: true,
-      })
-  };
-
-  handleChangeDistribution(distribution) {
-    this.setState({
-      distribution
-    })
-  };
-
-  handleClickDistribution() {
-    this.state.atButtonDistribution
-      ? this.setState({
-        atButtonDistribution: false,
-      })
-      : this.setState({
-        atButtonDistribution: true,
-      })
-  };
-
-  handleChangeService(service) {
-    this.setState({
-      service
-    })
-  };
-
-  handleClickService() {
-    this.state.atButtonService
-      ? this.setState({
-        atButtonService: false,
-      })
-      : this.setState({
-        atButtonService: true,
-      })
   };
 
   handleChangeNumber(value) {
     this.setState({
       value
     })
-  };
-  
-  btnClick = (value) => {
-    let num = this.state.value;
-    console.log(num)
-    num = value === 'add' ? (num += 1) : (num -= 1);
-    if (num < 1) {
-      num = 0;
-    }
-    let money = this.props.goodInfo.price;
-    this.setState({
-      totalNum: num,
-      totalMoney: (money * num).toFixed(2),
-    });
-  };
+  };  
 
   goHref = (type) => {
     switch (type) {
@@ -119,48 +55,114 @@ class GoodsSelection extends React.Component {
         });
     }
   };
+
+  offSelect() {
+    this.setState({
+      displaySelect: 'mask none',
+      classstyleSelect: 'box moveFromBottom',
+    })
+  };
+
+  openSelect() {
+    this.setState({
+      displaySelect: 'mask block',
+      classstyleSelect: 'box moveFromBottom showMove'
+    })
+  };
+
+  offDistribution() {
+    this.setState({
+      displayDistribution: 'mask none',
+      classstyleDistribution: 'box moveFromBottom',
+    })
+  };
+
+  openDistribution() {
+    this.setState({
+      displayDistribution: 'mask block',
+      classstyleDistribution: 'box moveFromBottom showMove'
+    })
+  };
+
   render() {
 
     const { image } = this.props
-    const value = this.state.value
-    console.log(value)
+    const { specs } = this.props
+    const { inventory } = this.props
+    const { price } = this.props
     return (
       <View className='atradio'>
-        <View className='goodsSelection'>
-          <AtList>
-            <AtListItem
+        <View className='goodsSelection' >
+          <AtList hasBorder={false}>
+            <View
               className='radioList'
-              title={Get('languages').detailPage.select}
-              onClick={this.handleClickSelect.bind(this)}
-              arrow='right' />
-            <AtFloatLayout
-              isOpened={this.state.atButtonSelect}
-              onClose={this.handleClickSelect.bind(this)}
-              title={Get('languages').detailPage.goodsSelection}
-              className='floatlayoutbutton'
+              onClick={this.openSelect.bind(this)}
             >
-              <View>
-                <Image
-                  src={image}
-                  style="height: 16vh; width: 16vh"
-                />
+              <View className='textSelect'>
+                <Text >
+                  {Get('languages').detailPage.select}
+                </Text>
               </View>
-              <View className='floatlayoutHeight'>
-                <View className='numberChange'>
-                  <View className='number'>
-                    {Get('languages').detailPage.number}
-                  </View>
-                  <View className='numberLocation'>
-                    <AtInputNumber
-                      type='digit'
-                      min={1}
-                      max={99}
-                      step={1}
-                      width={100}
-                      value={this.state.value}
-                      onChange={this.handleChangeNumber.bind(this)}
-                    />
-                  </View>
+              <View className='specs'>
+                <Text>
+                  {specs}
+                </Text>
+              </View>
+              <AtIcon
+                className='iconCheron'
+                value='chevron-right'
+                size='15'
+                color='#bfbfbf'
+              />
+            </View>
+            <View
+              onClick={this.offSelect.bind(this)}
+              className={this.state.displaySelect}
+            />
+            <View className={this.state.classstyleSelect}>
+              <View className='detailPrice'>
+                <View className='skuImage'>
+                  <Image
+                    src={image}
+                    style="height: 16vh; width: 16vh"
+                  />
+                </View>
+                <View className='goodsprice'>
+                  ￥{price}
+                </View>
+              </View>
+              <View className='textInventory'>
+                <View className='inventory'>
+                    {Get('languages').detailPage.inventory}
+                </View>
+                <View className='detailInventory'>
+                  {inventory}
+                </View>
+              </View>
+              <View className='skuText'>
+                <View className='textSpecs'>                
+                    {Get('languages').detailPage.specifications}
+                </View>
+                <AtButton
+                  size='small'
+                  className='detailSpecs'>
+                  {specs}
+                </AtButton>
+              </View>
+              <View className='numberChange'>
+                <View className='number'>
+                  {Get('languages').detailPage.number}
+                </View>
+                <View className='numberLocation'>
+                  <AtInputNumber
+                    type='digit'
+                    min={1}
+                    max={99}
+                    step={1}
+                    width={100}
+                    value={this.state.value}
+                    onChange={this.handleChangeNumber.bind(this)}
+                  />
                 </View>
               </View>
               <AtButton
@@ -175,35 +177,45 @@ class GoodsSelection extends React.Component {
               >
                 {Get('languages').detailPage.tobuy}
               </AtButton>
-            </AtFloatLayout>
+            </View>
           </AtList>
         </View>
         <View className='distribution'>
-          <AtList>
-            <AtListItem
+          <AtList hasBorder={false}>
+            <View
               className='radioList'
-              title={Get('languages').detailPage.distribution}
-              onClick={this.handleClickDistribution.bind(this)}
-              arrow='right'
-            />
-            <AtFloatLayout
-              isOpened={this.state.atButtonDistribution}
-              onClose={this.handleClickDistribution.bind(this)}
-              title={Get('languages').deliveryTo}
+              onClick={this.openDistribution.bind(this)}
             >
-            </AtFloatLayout>
+              <View className='textSelect '>
+                  {Get('languages').detailPage.distribution}
+              </View>
+              <View className='specsDi'>
+              </View>
+              <AtIcon
+                className='iconCheron'
+                value='chevron-right'
+                size='15'
+                color='#bfbfbf'
+              />
+            </View>
+            <View
+              onClick={this.offDistribution.bind(this)}
+              title={Get('languages').deliveryTo}
+              className={this.state.displayDistribution}
+            />
+            <View
+              className={this.state.classstyleDistribution}
+            >
+            </View>
           </AtList>
         </View>
         <View className='service'>
-          <AtList>
+          <AtList hasBorder={false}>
             <View
               className='serviceList'
-              onClick={this.handleClickService.bind(this)}
             >
-              <View className='textService'>
-                <Text >
+              <View className='textService '>
                   {Get('languages').detailPage.service}
-                </Text>
               </View>
               <Image
                 className='imageFruit'
@@ -224,21 +236,12 @@ class GoodsSelection extends React.Component {
               <Image
                 className='imageSevenDays'
                 src={SevenDays}
-                style='width:6vw; height: 6vw;'
+                style='width:5vw; height: 5vw;'
               />
               <View className='serviceDetail'>
                 {Get('languages').detailPage.returnGoods}
               </View>
             </View>
-            <AtFloatLayout
-              isOpened={this.state.atButtonService}
-              onClose={this.handleClickService.bind(this)}
-            >
-              <AtRadio
-                value={this.state.service}
-                onClick={this.handleChangeService.bind(this)}
-              />
-            </AtFloatLayout>
           </AtList>
         </View>
       </View>

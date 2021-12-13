@@ -39,6 +39,10 @@
   background-color: white;
 }
 
+.bottomLeftService::after {
+  border: none;
+}
+
 .bottomLeftGoodscar {
   display: flex;
   flex-direction: column;
@@ -46,7 +50,6 @@
   height: 8vh;
   margin-left: -20vw;
   width: 12vw;
-  border: none;
   justify-content: space-between;
   padding-bottom: 3vh;
   background-color: white;
@@ -97,10 +100,6 @@
   flex-direction: row;
   margin-bottom: 1vh;
   width: 40vw;
-}
-
-.bottomLeftService::after {
-  border: none;
 }
 
 .detailHome {

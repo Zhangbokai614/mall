@@ -6,40 +6,10 @@ import Taro from '@tarojs/taro'
 import { Get } from '../../global-data/index'
 import shoppingcar from '../../asset/images/icon/detail-shopping-cart.png'
 import home from '../../asset/images/tabs/home-select.png'
-import service from '../../asset/images/icon/detail-customer-service-select.png'
+import service from '../../asset/images/icon/customer-service.png'
 import './index.css'
 class Bottomdetail extends React.Component {
-  constructor(props) {
-    super(props)
-    this.state = {
-      totalNum: 0,
-      home: false,
-      shoppingcar: false,
-      service: false,
-      id: this.props.id,
-      type: this.props.type
-    }
-  };
-
-  handeChangeShoppingcar() {
-    this.setState({
-      shoppingcar: !this.state.shoppingcar
-    })
-  };
-
-  btnClick = (type) => {
-    let num = this.state.totalNum;
-    num = type === 'add' ? (num += 1) : (num -= 1);
-    if (num < 1) {
-      num = 0;
-    }
-    let money = this.props.goodInfo.price;
-    this.setState({
-      totalNum: num,
-      totalMoney: (money * num).toFixed(2),
-    });
-  };
-
+  
   goHref = (type) => {
     switch (type) {
       case '01':
@@ -54,7 +24,7 @@ class Bottomdetail extends React.Component {
         break;
       case '03':
         Taro.reLaunch({
-          url: '/pages/cart/index?id=',
+          url: '/pages/cart/index?',
         });
         break;
       case '04':
@@ -64,7 +34,6 @@ class Bottomdetail extends React.Component {
         break;
       default:
         Taro.navigateTo({
-
           url: '/pages/home/index',
         });
     }
@@ -115,7 +84,6 @@ class Bottomdetail extends React.Component {
             <Image
               src={shoppingcar}
               className='imageGoodscar'
-              onClick={this.handeChangeShoppingcar.bind(this)}
               style='width:5vw; height:5vw;'
             />
             <View className='detailGoodscar'>
@@ -126,7 +94,7 @@ class Bottomdetail extends React.Component {
         <View className='bottomRight'>
           <AtButton
             className='bottombuttonCar'
-            onClick={this.btnClick.bind(this, 'add')}
+            onClick={this.goHref.bind(this, '03')}
           >
             {Get('languages').detailPage.addcar}
           </AtButton>

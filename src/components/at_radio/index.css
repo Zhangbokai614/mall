@@ -1,9 +1,13 @@
+.atradio{
+    margin-top: 2vh;
+}
+
 .radioList {
-    height: 6vh;
     display: flex;
-    align-items: center;
+    align-items: center;  
+    flex-direction: row;
+    height: 6vh;
     text-align: left;
-    font-size: 30px;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
 }
@@ -22,40 +26,46 @@
 
 .goodscar {
     padding-top: 1vh;
-    margin-bottom: 2vh;
+    margin-top: 17vh;
+    margin-left: 8%;
     background-color:#ffd149;
     color: white;
-    text-align: center;
     display:inline-block;
+    justify-content: center;
+    align-items: center; 
     font-size: 30px;
-    width: 50%;
+    width: 40%;
     height: 6vh;
     border-radius: var(--detail-border-radius);
+    position: absolute;
 }
 
 .confirm {
     padding-top: 1vh;
-    margin-bottom: 2vh;
+    margin-top: 17vh;
+    margin-left: 53%;
     background-color: var(--highlight-color);
     color: white;
-    text-align: center;
     display:inline-block;
+    justify-content: center;
+    align-items: center; 
     font-size: 30px;
-    width: 50%;
+    width: 40%;
     height: 6vh;
     border-radius: var(--detail-border-radius);
+    position: absolute;
+}
+
+.textSelect {
+    margin-left: 2vw;
 }
 
 .textService {
-    display: flex;
-    align-items: center;
-    font-size: 30px;
     margin-left: 2vw;
-    width: 8vw;
 }
 
 .imageFruit {
-    margin-left: 6vw;
+    margin-left: 4vw;
     display: flex;
     justify-content: center;
     align-items: center;  
@@ -75,6 +85,11 @@
     align-items: center;  
 }
 
+.skuImage {
+    margin-top: -3vh;
+    margin-left: 5vw;
+}
+
 .serviceDetail {
     margin-left: 2vw;
     display: flex;
@@ -83,8 +98,13 @@
     font-size: 25px;
 }
 
-.at-Floatlayout {
-    z-index: 200;
+.iconCheron {
+    position: absolute;
+    margin-left: 95vw;
+}
+
+.iconCheronSe {
+    margin-left: 4vw;
 }
 
 .kindTitle {
@@ -92,28 +112,106 @@
     margin-left: 2vw;
 }
 
-.number {
-    margin-top: 1vh;
-    margin-left: 2vw;
+.numberLocation {
+    margin-bottom: 1vh;
+    margin-left: 60vw;
+}
+
+.specs {
+    margin-left: 5vw;
+}
+
+.moveFromBottom {
+    position: fixed;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    -webkit-transform: translate(0, 100%);
+    transform: translate(0, 100%);
+    -webkit-transition: all ease-in-out 0.3s;
+    transition: all ease-in-out 0.3s;
+}
+
+.showMove {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+    transform: translate(0, 0);
+}
+
+.box {
+    width: 100%;
+    height: 60vh;
+    background-color: #fff;
+    z-index: 999;
+}
+
+.mask {
+    z-index: 800;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.none {
+    display: none;
+}
+
+.block {
+    display: block;
+}
+
+.detailPrice {
+    display: flex;
+}
+
+.goodsprice {
+    color: #ff4949;
+    margin-top: 11vh;
+    margin-left: 3vw;
+}
+
+.textInventory {
+    margin-top: 3vh;
+    display: flex;
+}
+
+.inventory {
+    margin-top: 1vw;
+    margin-left: 5vw;
+}
+
+.detailInventory {
+    margin-top: 1vw;
+    margin-left: 6vw;
+}
+
+.skuText {
+    margin-top: 3vh;
+    display: flex; 
+}
+
+.textSpecs {
+    margin-top: 1vw;
+    margin-left: 5vw;
+}
+
+.detailSpecs {
+    margin-top: 1vw;
+    margin-left: 6vw;
+    color: #ff4949;
+    border: 2px solid #ff4949;
 }
 
 .numberChange {
     display: flex;
-    flex-direction: row;
+    margin-top: 3vh;
 }
 
-.numberLocation {
-    margin-bottom: 1vh;
-    margin-left: 62vw;
+.number {
+    margin-top: 1vw;
+    margin-left: 5vw;
 }
-/* .floatlayoutbutton {
-    display: none;
-    position: fixed;
-    top: 20vh;
-    width: 100%;
-    bottom: 0;
-    background: white;
-}
-.floatlayoutbutton:target {
-    display: block;
-} */

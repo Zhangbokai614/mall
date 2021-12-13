@@ -14,26 +14,21 @@
     font-size: 52px;
 }
 
-.imageShare {
-    margin-top: 1vh;
-    margin-left: 75vw;
-}
-
 .goodsintroduction {
     padding-left: 20px;
     background-color: white;
-    font-size: 38px;
+    font-size: 14pt;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     color: #212121 100%;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
 }
 
 .detailAfterSales {
     height: 35vh;
     text-align: left;
     background-color: white;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.094);
 }
 
 .afterSales {
@@ -53,3 +48,14 @@
 .afterSalesTitle {
     padding-top: 3vh;
 }
+
+.buttonShare {
+    margin-left: 73vw;
+    height: 4vh;
+    width: 12vw;
+    background-color: white;
+}
+
+.buttonShare::after{
+    border: none;
+} 

@@ -71,14 +71,18 @@ export default class Index extends Component {
                         />
                     </View>
                     <View className='priceAndShare'>
-                        <View className='infoPrice'> 
+                        <View className='infoPrice'>
                             ￥{info[0].price}
                         </View>
-                        <Image
-                        className='imageShare'
-                        src={Share}
-                        style='width:6vw; height:6vw;'
-                        />
+                        <button
+                            open-type='share'
+                            className='buttonShare'>
+                            <Image
+                                className='imageShare'
+                                src={Share}
+                                style='width:6vw; height:6vw;'
+                            />
+                        </button>
                     </View>
                     <View
                         className='goodsintroduction'
@@ -86,8 +90,11 @@ export default class Index extends Component {
                         {info[0].title}
                     </View>
                     <View>
-                        <GoodsSelection 
+                        <GoodsSelection
                             image={info[0].images[0]}
+                            specs={info[0].specs}
+                            inventory={info[0].inventory}
+                            price={info[0].price}
                         />
                     </View>
                     <View>
