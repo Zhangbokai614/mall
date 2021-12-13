@@ -1,5 +1,5 @@
 import React from 'react'
-// import Taro from '@tarojs/taro'
+import Taro from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
 import { CuButton, CuTag } from "taro-color-ui";
 
@@ -12,27 +12,17 @@ const text = Get('languages').user.order
 class OrderCard extends React.Component {
   constructor(props) {
     super(props)
-    this.state = {
-      order_code: props.order_code,
-      order_state: props.order_state,
-      payment_time: props.payment_time,
-      goods_title: props.goods_title,
-      goods_image: props.goods_image,
-      specs: props.specs,
-      number: props.number,
-      cost: props.cost,
-      finish: props.finish,
-    }
   }
 
-  // handleClick() {
-  //   Taro.navigateTo({
-  //     url: '/pages/detail/index?id=' + this.state.id
-  //   })
-  // }
+  handleClick(orderCode) {
+    Taro.navigateTo({
+      url: '/pages/order-detail/index?orderCode=' + orderCode
+    })
+  }
 
   render() {
-    const paymentTime = new Date(this.state.payment_time)
+    const orderInfo = this.props.orderInfo
+    const paymentTime = new Date(orderInfo.payment_time)
     const stateMap = {
       "01": text.pendingPayment,
       "02": text.pendingReceipt,
@@ -41,18 +31,18 @@ class OrderCard extends React.Component {
     }
 
     return (
-      <View id='order-card'>
+      <View className='order-card' onClick={this.handleClick.bind(this, orderInfo.order_code)}>
         <View id="card-head">
           <View>
-            {text.order_code + ': ' + this.state.order_code}
+            {text.orderCode + ': ' + orderInfo.order_code}
           </View>
           {
-            this.state.order_state == "04"
-              ? <CuTag radius='true' color="olive" type="light">
-                {stateMap[this.state.order_state]}
+            orderInfo.order_state == "04"
+              ? <CuTag className='order-tag' radius='true' color="olive" type="light">
+                {stateMap[orderInfo.order_state]}
               </CuTag>
-              : <CuTag radius='true' color="red" type="light">
-                {stateMap[this.state.order_state]}
+              : <CuTag className='order-tag' radius='true' color="red" type="light">
+                {stateMap[orderInfo.order_state]}
               </CuTag>
           }
         </View>
@@ -61,29 +51,34 @@ class OrderCard extends React.Component {
             <Image
               id='goods-info-image'
               style='width: 16vh'
-              src={this.state.goods_image}
+              src={orderInfo.image}
               mode='widthFix'
             />
             <View id='goods-title-specs'>
               <View id='goods-title'>
-                {this.state.goods_title}
+                {orderInfo.title}
               </View>
               <View id='goods-specs'>
-                {this.state.specs}
+                {orderInfo.specs}
               </View>
             </View>
           </View>
           <View id='total'>
-            {text.total + this.state.number + text.sum_total + this.state.cost}
+            {text.total + orderInfo.number + text.sumTotal + orderInfo.cost}
           </View>
         </View>
         <View id='card-foot'>
           <View id='payment-time'>
-            {(paymentTime.getMonth() + 1) + '-' + paymentTime.getDay() + " " + paymentTime.getHours() + ":" + paymentTime.getMinutes()}
+            {
+              ('0' + (paymentTime.getMonth() + 1)).slice(-2) + '-' +
+              ('0' + paymentTime.getDay()).slice(-2) + " " +
+              ('0' + paymentTime.getHours()).slice(-2) + ":" +
+              ('0' + paymentTime.getMinutes()).slice(-2)
+            }
           </View>
-          <View id='cad-button'>
-            <CuButton className='card-button' color='yellow' size="normal" round inline>物流详情</CuButton>
-            <CuButton className='card-button' color='red' size="normal" round inline>确认收货</CuButton>
+          <View id='card-buttons'>
+            <CuButton className='card-button' color='yellow' size="large" round inline>{text.CheckLogistics}</CuButton>
+            <CuButton className='card-button' color='red' size="large" round inline>{text.confirmTheReceiptOfGoods}</CuButton>
           </View>
         </View>
       </View>

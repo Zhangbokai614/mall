@@ -15,7 +15,6 @@ import couponsIcon from '../../asset/images/icon/coupons.png'
 import addressIcon from '../../asset/images/icon/address.png'
 import customerServiceIcon from '../../asset/images/tabs/customer-service-select.png'
 
-// import * as homeApi from './service';
 import './index.css'
 
 const text = Get('languages').user

@@ -1,4 +1,4 @@
-#order-card {
+.order-card {
   display: flex;
   flex-flow: column;
   box-shadow: var(--shadow);
@@ -78,10 +78,10 @@
 #payment-time {
   color: darkgrey;
   align-items: center;
-  line-height: 4vh;
+  line-height: 5vh;
 }
 
-#card-button {
+#card-buttons {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -91,4 +91,8 @@
 .card-button {
   margin-left: 4vw;
   color: #ffffff;
+}
+
+.cu-tag {
+  z-index: 10;
 }

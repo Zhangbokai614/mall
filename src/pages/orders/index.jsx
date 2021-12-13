@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import { View } from '@tarojs/components'
-import { Taro, getCurrentInstance } from '@tarojs/taro'
+import { getCurrentInstance } from '@tarojs/taro'
 
 import { Get } from '../../global-data/index'
 import { Tabs } from '../../components/tabs/index'
@@ -19,7 +19,6 @@ export default class Index extends Component {
       kind: [text.pendingPayment, text.pendingReceipt, text.returnExchange, text.allOrders],
       selectKind: getCurrentInstance().router.params.selectKind,
       orderInfo: [],
-      goodsInfo: [],
       loading: true
     }
   }
@@ -33,21 +32,10 @@ export default class Index extends Component {
       title: Get('languages').loading,
     })
 
-    let goodsInfo = []
-
     const orderInfo = await orderApi.orderInfo()
-
-    for (let i = 0; i < orderInfo.data.length; i++) {
-      let info = await orderApi.goodsInfo(orderInfo.data[i].goods_id)
-      goodsInfo.push({
-        title: info.data[0].title,
-        image: info.data[0].images[0]
-      })
-    }
 
     this.setState({
       orderInfo: orderInfo.data,
-      goodsInfo: goodsInfo,
       loading: false,
     })
 
@@ -55,32 +43,23 @@ export default class Index extends Component {
   }
 
   render() {
-    const selectKind = this.state.selectKind
-    const goodsInfo = this.state.goodsInfo
-
-    const tabsContent = this.state.loading ? null : this.state.orderInfo.map((item, index) => {
-      return (
-        <OrderCard
-          key={index}
-          order_code={item.order_code}
-          order_state={item.order_state}
-          payment_time={item.payment_time}
-          goods_image={goodsInfo[index].image}
-          goods_title={goodsInfo[0].title}
-          specs={item.specs}
-          number={item.number}
-          cost={item.cost}
-          finish={item.finish}
-        />
-      )
-    })
+    const tabsContent = this.state.loading
+      ? null
+      : this.state.orderInfo.map((item, index) => {
+        return (
+          <OrderCard
+            key={index + ''}
+            orderInfo={item}
+          />
+        )
+      })
 
     return (
       <View>
         <Tabs
           id='tabs'
           kind={this.state.kind}
-          selectKind={selectKind}
+          selectKind={this.state.selectKind}
         />
         {tabsContent}
       </View>
