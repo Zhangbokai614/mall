@@ -28,7 +28,6 @@ export default class Index extends Component {
             title: Get('languages').loading,
         })
         const features = await homeApi.features()
-        console.log(features.data[0].title)
         this.setState({
             title: features.data[0].title,
             time: features.data[0].time,
