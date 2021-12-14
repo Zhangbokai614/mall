@@ -63,6 +63,7 @@ export default class Index extends Component {
           title={e.title}
           imageSrc={e.images[0]}
           price={e.price}
+          activityName={e.activity_name}
         />
       )
     })

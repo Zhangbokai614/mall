@@ -17,6 +17,7 @@ module.exports = () => {
                 ],
                 'price|10-80': 80,
                 'inventory|0-10000': 10000,
+                activity_name: '限时促销',
             },
         ],
         'goods_card|1-8': [
@@ -32,6 +33,7 @@ module.exports = () => {
                 ],
                 'price|10-80': 80,
                 'inventory|0-10000': 10000,
+                activity_name: '爆款秒杀',
             },
             {
                 'id|+1': 200,
@@ -45,6 +47,7 @@ module.exports = () => {
                 ],
                 'price|10-80': 80,
                 'inventory|0-10000': 10000,
+                activity_name: '精品热卖',
             },
             {
                 'id|+1': 300,
@@ -58,6 +61,7 @@ module.exports = () => {
                 ],
                 'price|10-80': 80,
                 'inventory|0-10000': 10000,
+                activity_name: '限时促销',
             },
             {
                 'id|+1': 400,
@@ -71,6 +75,7 @@ module.exports = () => {
                 ],
                 'price|10-80': 80,
                 'inventory|0-10000': 10000,
+                activity_name: 'null',
             },
             {
                 'id|+1': 500,
@@ -84,6 +89,7 @@ module.exports = () => {
                 ],
                 'price|10-80': 80,
                 'inventory|0-10000': 10000,
+                activity_name: '爆款秒杀',
             },
             {
                 'id|+1': 600,
@@ -97,6 +103,7 @@ module.exports = () => {
                 ],
                 'price|10-80': 80,
                 'inventory|0-10000': 10000,
+                activity_name: '限时促销',
             },
             {
                 'id|+1': 600,
@@ -110,6 +117,7 @@ module.exports = () => {
                 ],
                 'price|10-80': 80,
                 'inventory|0-10000': 10000,
+                activity_name: '精品推荐',
             },
         ],
         'goods_info|1-8': [
@@ -136,6 +144,7 @@ module.exports = () => {
                 'price|10-80': 80,
                 'weight|1-4': 2,
                 specs: '6 斤装',
+                activity_code: '1000001',
             },
             {
                 'id|+1': 200,
@@ -159,6 +168,7 @@ module.exports = () => {
                 ],
                 'price|10-80': 80,
                 specs: '4 斤装',
+                activity_code: '1000002',
             },
             {
                 'id|+1': 300,
@@ -182,6 +192,7 @@ module.exports = () => {
                 ],
                 'price|10-80': 80,
                 specs: '2 斤装',
+                activity_code: '1000003',
             },
             {
                 'id|+1': 400,
@@ -205,7 +216,7 @@ module.exports = () => {
                 ],
                 'price|10-80': 80,
                 specs: '7 斤装',
-
+                activity_code: 'null',
             },
             {
                 'id|+1': 500,
@@ -230,6 +241,7 @@ module.exports = () => {
                 'price|10-80': 80,
                 'weight|1-4': 2,
                 specs: '10 斤装',
+                activity_code: '1000004',
             },
             {
                 'id|+1': 600,
@@ -251,6 +263,10 @@ module.exports = () => {
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715981-assets/web-upload/b7214668-4e86-4d57-a657-4d7bba2755a6.jpeg',
                     'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322716058-assets/web-upload/48df232e-47ee-4747-afa3-ce355d8e3e05.jpeg',
                 ],
+                'price|10-80': 80,
+                'weight|1-4': 2,
+                specs: '10 斤装',
+                activity_code: 'null',
             }
         ],
         "features": [
@@ -388,7 +404,7 @@ module.exports = () => {
         ],
         activity: [
             {
-                activity_code:'1000000',
+                activity_code: '1000000',
                 activity_name: '限时折扣',
                 start_time: '2021-12-12 01:25:30',
                 end_time: '2021-12-30 01:00:00',
@@ -396,7 +412,7 @@ module.exports = () => {
                 over: false
             },
             {
-                activity_code:'1000001',
+                activity_code: '1000001',
                 activity_name: '限时促销',
                 start_time: '2021-12-12 01:25:30',
                 end_time: '2022-01-10 01:00:00',
@@ -404,7 +420,7 @@ module.exports = () => {
                 over: false
             },
             {
-                activity_code:'1000002',
+                activity_code: '1000002',
                 activity_name: '爆款热卖',
                 start_time: '2021-12-10 01:25:30',
                 end_time: '2021-12-20 01:00:00',
@@ -412,7 +428,7 @@ module.exports = () => {
                 over: false
             },
             {
-                activity_code:'1000003',
+                activity_code: '1000003',
                 activity_name: '限时折扣',
                 start_time: '2021-12-01 01:25:30',
                 end_time: '2021-12-13 01:00:00',
