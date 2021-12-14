@@ -1,65 +1,55 @@
-.align {
+.shoppingCart-settlement-levelOne {
   z-index: 20;
   display: flex;
   align-items: center;
-}
-
-.flex-row {
-  display: flex;
-  flex-direction: row;
-}
-
-.relative {
-  position: relative;
-}
-
-.absolute {
-  position: absolute;
-  right: 0;
-}
-
-.footer {
   width: 100vw;
   height: 8.5vh;
   position: fixed;
   bottom: 0;
-  background: var(--card-bg-color);
+  background: var(--shoppingCard-settlement-background);
 }
 
-.margin {
-  margin-left: 4vw;
-  margin-right: 1.5vw;
+.shoppingCart-settlement-levelTwo {
+  display: flex;
+  position: absolute;
+  right: 0;
 }
 
-.at-article__h2-margin {
-  margin: 0;
+.shoppingCart-settlement-total {
+  display: flex;
+  align-items: center;
 }
 
-.money {
-  color: var(--highlight-color);
-  font-size: var(--ShoppingCard-string-font-size);
+.shoppingCart-settlement-money {
+  color: var(--shoppingCard-settlement-text-color);
 }
 
-.number {
-  color: var(--highlight-color);
-  font-size: var(--ShoppingCard-number-font-size);
+.shoppingCart-settlement-number {
+  color: var(--shoppingCard-settlement-text-color);
 }
 
-.bottom {
+.shoppingCart-settlement-button {
   margin-left: 2.5vw;
   margin-right: 2vw;
   width: 24vw;
-  font-size: var(--ShoppingCard-string-font-size);
+  color: var(--shoppingCard-settlement-button-color);
+  font-size: var(--shoppingCard-settlement-button-font-size);
+  background-color: var(--shoppingCard-settlement-button-background);
+}
+
+.shoppingCart-settlement-circle-margin {
+  margin-left: 4vw;
+  margin-right: 1.5vw;
 }
 
 .unselected {
   width: 45px;
   height: 45px;
-  background: var(--card-bg-color);
+  background: var(--shoppingCart-card-circle-unselect);
   border: solid;
-  border-width: 2px;
+  border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: var(--card-border-color);
+  border-color: var(--shoppingCart-card-circle-border-color);
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
@@ -69,9 +59,8 @@
   width: 45px;
   height: 45px;
   border-radius: 100%;
-  position: relative;
-  background: var(--highlight-color);
-  background-image: url('./check.svg');
+  background: var(--shoppingCart-card-circle-select);
+  background-image: url('../../../src/asset/images/icon/check.svg');
   background-position: center center;
   background-repeat: no-repeat;
   background-size: 75%;

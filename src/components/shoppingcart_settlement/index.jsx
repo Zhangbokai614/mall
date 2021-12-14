@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, Text } from '@tarojs/components';
 import { AtButton } from 'taro-ui';
-
 import { Get } from '../../global-data';
 import './index.css';
 
@@ -13,17 +12,23 @@ class Settlement extends Component {
   }
 
   render() {
-    const { number, circleClink, circleState, cardDelete } = this.props;
+    const { number, circleClink, circleState, cardDelete, moneySymbol } = this.props;
 
     const settlement = (
       <>
-        <View className='absolute flex-row'>
-          <View>
-            <Text className='at-article__h2 at-article__h2-margin'>{text.total}：</Text>
-            <Text className='money'>{text.moneySymbol}</Text>
-            <Text className='number'>{number == undefined ? 0 : number}</Text>
+        <View className='shoppingCart-settlement-levelTwo'>
+          <View className='shoppingCart-settlement-total'>
+            <Text>{text.total}：</Text>
+            <Text className='shoppingCart-settlement-money'>{text.moneySymbol}</Text>
+            <Text className='shoppingCart-settlement-number'>{number == undefined ? 0 : number}</Text>
           </View>
-          <AtButton className='bottom' type='primary' size='normal' circle='true'>
+          <AtButton
+            className='shoppingCart-settlement-button'
+            type='primary'
+            size='normal'
+            circle='true'
+            onClick={moneySymbol}
+          >
             {text.settlement}
           </AtButton>
         </View>
@@ -32,8 +37,14 @@ class Settlement extends Component {
 
     const del = (
       <>
-        <View className='absolute flex-row'>
-          <AtButton className='bottom' type='secondary' size='normal' circle='true' onClick={cardDelete}>
+        <View className='shoppingCart-settlement-levelTwo'>
+          <AtButton
+            className='shoppingCart-settlement-button'
+            type='secondary'
+            size='normal'
+            circle='true'
+            onClick={cardDelete}
+          >
             {text.delete}
           </AtButton>
         </View>
@@ -41,11 +52,17 @@ class Settlement extends Component {
     );
 
     return (
-      <View className='footer flex-row align relative'>
+      <View className='shoppingCart-settlement-levelOne'>
         <View onClick={circleClink}>
-          <View className={circleState === false ? 'unselected' + ' ' + 'margin' : 'selected' + ' ' + 'margin'}></View>
+          <View
+            className={
+              circleState === false
+                ? 'unselected' + ' ' + 'shoppingCart-settlement-circle-margin'
+                : 'selected' + ' ' + 'shoppingCart-settlement-circle-margin'
+            }
+          ></View>
         </View>
-        <Text className='at-article__h2 at-article__h2-margin'>{text.selecTall}</Text>
+        <Text>{text.selectAll}</Text>
         {this.props.topText === false ? settlement : del}
       </View>
     );

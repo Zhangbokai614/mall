@@ -1,33 +1,30 @@
-.cube {
-  display: flex;
-  width: 100%;
-  height: 7vh;
-  align-items: center;
-  flex-direction: row;
-  position: relative;
-  margin-bottom: 1.5vh;
-  box-shadow: var(--shadow);
-  border-bottom-right-radius: var(--card-border);
-  border-bottom-left-radius: var(--card-border);
-  background: var(--card-bg-color);
-}
-
-.sticky {
-  z-index: 40;
+.shoppingCart-top-levelOne {
+  z-index: var(--shoppingCard-top-z-index);
   position: sticky;
   top: 0px;
 }
 
-.hint {
-  margin-left: 2vw;
-  font-size: 25px;
-  color: var(--highlight-color);
+.shoppingCart-top-leveltwo {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  flex-direction: row;
+  position: relative;
+  height: var(--shoppingCard-top-height);
+  box-shadow: var(--shoppingCard-top-box-shadow);
+  border-bottom-right-radius: var(--shoppingCard-top-border);
+  border-bottom-left-radius: var(--shoppingCard-top-border);
+  background: var(--shoppingCard-top-background);
 }
 
-.textright {
+.shoppingCart-left-text {
+  margin-left: 4vw;
+  color: var(--shoppingCard-top-left-from-color);
+}
+
+.shoppingCart-right-text {
   position: absolute;
   right: 0;
   margin-right: 4vw;
-  font-size: 27.5px;
-  color: var(--highlight-color);
+  color: var(--shoppingCard-top-right-from-color);
 }

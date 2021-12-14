@@ -34,4 +34,37 @@ page {
 
   /* detail */
   --detail-border-radius: 50px;
+
+  /* ShoppingCart */
+  --ShoppingCard-null-font-h1-color: #777777;
+  --ShoppingCard-null-font-h2-color: #989898;
+
+  --shoppingCard-top-z-index: 10;
+  --shoppingCard-top-height: 8vh;
+  --shoppingCard-top-box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shoppingCard-top-border: var(--card-border);
+  --shoppingCard-top-background: var(--card-bg-color);
+  --shoppingCard-top-left-from-color: var(--card-border-color);
+  --shoppingCard-top-right-from-color: var(--highlight-color);
+
+  --shoppingCard-card-border-radius: var(--card-border-radius);
+  --shoppingCard-card-box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --shoppingCart-card-confing-color: var(--card-border-color);
+  --shoppingCard-card-background: var(--card-bg-color);
+  --shoppingCart-card-Image-border: var(--card-border-radius);
+  --shoppingCart-card-number-color: var(--highlight-color);
+  --shoppingCart-card-circle-select: var(--highlight-color);
+  --shoppingCart-card-circle-unselect: var(--card-bg-color);
+  --shoppingCart-card-circle-border-color: var(--card-border-color);
+
+  --shoppingCart-counter-button-background: var(--card-bg-color);
+  --shoppingCart-counter-button-border-color: var(--highlight-color);
+  --shoppingCart-counter-button-text-color: var(--highlight-color);
+  --shoppingCart-counter-input-number-color: var(--highlight-color);
+
+  --shoppingCard-settlement-background: var(--card-bg-color);
+  --shoppingCard-settlement-text-color: var(--highlight-color);
+  --shoppingCard-settlement-button-color: var(--card-bg-color);
+  --shoppingCard-settlement-button-font-size: ;
+  --shoppingCard-settlement-button-background: var(--highlight-color);
 }
