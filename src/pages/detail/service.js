@@ -16,4 +16,12 @@ export const afterSales = ( data) => {
     });
 }
 
+export const activity = ( data) => {
+    return Request({
+        url: '/activity',
+        method: 'GET',
+        ...data
+    });
+}
+
 
