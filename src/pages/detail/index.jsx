@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 import { getCurrentInstance } from '@tarojs/taro'
-import { AtDivider } from 'taro-ui'
+import { AtDivider, AtCountdown, AtTag } from 'taro-ui'
 
 import Vertical from '../../asset/images/icon/vertical.png'
 import { SwiperPosters } from '../../components/detail_swiper'
@@ -42,10 +42,12 @@ export default class Index extends Component {
         const { id } = getCurrentInstance().router.params
         const goodsInfo = await homeApi.goodsInfo(+id)
         const afterSales = await homeApi.afterSales()
+        const activity = await homeApi.activity()
         this.setState({
             goodsInfo: goodsInfo.data.filter((e) => e.id === +id),
             afterSales: afterSales.data.detail,
             afterSalesFree: afterSales.data.free,
+            activityName: activity.data[0].activity_name,
             loading: false,
         })
         Taro.hideLoading()
@@ -60,6 +62,7 @@ export default class Index extends Component {
         const info = this.state.goodsInfo
         const afterSalesDetail = this.state.afterSales
         const afterSalesFree = this.state.afterSalesFree
+        const activityName = this.state.activityName
         return (
             this.state.loading
                 ? null
@@ -71,6 +74,15 @@ export default class Index extends Component {
                         <View className='infoPrice'>
                             ￥{info[0].price}
                         </View>
+                        <AtTag className='activityName'>
+                            {activityName}
+                        </AtTag>
+                        <AtCountdown
+                            isCard
+                            minutes={1}
+                            seconds={10}
+                            className='countDown'>
+                        </AtCountdown>
                         <button
                             open-type='share'
                             className='buttonShare'>
