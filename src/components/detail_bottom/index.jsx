@@ -44,7 +44,7 @@ class Bottomdetail extends React.Component {
     return (
 
       <View className='bottom'>
-        <button
+        <AtButton
           className='bottomLeftHome'
           id='firstpage'
           onClick={this.goHref.bind(this, '01')}>
@@ -58,8 +58,8 @@ class Bottomdetail extends React.Component {
               {Get('languages').detailPage.home}
             </View>
           </View>
-        </button>
-        <button
+        </AtButton>
+        <AtButton
           className='bottomLeftService'
           open-type="contact"
           bindcontact="handleContact"
@@ -74,8 +74,8 @@ class Bottomdetail extends React.Component {
               {Get('languages').detailPage.customerService}
             </View>
           </View>
-        </button>
-        <button
+        </AtButton>
+        <AtButton
           className='bottomLeftGoodscar'
           id='goodscar'
           onClick={this.goHref.bind(this, '03')}
@@ -90,7 +90,7 @@ class Bottomdetail extends React.Component {
               {Get('languages').detailPage.goodscar}
             </View>
           </View>
-        </button>
+        </AtButton>
         <View className='bottomRight'>
           <AtButton
             className='bottombuttonCar'
