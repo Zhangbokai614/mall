@@ -4,7 +4,6 @@ import { getCurrentInstance } from '@tarojs/taro'
 
 import { Get } from '../../global-data/index'
 import { Tabs } from '../../components/tabs/index'
-import { OrderCard } from '../../components/order_card'
 
 import * as orderApi from './service';
 
@@ -43,26 +42,17 @@ export default class Index extends Component {
   }
 
   render() {
-    const tabsContent = this.state.loading
-      ? null
-      : this.state.orderInfo.map((item, index) => {
-        return (
-          <OrderCard
-            key={index + ''}
-            orderInfo={item}
-          />
-        )
-      })
-
     return (
-      <View>
-        <Tabs
-          id='tabs'
-          kind={this.state.kind}
-          selectKind={this.state.selectKind}
-        />
-        {tabsContent}
-      </View>
+      this.state.loading
+        ? null
+        : <View>
+          <Tabs
+            id='tabs'
+            kind={this.state.kind}
+            selectKind={this.state.selectKind}
+            content={this.state.orderInfo}
+          />
+        </View>
     )
   }
 }

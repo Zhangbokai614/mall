@@ -8,6 +8,7 @@ import { Get } from '../../global-data/index'
 import './index.css'
 
 const text = Get('languages').user.order
+const orderStateMap = Get('orderStateMap')
 
 class OrderCard extends React.Component {
   constructor(props) {
@@ -23,12 +24,6 @@ class OrderCard extends React.Component {
   render() {
     const orderInfo = this.props.orderInfo
     const paymentTime = new Date(orderInfo.payment_time)
-    const stateMap = {
-      "01": text.pendingPayment,
-      "02": text.pendingReceipt,
-      "03": text.pendingShipments,
-      "04": text.completed,
-    }
 
     return (
       <View className='order-card' onClick={this.handleClick.bind(this, orderInfo.order_code)}>
@@ -39,10 +34,10 @@ class OrderCard extends React.Component {
           {
             orderInfo.order_state == "04"
               ? <CuTag className='order-tag' radius='true' color="olive" type="light">
-                {stateMap[orderInfo.order_state]}
+                {orderStateMap[orderInfo.order_state]}
               </CuTag>
               : <CuTag className='order-tag' radius='true' color="red" type="light">
-                {stateMap[orderInfo.order_state]}
+                {orderStateMap[orderInfo.order_state]}
               </CuTag>
           }
         </View>
@@ -71,7 +66,7 @@ class OrderCard extends React.Component {
           <View id='payment-time'>
             {
               ('0' + (paymentTime.getMonth() + 1)).slice(-2) + '-' +
-              ('0' + paymentTime.getDay()).slice(-2) + " " +
+              ('0' + paymentTime.getDate()).slice(-2) + " " +
               ('0' + paymentTime.getHours()).slice(-2) + ":" +
               ('0' + paymentTime.getMinutes()).slice(-2)
             }
