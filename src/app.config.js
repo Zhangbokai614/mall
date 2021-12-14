@@ -3,6 +3,7 @@ import languages from "./asset/languages/zn-cn.json";
 export default {
   pages: [
     "pages/home/index",
+    "pages/feature/index",
     "pages/cart/index",
     "pages/user/index",
     "pages/detail/index",
@@ -27,6 +28,12 @@ export default {
         text: languages.home,
         iconPath: "./asset/images/tabs/home.png",
         selectedIconPath: "./asset/images/tabs/home-select.png"
+      },
+      {
+        pagePath: "pages/feature/index",
+        text: languages.features,
+        iconPath: "./asset/images/tabs/specialty.png",
+        selectedIconPath: "./asset/images/tabs/specialty-select.png"
       },
       {
         pagePath: "pages/cart/index",
