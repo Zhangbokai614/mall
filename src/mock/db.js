@@ -253,6 +253,17 @@ module.exports = () => {
                 ],
             }
         ],
+        "features": [
+            {
+                title: '保定市扶贫基地',
+                time: '2021-12-14',
+                images: [
+                    'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715956-assets/web-upload/11bd94e9-8a08-44d8-8d81-c0df05ae1454.jpeg',
+                    'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715891-assets/web-upload/72a7b82d-7e76-4f86-be19-e2b8e0295b9a.jpeg',
+                    'https://cdn.nlark.com/yuque/0/2021/jpeg/660331/1635322715991-assets/web-upload/1f8462d3-a9f0-4ac7-8682-ea332efb6806.jpeg',
+                ],
+            }
+        ],
         "order": [
             {
                 order_code: '00000000001',

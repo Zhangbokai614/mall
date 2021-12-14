@@ -99,9 +99,7 @@ class GoodsSelection extends React.Component {
               onClick={this.openSelect.bind(this)}
             >
               <View className='textSelect'>
-                <Text >
                   {Get('languages').detailPage.select}
-                </Text>
               </View>
               <View className='specs'>
                 <Text>
@@ -214,7 +212,7 @@ class GoodsSelection extends React.Component {
             <View
               className='serviceList'
             >
-              <View className='textService '>
+              <View className='textSelect '>
                   {Get('languages').detailPage.service}
               </View>
               <Image

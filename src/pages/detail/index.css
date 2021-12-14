@@ -11,11 +11,12 @@
 
 .infoPrice {
     color: var(--highlight-color);
-    font-size: 52px;
+    font-size: 14pt;
+    margin-left: 3vw;
 }
 
 .goodsintroduction {
-    padding-left: 20px;
+    padding-left: 3vw;
     background-color: white;
     font-size: 14pt;
     overflow: hidden;

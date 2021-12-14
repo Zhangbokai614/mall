@@ -4,59 +4,53 @@
   bottom: 0px;
   display: flex;
   flex-direction: row;
-  padding-bottom: 3vh;
   background-color: white;
   z-index: 100;
+  border-top: 3px solid var(--card-border-color);
 }
 
 .bottomLeftHome {
   display: flex;
   flex-direction: column;
-  margin-top: 2vh;
   height: 8vh;
+  margin-top: 1vh;
+  margin-bottom: -1vh;
   margin-left: 1vw;
   width: 12vw;
-  border: none;
   justify-content: space-between;
   align-items: center;
   padding-bottom: 3vh;
-  background-color: white;
-}
-
-.bottomLeftHome::after {
   border: none;
+  background-color: white;
 }
 
 .bottomLeftService {
   display: flex;
   flex-direction: column;
-  margin-top: 2vh;
   height: 8vh;
   width: 12vw;
+  margin-top: 1vh;
+  margin-bottom: -1vh;
   margin-left: -20vw;
   align-items: center;
+  justify-content: space-between;
   padding-bottom: 3vh;
-  background-color: white;
-}
-
-.bottomLeftService::after {
   border: none;
+  background-color: white;
 }
 
 .bottomLeftGoodscar {
   display: flex;
   flex-direction: column;
-  margin-top: 2vh;
   height: 8vh;
+  margin-top: 1vh;
+  margin-bottom: -1vh;
   margin-left: -20vw;
   width: 12vw;
   justify-content: space-between;
   padding-bottom: 3vh;
-  background-color: white;
-}
-
-.bottomLeftGoodscar::after {
   border: none;
+  background-color: white;
 }
 
 .bottonLeft {
@@ -70,28 +64,32 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2vh;
+  margin-top: 1vh;
+  margin-bottom: -1vh;
   background-color: #ffd149;
   color: white;
   font-size: 28px;
   border-radius: var(--detail-border-radius);
-  height: 80%;
+  height: 6vh;
   margin-left: -20vw;
   width: 50vw;
+  border: none;
 }
 
 .bottombuttonTobuy {
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 2vh;
+  margin-top: 1vh;
+  margin-bottom: -1vh;
   margin-left: 1vw;
   background-color: var(--highlight-color);
   color: white;
   font-size: 28px;
   border-radius: var(--detail-border-radius);
-  height: 80%;
+  height: 6vh;
   width: 50vw;
+  border: none;
 }
 
 .bottomRight {

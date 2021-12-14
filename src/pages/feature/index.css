@@ -1,0 +1,26 @@
+page {
+    background-color: #ffffff;
+}
+
+.title {
+    margin-top: 4vh;
+    margin-left: 4vw;
+}
+
+.time {
+    margin-top: 1vh;
+    margin-left: 4vw;
+}
+
+.images {
+    margin-top: 3vh;
+    margin-left: 4vw;
+}
+
+.intro {
+    text-indent: 2em;
+    margin-top: 3vh;
+    margin-left: 4vw;
+    margin-right: 4vw;
+    margin-bottom: 2vh;
+}

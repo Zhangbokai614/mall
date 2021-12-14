@@ -14,12 +14,10 @@
 
 .serviceList {
     display: flex;
-    justify-content: center;
     align-items: center;  
     flex-direction: row;
     background-color: white;
     height: 6vh;
-    margin-left: -7vw;
     text-align: left;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
 }
@@ -36,6 +34,7 @@
     font-size: 30px;
     width: 40%;
     height: 6vh;
+    border: none;
     border-radius: var(--detail-border-radius);
     position: absolute;
 }
@@ -52,9 +51,15 @@
     font-size: 30px;
     width: 40%;
     height: 6vh;
+    border: none;
     border-radius: var(--detail-border-radius);
     position: absolute;
 }
+
+button::after {
+    border: none;
+    padding: 0px;
+  }
 
 .textSelect {
     margin-left: 2vw;
