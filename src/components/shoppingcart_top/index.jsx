@@ -14,10 +14,10 @@ class CartTop extends Component {
   render() {
     const { textState, clink } = this.props;
     return (
-      <View className='sticky'>
-        <View className='cube'>
-          <Text className='hint'>{text.hint}</Text>
-          <Text className='textright' onClick={clink}>
+      <View className='shoppingCart-top-levelOne'>
+        <View className='shoppingCart-top-leveltwo'>
+          <Text className='shoppingCart-left-text'>{text.hint}</Text>
+          <Text className='shoppingCart-right-text' onClick={clink}>
             {textState === false ? text.edit : text.achieve}
           </Text>
         </View>

@@ -2,10 +2,11 @@ import React, { Component } from 'react';
 import Taro from '@tarojs/taro';
 import { View, Text, Image } from '@tarojs/components';
 import { AtButton } from 'taro-ui';
-import { Get } from '../../global-data/index';
-
 import image from '../../asset/images/tabs/cart_null.png';
+import { Get } from '../../global-data/index';
 import './index.css';
+
+const text = Get('languages').shoppingCart.cartNull;
 
 class Cartnull extends Component {
   constructor(props) {
@@ -20,14 +21,20 @@ class Cartnull extends Component {
 
   render() {
     return (
-      <View className='flex-col'>
-        <View className='spacing'>
-          <Image src={image} mode='aspectFit' className='image' />
+      <View className='shoppingCart-null-levelOne'>
+        <View className='shoppingCart-null-image-superior'>
+          <Image src={image} mode='aspectFit' className='shoppingCart-null-image' />
         </View>
-        <Text className='justify textone'>{Get('languages').shoppingcartisempty}</Text>
-        <Text className='justify texttwo'>{Get('languages').hurryupandbuysomebaby}</Text>
-        <AtButton type='secondary' size='normal' circle='true' onClick={this.jump.bind(this)}>
-          {Get('languages').goshopping}
+        <Text className='shoppingCart-null-textOne'>{text.shoppingcartisempty}</Text>
+        <Text className='shoppingCart-null-textTwo'>{text.hurryupandbuysomebaby}</Text>
+        <AtButton
+          className='shoppingCart-null-button'
+          type='secondary'
+          size='normal'
+          circle='true'
+          onClick={this.jump.bind(this)}
+        >
+          {text.goshopping}
         </AtButton>
       </View>
     );

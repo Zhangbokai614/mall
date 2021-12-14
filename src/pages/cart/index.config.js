@@ -1,5 +1,5 @@
-import languages from "../../asset/languages/zn-cn.json";
+import languages from '../../asset/languages/zn-cn.json';
 
 export default {
-  navigationBarTitleText: languages.goodscar
+  navigationBarTitleText: languages.shoppingCart.cart,
 };

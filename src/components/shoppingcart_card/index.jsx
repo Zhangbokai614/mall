@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 import { View, Image, Text } from '@tarojs/components';
-import { AtInputNumber } from 'taro-ui';
-
+import { Counter } from '../shoppingCart_counter';
 import { Get } from '../../global-data';
 import './index.css';
 
@@ -23,33 +22,28 @@ class Card extends Component {
   }
 
   render() {
-    const { link, title, config, number, circle, value } = this.props;
+    const { link, title, config, number, circle, value, open, max, min } = this.props;
     return (
-      <View className='outmost'>
-        <View className='frameleft' onClick={this.alertEvevnt.bind(this)}>
+      <View className='shoppingCart-card-levelOne'>
+        <View className='shoppingCart-card-frameleft' onClick={this.alertEvevnt.bind(this)}>
           <View className={circle === false ? 'unselected' : 'selected'}></View>
         </View>
-        <View className='align'>
-          <Image className='cardImage' mode='scaleToFill' src={link} />
+        <View className='shoppingCart-card-align'>
+          <Image className='shoppingCart-card-cardImage' mode='scaleToFill' src={link} />
         </View>
-        <View className='frameright'>
-          <Text className='at-article__h2'>{title}</Text>
-          <View className='confing'>
-            <View className='standard'>
-              <Text className='at-article__p'>{config}</Text>
+        <View className='shoppingCart-card-frameright'>
+          <Text className='shoppingCart-card-title'>{title}</Text>
+          <Text onClick={open} className='shoppingCart-card-confing'>
+            {config}
+          </Text>
+          <View className='shoppingCart-card-rightBottom'>
+            <View className='shoppingCart-card-absolute shoppingCart-card-down'>
+              <Text className='shoppingCart-card-money shoppingCart-card-relative'>{text.moneySymbol}</Text>
+              <Text className='shoppingCart-card-number'>{number}</Text>
             </View>
-          </View>
-          <View className='absolute down relative'>
-            <Text className='money'>{text.moneySymbol}</Text>
-            <Text className='number'>{number}</Text>
-            <AtInputNumber
-              className='absolute counter'
-              min={1}
-              max={99}
-              step={1}
-              value={value}
-              onChange={this.number.bind(this)}
-            ></AtInputNumber>
+            <View className='shoppingCart-card-absolute shoppingCart-card-counter'>
+              <Counter value={value} min={min} max={max} onChange={this.number.bind(this)}></Counter>
+            </View>
           </View>
         </View>
       </View>
