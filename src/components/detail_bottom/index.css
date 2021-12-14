@@ -1,6 +1,6 @@
 .bottom {
   position: sticky;
-  bottom: 0px;
+  bottom: 0vh;
   display: flex;
   height: 8vh;
   flex-direction: row;
