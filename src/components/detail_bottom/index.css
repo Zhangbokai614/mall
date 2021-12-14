@@ -1,8 +1,8 @@
 .bottom {
-  position: absolute;
   position: sticky;
-  bottom: 0px;
+  bottom: 0vh;
   display: flex;
+  height: 8vh;
   flex-direction: row;
   background-color: white;
   z-index: 100;
@@ -12,7 +12,7 @@
 .bottomLeftHome {
   display: flex;
   flex-direction: column;
-  height: 8vh;
+  height: 6vh;
   margin-top: 1vh;
   margin-bottom: -1vh;
   margin-left: 1vw;
@@ -27,7 +27,7 @@
 .bottomLeftService {
   display: flex;
   flex-direction: column;
-  height: 8vh;
+  height: 6vh;
   width: 12vw;
   margin-top: 1vh;
   margin-bottom: -1vh;
@@ -42,7 +42,7 @@
 .bottomLeftGoodscar {
   display: flex;
   flex-direction: column;
-  height: 8vh;
+  height: 6vh;
   margin-top: 1vh;
   margin-bottom: -1vh;
   margin-left: -20vw;

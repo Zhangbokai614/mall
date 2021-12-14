@@ -2,34 +2,26 @@
     overflow:visible;
 }
 
-.priceAndShare {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-items: right;
-}
-
-.infoPrice {
-    color: var(--highlight-color);
-    font-size: 14pt;
-    margin-left: 3vw;
-}
-
 .goodsintroduction {
     padding-left: 3vw;
-    background-color: white;
+    background-color: var(--card-bg-color);
     font-size: 14pt;
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
     color: #212121 100%;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
+    height: 6vh;
+    display: flex;
+    align-items: center;  
+    flex-direction: row;
 }
 
 .detailAfterSales {
-    height: 35vh;
+    height: 30vh;
+    margin-top: 2vh;
     text-align: left;
-    background-color: white;
+    background-color: var(--card-bg-color);
 }
 
 .afterSales {
@@ -42,7 +34,7 @@
 }
 
 .afterSalesText {
-    margin-top: 2vh;
+    margin-top: 1vh;
     margin-left: 4vw;
 }
 
@@ -50,13 +42,53 @@
     padding-top: 3vh;
 }
 
+.priceAndShare {
+    background-color: var(--card-bg-color);
+    display: flex;
+    align-items: center;    
+    justify-items: center;
+    flex-direction: row;    
+    height: 6vh;
+}
+
+.infoPrice {
+    font-size: 14pt;
+    margin-top: 2vw;
+    margin-left: 3vw;
+    padding-bottom: 1vw;
+    height: 5vw;
+    color: var(--highlight-color);
+}
+
 .buttonShare {
-    margin-left: 73vw;
-    height: 4vh;
-    width: 12vw;
-    background-color: white;
+    margin-top: 2vw;
+    margin-left: 86vw;
+    display: flex;
+    justify-items: row;
+    position: absolute;
+    background-color: var(--card-bg-color);
 }
 
 .buttonShare::after{
     border: none;
 } 
+
+.countDown {
+    display: flex;
+    justify-items: row;
+    white-space: nowrap;
+    margin-top: 3vw;
+    margin-left: 2vw;
+    height: 5vw;
+}
+
+.activityName {
+    display: flex;
+    justify-items: row;
+    white-space: nowrap;
+    margin-top: 3vw;
+    margin-left: 3vw;
+    color: var(--highlight-color);
+    background-color: var(--card-bg-color);
+    border: 2px solid var(--highlight-color);
+}

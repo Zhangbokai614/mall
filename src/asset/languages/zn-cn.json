@@ -18,8 +18,8 @@
       "completed": "已完成",
       "orderCode": "订单编号",
       "orderTime": "订单时间",
-      "total":"共 ",
-      "sumTotal":" 件商品,合计",
+      "total": "共 ",
+      "sumTotal": " 件商品,合计",
       "confirmTheReceiptOfGoods": "确认收货",
       "CheckLogistics": "查看物流",
       "logisticsInfo": "物流信息",
@@ -30,7 +30,7 @@
       "paymentTime": "支付时间",
       "commodityPrice": "商品金额",
       "postage": "邮费",
-      "orderLumpSum":"订单总金额",
+      "orderLumpSum": "订单总金额",
       "limitDiscounts": "限时折扣"
     },
     "asset": {
@@ -45,9 +45,9 @@
     "technicalSupport": "风顺（天津）网络科技提供技术支持"
   },
   "feature": {
-    "firstIntro": "  从A点画一直线至对边，使其垂直于对边。延长此线把对边上的正方形一分为二，把上方的两个正方形，通过等高同底的三角形，以其面积关系，转换成下方两个同等面积的长方形。",    
+    "firstIntro": "  从A点画一直线至对边，使其垂直于对边。延长此线把对边上的正方形一分为二，把上方的两个正方形，通过等高同底的三角形，以其面积关系，转换成下方两个同等面积的长方形。",
     "secondIntro": "  如果他一开始就有100万元呢？他就可以一次进100万元的货物，而1个月后，他的资产增长50%，就会变成150万元．换句话说，商人赚钱的多少，是受他的初始资本控制的，越是有钱的商人，赚钱越快。",
-    "thirdIntro":  "  从上面的分析中可以看到，债务是一个商人信用的表现，依靠债务，商人可以扩大自己的生意规模，让自己多赚10倍的利润，欠债在商业活动中是一种常见的现象。"
+    "thirdIntro": "  从上面的分析中可以看到，债务是一个商人信用的表现，依靠债务，商人可以扩大自己的生意规模，让自己多赚10倍的利润，欠债在商业活动中是一种常见的现象。"
   },
   "detailPage": {
     "home": "首页",
@@ -67,14 +67,16 @@
     "customerService": "客服",
     "goodsselection": "商品选择",
     "goodsIntroduce": "商品介绍",
-    "productionLicense": "生产许可证", 
+    "productionLicense": "生产许可证",
     "returnGoods": "不支持七天无理由退货"
   },
   "shoppingCart": {
+    "cart": "购物车",
     "cartNull": {
       "goshopping": "去逛逛",
       "shoppingcartisempty": "购物车当前是空的",
-      "hurryupandbuysomebaby": "赶紧买点宝贝慰劳下自己吧"
+      "hurryupandbuysomebaby": "赶紧买点宝贝慰劳下自己吧",
+      "technicalSupport": "风顺（天津）网络科技提供技术支持"
     },
     "cartTop": {
       "hint": "商品库存有限，请尽快下单",
@@ -85,11 +87,18 @@
       "moneySymbol": "￥"
     },
     "cartSettlement": {
-      "selecTall": "全选",
+      "selectAll": "全选",
       "total": "合计",
       "settlement": "结算",
       "moneySymbol": "￥",
       "delete": "删除"
+    },
+    "counter": {
+      "few": "商品数量不能在减少了",
+      "much": "库存不足，剩余",
+      "piece": "件",
+      "subtraction": "-",
+      "addition": "+"
     }
   }
 }

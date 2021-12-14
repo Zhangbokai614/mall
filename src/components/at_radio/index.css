@@ -199,7 +199,7 @@ button::after {
     margin-top: 1vw;
     margin-left: 6vw;
     color: #ff4949;
-    border: 2px solid #ff4949;
+    border: 2px solid var(--highlight-color);
 }
 
 .numberChange {
