@@ -2,14 +2,6 @@
     overflow:visible;
 }
 
-.priceAndShare {
-    background-color: var(--card-bg-color);
-    display: flex;
-    flex-direction: row;
-    justify-items: right;
-    height: 6vh;
-}
-
 .goodsintroduction {
     padding-left: 3vw;
     background-color: var(--card-bg-color);
@@ -50,6 +42,15 @@
     padding-top: 3vh;
 }
 
+.priceAndShare {
+    background-color: var(--card-bg-color);
+    display: flex;
+    align-items: center;    
+    justify-items: center;
+    flex-direction: row;    
+    height: 6vh;
+}
+
 .infoPrice {
     font-size: 14pt;
     margin-top: 2vw;
@@ -61,11 +62,10 @@
 
 .buttonShare {
     margin-top: 2vw;
-    margin-left: 30vw;
-    height: 4vh;
-    width: 12vw;
+    margin-left: 86vw;
     display: flex;
     justify-items: row;
+    position: absolute;
     background-color: var(--card-bg-color);
 }
 
