@@ -27,25 +27,25 @@ export default {
         pagePath: "pages/home/index",
         text: languages.home,
         iconPath: "./asset/images/tabs/home.png",
-        selectedIconPath: "./asset/images/tabs/home-select.png"
+        selectedIconPath: "./asset/images/tabs/home-select.png",
       },
       {
         pagePath: "pages/feature/index",
         text: languages.features,
         iconPath: "./asset/images/tabs/specialty.png",
-        selectedIconPath: "./asset/images/tabs/specialty-select.png"
+        selectedIconPath: "./asset/images/tabs/specialty-select.png",
       },
       {
         pagePath: "pages/cart/index",
         text: languages.cart,
         iconPath: "./asset/images/tabs/shopping-cart.png",
-        selectedIconPath: "./asset/images/tabs/shopping-cart-select.png"
+        selectedIconPath: "./asset/images/tabs/shopping-cart-select.png",
       },
       {
         pagePath: "pages/user/index",
         text: languages.user.myself,
         iconPath: './asset/images/tabs/user.png',
-        selectedIconPath: './asset/images/tabs/user-select.png'
+        selectedIconPath: './asset/images/tabs/user-select.png',
       }
     ]
   }
