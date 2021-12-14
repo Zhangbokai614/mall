@@ -272,7 +272,8 @@ module.exports = () => {
                 "limitDiscounts": -3,
                 name: '吴某',
                 mobile: '55555555555',
-                address: '河北省保定市莲池区未来石'
+                address: '河北省保定市莲池区未来石',
+                activity_code: '1000000',
             },
             {
                 order_code: '00000000002',
@@ -292,7 +293,8 @@ module.exports = () => {
                 "limitDiscounts": -7,
                 name: '赵某',
                 mobile: '44444444444',
-                address: '河北省保定市莲池区未来石'
+                address: '河北省保定市莲池区未来石',
+                activity_code: '1000003',
             },
             {
                 order_code: '00000000003',
@@ -312,7 +314,8 @@ module.exports = () => {
                 "limitDiscounts": -6,
                 name: '刘某',
                 mobile: '33333333333',
-                address: '河北省保定市莲池区未来石'
+                address: '河北省保定市莲池区未来石',
+                activity_code: '1000002',
             },
             {
                 order_code: '00000000004',
@@ -332,7 +335,8 @@ module.exports = () => {
                 "limitDiscounts": -3,
                 name: '张某',
                 mobile: '22222222222',
-                address: '河北省保定市莲池区未来石'
+                address: '河北省保定市莲池区未来石',
+                activity_code: '1000001',
             },
             {
                 order_code: '00000000005',
@@ -352,7 +356,8 @@ module.exports = () => {
                 "limitDiscounts": 0,
                 name: '王某',
                 mobile: '11111111111',
-                address: '河北省保定市莲池区未来石'
+                address: '河北省保定市莲池区未来石',
+                activity_code: '1000000',
             },
         ],
         "banner": ['https://cdn.nlark.com/yuque/0/2021/png/660331/1634622259552-assets/web-upload/268743d4-25d3-4753-8442-e1759a3e22e0.png'],
@@ -370,6 +375,40 @@ module.exports = () => {
                 config: Mock.mock('@csentence(5)'),
             },
         ],
+        activity: [
+            {
+                activity_code:'1000000',
+                activity_name: '限时折扣',
+                start_time: '2021-12-12 01:25:30',
+                end_time: '2021-12-30 01:00:00',
+                discount: 0.8,
+                over: false
+            },
+            {
+                activity_code:'1000001',
+                activity_name: '限时促销',
+                start_time: '2021-12-12 01:25:30',
+                end_time: '2022-01-10 01:00:00',
+                discount: 0.7,
+                over: false
+            },
+            {
+                activity_code:'1000002',
+                activity_name: '爆款热卖',
+                start_time: '2021-12-10 01:25:30',
+                end_time: '2021-12-20 01:00:00',
+                discount: 0.6,
+                over: false
+            },
+            {
+                activity_code:'1000003',
+                activity_name: '限时折扣',
+                start_time: '2021-12-01 01:25:30',
+                end_time: '2021-12-13 01:00:00',
+                discount: 0.9,
+                over: true
+            },
+        ]
     });
 
     return data;
