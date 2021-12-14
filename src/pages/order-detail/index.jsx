@@ -12,6 +12,7 @@ import addressIcon from '../../asset/images/icon/address.png'
 import './index.css'
 
 const text = Get('languages').user.order
+const orderStateMap = Get('orderStateMap')
 
 export default class Index extends Component {
   constructor(props) {
@@ -43,13 +44,6 @@ export default class Index extends Component {
   }
 
   render() {
-
-    const stateMap = {
-      "01": text.pendingPayment,
-      "02": text.pendingReceipt,
-      "03": text.pendingShipments,
-      "04": text.completed,
-    }
     const orderInfo = this.state.orderInfo
 
     const listCardGoods = {
@@ -88,7 +82,7 @@ export default class Index extends Component {
       this.state.loading
         ? null
         : <View>
-          <View id='order-state' className={orderInfo.order_state == '04' ? 'green' : 'red'}>{stateMap[orderInfo.order_state]}</View>
+          <View id='order-state' className={orderInfo.order_state == '04' ? 'green' : 'red'}>{orderStateMap[orderInfo.order_state]}</View>
           <View className='text'>
             {text.logisticsInfo}
           </View>

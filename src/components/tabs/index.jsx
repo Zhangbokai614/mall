@@ -3,6 +3,12 @@ import { View } from '@tarojs/components'
 
 import './index.css'
 
+import { OrderCard } from '../../components/order_card'
+import { Get } from '../../global-data/index'
+
+const text = Get('languages').user.order
+const orderStateMap = Get('orderStateMap')
+
 class Tabs extends React.Component {
   constructor(props) {
     super(props)
@@ -10,7 +16,6 @@ class Tabs extends React.Component {
       kind: props.kind,
       selectKind: props.selectKind,
       content: props.content,
-      loading: true
     }
   }
 
@@ -21,6 +26,7 @@ class Tabs extends React.Component {
   }
 
   render() {
+
     let tabsBar = this.state.kind.map((e, index) =>
       e === this.state.selectKind
         ? <View className='select' key={index} onClick={this.handleClick.bind(this, e)}>
@@ -33,9 +39,25 @@ class Tabs extends React.Component {
         </View>
     )
 
+    const tabsContent = this.state.content.map((item, index) => {
+      return (
+        orderStateMap[item.order_state] == this.state.selectKind ||
+          this.state.selectKind == text.allOrders ||
+          this.state.selectKind == text.pendingReceipt && (item.order_state == '02' || item.order_state == '03')
+          ? <OrderCard
+            key={index + ''}
+            orderInfo={item}
+          />
+          : null
+      )
+    })
+
     return (
-      <View id='tabsBar'>
-        {tabsBar}
+      <View>
+        <View id='tabsBar'>
+          {tabsBar}
+        </View>
+        {tabsContent}
       </View>
     )
   }

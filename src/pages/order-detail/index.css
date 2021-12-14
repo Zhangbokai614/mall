@@ -209,6 +209,7 @@ button::after {
   height: 6vh;
   z-index: 100;
   border-radius: 20px 20px 0 0;
+  border-top:1px solid var(--card-border-color);
 }
 
 .card-button {

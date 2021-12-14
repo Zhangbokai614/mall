@@ -336,7 +336,7 @@ module.exports = () => {
             },
             {
                 order_code: '00000000005',
-                order_state: '01',
+                order_state: '06',
                 payment_time: Mock.mock('@datetime()'),
                 payment_type: '微信支付',
                 order_time: Mock.mock('@datetime()'),

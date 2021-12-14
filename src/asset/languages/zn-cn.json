@@ -13,7 +13,7 @@
       "pendingPayment": "待付款",
       "pendingReceipt": "待收货",
       "pendingShipments": "待发货",
-      "returnExchange": "退换货",
+      "returnExchange": "退货中",
       "completed": "已完成",
       "orderCode": "订单编号",
       "orderTime": "订单时间",

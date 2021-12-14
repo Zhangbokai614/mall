@@ -13,6 +13,13 @@ class App extends Component {
 
   componentDidShow() {
     Set('languages', languages)
+    Set('orderStateMap', {
+      "01": languages.user.order.pendingPayment,
+      "02": languages.user.order.pendingShipments,
+      "03": languages.user.order.pendingReceipt,
+      "04": languages.user.order.completed,
+      "06": languages.user.order.returnExchange,
+    })
 
     Taro.checkSession({
       success: function () {
