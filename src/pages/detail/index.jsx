@@ -20,7 +20,6 @@ export default class Index extends Component {
     constructor(props) {
         super(props)
         this.state = {
-            current: 0,
             goodsInfo: {},
             afterSales: [],
             loading: true,
