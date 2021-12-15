@@ -75,7 +75,6 @@
 
 .countDown {
     display: flex;
-    justify-items: row;
     white-space: nowrap;
     margin-top: 3vw;
     margin-left: 2vw;
@@ -84,11 +83,15 @@
 
 .activityName {
     display: flex;
-    justify-items: row;
     white-space: nowrap;
     margin-top: 3vw;
     margin-left: 3vw;
     color: var(--highlight-color);
     background-color: var(--card-bg-color);
     border: 2px solid var(--highlight-color);
+}
+
+.showElem {
+    display: flex;
+    align-items: row;
 }

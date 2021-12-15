@@ -23,7 +23,14 @@ export default class Index extends Component {
             goodsInfo: {},
             afterSales: [],
             loading: true,
+            showElem: true,
         }
+    }
+
+    onTimeUp() {
+        this.setState({
+            showElem: !this.state.showElem
+        })
     }
 
     componentDidMount() {
@@ -48,13 +55,11 @@ export default class Index extends Component {
             afterSales: afterSales.data.detail,
             afterSalesFree: afterSales.data.free,
             activityName: activity.data[0].activity_name,
+            endTime: activity.data[0].end_time,
             loading: false,
         })
         Taro.hideLoading()
-    }
-
-    componentDidMount() {
-        console.log(getCurrentInstance().router.params)
+		
     }
 
     render() {
@@ -63,6 +68,16 @@ export default class Index extends Component {
         const afterSalesDetail = this.state.afterSales
         const afterSalesFree = this.state.afterSalesFree
         const activityName = this.state.activityName
+		const time = this.state.endTime
+
+        const nowTime = new Date()
+        const endDate = new Date(time)
+        const newEndDate = endDate.getTime() - nowTime.getTime()
+        const days = Math.floor(newEndDate / (1000 * 60 * 60 * 24))
+        const hours = Math.floor((newEndDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
+        const minutes = Math.floor((newEndDate % (1000 * 60 * 60)) / (1000 * 60))
+        const seconds = Math.floor((newEndDate % (1000 * 60)) / 1000)
+
         return (
             this.state.loading
                 ? null
@@ -74,15 +89,26 @@ export default class Index extends Component {
                         <View className='infoPrice'>
                             ￥{info[0].price}
                         </View>
-                        <AtTag className='activityName'>
-                            {activityName}
-                        </AtTag>
-                        <AtCountdown
-                            isCard
-                            minutes={1}
-                            seconds={10}
-                            className='countDown'>
-                        </AtCountdown>
+                        {
+                            this.state.showElem?(
+                            <View className='showElem'>
+                                <AtTag className='activityName'>
+                                    {activityName}
+                                </AtTag>
+                                <AtCountdown
+                                    isCard
+                                    isShowDay
+                                    format={{day: Get('languages').day, hours: ':', minutes: ':', seconds: '' }}
+                                    day={days}
+                                    hours={hours}
+                                    minutes={minutes}
+                                    seconds={seconds}
+                                    onTimeUp={this.onTimeUp.bind(this)}
+                                    className='countDown'>
+                                </AtCountdown>
+                            </View>
+                            ):null
+                        }
                         <button
                             open-type='share'
                             className='buttonShare'>
