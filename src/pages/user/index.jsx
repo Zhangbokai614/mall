@@ -66,6 +66,21 @@ export default class Index extends Component {
     })
   }
 
+  test() {
+    wx.chooseAddress({
+      success(res) {
+        console.log(res.userName)
+        console.log(res.postalCode)
+        console.log(res.provinceName)
+        console.log(res.cityName)
+        console.log(res.countyName)
+        console.log(res.detailInfo)
+        console.log(res.nationalCode)
+        console.log(res.telNumber)
+      }
+    })
+  }
+
   render() {
     const ordersCardContent = [
       { text: text.order.pendingPayment, icon: pendingPaymentIcon, path: '/pages/orders/index?selectKind=' + text.order.pendingPayment },
@@ -116,7 +131,7 @@ export default class Index extends Component {
             />
           </View>
 
-          <View className='.at-article__info technicalSupport'>
+          <View className='.at-article__info technicalSupport' onClick={this.test.bind(this)}>
             {text.technicalSupport}
           </View>
         </View>
