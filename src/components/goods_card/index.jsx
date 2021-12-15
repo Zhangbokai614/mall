@@ -3,8 +3,6 @@ import Taro from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
 import { AtTag } from 'taro-ui'
 
-import { Get } from '../../global-data/index'
-
 import './index.css'
 
 class GoodsCard extends React.Component {
@@ -13,7 +11,6 @@ class GoodsCard extends React.Component {
     this.state = {
       focus: this.props.focus,
       id: this.props.id,
-      type: this.props.type
     }
   }
 
@@ -24,9 +21,10 @@ class GoodsCard extends React.Component {
   }
 
   render() {
-    const { title, imageSrc, price } = this.props
+    const { title, imageSrc, price, activityName } = this.props
     const kind = this.state.focus ? 'focus' : 'goods'
 
+    // console.log(activityCode)
     return (
       <View className={'card ' + kind + 'Card'} onClick={this.handleClick.bind(this)}>
         <Image
@@ -48,9 +46,9 @@ class GoodsCard extends React.Component {
             </View>
           </View>
           {
-            price < 40
+            activityName == 'null'
               ? null
-              : <AtTag className='.at-article__p' active='false'>{Get('languages').activity}</AtTag>
+              : <AtTag className='.at-article__p' active='false'>{activityName}</AtTag>
           }
         </View>
       </View>

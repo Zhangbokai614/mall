@@ -9,13 +9,12 @@ class GoodsList extends React.Component {
   constructor(props) {
     super(props)
     this.state = {
-      goodsCardInfo: props.goodsCardInfo,
       loading: true
     }
   }
 
   render() {
-    const info = this.state.goodsCardInfo
+    const info = this.props.goodsCardInfo
 
     const listContent = (
       info.map((e) => {
@@ -27,6 +26,7 @@ class GoodsList extends React.Component {
             title={e.title}
             imageSrc={e.images[0]}
             price={e.price}
+            activityName={e.activity_name}
           />
         )
       })
