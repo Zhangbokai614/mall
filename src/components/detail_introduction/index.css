@@ -1,16 +1,17 @@
 .detailIntroduce {
+    margin-top: 2vh;
     text-align: left;
     background-color: white;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.094);
 }
 
 .goodsIntroduce {
-    font-size: 5vw;
-    margin-top: 2vh;
+    font-size: 14pt;
     margin-left: 4vw;
-    height: 6vh;
+    height: 5vh;
     display: flex;
     align-items: center;
+    justify-items: center;
 }
 
 .introduceTitle {
