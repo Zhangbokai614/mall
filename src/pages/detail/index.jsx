@@ -78,6 +78,7 @@ export default class Index extends Component {
         const minutes = Math.floor((newEndDate % (1000 * 60 * 60)) / (1000 * 60))
         const seconds = Math.floor((newEndDate % (1000 * 60)) / 1000)
 
+		console.log(days,hours,minutes,seconds)
         return (
             this.state.loading
                 ? null

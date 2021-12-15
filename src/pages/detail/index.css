@@ -43,11 +43,9 @@
 }
 
 .priceAndShare {
-    background-color: var(--card-bg-color);
-    display: flex;
-    align-items: center;    
-    justify-items: center;
-    flex-direction: row;    
+    /* background-color: var(--card-bg-color); */
+    display: flex; 
+    justify-items: center;  
     height: 6vh;
 }
 
