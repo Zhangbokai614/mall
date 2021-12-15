@@ -43,7 +43,7 @@
 }
 
 .priceAndShare {
-    /* background-color: var(--card-bg-color); */
+    background-color: var(--card-bg-color);
     display: flex; 
     justify-items: center;  
     height: 6vh;
