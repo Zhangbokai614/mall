@@ -10,6 +10,9 @@ page {
   --posters-shadow: 0 2px 4px 0 rgba(105, 105, 105, 0.084);
   --shadow: 0 4px 6px 0 rgba(17, 17, 17, 0.04);
 
+  /* icon */
+  --icon-gray: #d9d9d9;
+
   /* card */
   --posters-border-radius: 0 0 100px 100px;
 

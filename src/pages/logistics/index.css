@@ -1,0 +1,20 @@
+#order-state {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: var(--shadow);
+  border-radius: var(--card-border-radius);
+  margin: 2vw;
+  width: 96vw;
+  height: 18vh;
+  color: var(--card-bg-color);
+  font-size: var(--order-state-font-size);
+}
+
+.green {
+  background-color: #49FF49;
+}
+
+.red {
+  background-color: #FF4949;
+}

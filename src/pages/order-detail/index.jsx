@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import { View, Image } from '@tarojs/components'
-import { getCurrentInstance } from '@tarojs/taro'
+import Taro, { getCurrentInstance } from '@tarojs/taro'
+import { AtIcon } from 'taro-ui'
 import { CuButton } from "taro-color-ui";
 
 import { Get } from '../../global-data/index'
@@ -43,6 +44,14 @@ export default class Index extends Component {
     wx.hideLoading()
   }
 
+  logisticsJump() {
+    Taro.navigateTo({
+      url: '/pages/logistics/index?orderState=' + this.state.orderInfo.order_state +
+      '&&orderCode=' + this.state.orderInfo.l
+    })
+  }
+
+
   render() {
     const orderInfo = this.state.orderInfo
 
@@ -82,11 +91,15 @@ export default class Index extends Component {
       this.state.loading
         ? null
         : <View>
-          <View id='order-state' className={orderInfo.order_state == '04' ? 'green' : 'red'}>{orderStateMap[orderInfo.order_state]}</View>
+          <View
+            id='order-state'
+            className={orderInfo.order_state == '04' ? 'green' : 'red'}>
+            {orderStateMap[orderInfo.order_state]}
+          </View>
           <View className='text'>
             {text.logisticsInfo}
           </View>
-          <View className='card' id='logistics'>
+          <View className='card' id='logistics' onClick={this.logisticsJump.bind(this)}>
             <Image
               id='address-icon'
               src={addressIcon}
@@ -98,6 +111,9 @@ export default class Index extends Component {
                 <View className='recipient-info'>{orderInfo.mobile}</View>
               </View>
               <View id='address'>{orderInfo.address}</View>
+            </View>
+            <View id='logistics-info-chevron-right'>
+              <AtIcon value='chevron-right' size='18'></AtIcon>
             </View>
           </View>
           <View className='text'>

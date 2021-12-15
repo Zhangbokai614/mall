@@ -392,14 +392,16 @@ module.exports = () => {
             "detail": '折扣价：为折扣期间的价格如果没有特殊说明，折扣是在原价基础上计算出的优惠比例或者优惠金额；如果有疑问您可以在购买前询问客服。',
             "free": '：包邮不包含偏远地区及海外地区。',
         },
-        'shopping_card|20-50': [
+        'shopping_card|10-20': [
             {
-                'value|50-80': 66,
-                'commodityPrice|800-1600': 985,
+                select: false,
+                'number|50-80': 66,
+                'maximum_inventory|300-600': 400,
+                'price|20-100': 70,
                 'id|+37': 258963,
                 link: Random.image('640x640', Mock.mock('@color'), Random.string('upper', 5)),
                 title: Mock.mock('@csentence'),
-                config: Mock.mock('@csentence(5)'),
+                specs: Mock.mock('@csentence(5)'),
             },
         ],
         activity: [

@@ -9,6 +9,7 @@ export default {
     "pages/detail/index",
     "pages/orders/index",
     "pages/order-detail/index",
+    "pages/logistics/index",
   ],
 
   window: {
