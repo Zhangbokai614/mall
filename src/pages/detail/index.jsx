@@ -59,7 +59,7 @@ export default class Index extends Component {
             loading: false,
         })
         Taro.hideLoading()
-
+		
     }
 
     render() {
@@ -68,15 +68,15 @@ export default class Index extends Component {
         const afterSalesDetail = this.state.afterSales
         const afterSalesFree = this.state.afterSalesFree
         const activityName = this.state.activityName
-
+		const time = this.state.endTime
 
         const nowTime = new Date()
-        const endDate = new Date(this.state.endTime)
-        const newEndDate = endDate - nowTime
+        const endDate = new Date(time)
+        const newEndDate = endDate.getTime() - nowTime.getTime()
         const days = Math.floor(newEndDate / (1000 * 60 * 60 * 24))
         const hours = Math.floor((newEndDate % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60))
         const minutes = Math.floor((newEndDate % (1000 * 60 * 60)) / (1000 * 60))
-        const seconds = Math.floor(newEndDate % (1000 * 60)) / 1000
+        const seconds = Math.floor((newEndDate % (1000 * 60)) / 1000)
 
         return (
             this.state.loading
@@ -97,9 +97,9 @@ export default class Index extends Component {
                                 </AtTag>
                                 <AtCountdown
                                     isCard
-                                    // isShowDay
-                                    // format={{day: Get('languages').day, hours: ':', minutes: ':', seconds: '' }}
-                                    // day={days}
+                                    isShowDay
+                                    format={{day: Get('languages').day, hours: ':', minutes: ':', seconds: '' }}
+                                    day={days}
                                     hours={hours}
                                     minutes={minutes}
                                     seconds={seconds}
