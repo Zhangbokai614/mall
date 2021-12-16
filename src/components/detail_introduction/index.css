@@ -1,7 +1,7 @@
 .detailIntroduce {
     margin-top: 2vh;
     text-align: left;
-    background-color: white;
+    background-color: var(--card-bg-color);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.094);
 }
 
@@ -21,4 +21,8 @@
 .vertical {
     margin-top: 5vw;
     margin-right: 4vw;
+}
+
+.introImage {
+    font-size: 0;
 }
