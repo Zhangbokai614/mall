@@ -16,7 +16,7 @@ class Introduction extends React.Component {
                 <Image
                 key={index}
                 src={e}
-                style='width: 100vw; height: 100vw; background: #fff;'
+                style='width: 100vw; height:100vw'
                 />
             )
         })
@@ -36,7 +36,7 @@ class Introduction extends React.Component {
                     </View>
                 </View>
                 <AtDivider />
-                <View>
+                <View className='introImage'>
                    {detailInfoImages}
                 </View>
             </View>

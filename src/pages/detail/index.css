@@ -25,11 +25,11 @@
 }
 
 .afterSales {
-    font-size: 5vw;
-    height: 6vh;
+    font-size: 14pt;
+    height: 5vh;
     display: flex;
     align-items: center;
-    margin-top: 2vh;
+    justify-items: center;
     margin-left: 4vw;
 }
 
@@ -39,6 +39,7 @@
 }
 
 .afterSalesTitle {
+    font-size: 14pt;
     padding-top: 3vh;
 }
 

@@ -103,7 +103,7 @@ class GoodsSelection extends React.Component {
               </View>
               <View className='specs'>
                 <Text>
-                  {specs}
+                  {specs}×{this.state.value}
                 </Text>
               </View>
               <AtIcon
