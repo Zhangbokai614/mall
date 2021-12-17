@@ -7,6 +7,7 @@ import Fruit from '../../asset/images/icon/fruit.png'
 import FreeMoney from '../../asset/images/icon/free.png'
 import SevenDays from '../../asset/images/icon/notseven-days.png'
 import './index.css'
+import * as homeApi from './service'
 
 class GoodsSelection extends React.Component {
 
@@ -20,6 +21,10 @@ class GoodsSelection extends React.Component {
       classstyleDistribution: 'box moveFromBottom',
     }
   };
+
+  update(id, value) {
+    homeApi.goodscar(id, value)
+  }
 
   handleChangeNumber(value) {
     this.setState({
