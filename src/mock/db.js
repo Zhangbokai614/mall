@@ -387,6 +387,133 @@ module.exports = () => {
                 activity_code: '1000000',
             },
         ],
+        waybill: [
+            {
+                order_code: '00000000001',
+                "openid": "OPENID",
+                "delivery_name": "顺丰",
+                order_state: '01',
+                "waybill_id": "12345678901234567890",
+                "path_item_num": 3,
+                "path_item_list": [
+                    {
+                        "action_time": 1639308005000,
+                        "action_type": 100001,
+                        "action_msg": "快递员已成功取件"
+                    },
+                    {
+                        "action_time": 1639383005000,
+                        "action_type": 200001,
+                        "action_msg": "快件已到达xxx集散中心，准备发往xxx"
+                    },
+                    {
+                        "action_time": 1639454885000,
+                        "action_type": 300001,
+                        "action_msg": "快递员已出发，联系电话xxxxxx"
+                    }
+                ]
+            },
+            {
+                order_code: '00000000002',
+                "openid": "OPENID",
+                "delivery_name": "顺丰快递",
+                "order_state": '02',
+                "waybill_id": "12345678901234567890",
+                "path_item_num": 3,
+                "path_item_list": [
+                    {
+                        "action_time": 1639308005000,
+                        "action_type": 100001,
+                        "action_msg": "快递员已成功取件"
+                    },
+                    {
+                        "action_time": 1639383005000,
+                        "action_type": 200001,
+                        "action_msg": "快件已到达xxx集散中心，准备发往xxx"
+                    },
+                    {
+                        "action_time": 1639454885000,
+                        "action_type": 300001,
+                        "action_msg": "快递员已出发，联系电话xxxxxx"
+                    }
+                ]
+            },
+            {
+                order_code: '00000000003',
+                "openid": "OPENID",
+                "delivery_name": "顺丰快递",
+                "order_state": '03',
+                "waybill_id": "12345678901234567890",
+                "path_item_num": 3,
+                "path_item_list": [
+                    {
+                        "action_time": 1639308005000,
+                        "action_type": 100001,
+                        "action_msg": "快递员已成功取件"
+                    },
+                    {
+                        "action_time": 1639383005000,
+                        "action_type": 200001,
+                        "action_msg": "快件已到达xxx集散中心，准备发往xxx"
+                    },
+                    {
+                        "action_time": 1639454885000,
+                        "action_type": 300001,
+                        "action_msg": "快递员已出发，联系电话xxxxxx"
+                    }
+                ]
+            },
+            {
+                order_code: '00000000004',
+                "openid": "OPENID",
+                "delivery_name": "顺丰快递",
+                "order_state": '04',
+                "waybill_id": "12345678901234567890",
+                "path_item_num": 3,
+                "path_item_list": [
+                    {
+                        "action_time": 1639308005000,
+                        "action_type": 100001,
+                        "action_msg": "快递员已成功取件"
+                    },
+                    {
+                        "action_time": 1639383005000,
+                        "action_type": 200001,
+                        "action_msg": "快件已到达xxx集散中心，准备发往xxx"
+                    },
+                    {
+                        "action_time": 1639454885000,
+                        "action_type": 300001,
+                        "action_msg": "快递员已出发，联系电话xxxxxx"
+                    }
+                ]
+            },
+            {
+                order_code: '00000000005',
+                "openid": "OPENID",
+                "delivery_name": "顺丰快递",
+                "order_state": '06',
+                "waybill_id": "12345678901234567890",
+                "path_item_num": 3,
+                "path_item_list": [
+                    {
+                        "action_time": 1639308005000,
+                        "action_type": 100001,
+                        "action_msg": "快递员已成功取件"
+                    },
+                    {
+                        "action_time": 1639383005000,
+                        "action_type": 200001,
+                        "action_msg": "快件已到达xxx集散中心，准备发往xxx"
+                    },
+                    {
+                        "action_time": 1639454885000,
+                        "action_type": 300001,
+                        "action_msg": "快递员已出发，联系电话xxxxxx"
+                    }
+                ]
+            }
+        ],
         "banner": ['https://cdn.nlark.com/yuque/0/2021/png/660331/1634622259552-assets/web-upload/268743d4-25d3-4753-8442-e1759a3e22e0.png'],
         "after_sales": {
             "detail": '折扣价：为折扣期间的价格如果没有特殊说明，折扣是在原价基础上计算出的优惠比例或者优惠金额；如果有疑问您可以在购买前询问客服。',

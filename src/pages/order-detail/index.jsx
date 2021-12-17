@@ -30,7 +30,7 @@ export default class Index extends Component {
   }
 
   async loading() {
-    wx.showLoading({
+    Taro.showLoading({
       title: Get('languages').loading,
     })
 
@@ -41,13 +41,12 @@ export default class Index extends Component {
       loading: false,
     })
 
-    wx.hideLoading()
+    Taro.hideLoading()
   }
 
   logisticsJump() {
     Taro.navigateTo({
-      url: '/pages/logistics/index?orderState=' + this.state.orderInfo.order_state +
-      '&&orderCode=' + this.state.orderInfo.l
+      url: '/pages/logistics/index?orderCode=' + this.state.orderInfo.order_code
     })
   }
 

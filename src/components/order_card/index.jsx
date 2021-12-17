@@ -21,6 +21,12 @@ class OrderCard extends React.Component {
     })
   }
 
+  checkLogistics(orderCode) {
+    Taro.navigateTo({
+      url: '/pages/logistics/index?orderCode=' + orderCode
+    })
+  }
+
   render() {
     const orderInfo = this.props.orderInfo
     const paymentTime = new Date(orderInfo.payment_time)
@@ -72,7 +78,16 @@ class OrderCard extends React.Component {
             }
           </View>
           <View id='card-buttons'>
-            <CuButton className='card-button' color='yellow' size="large" round inline>{text.CheckLogistics}</CuButton>
+            <CuButton
+              className='card-button'
+              color='yellow'
+              size="large"
+              round
+              inline
+              onClick={this.checkLogistics.bind(this, orderInfo.order_code)}
+            >
+              {text.CheckLogistics}
+            </CuButton>
             <CuButton className='card-button' color='red' size="large" round inline>{text.confirmTheReceiptOfGoods}</CuButton>
           </View>
         </View>
