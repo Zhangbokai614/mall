@@ -23,20 +23,20 @@ class Introduction extends React.Component {
 
         return (
 
-            <View className='detailIntroduce'>
-                <View className='goodsIntroduce'>
+            <View className='main-intro'>
+                <View className='container-intro'>
                     <Image
-                        className='vertical'
+                        className='container-intro-image'
                         src={Vertical}
                         style='width:2vw; height:9vw;'
                     >
                     </Image>
-                    <View className='introduceTitle'>
+                    <View className='container-intro-title'>
                         {Get('languages').detailPage.goodsIntroduce}
                     </View>
                 </View>
                 <AtDivider />
-                <View className='introImage'>
+                <View className='container-banner'>
                    {detailInfoImages}
                 </View>
             </View>

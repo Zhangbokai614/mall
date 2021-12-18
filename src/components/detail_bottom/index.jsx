@@ -43,63 +43,58 @@ class Bottomdetail extends React.Component {
 
     return (
 
-      <View className='bottom'>
+      <View className='main-bottom'>
         <AtButton
-          className='bottomLeftHome'
-          id='firstpage'
+          className='bottom-home'
           onClick={this.goHref.bind(this, '01')}>
-          <View className='bottonLeft'>
+          <View className='bottom-container-left'>
             <Image
               src={home}
-              className='imageHome'
               style='width:5vw; height:5vw;'
             />
-            <View className='detailHome' >
+            <View className='container-left-title' >
               {Get('languages').detailPage.home}
             </View>
           </View>
         </AtButton>
         <AtButton
-          className='bottomLeftService'
+          className='bottom-service'
           open-type="contact"
           bindcontact="handleContact"
         >
-          <View className='bottonLeft'>
+          <View className='bottom-container-left'>
             <Image
               src={service}
-              className='imageService'
               style='width:5vw; height:5vw;'
             />
-            <View className='detailService'>
+            <View className='container-left-title'>
               {Get('languages').detailPage.customerService}
             </View>
           </View>
         </AtButton>
         <AtButton
-          className='bottomLeftGoodscar'
-          id='goodscar'
+          className='bottom-goodscar'
           onClick={this.goHref.bind(this, '03')}
         >
-          <View className='bottonLeft'>
+          <View className='bottom-container-left'>
             <Image
               src={shoppingcar}
-              className='imageGoodscar'
               style='width:5vw; height:5vw;'
             />
-            <View className='detailGoodscar'>
+            <View className='container-left-title'>
               {Get('languages').detailPage.goodscar}
             </View>
           </View>
         </AtButton>
-        <View className='bottomRight'>
+        <View className='bottom-container-right'>
           <AtButton
-            className='bottombuttonCar'
+            className='bottom-right-car'
             onClick={this.goHref.bind(this, '03')}
           >
             {Get('languages').detailPage.addcar}
           </AtButton>
           <AtButton
-            className='bottombuttonTobuy'
+            className='bottom-right-tobuy'
             onClick={this.goHref.bind(this, '04')}
           >
             {Get('languages').detailPage.tobuy}

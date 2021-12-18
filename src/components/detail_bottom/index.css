@@ -1,45 +1,45 @@
-.bottom {
-  position: sticky;
+.main-bottom {
   bottom: 0vh;
-  display: flex;
   height: 8vh;
-  flex-direction: row;
-  background-color: white;
   z-index: 100;
+  display: flex;
+  position: sticky;
+  flex-direction: row;
+  background-color: var(--card-bg-color);
   border-top: 3px solid var(--card-border-color);
 }
 
-.bottomLeftHome {
-  display: flex;
-  flex-direction: column;
+.bottom-home {
   height: 6vh;
+  width: 12vw;
+  padding-bottom: 3vh;
   margin-top: 1vh;
   margin-bottom: -1vh;
   margin-left: 1vw;
-  width: 12vw;
-  justify-content: space-between;
-  align-items: center;
-  padding-bottom: 3vh;
   border: none;
-  background-color: white;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  justify-content: space-between;
+  background-color: var(--card-bg-color);
 }
 
-.bottomLeftService {
-  display: flex;
-  flex-direction: column;
+.bottom-service {
   height: 6vh;
   width: 12vw;
   margin-top: 1vh;
   margin-bottom: -1vh;
   margin-left: -20vw;
+  display: flex;
   align-items: center;
+  flex-direction: column;
   justify-content: space-between;
   padding-bottom: 3vh;
   border: none;
-  background-color: white;
+  background-color: var(--card-bg-color);
 }
 
-.bottomLeftGoodscar {
+.bottom-goodscar {
   display: flex;
   flex-direction: column;
   height: 6vh;
@@ -50,24 +50,24 @@
   justify-content: space-between;
   padding-bottom: 3vh;
   border: none;
-  background-color: white;
+  background-color: var(--card-bg-color);
 }
 
-.bottonLeft {
+.bottom-container-left {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
 
-.bottombuttonCar {
+.bottom-right-car {
   display: flex;
   justify-content: center;
   align-items: center;
   margin-top: 1vh;
   margin-bottom: -1vh;
   background-color: var(--detail-addcar-color);
-  color: white;
+  color: var(--card-bg-color);
   font-size: 28px;
   border-radius: var(--detail-border-radius);
   height: 6vh;
@@ -76,7 +76,7 @@
   border: none;
 }
 
-.bottombuttonTobuy {
+.bottom-right-tobuy {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -84,7 +84,7 @@
   margin-bottom: -1vh;
   margin-left: 1vw;
   background-color: var(--highlight-color);
-  color: white;
+  color: var(--card-bg-color);
   font-size: 28px;
   border-radius: var(--detail-border-radius);
   height: 6vh;
@@ -92,7 +92,7 @@
   border: none;
 }
 
-.bottomRight {
+.bottom-container-right {
   display: flex;
   justify-content: center;
   flex-direction: row;
@@ -100,19 +100,7 @@
   width: 40vw;
 }
 
-.detailHome {
-  margin-bottom: 1vh;
-  font-size: 2vh;
-  white-space: nowrap;
-}
-
-.detailService {
-  margin-bottom: 1vh;
-  font-size: 2vh;
-  white-space: nowrap;
-}
-
-.detailGoodscar {
+.container-left-title {
   margin-bottom: 1vh;
   font-size: 2vh;
   white-space: nowrap;
