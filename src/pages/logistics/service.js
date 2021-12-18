@@ -1,9 +1,9 @@
 import Request from '../../utils/request';
 
-export const orderInfo = (data) => {
+export const orderPath = (data) => {
   return Request({
-    url: '/order',
+    url: '/waybill?order_code=' + data.orderCode,
     method: 'GET',
-    ...data
+    data: data
   });
 }

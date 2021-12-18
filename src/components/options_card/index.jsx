@@ -31,17 +31,31 @@ class OptionsCard extends React.Component {
 
   render() {
     const cardContent = this.state.content === undefined ? null : this.state.content.map((e, index) => {
+      const func = e.func || false
       return (
-        <View className='option' key={index} onClick={this.optionHandleClick.bind(this, index)}>
-          <Image
-            className='optionIcon'
-            src={e.icon}
-            mode='aspectFit'
-          />
-          <View>
-            {e.text}
+        e.contact
+          ? <View key={index} onClick={func ? func.bind(this) : this.optionHandleClick.bind(this, index)}>
+            <button id='contactButton' className='option' size='mini' open-type="contact">
+              <Image
+                className='optionIcon'
+                src={e.icon}
+                mode='aspectFit'
+              />
+            </button>
+            <View>
+              {e.text}
+            </View>
           </View>
-        </View>
+          : <View className='option' key={index} onClick={func ? func.bind(this) : this.optionHandleClick.bind(this, index)}>
+            <Image
+              className='optionIcon'
+              src={e.icon}
+              mode='aspectFit'
+            />
+            <View>
+              {e.text}
+            </View>
+          </View>
       )
     })
 

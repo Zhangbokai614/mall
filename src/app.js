@@ -29,20 +29,42 @@ class App extends Component {
   }
 
   login() {
+    // Taro.login({
+    //   success: function (res) {
+    //     if (res.code) {
+    //       Taro.request({
+    //         method: 'POST',
+    //         url: 'http://192.168.0.46:8000/api/v1/user/login',
+    //         data: {
+    //           code: res.code
+    //         },
+    //         success: (res) => {
+    //           console.log(res)
+    //           Taro.setStorage({
+    //             key: "userToken",
+    //             data: res.data.token
+    //           })
+    //         },
+    //       })
+    //     } else {
+    //       console.log(res.errMsg)
+    //     }
+    //   }
+    // })
+
     Taro.login({
       success: function (res) {
         if (res.code) {
           Taro.request({
             method: 'POST',
-            url: 'http://192.168.0.46:8000/api/v1/user/login',
-            data: {
-              code: res.code
-            },
+            url: 'https://api.weixin.qq.com/cgi-bin/token?' +
+              'grant_type=client_credential' +
+              '&appid=' + 'wxae947bdd2c9b6bab' +
+              '&secret=' + 'e1047bf23888c4539ce6c6282881f43f',
             success: (res) => {
-              console.log(res)
               Taro.setStorage({
-                key: "userToken",
-                data: res.data.token
+                key: "accessToken",
+                data: res.data.access_token
               })
             },
           })
