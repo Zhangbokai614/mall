@@ -30,7 +30,7 @@ class GoodsSelection extends React.Component {
     this.setState({
       value
     })
-  };  
+  };
 
   goHref = (type) => {
     switch (type) {
@@ -46,7 +46,7 @@ class GoodsSelection extends React.Component {
         break;
       case '03':
         Taro.navigateTo({
-          url: '/pages/cart/index?value=' + this.state.value
+          url: '/pages/cart/index'
         });
         break;
       case '04':
@@ -95,24 +95,24 @@ class GoodsSelection extends React.Component {
     const { specs } = this.props
     const { inventory } = this.props
     const { price } = this.props
+    const { id } = this.props
+    console.log(typeof id)
     return (
-      <View className='atradio'>
-        <View className='goodsSelection' >
+      <View className='main-radio'>
+        <View>
           <AtList hasBorder={false}>
             <View
-              className='radioList'
+              className='container-radio'
               onClick={this.openSelect.bind(this)}
             >
-              <View className='textSelect'>
-                  {Get('languages').detailPage.select}
+              <View className='container-title'>
+                {Get('languages').detailPage.select}
               </View>
-              <View className='specs'>
-                <Text>
-                  {specs}×{this.state.value}
-                </Text>
+              <View className='container-content'>
+                {specs}x{this.state.value}
               </View>
               <AtIcon
-                className='iconCheron'
+                className='container-icon'
                 value='chevron-right'
                 size='15'
                 color='#bfbfbf'
@@ -123,40 +123,40 @@ class GoodsSelection extends React.Component {
               className={this.state.displaySelect}
             />
             <View className={this.state.classstyleSelect}>
-              <View className='detailPrice'>
-                <View className='skuImage'>
+              <View className='show-content'>
+                <View className='show-images'>
                   <Image
                     src={image}
                     style="height: 16vh; width: 16vh"
                   />
                 </View>
-                <View className='goodsprice'>
+                <View className='show-price'>
                   ￥{price}
                 </View>
               </View>
-              <View className='textInventory'>
-                <View className='inventory'>
-                    {Get('languages').detailPage.inventory}
+              <View className='show-detail'>
+                <View className='show-title'>
+                  {Get('languages').detailPage.inventory}
                 </View>
-                <View className='detailInventory'>
+                <View className='show-number'>
                   {inventory}
                 </View>
               </View>
-              <View className='skuText'>
-                <View className='textSpecs'>                
-                    {Get('languages').detailPage.specifications}
+              <View className='show-detail'>
+                <View className='show-title'>
+                  {Get('languages').detailPage.specifications}
                 </View>
                 <AtButton
                   size='small'
-                  className='detailSpecs'>
+                  className='show-specs'>
                   {specs}
                 </AtButton>
               </View>
-              <View className='numberChange'>
-                <View className='number'>
+              <View className='show-detail'>
+                <View className='show-title'>
                   {Get('languages').detailPage.number}
                 </View>
-                <View className='numberLocation'>
+                <View className='show-input-number'>
                   <AtInputNumber
                     type='digit'
                     min={1}
@@ -169,13 +169,13 @@ class GoodsSelection extends React.Component {
                 </View>
               </View>
               <AtButton
-                className='goodscar'
-                onClick={this.goHref.bind(this, '03')}
+                className='show-addcar'
+                onClick={this.update.bind(this, id, this.state.value)}
               >
                 {Get('languages').detailPage.addcar}
               </AtButton>
               <AtButton
-                className='confirm'
+                className='show-gobuy'
                 onClick={this.goHref.bind(this, '04')}
               >
                 {Get('languages').detailPage.tobuy}
@@ -183,19 +183,17 @@ class GoodsSelection extends React.Component {
             </View>
           </AtList>
         </View>
-        <View className='distribution'>
+        <View>
           <AtList hasBorder={false}>
             <View
-              className='radioList'
+              className='container-radio'
               onClick={this.openDistribution.bind(this)}
             >
-              <View className='textSelect '>
-                  {Get('languages').detailPage.distribution}
-              </View>
-              <View className='specsDi'>
+              <View className='container-title '>
+                {Get('languages').detailPage.distribution}
               </View>
               <AtIcon
-                className='iconCheron'
+                className='container-icon'
                 value='chevron-right'
                 size='15'
                 color='#bfbfbf'
@@ -212,36 +210,36 @@ class GoodsSelection extends React.Component {
             </View>
           </AtList>
         </View>
-        <View className='service'>
+        <View>
           <AtList hasBorder={false}>
             <View
-              className='serviceList'
+              className='container-radio'
             >
-              <View className='textSelect '>
-                  {Get('languages').detailPage.service}
+              <View className='container-title'>
+                {Get('languages').detailPage.service}
               </View>
               <Image
-                className='imageFruit'
+                className='container-images'
                 src={Fruit}
                 style='width:5vw; height:5vw;'
               />
-              <View className='serviceDetail'>
+              <View className='container-service-text'>
                 {Get('languages').detailPage.compensation}
               </View>
               <Image
-                className='imageFree'
+                className='container-images'
                 src={FreeMoney}
                 style='width:5vw; height:5vw;'
               />
-              <View className='serviceDetail'>
+              <View className='container-service-text'>
                 {Get('languages').detailPage.freeMoney}
               </View>
               <Image
-                className='imageSevenDays'
+                className='container-images'
                 src={SevenDays}
                 style='width:5vw; height: 5vw;'
               />
-              <View className='serviceDetail'>
+              <View className='container-service-text'>
                 {Get('languages').detailPage.returnGoods}
               </View>
             </View>

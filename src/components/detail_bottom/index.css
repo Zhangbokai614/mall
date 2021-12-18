@@ -66,7 +66,7 @@
   align-items: center;
   margin-top: 1vh;
   margin-bottom: -1vh;
-  background-color: #ffd149;
+  background-color: var(--detail-addcar-color);
   color: white;
   font-size: 28px;
   border-radius: var(--detail-border-radius);
