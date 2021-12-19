@@ -54,7 +54,7 @@ class Tabs extends React.Component {
 
     return (
       <View>
-        <View id='tabsBar'>
+        <View id='tabs-bar'>
           {tabsBar}
         </View>
         {tabsContent}

@@ -4,6 +4,7 @@ import { View , Image} from '@tarojs/components'
 
 import { Get } from '../../global-data/index'
 import * as homeApi from './service'
+
 import './index.css'
 
 export default class Index extends Component {

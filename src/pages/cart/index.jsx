@@ -1,12 +1,15 @@
 import Taro from '@tarojs/taro';
 import React, { Component } from 'react';
+
 import { Settlement } from '../../components/shoppingCart_settlement/index';
 import { CartAbout } from '../../components/shoppingCart_about';
 import { Cartnull } from '../../components/shoppingCart_null';
 import { CartTop } from '../../components/shoppingCart_top';
 import { Card } from '../../components/shoppingCart_card/index';
+
 import { Get } from '../../global-data';
 import * as cartApi from './service';
+
 import './index.css';
 
 export default class index extends Component {

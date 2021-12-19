@@ -34,7 +34,7 @@ class GoodsList extends React.Component {
 
     return (
       <View>
-        <View id='cardList'>
+        <View id='card-list'>
           {listContent}
         </View>
       </View>

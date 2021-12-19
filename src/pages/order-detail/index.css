@@ -15,11 +15,11 @@ page {
   font-size: var(--order-state-font-size);
 }
 
-.green {
+.order-state--green {
   background-color: #1eb268;
 }
 
-.red {
+.order-state--red {
   background-color: #FF4949;
 }
 
@@ -28,7 +28,6 @@ page {
   margin-top: 4vw;
   margin-bottom: 4vw;
   font-size: 14pt;
-  /* font-weight: 500; */
 }
 
 .card {
@@ -47,7 +46,7 @@ page {
   padding-bottom: 1vh;
 }
 
-#address-icon {
+#logistics__address-icon {
   height: 4.8vh;
   width: 4.8vh;
   margin-right: 2vw;
@@ -56,19 +55,19 @@ page {
   align-self: center;
 }
 
-#logistics-info {
+#logistics_info {
   display: flex;
   flex-flow: column;
   font-size: 12pt;
 }
 
-#recipient {
+#logistics_info_recipient {
   display: flex;
   flex-flow: row;
   flex-wrap: nowrap;
 }
 
-.recipient-info {
+.recipient-text {
   margin-top: 2vh;
   /* margin-bottom: 2vh; */
   margin-left: 2vw;
@@ -76,7 +75,7 @@ page {
   font-weight: 500;
 }
 
-#address {
+#logistics_info_address {
   margin-top: 2vh;
   margin-bottom: 2vh;
   margin-left: 2vw;
@@ -84,7 +83,7 @@ page {
   color: darkgray;
 }
 
-#logistics-info-chevron-right {
+#logistics_chevron-right {
   display: flex;
   flex-flow: row-reverse;
   align-self: center;
@@ -122,7 +121,7 @@ page {
   margin-bottom: 2vw;
 }
 
-#card-content {
+.goods-card {
   margin-top: 4vw;
   margin-bottom: 4vw;
   display: flex;
@@ -130,7 +129,7 @@ page {
   padding-bottom: 1vh;
 }
 
-#goods-info {
+#goods-card_goods-info {
   margin-top: 4vw;
   display: flex;
   flex-flow: row;
@@ -138,30 +137,30 @@ page {
   height: 12vh;
 }
 
-#goods-title-specs {
+#goods-info_text {
   display: flex;
   flex-flow: column;
 }
 
-#goods-title {
+#goods-info_text_title {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   font-weight: 500;
 }
 
-#goods-specs {
+#goods-info_text_specs {
   color: darkgrey;
   margin-top: 2vh;
 }
 
-#goods-info-image {
+#goods-info_image {
   border-radius: var(--card-border-radius);
   margin-right: 4vw;
   margin-left: 4vw;
 }
 
-#total {
+#goods-card_total {
   display: flex;
   flex-flow: row-reverse;
   align-content: center;
@@ -171,30 +170,30 @@ page {
   margin-bottom: 2vw;
 }
 
-#cost-text {
+#total_text {
   line-height: 14pt;
 }
 
-#cost {
+#total_cost {
   color: #FF4949;
   font-weight: 600;
   font-size: 14pt;
   line-height: 14pt;
 }
 
-#contact-merchant {
+#contact-card {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#contact-merchant-icon {
+#contact-card-icon {
   height: var(--order-state-font-size);
   width: var(--order-state-font-size);
   margin-right: 2vw;
 }
 
-#contactButton {
+#contact-card_button {
   background-color: rgba(255, 255, 255, 0);
 }
 
@@ -203,7 +202,7 @@ button::after {
   padding: 0px;
 }
 
-#card-buttons {
+#buttons-card {
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -220,7 +219,7 @@ button::after {
   border-top:0.5px solid var(--card-border-color);
 }
 
-.card-button {
+.buttons-card_button {
   margin-left: 6vw;
   margin-right: 6vw;
   color: #ffffff;

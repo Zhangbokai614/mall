@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { View, Button } from '@tarojs/components';
+
 import './index.css';
 
 export default class index extends Component {

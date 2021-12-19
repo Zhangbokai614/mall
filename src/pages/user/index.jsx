@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { View } from '@tarojs/components'
 import Taro from '@tarojs/taro'
+import { View } from '@tarojs/components'
 import { AtAvatar } from 'taro-ui'
 
 import { Get } from '../../global-data/index'
@@ -61,7 +61,6 @@ export default class Index extends Component {
           nickName: res.userInfo.nickName,
           hasUserInfo: true
         })
-        console.log(this.state.userInfo)
       }
     })
   }
@@ -95,20 +94,11 @@ export default class Index extends Component {
       { text: text.asset.customerService, icon: customerServiceIcon, contact: true }
     ]
 
-    try {
-      var value = Taro.getStorageSync('userToken')
-      if (value) {
-        console.log(value)
-      }
-    } catch (e) {
-      console.log(e)
-    }
-
     return (
       this.state.loading
         ? null
         : <View id='body'>
-          <View id='nameCard' className='card'>
+          <View id='name-card' className='card'>
             <AtAvatar
               circle
               size='large'
@@ -131,7 +121,7 @@ export default class Index extends Component {
             />
           </View>
 
-          <View className='.at-article__info technicalSupport'>
+          <View className='.at-article__info technical-support'>
             {text.technicalSupport}
           </View>
         </View>

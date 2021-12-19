@@ -3,6 +3,10 @@ page {
   font-size: 10pt;
   font-family: SimHei;
 
+  /* page gray */
+  filter: grayscale(0%);
+
+  /* color */
   --highlight-color: #ff4949;
   --unselect-color: #434343;
   --confing-color: #f7f7f7;

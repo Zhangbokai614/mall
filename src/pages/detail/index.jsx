@@ -1,17 +1,19 @@
 import React, { Component } from 'react'
-import { View, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
+import { View, Image } from '@tarojs/components'
 import { getCurrentInstance } from '@tarojs/taro'
 import { AtDivider, AtCountdown, AtTag } from 'taro-ui'
 
-import Vertical from '../../asset/images/icon/vertical.png'
 import { SwiperPosters } from '../../components/detail_swiper'
 import { GoodsSelection } from '../../components/at_radio/index'
 import { Bottomdetail } from '../../components/detail_bottom/index'
 import { Introduction } from '../../components/detail_introduction/index'
-import Share from '../../asset/images/icon/share-select.png'
+
 import * as homeApi from './service'
 import { Get } from '../../global-data/index'
+
+import Vertical from '../../asset/images/icon/vertical.png'
+import Share from '../../asset/images/icon/share-select.png'
 
 import './index.css'
 
