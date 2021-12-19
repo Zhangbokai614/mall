@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { View } from '@tarojs/components'
 import Taro, { getCurrentInstance } from '@tarojs/taro'
+import { View } from '@tarojs/components'
 import { CuTimeline } from "taro-color-ui";
 
 import { Get } from '../../global-data/index'
@@ -61,7 +61,7 @@ export default class Index extends Component {
           shadow
           color="#FF4949"
           left={
-            <View className='circle'/>
+            <View className='timeline-item_circle'/>
           }>
           <View style={{ color: "#FFFFFF" }}>
             <View>
@@ -77,20 +77,19 @@ export default class Index extends Component {
         </CuTimeline.Item>
       )
     }).reverse()
-    console.log(path)
 
     return (
       this.state.loading
         ? null
         : <View>
-          <View id='order-state' className={orderState == '04' ? 'green' : 'red'}>
+          <View id='order-state' className={orderState == '04' ? 'order-state--green' : 'order-state--red'}>
             {orderStateMap[orderState]}
           </View>
           <View className='card waybill-info'>
-            <View className='waybill-info-item'>
+            <View className='waybill-info_item'>
               {this.state.orderPath.delivery_name}
             </View>
-            <View className='waybill-info-item'>
+            <View className='waybill-info_item'>
               {this.state.orderPath.waybill_id}
             </View>
           </View>

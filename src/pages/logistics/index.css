@@ -11,11 +11,11 @@
   font-size: var(--order-state-font-size);
 }
 
-.green {
-  background-color: #49FF49;
+.order-state--green {
+  background-color: #1EB268;
 }
 
-.red {
+.order-state--red {
   background-color: #FF4949;
 }
 
@@ -37,7 +37,7 @@
   margin-bottom: 2vh;
 }
 
-.waybill-info-item {
+.waybill-info_item {
   padding-top: 1vh;
   padding-bottom: 1vh;
   padding-right: 4vw;
@@ -55,7 +55,7 @@
   align-items: center;
 }
 
-.circle {
+.timeline-item_circle {
   width: 3.2vw;
   height: 3.2vw;
   border-radius: 100%;

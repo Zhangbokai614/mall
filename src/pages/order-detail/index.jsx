@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
-import { View, Image } from '@tarojs/components'
 import Taro, { getCurrentInstance } from '@tarojs/taro'
+import { View, Image } from '@tarojs/components'
 import { AtIcon } from 'taro-ui'
 import { CuButton } from "taro-color-ui";
 
@@ -92,7 +92,7 @@ export default class Index extends Component {
         : <View>
           <View
             id='order-state'
-            className={orderInfo.order_state == '04' ? 'green' : 'red'}>
+            className={orderInfo.order_state == '04' ? 'order-state--green' : 'order-state--red'}>
             {orderStateMap[orderInfo.order_state]}
           </View>
           <View className='text'>
@@ -100,50 +100,48 @@ export default class Index extends Component {
           </View>
           <View className='card' id='logistics' onClick={this.logisticsJump.bind(this)}>
             <Image
-              id='address-icon'
+              id='logistics__address-icon'
               src={addressIcon}
               mode='aspectFit'
             />
-            <View id='logistics-info'>
-              <View id='recipient'>
-                <View className='recipient-info'>{orderInfo.name}</View>
-                <View className='recipient-info'>{orderInfo.mobile}</View>
+            <View id='logistics_info'>
+              <View id='logistics_info_recipient'>
+                <View className='recipient-text'>{orderInfo.name}</View>
+                <View className='recipient-text'>{orderInfo.mobile}</View>
               </View>
-              <View id='address'>{orderInfo.address}</View>
+              <View id='logistics_info_address'>{orderInfo.address}</View>
             </View>
-            <View id='logistics-info-chevron-right'>
+            <View id='logistics_chevron-right'>
               <AtIcon value='chevron-right' size='18'></AtIcon>
             </View>
           </View>
           <View className='text'>
             {text.goodsInfo}
           </View>
-          <View className='card'>
-            <View id='card-content'>
-              <View id='goods-info'>
-                <Image
-                  id='goods-info-image'
-                  style='width: 12vh'
-                  src={orderInfo.image}
-                  mode='widthFix'
-                />
-                <View id='goods-title-specs'>
-                  <View id='goods-title'>
-                    {orderInfo.title}
-                  </View>
-                  <View id='goods-specs'>
-                    {orderInfo.specs}
-                  </View>
+          <View className='card goods-card'>
+            <View id='goods-card_goods-info'>
+              <Image
+                id='goods-info_image'
+                style='width: 12vh'
+                src={orderInfo.image}
+                mode='widthFix'
+              />
+              <View id='goods-info_text'>
+                <View id='goods-info_text_title'>
+                  {orderInfo.title}
+                </View>
+                <View id='goods-info_text_specs'>
+                  {orderInfo.specs}
                 </View>
               </View>
-              {goodsContent}
-              <View id='total'>
-                <View id='cost'>
-                  {Get('languages').cny + orderInfo.cost}
-                </View>
-                <View id='cost-text'>
-                  {text.total + orderInfo.number + text.sumTotal}
-                </View>
+            </View>
+            {goodsContent}
+            <View id='goods-card_total'>
+              <View id='total_cost'>
+                {Get('languages').cny + orderInfo.cost}
+              </View>
+              <View id='total_text'>
+                {text.total + orderInfo.number + text.sumTotal}
               </View>
             </View>
           </View>
@@ -153,21 +151,19 @@ export default class Index extends Component {
           <View className='card'>
             {orderContent}
           </View>
-          <View className='card'>
-            <View id='contact-merchant' className='text'>
-              <button id='contactButton' open-type="contact">
-                <Image
-                  id='contact-merchant-icon'
-                  src={contactMerchantIcon}
-                  mode='aspectFit'
-                />
-                {text.contactTheMerchant}
-              </button>
-            </View>
+          <View id='contact-card' className='text card'>
+            <button id='contact-card_button' open-type="contact">
+              <Image
+                id='contact-card-icon'
+                src={contactMerchantIcon}
+                mode='aspectFit'
+              />
+              {text.contactTheMerchant}
+            </button>
           </View>
-          <View id='card-buttons'>
-            <CuButton className='card-button' color='yellow' size="large" round inline>{text.CheckLogistics}</CuButton>
-            <CuButton className='card-button' color='red' size="large" round inline>{text.confirmTheReceiptOfGoods}</CuButton>
+          <View id='buttons-card'>
+            <CuButton className='buttons-card_button' color='yellow' size="large" round inline>{text.CheckLogistics}</CuButton>
+            <CuButton className='buttons-card_button' color='red' size="large" round inline>{text.confirmTheReceiptOfGoods}</CuButton>
           </View>
         </View>
     )

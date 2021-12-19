@@ -4,8 +4,8 @@ import Taro from '@tarojs/taro'
 
 import { GoodsCard } from '../../components/goods_card/index'
 import { GoodsList } from '../../components/goods_list/index'
-import { Get } from '../../global-data/index'
 
+import { Get } from '../../global-data/index'
 import * as homeApi from './service';
 
 import './index.css'
@@ -80,7 +80,7 @@ export default class Index extends Component {
           />
 
           <View id='goods'>
-            <View id='activitys'>
+            <View>
               {focusCard}
             </View>
             <GoodsList goodsCardInfo={goodsCardInfo}/>

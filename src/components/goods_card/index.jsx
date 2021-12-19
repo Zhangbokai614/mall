@@ -26,9 +26,9 @@ class GoodsCard extends React.Component {
 
     // console.log(activityCode)
     return (
-      <View className={'card ' + kind + 'Card'} onClick={this.handleClick.bind(this)}>
+      <View className={'card ' + kind + '-card'} onClick={this.handleClick.bind(this)}>
         <Image
-          className='goodsImage'
+          className='goods-image'
           style='width: 100%; background: #fff;'
           src={imageSrc}
           mode='aspectFill'
@@ -36,7 +36,7 @@ class GoodsCard extends React.Component {
         <View className='.at-article__h2 title'>
           {title}
         </View>
-        <View id='goodsInfoText'>
+        <View id='goods-info-text'>
           <View id='prices'>
             <View className='.at-article__h2 cny price'>
               ￥

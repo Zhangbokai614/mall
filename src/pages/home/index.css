@@ -14,9 +14,3 @@
   justify-content: center;
   align-items: center;
 }
-
-.card {
-  box-shadow: var(--shadow);
-  border-radius: var(--card-border-radius);
-  background-color: var(--card-bg-color);
-}

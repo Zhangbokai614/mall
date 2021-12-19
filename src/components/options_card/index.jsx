@@ -35,9 +35,9 @@ class OptionsCard extends React.Component {
       return (
         e.contact
           ? <View key={index} onClick={func ? func.bind(this) : this.optionHandleClick.bind(this, index)}>
-            <button id='contactButton' className='option' size='mini' open-type="contact">
+            <button id='contact-button' className='option' size='mini' open-type="contact">
               <Image
-                className='optionIcon'
+                className='option-icon'
                 src={e.icon}
                 mode='aspectFit'
               />
@@ -48,7 +48,7 @@ class OptionsCard extends React.Component {
           </View>
           : <View className='option' key={index} onClick={func ? func.bind(this) : this.optionHandleClick.bind(this, index)}>
             <Image
-              className='optionIcon'
+              className='option-icon'
               src={e.icon}
               mode='aspectFit'
             />
@@ -60,21 +60,21 @@ class OptionsCard extends React.Component {
     })
 
     return (
-      <View id='optionsCard'>
-        <View id='cardHead'>
+      <View id='options-card'>
+        <View id='card-head'>
           <View>
             {this.state.title}
           </View>
           {
             this.state.headNavigate
-              ? <View className='headNavigateText' onClick={this.headHandleClick.bind(this)}>
+              ? <View className='head-navigate-text' onClick={this.headHandleClick.bind(this)}>
                 {this.state.headNavigateText}
                 <AtIcon value='chevron-right' size='12' color='#000'></AtIcon>
               </View>
               : null
           }
         </View>
-        <View id='cardContent'>
+        <View id='card-content'>
           {cardContent}
         </View>
       </View>
