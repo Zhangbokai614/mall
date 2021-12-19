@@ -80,22 +80,21 @@ export default class Index extends Component {
         const minutes = Math.floor((newEndDate % (1000 * 60 * 60)) / (1000 * 60))
         const seconds = Math.floor((newEndDate % (1000 * 60)) / 1000)
 
-		console.log(days,hours,minutes,seconds)
         return (
             this.state.loading
                 ? null
-                : <View className='index'>
+                : <View className='main'>
                     <SwiperPosters
                         images={info[0].images}
                     />
-                    <View className='priceAndShare'>
-                        <View className='infoPrice'>
+                    <View className='top-banner'>
+                        <View className='top-banner-price'>
                             ￥{info[0].price}
                         </View>
                         {
                             this.state.showElem?(
-                            <View className='showElem'>
-                                <AtTag className='activityName'>
+                            <View className='top-show'>
+                                <AtTag className='top-show-title'>
                                     {activityName}
                                 </AtTag>
                                 <AtCountdown
@@ -107,22 +106,21 @@ export default class Index extends Component {
                                     minutes={minutes}
                                     seconds={seconds}
                                     onTimeUp={this.onTimeUp.bind(this)}
-                                    className='countDown'>
+                                    className='top-show-count'>
                                 </AtCountdown>
                             </View>
                             ):null
                         }
                         <button
                             open-type='share'
-                            className='buttonShare'>
+                            className='top-show-share'>
                             <Image
-                                className='imageShare'
                                 src={Share}
                                 style='width:6vw; height:6vw;'
                             />
                         </button>
                     </View>
-                    <View className='goodsintroduction'>
+                    <View className='top-show-info'>
                         {info[0].title}
                     </View>
                     <GoodsSelection
@@ -130,27 +128,28 @@ export default class Index extends Component {
                         specs={info[0].specs}
                         inventory={info[0].inventory}
                         price={info[0].price}
+                        id={info[0].id}
                     />
                     <Introduction
                         detailImages={info[0].detailImages}
                     />
-                    <View className='detailAfterSales'>
-                        <View className='afterSales'>
+                    <View className='main-bottom-service'>
+                        <View className='main-bottom-container'>
                             <Image
-                                className='vertical'
+                                className='container-intro-image'
                                 src={Vertical}
                                 style='width:2vw; height:9vw;'
                             >
                             </Image>
-                            <View className='afterSalesTitle'>
+                            <View className='main-bottom-title'>
                                 {Get('languages').detailPage.afterSales}
                             </View>
                         </View>
                         <AtDivider />
-                        <View className='afterSalesText'>
+                        <View className='main-bottom-content'>
                             {afterSalesDetail}
                         </View>
-                        <View className='afterSalesText'>
+                        <View className='main-bottom-content'>
                             {Get('languages').detailPage.freeMoney}
                             {afterSalesFree}
                         </View>

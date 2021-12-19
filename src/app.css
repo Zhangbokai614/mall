@@ -41,6 +41,7 @@ page {
 
   /* detail */
   --detail-border-radius: 50px;
+  --detail-addcar-color:#ffd149;
 
   /* ShoppingCart */
   --ShoppingCard-null-font-h1-color: #777777;

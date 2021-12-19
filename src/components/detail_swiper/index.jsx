@@ -21,7 +21,7 @@ class SwiperPosters extends React.Component {
 
         return (
             <Swiper
-                className='swiper'
+                className='main-swiper'
                 indicatorColor='#999'
                 indicatorActiveColor='#333'
                 circular
