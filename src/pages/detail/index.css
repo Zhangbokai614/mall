@@ -6,7 +6,7 @@
     background-color: var(--card-bg-color);
     display: flex; 
     justify-items: center;  
-    height: 6vh;
+    height: 5vh;
 }
 
 .top-banner-price {
@@ -78,7 +78,7 @@
 
 .main-bottom-container {
     font-size: 14pt;
-    height: 5vh;
+    height: 4vh;
     display: flex;
     align-items: center;
     justify-items: center;

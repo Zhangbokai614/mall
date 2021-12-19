@@ -68,7 +68,7 @@
   margin-bottom: -1vh;
   background-color: var(--detail-addcar-color);
   color: var(--card-bg-color);
-  font-size: 28px;
+  font-size: 14pt;
   border-radius: var(--detail-border-radius);
   height: 6vh;
   margin-left: -20vw;
@@ -85,7 +85,7 @@
   margin-left: 1vw;
   background-color: var(--highlight-color);
   color: var(--card-bg-color);
-  font-size: 28px;
+  font-size: 14pt;
   border-radius: var(--detail-border-radius);
   height: 6vh;
   width: 50vw;
@@ -100,8 +100,9 @@
   width: 40vw;
 }
 
-.container-left-title {
-  margin-bottom: 1vh;
-  font-size: 2vh;
-  white-space: nowrap;
+/* .container-left-title {
 }
+
+.bottom-container-avatar {
+
+} */

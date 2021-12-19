@@ -218,29 +218,34 @@ class GoodsSelection extends React.Component {
               <View className='container-title'>
                 {Get('languages').detailPage.service}
               </View>
-              <Image
-                className='container-images'
-                src={Fruit}
-                style='width:5vw; height:5vw;'
-              />
-              <View className='container-service-text'>
-                {Get('languages').detailPage.compensation}
-              </View>
-              <Image
-                className='container-images'
-                src={FreeMoney}
-                style='width:5vw; height:5vw;'
-              />
-              <View className='container-service-text'>
-                {Get('languages').detailPage.freeMoney}
-              </View>
-              <Image
-                className='container-images'
-                src={SevenDays}
-                style='width:5vw; height: 5vw;'
-              />
-              <View className='container-service-text'>
-                {Get('languages').detailPage.returnGoods}
+              <View className='container-wrapper'>
+                <Image
+                  className='container-images'
+                  src={Fruit}
+                  style='width:5vw; height:5vw;'
+                  mode='aspectFit'
+                />
+                <View className='container-service-text'>
+                  {Get('languages').detailPage.compensation}
+                </View>
+                <Image
+                  className='container-images'
+                  src={FreeMoney}
+                  style='width:5vw; height:5vw;'
+                  mode='aspectFit'
+                />
+                <View className='container-service-text'>
+                  {Get('languages').detailPage.freeMoney}
+                </View>
+                <Image
+                  className='container-images'
+                  src={SevenDays}
+                  style='width:5vw; height:5vw;'
+                  mode='aspectFit'
+                />
+                <View className='container-service-text'>
+                  {Get('languages').detailPage.returnGoods}
+                </View>
               </View>
             </View>
           </AtList>
