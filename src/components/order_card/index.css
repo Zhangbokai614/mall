@@ -11,19 +11,19 @@
 #card-head {
   margin-left: 4vw;
   margin-right: 4vw;
-  margin-top: 4vw;
-  margin-bottom: 2vw;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  font-weight: 500;
+  font-weight: var(--font-weight--coarse);
 }
 
 #card-content {
   margin-left: 4vw;
   margin-right: 4vw;
-  margin-top: 2vw;
-  margin-bottom: 2vw;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
   display: flex;
   flex-flow: column;
 }
@@ -44,7 +44,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  font-weight: 500;
+  font-weight: var(--font-weight--coarse);
 }
 
 #goods-specs {
@@ -53,22 +53,22 @@
 }
 
 #goods-info-image {
-  border-radius: var(--radius--min);
+  border-radius: var(--radius--mini);
   margin-right: 4vw;
 }
 
 #total {
   display: flex;
   flex-flow: row-reverse;
-  margin-top: 2vw;
-  font-weight: 500;
+  margin-top: 1vh;
+  /* font-weight: var(--font-weight); */
 }
 
 #card-foot {
   margin-left: 4vw;
   margin-right: 4vw;
-  margin-top: 2vw;
-  margin-bottom: 4vw;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
   display: flex;
   flex-flow: row;
   justify-content: space-between;

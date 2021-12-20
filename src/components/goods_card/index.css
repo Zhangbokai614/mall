@@ -1,13 +1,13 @@
 .goods-image {
   height: 46vw;
-  border-radius: var(--radius--min--t);
+  border-radius: var(--radius--mini--t);
 }
 
 .focus-card {
   display: flex;
   flex-flow: column;
   width: 94vw;
-  margin-bottom: 2.8vw;
+  margin-bottom: 1.4vh;
 }
 
 .goods-card {
@@ -15,7 +15,7 @@
   flex-flow: column;
   justify-content: space-between;
   width: 46vw;
-  margin-bottom: 2.8vw;
+  margin-bottom: 1.4vh;
   margin-left: 1.4vw;
   margin-right: 1.4vw;
 }
@@ -71,7 +71,7 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  border-radius: var(--radius--min);
+  border-radius: var(--radius--mini);
   color: var(--color--main);
   border-width: 2px;
   margin-right: 2vw;
@@ -79,6 +79,6 @@
 
 .card {
   box-shadow: var(--box-shadow--l1);
-  border-radius: var(--radius--min);
+  border-radius: var(--radius--mini);
   background-color: var(--color--background);
 }

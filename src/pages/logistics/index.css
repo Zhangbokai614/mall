@@ -3,7 +3,7 @@
   justify-content: center;
   align-items: center;
   box-shadow: var(--box-shadow--l1);
-  border-radius: var(---radius--min);
+  border-radius: var(---radius--mini);
   margin: 2vw;
   width: 96vw;
   height: 18vh;
@@ -21,7 +21,7 @@
 
 .card {
   box-shadow: var(--box-shadow--l1);
-  border-radius: var(--radius--min);
+  border-radius: var(--radius--mini);
   background-color: var(--color--background);
   margin-left: 2vw;
   margin-right: 2vw;

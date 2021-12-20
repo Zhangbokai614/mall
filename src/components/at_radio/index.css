@@ -60,7 +60,7 @@
     justify-content: center;
     color: var(--text-color--white);
     background-color: var(--color--main);
-    border-radius: var(--radius-min);
+    border-radius: var(--radius);
 }
 
 .show-images {
@@ -80,17 +80,17 @@
 }
 
 .show-title {
-    margin-top: 1vw;
+    margin-top: 1vh;
     margin-left: 5vw;
 }
 
 .show-number {
-    margin-top: 1vw;
+    margin-top: 1vh;
     margin-left: 6vw;
 }
 
 .show-specs {
-    margin-top: 1vw;
+    margin-top: 1vh;
     margin-left: 6vw;
     color: var(--color--main);
     border: 2px solid var(--color--main);

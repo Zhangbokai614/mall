@@ -2,6 +2,7 @@ page {
   background-color: #f4f4f4;
   font-size: 1rem;
   font-family: SimHei;
+  font-weight: var(--font-weight--slender);
 
   /* page gray */
   filter: grayscale(0%);
@@ -33,9 +34,9 @@ page {
   --radius: 40px 40px 40px 40px;
   --radius--t: 0 0 20px 20px;
   --radius--b: 20px 20px 0 0;
-  --radius--min: 20px 20px 20px 20px;
-  --radius--min--t: 20px 20px 0 0;
-  --radius--min--b: 0 0 20px 20px;
+  --radius--mini: 20px 20px 20px 20px;
+  --radius--mini--t: 20px 20px 0 0;
+  --radius--mini--b: 0 0 20px 20px;
   --radius--b-big: 0 0 100px 100px;
 
   /* box-shadow */

@@ -5,7 +5,7 @@
   flex-flow: column;
   margin-left: 4vw;
   margin-right: 4vw;
-  margin-bottom: 4vw;
+  margin-bottom: 2vh;
   box-shadow: var(--box-shadow--l1);
   background-color: var(--color--background);
 }

@@ -12,8 +12,8 @@
   position: relative;
   height: 8vh;
   box-shadow: var(--box-shadow--l1);
-  border-bottom-right-radius: var(--radius--min);
-  border-bottom-left-radius: var(--radius--min);
+  border-bottom-right-radius: var(--radius--mini);
+  border-bottom-left-radius: var(--radius--mini);
   background: var(--color--background);
 }
 
