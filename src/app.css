@@ -1,18 +1,54 @@
 page {
   background-color: #f4f4f4;
-  font-size: 10pt;
+  font-size: 1rem;
   font-family: SimHei;
 
   /* page gray */
   filter: grayscale(0%);
 
   /* color */
+  --color--main: #FF4949;
+  --color--background: #FFFFFF;
+  --color--subordinate: #FFD149;
+
+  --text-color--black: #000000;
+  --text-color--white: #FFFFFF;
+  --text-color--gray: #BFBFBF;
+
+  --state--unselect: #BFBFBF;
+  --state--succeed: #1EB268;
+  --state--special: #686BBC;
+
+  /* size */
+  --text--h1: 1.2rem;
+  --text--p: 1rem;
+
+  /* border */
+  /* border-width */
+  --border--width: 1px;
+
+  /* border-radius */
+  --radius: 40px 40px 40px 40px;
+  --radius--t: 0 0 20px 20px;
+  --radius--b: 20px 20px 0 0;
+  --radius--min: 20px 20px 20px 20px;
+  --radius--min--t: 20px 20px 0 0;
+  --radius--min--b: 0 0 20px 20px;
+  --radius--b-big: 0 0 100px 100px;
+
+  /* box-shadow */
+  --box-shadow--l1: 1px 2px 2px 1px #E6E6E6;
+
+
+
+
   --highlight-color: #ff4949;
   --unselect-color: #434343;
   --confing-color: #f7f7f7;
 
-  --posters-shadow: 0 2px 4px 0 rgba(105, 105, 105, 0.084);
-  --shadow: 0 4px 6px 0 rgba(17, 17, 17, 0.04);
+  --posters-shadow: 1px 2px 2px 1px #E6E6E6;
+  --shadow: 1px 2px 2px 1px #E6E6E6;
+
 
   /* icon */
   --icon-gray: #d9d9d9;

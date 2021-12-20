@@ -16,7 +16,7 @@
 }
 
 #name-card {
-  background-color: #ff4949;
+  background-color: var(--color--main);
   border-radius: 0 0 72px 72px;
   height: 28vh;
   display: flex;
@@ -27,7 +27,7 @@
 
 #name {
   color: #FFFFFF;
-  font-size: 28px;
+  font-size: var(--text-h1);
   margin-bottom: 1vh;
 }
 

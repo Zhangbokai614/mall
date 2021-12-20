@@ -3,14 +3,14 @@
 }
 
 .top-banner {
-    background-color: var(--card-bg-color);
+    background-color: var(--color--background);
     display: flex; 
     justify-items: center;  
     height: 6vh;
 }
 
 .top-banner-price {
-    font-size: 14pt;
+    font-size: var(--text-h1);
     margin-top: 2vw;
     margin-left: 3vw;
     padding-bottom: 1vw;
@@ -29,8 +29,8 @@
     margin-top: 3vw;
     margin-left: 3vw;
     color: var(--highlight-color);
-    background-color: var(--card-bg-color);
-    border: 2px solid var(--highlight-color);
+    background-color: var(--color--background);
+    border: 2px solid var(--color--main);
 }
 
 .top-show-count {
@@ -47,7 +47,7 @@
     display: flex;
     justify-items: row;
     position: absolute;
-    background-color: var(--card-bg-color);
+    background-color: var(--color--background);
 }
 
 .top-show-share::after{
@@ -56,8 +56,8 @@
 
 .top-show-info {
     padding-left: 3vw;
-    background-color: var(--card-bg-color);
-    font-size: 14pt;
+    background-color: var(--color--background);
+    font-size: var(--text-h1);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -73,11 +73,11 @@
     height: 30vh;
     margin-top: 2vh;
     text-align: left;
-    background-color: var(--card-bg-color);
+    background-color: var(--color--background);
 }
 
 .main-bottom-container {
-    font-size: 14pt;
+    font-size: var(--text-h1);
     height: 5vh;
     display: flex;
     align-items: center;
@@ -91,6 +91,6 @@
 }
 
 .main-bottom-title {
-    font-size: 14pt;
+    font-size: var(--text-h1);
     padding-top: 3vh;
 }

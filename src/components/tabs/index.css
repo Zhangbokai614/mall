@@ -4,7 +4,7 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--card-bg-color);
+  background-color: var(--color--background);
   position: sticky;
   top: -0.1vh;
   height: 7.2vh;
@@ -34,7 +34,7 @@
 
 
 #underscore {
-  background-color: var(--highlight-font-color);
+  background-color: var(--color--main);
   height: 0.36vh;
   width: 88%;
   border-radius: 100px;

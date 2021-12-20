@@ -27,7 +27,7 @@
   justify-content: center;
   margin-top: 1.2vh;
   margin-bottom: 1.5vh;
-  font-size: 25px;
+  font-size: var(--text-h1);
   color: var(--ShoppingCard-null-font-h2-color);
 }
 

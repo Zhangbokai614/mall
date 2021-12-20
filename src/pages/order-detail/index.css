@@ -12,22 +12,22 @@ page {
   width: 96vw;
   height: 18vh;
   color: var(--card-bg-color);
-  font-size: var(--order-state-font-size);
+  font-size: var(--text-h1);
 }
 
 .order-state--green {
-  background-color: #1eb268;
+  background-color: var(--state--succeed);
 }
 
 .order-state--red {
-  background-color: #FF4949;
+  background-color: var(--color--main);
 }
 
 .text {
   margin-left: 2vw;
   margin-top: 4vw;
   margin-bottom: 4vw;
-  font-size: 14pt;
+  font-size: var(--text-h1);
 }
 
 .card {
@@ -58,7 +58,7 @@ page {
 #logistics_info {
   display: flex;
   flex-flow: column;
-  font-size: 12pt;
+  font-size: var(--text-p);
 }
 
 #logistics_info_recipient {
@@ -94,7 +94,7 @@ page {
 .goods-info {
   display: flex;
   flex-flow: row;
-  /* font-size: var(--order-state-font-size); */
+  font-size: var(--order-state-font-size);
   justify-content: space-between;
   margin-right: 4vw;
   padding-top: 1vh;
@@ -207,7 +207,7 @@ button::after {
   flex-flow: row;
   justify-content: space-between;
   align-content: center;
-  background-color: var(--card-bg-color);
+  background-color: var( --color--background);
   position:fixed;
   bottom: 0;
   padding-top: 2vh;

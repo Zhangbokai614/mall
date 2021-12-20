@@ -2,8 +2,8 @@
   display: flex;
   flex-flow: column;
   box-shadow: var(--shadow);
-  border-radius: var(--card-border-radius);
-  background-color: var(--card-bg-color);
+  border-radius: var(--radius);
+  background-color: var(--color--background);
   margin: 2vw;
   width: 96%;
 }

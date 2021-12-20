@@ -121,7 +121,7 @@ export default class Index extends Component {
             />
           </View>
 
-          <View className='.at-article__info technical-support'>
+          <View className='technical-support'>
             {text.technicalSupport}
           </View>
         </View>
