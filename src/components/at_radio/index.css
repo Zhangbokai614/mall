@@ -7,17 +7,18 @@
     align-items: center;
     flex-direction: row;
     text-align: left;
-    height: 6vh;
+    height: 7vh;
     box-shadow: var(--shadow);
     background-color: var(--color--background);
 }
 
 .container-title {
-    margin-left: 2vw;
+    margin-left: 4vw;
+    white-space: nowrap;
 }
 
 .container-content {
-    margin-left: 5vw;
+    margin-left: 7vw;
 }
 
 .container-icon {
@@ -49,7 +50,6 @@
 .show-gobuy {
     width: 40%;
     height: 6vh;
-    padding-top: 1vh;
     margin-top: 17vh;
     margin-left: 53%;
     font-size: var(--text-h1);
@@ -102,13 +102,13 @@
 }
 
 .container-images {
-    margin-left: 4vw;
+    margin-left: 1vw;
 }
 
 .container-service-text {
-    margin-left: 2vw;
+    margin-left: 1vw;
+    white-space: nowrap;
     display: flex;
-    align-items: center;  
     justify-content: center;   
 }
 
@@ -153,4 +153,12 @@
 
 .block {
     display: block;
+}
+
+.container-wrapper {
+    width: 80vw;
+    margin-left: 4vw;
+    display: flex;
+    align-items: center;  
+    flex-direction: row;
 }

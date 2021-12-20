@@ -6,7 +6,7 @@
     background-color: var(--color--background);
     display: flex; 
     justify-items: center;  
-    height: 6vh;
+    height: 5vh;
 }
 
 .top-banner-price {

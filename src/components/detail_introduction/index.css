@@ -8,7 +8,7 @@
 .container-intro {
     font-size: var(--text-h1);
     margin-left: 4vw;
-    height: 5vh;
+    height: 4vh;
     display: flex;
     align-items: center;
     justify-items: center;

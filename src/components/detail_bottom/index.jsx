@@ -9,7 +9,7 @@ import home from '../../asset/images/tabs/home-select.png'
 import service from '../../asset/images/icon/detail-customer-service-select.png'
 import './index.css'
 class Bottomdetail extends React.Component {
-  
+
   goHref = (type) => {
     switch (type) {
       case '01':
@@ -49,6 +49,7 @@ class Bottomdetail extends React.Component {
           onClick={this.goHref.bind(this, '01')}>
           <View className='bottom-container-left'>
             <Image
+              className='bottom-container-avatar'
               src={home}
               style='width:5vw; height:5vw;'
             />
@@ -64,6 +65,7 @@ class Bottomdetail extends React.Component {
         >
           <View className='bottom-container-left'>
             <Image
+              className='bottom-container-avatar'
               src={service}
               style='width:5vw; height:5vw;'
             />
@@ -78,6 +80,7 @@ class Bottomdetail extends React.Component {
         >
           <View className='bottom-container-left'>
             <Image
+              className='bottom-container-avatar'
               src={shoppingcar}
               style='width:5vw; height:5vw;'
             />
