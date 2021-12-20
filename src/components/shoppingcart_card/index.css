@@ -5,9 +5,9 @@
   display: flex;
   position: relative;
   align-items: center;
-  border-radius: var(--shoppingCard-card-border-radius);
-  box-shadow: var(--shoppingCard-card-box-shadow);
-  background: var(--shoppingCard-card-background);
+  border-radius: var(--radius--min);
+  box-shadow: var(--box-shadow--l1);
+  background: var(--color--background);
 }
 
 .shoppingCart-card-frameleft {
@@ -26,7 +26,7 @@
 .shoppingCart-card-cardImage {
   width: 20vh;
   height: 20vh;
-  border-radius: var(--shoppingCart-card-Image-border);
+  border-radius: var(--radius--min);
 }
 
 .shoppingCart-card-frameright {
@@ -45,7 +45,7 @@
 }
 
 .shoppingCart-card-confing {
-  color: var(--shoppingCart-card-confing-color);
+  color: var(--state--unselect);
 }
 
 .shoppingCart-card-down {
@@ -66,11 +66,11 @@
 }
 
 .shoppingCart-card-money {
-  color: var(--shoppingCart-card-number-color);
+  color: var(--color--main);
 }
 
 .shoppingCart-card-number {
-  color: var(--shoppingCart-card-number-color);
+  color: var(--color--main);
 }
 
 .shoppingCart-card-counter {
@@ -82,11 +82,11 @@
 .unselected {
   width: 45px;
   height: 45px;
-  background: var(--shoppingCart-card-circle-unselect);
+  background: var(--color--background);
   border: solid;
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: var(--shoppingCart-card-circle-border-color);
+  border-color: var(--state--unselect);
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
@@ -96,7 +96,7 @@
   width: 45px;
   height: 45px;
   border-radius: 100%;
-  background: var(--shoppingCart-card-circle-select);
+  background: var(--color--main);
   background-image: url('../../../src/asset/images/icon/check.svg');
   background-position: center center;
   background-repeat: no-repeat;

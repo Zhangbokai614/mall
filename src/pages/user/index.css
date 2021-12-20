@@ -1,5 +1,5 @@
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
+  box-shadow: var(--box-shadow--l1);
 }
 
 .at-avatar {
@@ -26,7 +26,7 @@
 }
 
 #name {
-  color: #FFFFFF;
+  color: var(--text-color--white);
   font-size: var(--text-h1);
   margin-bottom: 1vh;
 }
@@ -54,4 +54,6 @@
   margin-top: 1vh;
   margin-bottom: 1vh;
   justify-self: end;
+  color: var(--text-color--gray);
+  font-size: var(--text--p);
 }

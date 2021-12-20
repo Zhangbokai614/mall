@@ -1,7 +1,7 @@
 .order-card {
   display: flex;
   flex-flow: column;
-  box-shadow: var(--shadow);
+  box-shadow: var(--box-shadow--l1);
   border-radius: var(--radius);
   background-color: var(--color--background);
   margin: 2vw;
@@ -48,12 +48,12 @@
 }
 
 #goods-specs {
-  color: darkgrey;
+  color: var(--text-color--gray);
   margin-top: 4vh;
 }
 
 #goods-info-image {
-  border-radius: var(--card-border-radius);
+  border-radius: var(--radius--min);
   margin-right: 4vw;
 }
 
@@ -76,7 +76,7 @@
 }
 
 #payment-time {
-  color: darkgrey;
+  color: var(--text-color--gray);
   align-items: center;
   line-height: 5vh;
 }
@@ -90,7 +90,7 @@
 
 .card-button {
   margin-left: 4vw;
-  color: #ffffff;
+  color: var(--text-color--white);
 }
 
 .cu-tag {

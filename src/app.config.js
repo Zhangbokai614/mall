@@ -14,15 +14,15 @@ export default {
 
   window: {
     backgroundTextStyle: "light",
-    navigationBarBackgroundColor: "#ff4949",
+    navigationBarBackgroundColor: "#FF4949",
     navigationBarTitleText: "Page",
     navigationBarTextStyle: "white"
   },
 
   tabBar: {
-    color: "#595959",
-    selectedColor: "#ff4949",
-    backgroundColor: "#ffffff",
+    color: "#BFBFBF",
+    selectedColor: "#FF4949",
+    backgroundColor: "#FFFFFF",
     list: [
       {
         pagePath: "pages/home/index",

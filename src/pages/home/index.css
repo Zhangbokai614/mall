@@ -3,8 +3,8 @@
 }
 
 #banner {
-  border-radius: var(--posters-border-radius);
-  box-shadow: var(--posters-shadow);
+  border-radius: var(--radius--b-big);
+  box-shadow: var(--box-shadow--l1);
   margin-bottom: 2.8vw;
 }
 

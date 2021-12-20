@@ -1,17 +1,13 @@
-page {
-  padding-bottom: 10vh;
-}
-
 #order-state {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: var(--shadow);
-  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow--l1);
+  border-radius: var(--radius--min);
   margin: 2vw;
   width: 96vw;
   height: 18vh;
-  color: var(--card-bg-color);
+  color: var(--color--background);
   font-size: var(--text-h1);
 }
 
@@ -31,9 +27,9 @@ page {
 }
 
 .card {
-  box-shadow: var(--shadow);
-  border-radius: var(--card-border-radius);
-  background-color: var(--card-bg-color);
+  box-shadow: var(--box-shadow--l1);
+  border-radius: var(--radius--min);
+  background-color: var(--color--background);
   margin-right: 2vw;
   margin-left: 2vw;
   width: 96vw;
@@ -80,7 +76,7 @@ page {
   margin-bottom: 2vh;
   margin-left: 2vw;
   margin-right: 2vw;
-  color: darkgray;
+  color: var(--text-color--gray);
 }
 
 #logistics_chevron-right {
@@ -88,13 +84,13 @@ page {
   flex-flow: row-reverse;
   align-self: center;
   flex: 1;
-  color: var(--icon-gray);
+  color: var(--state--unselect);
 }
 
 .goods-info {
   display: flex;
   flex-flow: row;
-  font-size: var(--order-state-font-size);
+  font-size: var( --text--h1);
   justify-content: space-between;
   margin-right: 4vw;
   padding-top: 1vh;
@@ -105,7 +101,7 @@ page {
   flex-flow: row;
   padding-top: 1vh;
   padding-bottom: 1vh;
-  /* font-size: var(--order-state-font-size); */
+  /* font-size: var( --text--h1); */
 }
 
 .info-type {
@@ -113,7 +109,7 @@ page {
   margin-right: 4vw;
   margin-top: 2vw;
   margin-bottom: 2vw;
-  color: darkgrey;
+  color: var(--text-color--gray);
 }
 
 .info-text {
@@ -150,12 +146,12 @@ page {
 }
 
 #goods-info_text_specs {
-  color: darkgrey;
+  color: var(--text-color--gray);
   margin-top: 2vh;
 }
 
 #goods-info_image {
-  border-radius: var(--card-border-radius);
+  border-radius: var(--radius--min);
   margin-right: 4vw;
   margin-left: 4vw;
 }
@@ -175,9 +171,9 @@ page {
 }
 
 #total_cost {
-  color: #FF4949;
+  color: var(--color--main);
   font-weight: 600;
-  font-size: 14pt;
+  font-size: var(--text--h1);
   line-height: 14pt;
 }
 
@@ -188,8 +184,8 @@ page {
 }
 
 #contact-card-icon {
-  height: var(--order-state-font-size);
-  width: var(--order-state-font-size);
+  height: var( --text--h1);
+  width: var( --text--h1);
   margin-right: 2vw;
 }
 
@@ -208,7 +204,7 @@ button::after {
   justify-content: space-between;
   align-content: center;
   background-color: var( --color--background);
-  position:fixed;
+  position:sticky;
   bottom: 0;
   padding-top: 2vh;
   padding-bottom: 2vh;
@@ -216,12 +212,12 @@ button::after {
   height: 6vh;
   z-index: 100;
   border-radius: 20px 20px 0 0;
-  border-top:0.5px solid var(--card-border-color);
+  border-top:0.5px solid var(--state--unselect);
 }
 
 .buttons-card_button {
   margin-left: 6vw;
   margin-right: 6vw;
-  color: #ffffff;
+  color: var(--color--background);
   width: 40vw;
 }

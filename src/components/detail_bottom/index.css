@@ -6,7 +6,7 @@
   position: sticky;
   flex-direction: row;
   background-color: var(--color--background);
-  border-top: 3px solid var(--card-border-color);
+  border-top: 3px solid var(--state--unselect);
 }
 
 .bottom-home {
@@ -67,7 +67,7 @@
   margin-top: 1vh;
   margin-bottom: -1vh;
   background-color: var(--color--subordinate);
-  color: var(--card-bg-color);
+  color: var(--color--background);
   font-size: var(--text-h1);
   border-radius: var(--radius);
   height: 6vh;
@@ -83,8 +83,8 @@
   margin-top: 1vh;
   margin-bottom: -1vh;
   margin-left: 1vw;
-  background-color: var(--highlight-color);
-  color: var(--card-bg-color);
+  background-color: var(--color--main);
+  color: var(--text-color--white);
   font-size: var(--text-h1);
   border-radius: var(--radius);
   height: 6vh;

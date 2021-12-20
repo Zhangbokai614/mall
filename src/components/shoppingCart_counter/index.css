@@ -9,7 +9,7 @@
 .shoppingCart-counter-input {
   text-align: center;
   width: 8vw;
-  color: var(--shoppingCart-counter-input-number-color);
+  color: var(--color--main);
 }
 
 .shoppingCart-counter-button {
@@ -19,6 +19,6 @@
   width: 7vw;
   height: 7vw;
   background-color: var(--color--background);
-  color: var(--shoppingCart-counter-button-text-color);
-  border: 2px solid var(--shoppingCart-counter-button-border-color);
+  color: var(--color--main);
+  border: 2px solid var(--color--main);
 }

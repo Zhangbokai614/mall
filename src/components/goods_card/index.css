@@ -1,6 +1,6 @@
 .goods-image {
   height: 46vw;
-  border-radius: var(--cardImage-border-radius);
+  border-radius: var(--radius--min--t);
 }
 
 .focus-card {
@@ -24,8 +24,12 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 2;
   padding-top: 1vh;
-  padding-bottom: 1vh;
+  padding-bottom: 0.6vh;
   margin-left: 2vw;
   margin-right: 2vw;
 }
@@ -39,8 +43,8 @@
 }
 
 .price {
-  color: var(--highlight-font-color);
-  font-weight: var(--highlight-font-weight);
+  color: var(--color--main);
+  font-weight: var(--font-weight--coarse);
   font-size: var(--text-h1);
   display: flex;
   flex-flow: column;
@@ -49,9 +53,9 @@
 }
 
 .cny {
-  font-weight: var(--highlight-font-weight);
+  font-weight: var(--font-weight--coarse);
   font-size: var(--text-h1);
-  color: var(--highlight-font-color);
+  color: var(--color--main);
   margin-bottom: 1.2vh;
 }
 
@@ -67,15 +71,14 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  border-radius: var(--tag-radius);
-  color: var(--highlight-color);
-  border-color: var(--tag-color);
+  border-radius: var(--radius--min);
+  color: var(--color--main);
   border-width: 2px;
   margin-right: 2vw;
 }
 
 .card {
-  box-shadow: var(--shadow);
-  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow--l1);
+  border-radius: var(--radius--min);
   background-color: var(--color--background);
 }

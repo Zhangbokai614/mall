@@ -2,12 +2,12 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: var(--shadow);
-  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow--l1);
+  border-radius: var(---radius--min);
   margin: 2vw;
   width: 96vw;
   height: 18vh;
-  color: var(--card-bg-color);
+  color: var(--color--background);
   font-size: var(--text-h1);
 }
 
@@ -20,8 +20,8 @@
 }
 
 .card {
-  box-shadow: var(--shadow);
-  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow--l1);
+  border-radius: var(--radius--min);
   background-color: var(--color--background);
   margin-left: 2vw;
   margin-right: 2vw;

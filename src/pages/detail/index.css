@@ -15,7 +15,7 @@
     margin-left: 3vw;
     padding-bottom: 1vw;
     height: 5vw;
-    color: var(--highlight-color);
+    color: var(--color--main);
 }
 
 .top-show {
@@ -28,7 +28,7 @@
     white-space: nowrap;
     margin-top: 3vw;
     margin-left: 3vw;
-    color: var(--highlight-color);
+    color: var(--color--main);
     background-color: var(--color--background);
     border: 2px solid var(--color--main);
 }
@@ -62,10 +62,10 @@
     text-overflow: ellipsis;
     white-space: nowrap;
     color: #212121 100%;
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
+    box-shadow: var(--box-shadow--l1);
     height: 6vh;
     display: flex;
-    align-items: center;  
+    align-items: center;
     flex-direction: row;
 }
 

@@ -2,7 +2,7 @@
     margin-top: 2vh;
     text-align: left;
     background-color: var(--color--background);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.094);
+    box-shadow:var(--box-shadow--l1);
 }
 
 .container-intro {
