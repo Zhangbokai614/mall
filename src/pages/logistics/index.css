@@ -2,27 +2,27 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: var(--shadow);
-  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow--l1);
+  border-radius: var(---radius--mini);
   margin: 2vw;
   width: 96vw;
   height: 18vh;
-  color: var(--card-bg-color);
-  font-size: var(--order-state-font-size);
+  color: var(--color--background);
+  font-size: var(--text-h1);
 }
 
 .order-state--green {
-  background-color: #1EB268;
+  background-color: var(--state--succeed);
 }
 
 .order-state--red {
-  background-color: #FF4949;
+  background-color: var(--color--main);
 }
 
 .card {
-  box-shadow: var(--shadow);
-  border-radius: var(--card-border-radius);
-  background-color: var(--card-bg-color);
+  box-shadow: var(--box-shadow--l1);
+  border-radius: var(--radius--mini);
+  background-color: var(--color--background);
   margin-left: 2vw;
   margin-right: 2vw;
   padding-top: 1vh;
@@ -42,7 +42,7 @@
   padding-bottom: 1vh;
   padding-right: 4vw;
   padding-left: 4vw;
-  font-size: 12pt;
+  font-size: var(--text-p);
 }
 
 .timeline-card {
@@ -59,5 +59,5 @@
   width: 3.2vw;
   height: 3.2vw;
   border-radius: 100%;
-  background-color: var(--highlight-color);
+  background-color: var(--color--main);
 }

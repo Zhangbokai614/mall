@@ -4,18 +4,18 @@
   flex-wrap: nowrap;
   align-items: center;
   justify-content: space-around;
-  background-color: var(--card-bg-color);
+  background-color: var(--color--background);
   position: sticky;
   top: -0.1vh;
   height: 7.2vh;
-  box-shadow: var(--shadow);
+  box-shadow: var(--box-shadow--l1);
   z-index: 100;
 }
 
 .select {
   display: flex;
   flex-flow: column;
-  color: var(--highlight-font-color);
+  color: var(--color--main);
   height: 100%;
   white-space: nowrap;
   justify-content: space-around;
@@ -23,7 +23,7 @@
 }
 
 .unSelect {
-  color: var(--unselect-font-color);
+  color: var(--text-color--gray);
   height: 100%;
   white-space: nowrap;
   display: flex;
@@ -34,7 +34,7 @@
 
 
 #underscore {
-  background-color: var(--highlight-font-color);
+  background-color: var(--color--main);
   height: 0.36vh;
   width: 88%;
   border-radius: 100px;

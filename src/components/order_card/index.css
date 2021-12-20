@@ -1,9 +1,9 @@
 .order-card {
   display: flex;
   flex-flow: column;
-  box-shadow: var(--shadow);
-  border-radius: var(--card-border-radius);
-  background-color: var(--card-bg-color);
+  box-shadow: var(--box-shadow--l1);
+  border-radius: var(--radius);
+  background-color: var(--color--background);
   margin: 2vw;
   width: 96%;
 }
@@ -11,19 +11,19 @@
 #card-head {
   margin-left: 4vw;
   margin-right: 4vw;
-  margin-top: 4vw;
-  margin-bottom: 2vw;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  font-weight: 500;
+  font-weight: var(--font-weight--coarse);
 }
 
 #card-content {
   margin-left: 4vw;
   margin-right: 4vw;
-  margin-top: 2vw;
-  margin-bottom: 2vw;
+  margin-top: 2vh;
+  margin-bottom: 1vh;
   display: flex;
   flex-flow: column;
 }
@@ -44,31 +44,31 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  font-weight: 500;
+  font-weight: var(--font-weight--coarse);
 }
 
 #goods-specs {
-  color: darkgrey;
+  color: var(--text-color--gray);
   margin-top: 4vh;
 }
 
 #goods-info-image {
-  border-radius: var(--card-border-radius);
+  border-radius: var(--radius--mini);
   margin-right: 4vw;
 }
 
 #total {
   display: flex;
   flex-flow: row-reverse;
-  margin-top: 2vw;
-  font-weight: 500;
+  margin-top: 1vh;
+  /* font-weight: var(--font-weight); */
 }
 
 #card-foot {
   margin-left: 4vw;
   margin-right: 4vw;
-  margin-top: 2vw;
-  margin-bottom: 4vw;
+  margin-top: 1vh;
+  margin-bottom: 2vh;
   display: flex;
   flex-flow: row;
   justify-content: space-between;
@@ -76,7 +76,7 @@
 }
 
 #payment-time {
-  color: darkgrey;
+  color: var(--text-color--gray);
   align-items: center;
   line-height: 5vh;
 }
@@ -90,7 +90,7 @@
 
 .card-button {
   margin-left: 4vw;
-  color: #ffffff;
+  color: var(--text-color--white);
 }
 
 .cu-tag {

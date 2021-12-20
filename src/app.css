@@ -1,78 +1,45 @@
 page {
   background-color: #f4f4f4;
-  font-size: 10pt;
+  font-size: 1rem;
   font-family: SimHei;
+  font-weight: var(--font-weight--slender);
 
   /* page gray */
   filter: grayscale(0%);
 
   /* color */
-  --highlight-color: #ff4949;
-  --unselect-color: #434343;
-  --confing-color: #f7f7f7;
+  --color--main: #FF4949;
+  --color--background: #FFFFFF;
+  --color--subordinate: #FFD149;
 
-  --posters-shadow: 0 2px 4px 0 rgba(105, 105, 105, 0.084);
-  --shadow: 0 4px 6px 0 rgba(17, 17, 17, 0.04);
+  --text-color--black: #000000;
+  --text-color--white: #FFFFFF;
+  --text-color--gray: #BFBFBF;
 
-  /* icon */
-  --icon-gray: #d9d9d9;
-
-  /* card */
-  --posters-border-radius: 0 0 100px 100px;
-
-  --card-bg-color: #ffffff;
-  --card-border-color: #d9d9d9;
-  --card-border: 20px;
-  --card-border-radius: 20px 20px 20px 20px;
-  --cardImage-border-radius: 20px 20px 0px 0px;
-  --shoppingCard-string-font-size: 1rem;
-  --shoppingCard-number-font-size: 1.5rem;
+  --state--unselect: #BFBFBF;
+  --state--succeed: #1EB268;
+  --state--special: #686BBC;
 
   /* font */
-  --highlight-font-color: var(--highlight-color);
-  --unselect-font-color: var(--unselect-color);
+  --text--h1: 1.2rem;
+  --text--p: 1rem;
+  --font-weight--coarse: 500;
+  --font-weight--slender: 400;
 
-  --highlight-font-size: 12pt;
-  --highlight-font-weight: 500;
+  /* border */
+  /* border-width */
+  --border--width: 1px;
 
-  --order-state-font-size: 14pt;
-  /* tag */
-  --tag-radius: 10px;
+  /* border-radius */
+  --radius: 40px 40px 40px 40px;
+  --radius--t: 0 0 20px 20px;
+  --radius--b: 20px 20px 0 0;
+  --radius--mini: 20px 20px 20px 20px;
+  --radius--mini--t: 20px 20px 0 0;
+  --radius--mini--b: 0 0 20px 20px;
+  --radius--b-big: 0 0 100px 100px;
 
-  /* detail */
-  --detail-border-radius: 50px;
-  --detail-addcar-color:#ffd149;
-
-  /* ShoppingCart */
-  --ShoppingCard-null-font-h1-color: #777777;
-  --ShoppingCard-null-font-h2-color: #989898;
-
-  --shoppingCard-top-z-index: 10;
-  --shoppingCard-top-height: 8vh;
-  --shoppingCard-top-box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shoppingCard-top-border: var(--card-border);
-  --shoppingCard-top-background: var(--card-bg-color);
-  --shoppingCard-top-left-from-color: var(--card-border-color);
-  --shoppingCard-top-right-from-color: var(--highlight-color);
-
-  --shoppingCard-card-border-radius: var(--card-border-radius);
-  --shoppingCard-card-box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
-  --shoppingCart-card-confing-color: var(--card-border-color);
-  --shoppingCard-card-background: var(--card-bg-color);
-  --shoppingCart-card-Image-border: var(--card-border-radius);
-  --shoppingCart-card-number-color: var(--highlight-color);
-  --shoppingCart-card-circle-select: var(--highlight-color);
-  --shoppingCart-card-circle-unselect: var(--card-bg-color);
-  --shoppingCart-card-circle-border-color: var(--card-border-color);
-
-  --shoppingCart-counter-button-background: var(--card-bg-color);
-  --shoppingCart-counter-button-border-color: var(--highlight-color);
-  --shoppingCart-counter-button-text-color: var(--highlight-color);
-  --shoppingCart-counter-input-number-color: var(--highlight-color);
-
-  --shoppingCard-settlement-background: var(--card-bg-color);
-  --shoppingCard-settlement-text-color: var(--highlight-color);
-  --shoppingCard-settlement-button-color: var(--card-bg-color);
-  --shoppingCard-settlement-button-font-size: ;
-  --shoppingCard-settlement-button-background: var(--highlight-color);
+  /* box-shadow */
+  --box-shadow--l1: 0px 4px 6px 2px #e6e6e696;
+  --box-shadow--l2: 2px 4px 6px 2px #E6E6E6;
 }

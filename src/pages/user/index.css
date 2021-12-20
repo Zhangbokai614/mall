@@ -1,5 +1,5 @@
 .card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.084);
+  box-shadow: var(--box-shadow--l1);
 }
 
 .at-avatar {
@@ -16,7 +16,7 @@
 }
 
 #name-card {
-  background-color: #ff4949;
+  background-color: var(--color--main);
   border-radius: 0 0 72px 72px;
   height: 28vh;
   display: flex;
@@ -26,8 +26,8 @@
 }
 
 #name {
-  color: #FFFFFF;
-  font-size: 28px;
+  color: var(--text-color--white);
+  font-size: var(--text-h1);
   margin-bottom: 1vh;
 }
 
@@ -42,7 +42,7 @@
 #activity {
   height: 32vh;
   border-radius: 20px 20px 20px 20px;
-  margin-bottom: 4vw;
+  margin-bottom: 2vh;
   margin-left: 4vw;
   margin-right: 4vw;
 }
@@ -54,4 +54,6 @@
   margin-top: 1vh;
   margin-bottom: 1vh;
   justify-self: end;
+  color: var(--text-color--gray);
+  font-size: var(--text--p);
 }

@@ -33,22 +33,22 @@ class GoodsCard extends React.Component {
           src={imageSrc}
           mode='aspectFill'
         />
-        <View className='.at-article__h2 title'>
+        <View className='title'>
           {title}
         </View>
         <View id='goods-info-text'>
           <View id='prices'>
-            <View className='.at-article__h2 cny price'>
+            <View className='cny price'>
               ￥
             </View>
-            <View className='.at-article__h2 price'>
+            <View className='price'>
               {price}
             </View>
           </View>
           {
             activityName == 'null'
               ? null
-              : <AtTag className='.at-article__p' active='false'>{activityName}</AtTag>
+              : <AtTag active='false'>{activityName}</AtTag>
           }
         </View>
       </View>

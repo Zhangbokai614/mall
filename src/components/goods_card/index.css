@@ -1,13 +1,13 @@
 .goods-image {
   height: 46vw;
-  border-radius: var(--cardImage-border-radius);
+  border-radius: var(--radius--mini--t);
 }
 
 .focus-card {
   display: flex;
   flex-flow: column;
   width: 94vw;
-  margin-bottom: 2.8vw;
+  margin-bottom: 1.4vh;
 }
 
 .goods-card {
@@ -15,7 +15,7 @@
   flex-flow: column;
   justify-content: space-between;
   width: 46vw;
-  margin-bottom: 2.8vw;
+  margin-bottom: 1.4vh;
   margin-left: 1.4vw;
   margin-right: 1.4vw;
 }
@@ -24,6 +24,14 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
+  text-overflow: -o-ellipsis-lastline;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  line-clamp: 2;
+  padding-top: 1vh;
+  padding-bottom: 0.6vh;
+  margin-left: 2vw;
+  margin-right: 2vw;
 }
 
 #goods-info-text {
@@ -32,13 +40,12 @@
   flex-flow: row;
   justify-content: space-between;
   align-content: center;
-  padding-right: 2vw;
 }
 
 .price {
-  color: var(--highlight-font-color);
-  font-weight: var(--highlight-font-weight);
-  font-size: var(--highlight-font-size);
+  color: var(--color--main);
+  font-weight: var(--font-weight--coarse);
+  font-size: var(--text-h1);
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -46,16 +53,16 @@
 }
 
 .cny {
-  font-weight: var(--highlight-font-weight);
-  font-size: var(--highlight-font-size);
-  color: var(--highlight-font-color);
-  margin-right: -1.4vh;
+  font-weight: var(--font-weight--coarse);
+  font-size: var(--text-h1);
+  color: var(--color--main);
   margin-bottom: 1.2vh;
 }
 
 #prices {
   display: flex;
   flex-flow: row;
+  margin-left: 2vw;
 }
 
 .at-tag {
@@ -64,14 +71,14 @@
   flex-flow: row;
   justify-content: center;
   align-items: center;
-  border-radius: var(--tag-radius);
-  color: var(--highlight-color);
-  border-color: var(--tag-color);
+  border-radius: var(--radius--mini);
+  color: var(--color--main);
   border-width: 2px;
+  margin-right: 2vw;
 }
 
 .card {
-  box-shadow: var(--shadow);
-  border-radius: var(--card-border-radius);
-  background-color: var(--card-bg-color);
+  box-shadow: var(--box-shadow--l1);
+  border-radius: var(--radius--mini);
+  background-color: var(--color--background);
 }

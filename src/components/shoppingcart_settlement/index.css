@@ -6,7 +6,7 @@
   height: 8.5vh;
   position: fixed;
   bottom: 0;
-  background: var(--shoppingCard-settlement-background);
+  background: var(--color--background);
 }
 
 .shoppingCart-settlement-levelTwo {
@@ -21,20 +21,20 @@
 }
 
 .shoppingCart-settlement-money {
-  color: var(--shoppingCard-settlement-text-color);
+  color: var(--color--main);
 }
 
 .shoppingCart-settlement-number {
-  color: var(--shoppingCard-settlement-text-color);
+  color: var(--color--main);
 }
 
 .shoppingCart-settlement-button {
   margin-left: 2.5vw;
   margin-right: 2vw;
   width: 24vw;
-  color: var(--shoppingCard-settlement-button-color);
-  font-size: var(--shoppingCard-settlement-button-font-size);
-  background-color: var(--shoppingCard-settlement-button-background);
+  color: var(--color--background);
+  font-size: var(--text-h1);
+  background-color: var(--color--main);
 }
 
 .shoppingCart-settlement-circle-margin {
@@ -45,11 +45,11 @@
 .unselected {
   width: 45px;
   height: 45px;
-  background: var(--shoppingCart-card-circle-unselect);
+  background: var(--color--background);
   border: solid;
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: var(--shoppingCart-card-circle-border-color);
+  border-color: var(--state--unselect);
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
   border-radius: 50px;
@@ -59,7 +59,7 @@
   width: 45px;
   height: 45px;
   border-radius: 100%;
-  background: var(--shoppingCart-card-circle-select);
+  background: var(--color--main);
   background-image: url('../../../src/asset/images/icon/check.svg');
   background-position: center center;
   background-repeat: no-repeat;

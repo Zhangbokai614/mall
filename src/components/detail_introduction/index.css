@@ -1,12 +1,12 @@
 .main-intro {
     margin-top: 2vh;
     text-align: left;
-    background-color: var(--card-bg-color);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.094);
+    background-color: var(--color--background);
+    box-shadow:var(--box-shadow--l1);
 }
 
 .container-intro {
-    font-size: 14pt;
+    font-size: var(--text-h1);
     margin-left: 4vw;
     height: 4vh;
     display: flex;
@@ -19,7 +19,7 @@
 }
 
 .container-intro-image {
-    margin-top: 5vw;
+    margin-top: 2vh;
     margin-right: 4vw;
 }
 

@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
-import { View , Image} from '@tarojs/components'
+import { View, Image } from '@tarojs/components'
 
 import { Get } from '../../global-data/index'
 import * as homeApi from './service'
@@ -45,42 +45,42 @@ export default class Index extends Component {
         const images = this.state.images
         return (
             this.state.loading
-            ? null
-            : <View>
-                <View className='title'>
-                    {title}
+                ? null
+                : <View>
+                    <View className='title'>
+                        {title}
+                    </View>
+                    <View className='time'>
+                        {time}
+                    </View>
+                    <View className='images'>
+                        <Image
+                            src={images[0]}
+                            style='width: 100vw; height:100vw'
+                        />
+                    </View>
+                    <View className='intro'>
+                        {Get('languages').feature.firstIntro}
+                    </View>
+                    <View className='images'>
+                        <Image
+                            src={images[1]}
+                            style='width: 100vw; height:100vw'
+                        />
+                    </View>
+                    <View className='intro'>
+                        {Get('languages').feature.secondIntro}
+                    </View>
+                    <View className='images'>
+                        <Image
+                            src={images[2]}
+                            style='width: 100vw; height:100vw'
+                        />
+                    </View>
+                    <View className='intro'>
+                        {Get('languages').feature.thirdIntro}
+                    </View>
                 </View>
-                <View className='time at-article__info'>
-                    {time}
-                </View>
-                <View className='images'>
-                   <Image
-                   src={images[0]}
-                   style='width: 100vw; height:100vw'
-                   />
-                </View>
-                <View className='intro'>
-                {Get('languages').feature.firstIntro}
-                </View>
-                <View className='images'>
-                    <Image
-                    src={images[1]}
-                    style='width: 100vw; height:100vw'
-                    />
-                </View>
-                <View className='intro'>
-                {Get('languages').feature.secondIntro}
-                </View>
-                <View className='images'>
-                    <Image
-                    src={images[2]}
-                    style='width: 100vw; height:100vw'
-                    />
-                </View>
-                <View className='intro'>
-                {Get('languages').feature.thirdIntro}
-                </View>
-            </View>
         )
     }
 

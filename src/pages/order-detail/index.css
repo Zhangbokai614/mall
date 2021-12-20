@@ -1,39 +1,35 @@
-page {
-  padding-bottom: 10vh;
-}
-
 #order-state {
   display: flex;
   justify-content: center;
   align-items: center;
-  box-shadow: var(--shadow);
-  border-radius: var(--card-border-radius);
+  box-shadow: var(--box-shadow--l1);
+  border-radius: var(--radius--mini);
   margin: 2vw;
   width: 96vw;
   height: 18vh;
-  color: var(--card-bg-color);
-  font-size: var(--order-state-font-size);
+  color: var(--color--background);
+  font-size: var(--text-h1);
 }
 
 .order-state--green {
-  background-color: #1eb268;
+  background-color: var(--state--succeed);
 }
 
 .order-state--red {
-  background-color: #FF4949;
+  background-color: var(--color--main);
 }
 
 .text {
   margin-left: 2vw;
-  margin-top: 4vw;
-  margin-bottom: 4vw;
-  font-size: 14pt;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
+  font-size: var(--text-h1);
 }
 
 .card {
-  box-shadow: var(--shadow);
-  border-radius: var(--card-border-radius);
-  background-color: var(--card-bg-color);
+  box-shadow: var(--box-shadow--l1);
+  border-radius: var(--radius--mini);
+  background-color: var(--color--background);
   margin-right: 2vw;
   margin-left: 2vw;
   width: 96vw;
@@ -58,7 +54,7 @@ page {
 #logistics_info {
   display: flex;
   flex-flow: column;
-  font-size: 12pt;
+  font-size: var(--text-p);
 }
 
 #logistics_info_recipient {
@@ -72,7 +68,7 @@ page {
   /* margin-bottom: 2vh; */
   margin-left: 2vw;
   margin-right: 2vw;
-  font-weight: 500;
+  /* font-weight: var(--font-weight); */
 }
 
 #logistics_info_address {
@@ -80,7 +76,7 @@ page {
   margin-bottom: 2vh;
   margin-left: 2vw;
   margin-right: 2vw;
-  color: darkgray;
+  color: var(--text-color--gray);
 }
 
 #logistics_chevron-right {
@@ -88,13 +84,13 @@ page {
   flex-flow: row-reverse;
   align-self: center;
   flex: 1;
-  color: var(--icon-gray);
+  color: var(--state--unselect);
 }
 
 .goods-info {
   display: flex;
   flex-flow: row;
-  /* font-size: var(--order-state-font-size); */
+  /* font-size: var( --text--h1); */
   justify-content: space-between;
   margin-right: 4vw;
   padding-top: 1vh;
@@ -105,32 +101,32 @@ page {
   flex-flow: row;
   padding-top: 1vh;
   padding-bottom: 1vh;
-  /* font-size: var(--order-state-font-size); */
+  /* font-size: var( --text--h1); */
 }
 
 .info-type {
   margin-left: 4vw;
   margin-right: 4vw;
-  margin-top: 2vw;
-  margin-bottom: 2vw;
-  color: darkgrey;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
+  color: var(--text-color--gray);
 }
 
 .info-text {
-  margin-top: 2vw;
-  margin-bottom: 2vw;
+  margin-top: 1vh;
+  margin-bottom: 1vh;
 }
 
 .goods-card {
-  margin-top: 4vw;
-  margin-bottom: 4vw;
+  margin-top: 2vh;
+  margin-bottom: 2vh;
   display: flex;
   flex-flow: column;
   padding-bottom: 1vh;
 }
 
 #goods-card_goods-info {
-  margin-top: 4vw;
+  margin-top: 2vh;
   display: flex;
   flex-flow: row;
   width: 100%;
@@ -146,16 +142,16 @@ page {
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  font-weight: 500;
+  font-weight: var(--font-weight--coarse);
 }
 
 #goods-info_text_specs {
-  color: darkgrey;
+  color: var(--text-color--gray);
   margin-top: 2vh;
 }
 
 #goods-info_image {
-  border-radius: var(--card-border-radius);
+  border-radius: var(--radius--mini);
   margin-right: 4vw;
   margin-left: 4vw;
 }
@@ -164,21 +160,21 @@ page {
   display: flex;
   flex-flow: row-reverse;
   align-content: center;
-  font-weight: 500;
+  /* font-weight: var(--font-weight); */
   margin-right: 4vw;
-  margin-top: 2vw;
+  margin-top: 1vh;
   margin-bottom: 2vw;
 }
 
 #total_text {
-  line-height: 14pt;
+  line-height: 1rem;
 }
 
 #total_cost {
-  color: #FF4949;
-  font-weight: 600;
-  font-size: 14pt;
-  line-height: 14pt;
+  color: var(--color--main);
+  font-weight: var(--font-weight--coarse);
+  font-size: var(--text--h1);
+  line-height: 1rem;
 }
 
 #contact-card {
@@ -188,8 +184,8 @@ page {
 }
 
 #contact-card-icon {
-  height: var(--order-state-font-size);
-  width: var(--order-state-font-size);
+  height: var( --text--h1);
+  width: var( --text--h1);
   margin-right: 2vw;
 }
 
@@ -207,8 +203,8 @@ button::after {
   flex-flow: row;
   justify-content: space-between;
   align-content: center;
-  background-color: var(--card-bg-color);
-  position:fixed;
+  background-color: var( --color--background);
+  position:sticky;
   bottom: 0;
   padding-top: 2vh;
   padding-bottom: 2vh;
@@ -216,12 +212,12 @@ button::after {
   height: 6vh;
   z-index: 100;
   border-radius: 20px 20px 0 0;
-  border-top:0.5px solid var(--card-border-color);
+  border-top:0.5px solid var(--state--unselect);
 }
 
 .buttons-card_button {
   margin-left: 6vw;
   margin-right: 6vw;
-  color: #ffffff;
+  color: var(--color--background);
   width: 40vw;
 }
