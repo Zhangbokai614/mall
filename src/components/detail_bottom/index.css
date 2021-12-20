@@ -24,6 +24,10 @@
   background-color: var(--color--background);
 }
 
+.bottom-home::after {
+  border: none;
+}
+
 .bottom-service {
   height: 6vh;
   width: 12vw;
@@ -39,6 +43,10 @@
   background-color: var(--color--background);
 }
 
+.bottom-service::after {
+  border: none;
+}
+
 .bottom-goodscar {
   display: flex;
   flex-direction: column;
@@ -51,6 +59,10 @@
   padding-bottom: 3vh;
   border: none;
   background-color: var(--color--background);
+}
+
+.bottom-goodscar::after {
+  border: none;
 }
 
 .bottom-container-left {
@@ -100,8 +112,12 @@
   width: 40vw;
 }
 
-.container-left-title {
-  margin-bottom: 1vh;
+ .container-left-title {
+  margin-top: -1vh;
   font-size: var(--text-h1);
   white-space: nowrap;
 }
+
+/* .bottom-container-avatar {
+
+} */
