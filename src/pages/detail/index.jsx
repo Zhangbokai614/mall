@@ -61,7 +61,7 @@ export default class Index extends Component {
             loading: false,
         })
         Taro.hideLoading()
-		
+
     }
 
     render() {
@@ -70,7 +70,7 @@ export default class Index extends Component {
         const afterSalesDetail = this.state.afterSales
         const afterSalesFree = this.state.afterSalesFree
         const activityName = this.state.activityName
-		const time = this.state.endTime
+        const time = this.state.endTime
 
         const nowTime = new Date()
         const endDate = new Date(time)
@@ -92,24 +92,24 @@ export default class Index extends Component {
                             ￥{info[0].price}
                         </View>
                         {
-                            this.state.showElem?(
-                            <View className='top-show'>
-                                <AtTag className='top-show-title'>
-                                    {activityName}
-                                </AtTag>
-                                <AtCountdown
-                                    isCard
-                                    isShowDay
-                                    format={{day: Get('languages').day, hours: ':', minutes: ':', seconds: '' }}
-                                    day={days}
-                                    hours={hours}
-                                    minutes={minutes}
-                                    seconds={seconds}
-                                    onTimeUp={this.onTimeUp.bind(this)}
-                                    className='top-show-count'>
-                                </AtCountdown>
-                            </View>
-                            ):null
+                            this.state.showElem ? (
+                                <View className='top-show'>
+                                    <AtTag className='top-show-title'>
+                                        {activityName}
+                                    </AtTag>
+                                    <AtCountdown
+                                        isCard
+                                        isShowDay
+                                        format={{ day: Get('languages').day, hours: ':', minutes: ':', seconds: '' }}
+                                        day={days}
+                                        hours={hours}
+                                        minutes={minutes}
+                                        seconds={seconds}
+                                        onTimeUp={this.onTimeUp.bind(this)}
+                                        className='top-show-count'>
+                                    </AtCountdown>
+                                </View>
+                            ) : null
                         }
                         <button
                             open-type='share'

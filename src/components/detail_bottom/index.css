@@ -24,6 +24,10 @@
   background-color: var(--card-bg-color);
 }
 
+.bottom-home::after {
+  border: none;
+}
+
 .bottom-service {
   height: 6vh;
   width: 12vw;
@@ -39,6 +43,10 @@
   background-color: var(--card-bg-color);
 }
 
+.bottom-service::after {
+  border: none;
+}
+
 .bottom-goodscar {
   display: flex;
   flex-direction: column;
@@ -51,6 +59,10 @@
   padding-bottom: 3vh;
   border: none;
   background-color: var(--card-bg-color);
+}
+
+.bottom-goodscar::after {
+  border: none;
 }
 
 .bottom-container-left {
@@ -100,9 +112,12 @@
   width: 40vw;
 }
 
-/* .container-left-title {
+ .container-left-title {
+  margin-top: -1vh;
+  font-size: 2vh;
+  white-space: nowrap;
 }
 
-.bottom-container-avatar {
+/* .bottom-container-avatar {
 
 } */
