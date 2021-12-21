@@ -21,13 +21,20 @@
     align-items: row;
 }
 
-.top-show-title {
-    display: flex;
-    white-space: nowrap;
+.top-show-ctivity{
     margin-left: 3vw;
+    display: flex; 
+    align-items: center; 
+    justify-items: center; 
+}
+
+.top-show-title {
+    padding-left: 2vw;
+    padding-right: 2vw;
     color: var(--color--main);
     background-color: var(--color--background);
     border: 2px solid var(--color--main);
+    border-radius: var(--radiux--s);
 }
 
 .top-show-count {

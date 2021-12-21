@@ -28,7 +28,7 @@ class Introduction extends React.Component {
                     <Image
                         className='container-intro-image'
                         src={Vertical}
-                        style='width:2vw; height:9vw;'
+                        style='width:1.5vw; height:4vh;'
                     >
                     </Image>
                     <View className='container-intro-title'>

@@ -94,9 +94,11 @@ export default class Index extends Component {
                         {
                             this.state.showElem ? (
                                 <View className='top-show'>
-                                    <AtTag className='top-show-title'>
-                                        {activityName}
-                                    </AtTag>
+                                    <View className='top-show-ctivity'>
+                                        <View className='top-show-title'>
+                                            {activityName}
+                                        </View>
+                                    </View>
                                     <AtCountdown
                                         isCard
                                         isShowDay
@@ -138,7 +140,7 @@ export default class Index extends Component {
                             <Image
                                 className='container-intro-image'
                                 src={Vertical}
-                                style='width:2vw; height:9vw;'
+                                style='width:1.5vw; height:4vh;'
                             >
                             </Image>
                             <View className='main-bottom-title'>

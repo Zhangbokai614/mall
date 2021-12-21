@@ -219,32 +219,38 @@ class GoodsSelection extends React.Component {
                 {Get('languages').detailPage.service}
               </View>
               <View className='container-wrapper'>
-                <Image
-                  className='container-images'
-                  src={Fruit}
-                  style='width:5vw; height:5vw;'
-                  mode='aspectFit'
-                />
-                <View className='container-service-text'>
-                  {Get('languages').detailPage.compensation}
+              <View className='container-wrapper-content'>
+                  <Image
+                    className='container-images'
+                    src={SevenDays}
+                    style='width:5vw; height:5vw;'
+                    mode='aspectFit'
+                  />
+                  <View className='container-service-text'>
+                    {Get('languages').detailPage.returnGoods}
+                  </View>
                 </View>
-                <Image
-                  className='container-images'
-                  src={FreeMoney}
-                  style='width:5vw; height:5vw;'
-                  mode='aspectFit'
-                />
-                <View className='container-service-text'>
-                  {Get('languages').detailPage.freeMoney}
+                <View className='container-wrapper-content'>
+                  <Image
+                    className='container-images'
+                    src={Fruit}
+                    style='width:5vw; height:5vw;'
+                    mode='aspectFit'
+                  />
+                  <View className='container-service-text'>
+                    {Get('languages').detailPage.compensation}
+                  </View>
                 </View>
-                <Image
-                  className='container-images'
-                  src={SevenDays}
-                  style='width:5vw; height:5vw;'
-                  mode='aspectFit'
-                />
-                <View className='container-service-text'>
-                  {Get('languages').detailPage.returnGoods}
+                <View className='container-wrapper-content'>
+                  <Image
+                    className='container-images'
+                    src={FreeMoney}
+                    style='width:5vw; height:5vw;'
+                    mode='aspectFit'
+                  />
+                  <View className='container-service-text'>
+                    {Get('languages').detailPage.freeMoney}
+                  </View>
                 </View>
               </View>
             </View>
