@@ -55,5 +55,5 @@
   margin-bottom: 1vh;
   justify-self: end;
   color: var(--text-color--gray);
-  font-size: var(--text--p);
+  font-size: var(--text--info);
 }
