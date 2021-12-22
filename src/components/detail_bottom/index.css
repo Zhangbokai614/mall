@@ -1,5 +1,5 @@
 .main-bottom {
-  bottom: 0vh;
+  bottom: 0;
   height: 8vh;
   z-index: 100;
   display: flex;
@@ -14,8 +14,8 @@
   width: 12vw;
   padding-bottom: 3vh;
   margin-top: 1vh;
-  margin-bottom: -1vh;
   margin-left: 1vw;
+  font-size: var(--text--info);
   border: none;
   display: flex;
   align-items: center;
@@ -32,8 +32,8 @@
   height: 6vh;
   width: 12vw;
   margin-top: 1vh;
-  margin-bottom: -1vh;
   margin-left: -20vw;
+  font-size: var(--text--info);
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -52,9 +52,9 @@
   flex-direction: column;
   height: 6vh;
   margin-top: 1vh;
-  margin-bottom: -1vh;
   margin-left: -20vw;
   width: 12vw;
+  font-size: var(--text--info);
   justify-content: space-between;
   padding-bottom: 3vh;
   border: none;
@@ -119,5 +119,4 @@
 }
 
 /* .bottom-container-avatar {
-
 } */
