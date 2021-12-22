@@ -7,7 +7,7 @@
   display: flex;
   align-items: center;
   justify-items: center;
-  height: 5vh;
+  height: 6vh;
 }
 
 .top-banner-price {
@@ -28,7 +28,8 @@
   color: var(--color--main);
   background-color: var(--color--background);
   border: 2px solid var(--color--main);
-  font-size: var(--text--h1);
+  font-size: var(--text--info);
+  border-radius: var(--radius--mini--small);
 }
 
 .top-show-count {
@@ -39,11 +40,14 @@
 }
 
 .top-show-share {
+  height: auto;
+
   margin-left: 86vw;
   display: flex;
   justify-items: row;
   position: absolute;
-  background-color: var(--color--background);
+  background-color: chartreuse;
+  /* background-color: var(--color--background); */
 }
 
 .top-show-share::after {
@@ -53,7 +57,7 @@
 .top-show-info {
   padding-left: 3vw;
   background-color: var(--color--background);
-  /* font-size: var(--text-h1); */
+  font-size: var(--text-h1);
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -104,13 +108,13 @@
     opacity: 0;
     -webkit-transform: translate(0, 100%);
     transform: translate(0, 100%);
-    transition-duration: 5s;
-    -webkit-transition-duration: 5s;
+    -webkit-transition: all ease-in-out .3s;
+    transition: all ease-in-out .3s;
 }
 
 .showMove {
     opacity: 1;
-    -webkit-transform: translate(0, 0%);
+    -webkit-transform: translate(0, 0);
     transform: translate(0, 0);
 }
 

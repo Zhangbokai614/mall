@@ -168,8 +168,8 @@ export default class Index extends Component {
 					/>
 					<View className='top-banner'>
 						<View className='top-banner-price'>
-						{Get('languages').cny}
-						{info[0].price}
+							{Get('languages').cny}
+							{info[0].price}
 						</View>
 						{
 							this.state.showElem ? (
@@ -180,6 +180,7 @@ export default class Index extends Component {
 										</View>
 									</View>
 									<AtCountdown
+										style='width:10vh; height:15vh'
 										isCard
 										isShowDay
 										format={{ day: Get('languages').day, hours: ':', minutes: ':', seconds: '' }}
@@ -198,7 +199,7 @@ export default class Index extends Component {
 							className='top-show-share'>
 							<Image
 								src={Share}
-								style='width:6vw; height:6vw;'
+								style='width:28px; height:28px;'
 							/>
 						</button>
 					</View>
