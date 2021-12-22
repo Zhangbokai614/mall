@@ -32,9 +32,8 @@ page {
 
   /* border-radius */
   --radius: 40px 40px 40px 40px;
-  --radius--t: 0 0 20px 20px;
-  --radius--b: 20px 20px 0 0;
-  --radiux--s: 10px 10px 10px 10px;
+  --radius--b: 0 0 40px 40px;
+  --radius--t: 40px 40px 0 0;
   --radius--mini: 20px 20px 20px 20px;
   --radius--mini--t: 20px 20px 0 0;
   --radius--mini--b: 0 0 20px 20px;
@@ -42,5 +41,6 @@ page {
 
   /* box-shadow */
   --box-shadow--l1: 0px 4px 6px 2px #e6e6e696;
+  --box-shadow--l1--t: 0px -4px 6px -2px #e6e6e696;
   --box-shadow--l2: 2px 4px 6px 2px #E6E6E6;
 }
