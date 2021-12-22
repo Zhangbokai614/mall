@@ -2,7 +2,7 @@
   display: flex;
   flex-flow: column;
   box-shadow: var(--box-shadow--l1);
-  border-radius: var(--radius);
+  border-radius: var(--radius--mini);
   background-color: var(--color--background);
   margin: 2vw;
   width: 96%;

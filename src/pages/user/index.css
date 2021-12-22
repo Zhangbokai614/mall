@@ -10,11 +10,6 @@
   margin-bottom: 2vh;
 }
 
-#avatar-box_image {
-  height: 12vh;
-  width: 12vh;
-  border-radius: var(--radius);
-}
 
 #body {
   display: flex;
@@ -48,7 +43,7 @@
 
 #activity {
   height: 32vh;
-  border-radius: 20px 20px 20px 20px;
+  border-radius: var(--radius);
   margin-bottom: 2vh;
   margin-left: 4vw;
   margin-right: 4vw;

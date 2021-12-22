@@ -211,9 +211,9 @@ button::after {
   width: 100vw;
   height: 6vh;
   z-index: 100;
-  border-radius: 20px 20px 0 0;
-  border-top:0.5px solid var(--state--unselect);
+  border-radius: var(--radius--mini--t);
   font-size: var(--text--h1);
+  box-shadow: var(--box-shadow--l1--t);
 }
 
 .buttons-card_button {

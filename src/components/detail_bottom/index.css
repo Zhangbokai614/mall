@@ -6,7 +6,7 @@
   position: sticky;
   flex-direction: row;
   background-color: var(--color--background);
-  border-top: 3px solid var(--state--unselect);
+  box-shadow: var(--box-shadow--l1--t);
 }
 
 .bottom-home {
@@ -81,7 +81,7 @@
   background-color: var(--color--subordinate);
   color: var(--color--background);
   font-size: var(--text--h1);
-  border-radius: var(--radius);
+  border-radius: var(--radius--mini);
   height: 6vh;
   margin-left: -20vw;
   width: 50vw;
@@ -98,7 +98,7 @@
   background-color: var(--color--main);
   color: var(--text-color--white);
   font-size: var(--text--h1);
-  border-radius: var(--radius);
+  border-radius: var(--radius--mini);
   height: 6vh;
   width: 50vw;
   border: none;
