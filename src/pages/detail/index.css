@@ -11,7 +11,7 @@
 }
 
 .top-banner-price {
-  /* font-size: var(--text--h1); */
+  font-size: var(--text--h1);
   margin-left: 3vw;
   color: var(--color--main);
 }
