@@ -65,7 +65,7 @@ class OrderCard extends React.Component {
             </View>
           </View>
           <View id='total'>
-            {text.total + orderInfo.number + text.sumTotal + orderInfo.cost}
+            {text.total + orderInfo.number + text.sumTotal +  Get('languages').cny + orderInfo.cost}
           </View>
         </View>
         <View id='card-foot'>

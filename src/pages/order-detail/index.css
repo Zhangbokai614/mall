@@ -8,7 +8,7 @@
   width: 96vw;
   height: 18vh;
   color: var(--color--background);
-  font-size: var(--text-h1);
+  font-size: var(--text--h1);
 }
 
 .order-state--green {
@@ -23,7 +23,7 @@
   margin-left: 2vw;
   margin-top: 2vh;
   margin-bottom: 2vh;
-  font-size: var(--text-h1);
+  font-size: var(--text--h1);
 }
 
 .card {
@@ -90,7 +90,6 @@
 .goods-info {
   display: flex;
   flex-flow: row;
-  /* font-size: var( --text--h1); */
   justify-content: space-between;
   margin-right: 4vw;
   padding-top: 1vh;
@@ -101,7 +100,6 @@
   flex-flow: row;
   padding-top: 1vh;
   padding-bottom: 1vh;
-  /* font-size: var( --text--h1); */
 }
 
 .info-type {
@@ -143,6 +141,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   font-weight: var(--font-weight--coarse);
+  font-size: var(--text--h1);
 }
 
 #goods-info_text_specs {
@@ -174,7 +173,7 @@
   color: var(--color--main);
   font-weight: var(--font-weight--coarse);
   font-size: var(--text--h1);
-  line-height: 1rem;
+  line-height: var(--text--h1);
 }
 
 #contact-card {
@@ -191,6 +190,7 @@
 
 #contact-card_button {
   background-color: rgba(255, 255, 255, 0);
+  font-size: var(--text--h1);
 }
 
 button::after {
@@ -213,6 +213,7 @@ button::after {
   z-index: 100;
   border-radius: 20px 20px 0 0;
   border-top:0.5px solid var(--state--unselect);
+  font-size: var(--text--h1);
 }
 
 .buttons-card_button {
@@ -220,4 +221,5 @@ button::after {
   margin-right: 6vw;
   color: var(--color--background);
   width: 40vw;
+  font-size: var(--text--h1);
 }

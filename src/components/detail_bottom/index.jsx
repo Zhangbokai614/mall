@@ -40,9 +40,7 @@ class Bottomdetail extends React.Component {
   };
 
   render() {
-
     return (
-
       <View className='main-bottom'>
         <button
           className='bottom-home'

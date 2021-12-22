@@ -3,12 +3,12 @@
   justify-content: center;
   align-items: center;
   box-shadow: var(--box-shadow--l1);
-  border-radius: var(---radius--mini);
+  border-radius: var(--radius--mini);
   margin: 2vw;
   width: 96vw;
   height: 18vh;
   color: var(--color--background);
-  font-size: var(--text-h1);
+  font-size: var(--text--h1);
 }
 
 .order-state--green {
@@ -42,7 +42,7 @@
   padding-bottom: 1vh;
   padding-right: 4vw;
   padding-left: 4vw;
-  font-size: var(--text-p);
+  /* font-size: var(--text-p); */
 }
 
 .timeline-card {

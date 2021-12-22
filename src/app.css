@@ -1,7 +1,6 @@
 page {
   background-color: #f4f4f4;
-  font-size: 1rem;
-  font-family: SimHei;
+  font-size: 28px;
   font-weight: var(--font-weight--slender);
 
   /* page gray */
@@ -21,9 +20,9 @@ page {
   --state--special: #686BBC;
 
   /* font */
-  --text--h1: 1.2rem;
-  --text--p: 1rem;
-  --text--info: 0.8rem;
+  --text--h1: 32px;
+  --text--p: 28px;
+  --text--info: 24px;
   --font-weight--coarse: 500;
   --font-weight--slender: 400;
 

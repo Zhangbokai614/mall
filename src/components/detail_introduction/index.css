@@ -6,7 +6,7 @@
 }
 
 .container-intro {
-    font-size: var(--text-h1);
+    font-size: var(--text--h1);
     margin-left: 4vw;
     height: 4vh;
     display: flex;
@@ -16,6 +16,7 @@
 
 .container-intro-title {
     padding-top: 3vh;
+    font-size: var(--text--h1);
 }
 
 .container-intro-image {

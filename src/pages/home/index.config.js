@@ -1,5 +1,6 @@
 import languages from '../../asset/languages/zn-cn.json'
 
 export default {
-  navigationBarTitleText: languages.home
+  navigationBarTitleText: languages.home,
+  enablePullDownRefresh: true
 }

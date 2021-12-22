@@ -5,6 +5,7 @@ page {
 .title {
     margin-top: 4vh;
     margin-left: 4vw;
+    font-size: var(--text--h1);
 }
 
 .time {

@@ -21,4 +21,5 @@
   background-color: var(--color--background);
   color: var(--color--main);
   border: 2px solid var(--color--main);
+  font-size: var(--text--h1);
 }

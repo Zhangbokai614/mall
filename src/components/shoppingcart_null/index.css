@@ -27,10 +27,11 @@
   justify-content: center;
   margin-top: 1.2vh;
   margin-bottom: 1.5vh;
-  font-size: var(--text-h1);
+  font-size: var(--text--h1);
   color: var(--text-color--gray);
 }
 
 .shoppingCart-null-button {
   width: 30vw;
+  font-size: var(--text--h1);
 }

@@ -45,6 +45,7 @@
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
   font-weight: var(--font-weight--coarse);
+  font-size: var(--text--h1);
 }
 
 #goods-specs {
@@ -86,11 +87,13 @@
   flex-flow: row;
   justify-content: space-between;
   align-content: center;
+  font-size: var(--text--h1);
 }
 
 .card-button {
   margin-left: 4vw;
   color: var(--text-color--white);
+  font-size: var(--text--h1);
 }
 
 .cu-tag {

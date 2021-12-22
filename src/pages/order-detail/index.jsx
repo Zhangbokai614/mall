@@ -50,6 +50,11 @@ export default class Index extends Component {
     })
   }
 
+  checkLogistics(orderCode) {
+    Taro.navigateTo({
+      url: '/pages/logistics/index?orderCode=' + orderCode
+    })
+  }
 
   render() {
     const orderInfo = this.state.orderInfo
@@ -162,7 +167,14 @@ export default class Index extends Component {
             </button>
           </View>
           <View id='buttons-card'>
-            <CuButton className='buttons-card_button' color='yellow' size="large" round inline>{text.CheckLogistics}</CuButton>
+            <CuButton 
+            className='buttons-card_button' 
+            color='yellow' 
+            size="large" 
+            round 
+            inline
+            onClick={this.checkLogistics.bind(this, orderInfo.order_code)}
+            >{text.CheckLogistics}</CuButton>
             <CuButton className='buttons-card_button' color='red' size="large" round inline>{text.confirmTheReceiptOfGoods}</CuButton>
           </View>
         </View>

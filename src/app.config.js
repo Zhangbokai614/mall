@@ -1,6 +1,8 @@
 import languages from "./asset/languages/zn-cn.json";
 
 export default {
+  "lazyCodeLoading": "requiredComponents",
+
   pages: [
     "pages/home/index",
     "pages/feature/index",

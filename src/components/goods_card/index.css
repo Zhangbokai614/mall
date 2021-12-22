@@ -32,6 +32,7 @@
   padding-bottom: 0.6vh;
   margin-left: 2vw;
   margin-right: 2vw;
+  font-size: var(--text--h1);
 }
 
 #goods-info-text {
@@ -45,7 +46,7 @@
 .price {
   color: var(--color--main);
   font-weight: var(--font-weight--coarse);
-  font-size: var(--text-h1);
+  font-size: var(--text--h1);
   display: flex;
   flex-flow: column;
   justify-content: center;
@@ -54,7 +55,7 @@
 
 .cny {
   font-weight: var(--font-weight--coarse);
-  font-size: var(--text-h1);
+  font-size: var(--text--h1);
   color: var(--color--main);
   margin-bottom: 1.2vh;
 }

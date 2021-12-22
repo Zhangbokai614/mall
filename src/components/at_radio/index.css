@@ -15,6 +15,7 @@
 .container-title {
     margin-left: 4vw;
     white-space: nowrap;
+    font-size: var(--text--h1);
 }
 
 .container-content {
@@ -33,7 +34,7 @@
 .show-addcar {
     width: 40%;
     height: 6vh;
-    font-size: var(--text-h1);
+    font-size: var(--text--h1);
     padding-top: 1vh;
     margin-top: 17vh;
     margin-left: 8%;
@@ -52,7 +53,7 @@
     height: 6vh;
     margin-top: 17vh;
     margin-left: 53%;
-    font-size: var(--text-h1);
+    font-size: var(--text--h1);
     border: none;
     display:inline-block;
     align-items: center;
@@ -82,6 +83,7 @@
 .show-title {
     margin-top: 1vh;
     margin-left: 5vw;
+    font-size: var(--text--h1);
 }
 
 .show-number {

@@ -42,6 +42,7 @@
   width: 45vw;
   margin-top: 0.5vh;
   margin-bottom: 2vh;
+  font-size: var(--text--h1);
 }
 
 .shoppingCart-card-confing {
