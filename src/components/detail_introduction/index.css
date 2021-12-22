@@ -8,21 +8,25 @@
 .container-intro {
     font-size: var(--text-h1);
     margin-left: 4vw;
-    height: 4vh;
+    height: 6vh;
     display: flex;
     align-items: center;
     justify-items: center;
 }
 
 .container-intro-title {
-    padding-top: 3vh;
+    font-size: var(--text--h1);
 }
 
 .container-intro-image {
-    margin-top: 2vh;
     margin-right: 4vw;
 }
 
 .container-banner {
     font-size: 0;
+}
+
+.intro-divider {
+    margin-bottom: 0.5vh;
+    height: 0vh;
 }

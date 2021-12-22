@@ -35,7 +35,9 @@ class Introduction extends React.Component {
                         {Get('languages').detailPage.goodsIntroduce}
                     </View>
                 </View>
-                <AtDivider />
+                <AtDivider 
+                className='intro-divider'
+                />
                 <View className='container-banner'>
                    {detailInfoImages}
                 </View>
