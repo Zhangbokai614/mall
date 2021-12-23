@@ -1,19 +1,18 @@
 import React, { Component } from 'react'
-import Taro from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
+import Taro from '@tarojs/taro'
 import { getCurrentInstance } from '@tarojs/taro'
-import { AtDivider, AtCountdown, AtButton, AtInputNumber } from 'taro-ui'
+import { AtDivider, AtCountdown, AtTag } from 'taro-ui'
 
+import Vertical from '../../asset/images/icon/vertical.png'
 import { SwiperPosters } from '../../components/detail_swiper'
 import { GoodsSelection } from '../../components/at_radio/index'
 import { Bottomdetail } from '../../components/detail_bottom/index'
 import { Introduction } from '../../components/detail_introduction/index'
+import Share from '../../asset/images/icon/share-select.png'
 
 import * as homeApi from './service'
 import { Get } from '../../global-data/index'
-
-import Vertical from '../../asset/images/icon/vertical.png'
-import Share from '../../asset/images/icon/share-select.png'
 
 import './index.css'
 
@@ -26,11 +25,6 @@ export default class Index extends Component {
 			afterSales: [],
 			loading: true,
 			showElem: true,
-			value: 1,
-			displaySelect: 'mask none',
-			classstyleSelect: 'box moveFromBottom',
-			displayDistribution: 'mask none',
-			classstyleDistribution: 'box moveFromBottom',
 		}
 	}
 
@@ -48,78 +42,6 @@ export default class Index extends Component {
 		this.loading()
 	}
 
-	offSelect() {
-		this.setState({
-			displaySelect: 'mask none',
-			classstyleSelect: 'box moveFromBottom',
-		})
-	};
-
-	openSelect() {
-		this.setState({
-			displaySelect: 'mask block',
-			classstyleSelect: 'box moveFromBottom showMove block'
-		})
-	};
-
-	changeSelect() {
-		this.state.displaySelect
-	}
-
-	offDistribution() {
-		this.setState({
-			displayDistribution: 'mask none',
-			classstyleDistribution: 'box moveFromBottom',
-		})
-	};
-
-	openDistribution() {
-		this.setState({
-			displayDistribution: 'mask block',
-			classstyleDistribution: 'box moveFromBottom showMove'
-		})
-	};
-
-	update(id, value) {
-		homeApi.goodscar(id, value)
-		console.log(id, value)
-	}
-
-	handleChangeNumber(value) {
-		this.setState({
-			value
-		})
-	};
-
-	goHref = (type) => {
-		switch (type) {
-			case '01':
-				Taro.navigateTo({
-					url: '/pages/home/index',
-				});
-				break;
-			case '02':
-				Taro.navigateTo({
-					url: '/pages/category/index',
-				});
-				break;
-			case '03':
-				Taro.navigateTo({
-					url: '/pages/cart/index'
-				});
-				break;
-			case '04':
-				Taro.navigateTo({
-					url: '/pages/order/index',
-				});
-				break;
-			default:
-				Taro.navigateTo({
-					url: '/pages/home/index',
-				});
-		}
-	};
-
 	async loading() {
 		Taro.showLoading({
 			title: Get('languages').loading,
@@ -130,7 +52,6 @@ export default class Index extends Component {
 		const afterSales = await homeApi.afterSales()
 		const activity = await homeApi.activity()
 		this.setState({
-			id: id,
 			goodsInfo: goodsInfo.data.filter((e) => e.id === +id),
 			afterSales: afterSales.data.detail,
 			afterSalesFree: afterSales.data.free,
@@ -139,11 +60,10 @@ export default class Index extends Component {
 			loading: false,
 		})
 		Taro.hideLoading()
+
 	}
 
 	render() {
-
-		const id = this.state.id
 
 		const info = this.state.goodsInfo
 		const afterSalesDetail = this.state.afterSales
@@ -162,25 +82,21 @@ export default class Index extends Component {
 		return (
 			this.state.loading
 				? null
-				: <View className='main-page'>
+				: <View className='main'>
 					<SwiperPosters
 						images={info[0].images}
 					/>
 					<View className='top-banner'>
 						<View className='top-banner-price'>
-							{Get('languages').cny}
-							{info[0].price}
+							￥{info[0].price}
 						</View>
 						{
 							this.state.showElem ? (
 								<View className='top-show'>
-									<View className='top-show-ctivity'>
-										<View className='top-show-title'>
-											{activityName}
-										</View>
-									</View>
+									<AtTag className='top-show-title'>
+										{activityName}
+									</AtTag>
 									<AtCountdown
-										style='width:10vh; height:15vh'
 										isCard
 										isShowDay
 										format={{ day: Get('languages').day, hours: ':', minutes: ':', seconds: '' }}
@@ -199,7 +115,7 @@ export default class Index extends Component {
 							className='top-show-share'>
 							<Image
 								src={Share}
-								style='width:28px; height:28px;'
+								style='width:6vw; height:6vw;'
 							/>
 						</button>
 					</View>
@@ -207,15 +123,11 @@ export default class Index extends Component {
 						{info[0].title}
 					</View>
 					<GoodsSelection
-						value={this.state.value}
+						image={info[0].images[0]}
 						specs={info[0].specs}
-						openSelect={this.openSelect.bind(this)}
-						offDistribution={this.offDistribution}
-						openDistribution={this.openDistribution}
-					/>
-					<View
-						onClick={this.offSelect.bind(this)}
-						className={this.state.displaySelect}
+						inventory={info[0].inventory}
+						price={info[0].price}
+						id={info[0].id}
 					/>
 					<Introduction
 						detailImages={info[0].detailImages}
@@ -232,8 +144,8 @@ export default class Index extends Component {
 								{Get('languages').detailPage.afterSales}
 							</View>
 						</View>
-						<AtDivider
-							className='main-bottom-divider'
+						<AtDivider 
+						className='main-bottom-divider'
 						/>
 						<View className='main-bottom-content'>
 							{afterSalesDetail}
@@ -244,68 +156,8 @@ export default class Index extends Component {
 						</View>
 					</View>
 					<Bottomdetail />
-					<View
-						className={this.state.classstyleSelect}>
-						<View className='show-content'>
-							<View className='show-images'>
-								<Image
-									src={info[0].images[0]}
-									style="height: 16vh; width: 16vh"
-								/>
-							</View>
-							<View className='show-price'>
-								{Get('languages').cny}
-								{info[0].price}
-							</View>
-						</View>
-						<View className='show-detail'>
-							<View className='show-title'>
-								{Get('languages').detailPage.inventory}
-							</View>
-							<View className='show-number'>
-								{info[0].inventory}
-							</View>
-						</View>
-						<View className='show-detail'>
-							<View className='show-title'>
-								{Get('languages').detailPage.specifications}
-							</View>
-							<AtButton
-								size='small'
-								className='show-specs'>
-								{info[0].specs}
-							</AtButton>
-						</View>
-						<View className='show-detail'>
-							<View className='show-title'>
-								{Get('languages').detailPage.number}
-							</View>
-							<View className='show-input-number'>
-								<AtInputNumber
-									type='digit'
-									min={1}
-									max={99}
-									step={1}
-									width={100}
-									value={this.state.value}
-									onChange={this.handleChangeNumber.bind(this)}
-								/>
-							</View>
-						</View>
-						<AtButton
-							className='show-addcar'
-							onClick={this.update.bind(this, id, this.state.value)}
-						>
-							{Get('languages').detailPage.addcar}
-						</AtButton>
-						<AtButton
-							className='show-gobuy'
-							onClick={this.goHref.bind(this, '04')}
-						>
-							{Get('languages').detailPage.tobuy}
-						</AtButton>
-					</View>
 				</View>
+
 		)
 	}
 };

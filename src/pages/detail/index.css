@@ -1,18 +1,20 @@
 .main {
-  overflow: visible;
+  overflow:visible;
 }
 
 .top-banner {
   background-color: var(--color--background);
   display: flex;
   align-items: center;
-  justify-items: center;
+  justify-items: center;  
   height: 6vh;
 }
 
 .top-banner-price {
   font-size: var(--text--h1);
   margin-left: 3vw;
+  padding-bottom: 1vw;
+  height: 5vw;
   color: var(--color--main);
 }
 
@@ -26,9 +28,9 @@
   white-space: nowrap;
   margin-left: 3vw;
   color: var(--color--main);
+  font-size: var(--text--info);
   background-color: var(--color--background);
   border: 2px solid var(--color--main);
-  font-size: var(--text--info);
   border-radius: var(--radius--mini--small);
 }
 
@@ -36,23 +38,19 @@
   display: flex;
   white-space: nowrap;
   margin-left: 2vw;
-  height: 5vw;
 }
 
 .top-show-share {
-  height: auto;
-
   margin-left: 86vw;
   display: flex;
   justify-items: row;
   position: absolute;
-  background-color: chartreuse;
-  /* background-color: var(--color--background); */
+  background-color: var(--color--background);
 }
 
-.top-show-share::after {
+.top-show-share::after{
   border: none;
-}
+} 
 
 .top-show-info {
   padding-left: 3vw;
@@ -78,7 +76,7 @@
 
 .main-bottom-container {
   font-size: var(--text--h1);
-  height: 5vh;
+  height: 6vh;
   display: flex;
   align-items: center;
   justify-items: center;
@@ -95,52 +93,6 @@
 }
 
 .main-bottom-divider {
-    margin-bottom: 0.5vh;
-    height: 0vh;
-}
-
-.moveFromBottom {
-    display: none;
-    position: fixed;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    opacity: 0;
-    -webkit-transform: translate(0, 100%);
-    transform: translate(0, 100%);
-    -webkit-transition: all ease-in-out .3s;
-    transition: all ease-in-out .3s;
-}
-
-.showMove {
-    opacity: 1;
-    -webkit-transform: translate(0, 0);
-    transform: translate(0, 0);
-}
-
-.box {
-    position: sticky;
-    bottom: 0;
-    width: 100%;
-    height: 60vh;
-    z-index: 999;
-    background-color: var(--text-color--white);
-}
-
-.mask {
-    z-index: 800;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(0, 0, 0, 0.5);
-}
-
-.none {
-    display: none;
-}
-
-.block {
-    display: block;
+  margin-bottom: 0.5vh;
+  height: 0vh;
 }
