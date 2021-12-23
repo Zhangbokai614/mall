@@ -25,6 +25,8 @@
 
 .top-show-title {
   display: flex;
+  align-items: center;
+  justify-items: center;
   white-space: nowrap;
   margin-left: 3vw;
   color: var(--color--main);
