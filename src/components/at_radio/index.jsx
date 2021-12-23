@@ -96,7 +96,7 @@ class GoodsSelection extends React.Component {
     const { inventory } = this.props
     const { price } = this.props
     const { id } = this.props
-    console.log(typeof id)
+
     return (
       <View className='main-radio'>
         <View>
