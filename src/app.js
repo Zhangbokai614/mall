@@ -73,24 +73,6 @@ class App extends Component {
         }
       }
     })
-
-    wx.getUserInfo({
-      withCredentials: true,
-      success: function (res) {
-        var userInfo = res.userInfo
-        console.log(userInfo)
-        Taro.setStorage(
-          {
-            key: "nickName",
-            data: userInfo.nickName
-          },
-          {
-            key: "avatarUrl",
-            data: userInfo.avatarUrl
-          }
-        )
-      }
-    })
   }
 
   render() {

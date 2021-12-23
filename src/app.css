@@ -3,9 +3,6 @@ page {
   font-size: 28px;
   font-weight: var(--font-weight--slender);
 
-  /* page gray */
-  filter: grayscale(0%);
-
   /* color */
   --color--main: #FF4949;
   --color--background: #FFFFFF;

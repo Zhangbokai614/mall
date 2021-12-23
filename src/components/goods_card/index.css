@@ -28,8 +28,8 @@
   overflow: hidden;
   text-overflow: ellipsis;
   line-clamp: 2;
-  padding-top: 1vh;
-  padding-bottom: 0.6vh;
+  padding-top: 1.4vh;
+  padding-bottom: 1.4vh;
   margin-left: 2vw;
   margin-right: 2vw;
   font-size: var(--text--h1);
