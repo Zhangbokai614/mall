@@ -6,7 +6,7 @@
 }
 
 .container-intro {
-    font-size: var(--text--h1);
+    font-size: var(--text-h1);
     margin-left: 4vw;
     height: 6vh;
     display: flex;
@@ -29,4 +29,4 @@
 .intro-divider {
     margin-bottom: 0.5vh;
     height: 0vh;
-}
+  }

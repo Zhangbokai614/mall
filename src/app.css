@@ -35,6 +35,7 @@ page {
   --radius--mini--t: 20px 20px 0 0;
   --radius--mini--b: 0 0 20px 20px;
   --radius--b-big: 0 0 100px 100px;
+  --radius--mini--small: 10px 10px 10px 10px;
 
   /* box-shadow */
   --box-shadow--l1: 0px 4px 6px 2px #e6e6e696;

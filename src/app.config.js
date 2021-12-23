@@ -1,7 +1,7 @@
 import languages from "./asset/languages/zn-cn.json";
 
 export default {
-  "lazyCodeLoading": "requiredComponents",
+  // "lazyCodeLoading": "requiredComponents",
 
   pages: [
     "pages/home/index",
@@ -11,7 +11,7 @@ export default {
     "pages/detail/index",
     "pages/orders/index",
     "pages/order-detail/index",
-    "pages/logistics/index",
+    "pages/logistics/index"
   ],
 
   window: {
