@@ -2,7 +2,7 @@ import React, { Component } from 'react'
 import { View, Image } from '@tarojs/components'
 import Taro from '@tarojs/taro'
 
-import { GoodsCard } from '../../components/goods_card/index'
+import GoodsCard from '../../components/goods_card/index'
 import { GoodsList } from '../../components/goods_list/index'
 
 import { Get } from '../../global-data/index'
@@ -58,7 +58,7 @@ export default class Index extends Component {
       return (
         <GoodsCard
           key={e.id}
-          id={e.id}
+          goodsId={e.id}
           focus={true}
           title={e.title}
           imageSrc={e.images[0]}
