@@ -1,0 +1,31 @@
+page {
+  --indent-address-box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --indent-address-border-radius: var(--radius--mini);
+  --indent-address-background: var(--text-color--white);
+  --indent-address-map-color: var(--color--main);
+  --indent-address-chevron-color: var(--text-color--gray);
+
+  --indent-card-border-radius: var(--radius--mini);
+  --indent-card-background: var(--text-color--white);
+  --indent-card-box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+
+  --indent-commodity-border-radius: var(--radius--mini);
+
+  --indent-remark-border-radius: 20px;
+  --indent-remark-z-index: 10;
+  --indent-remark-background: var(--text-color--white);
+  --indent-remark-active: var(--text-color--gray);
+  --indent-remark-mask-background: rgba(0, 0, 0, 0.5);
+  --indent-remark-levelOne-border-radius: var(--radius--mini);
+  --indent-remark-levelOne-box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --indent-remark-chevron-color: var(--text-color--gray);
+  --indent-remark-box-bottom-border-color: var(--text-color--gray);
+  --indent-remark-textarea-background: #f7f7f7;
+
+  --indent-placeAnOrder-background: var(--color--background);
+
+  --indent-placeAnOrder-text-color: var(--color--main);
+  --indent-placeAnOrder-button-color: var(--text-color--white);
+  --indent-placeAnOrder-font-size: ;
+  --indent-placeAnOrder-button-background: var(--color--main);
+}

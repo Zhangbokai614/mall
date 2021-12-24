@@ -6,7 +6,6 @@
   "cart": "购物车",
   "activity": "限时促销",
   "cny": "￥",
-  "day": "天",
   "user": {
     "myself": "我的",
     "order": {
@@ -25,7 +24,6 @@
       "CheckLogistics": "查看物流",
       "logisticsInfo": "物流信息",
       "goodsInfo": "商品信息",
-      "applyRefund": "申请退款",
       "orderInfo": "订单信息",
       "contactTheMerchant": "联系商家",
       "paymentType": "支付方式",
@@ -73,7 +71,9 @@
     "returnGoods": "不支持七天无理由退货"
   },
   "shoppingCart": {
+    "loading": "正在加载",
     "cart": "购物车",
+    "noSelect": "您还没有选择宝贝哦",
     "cartNull": {
       "goshopping": "去逛逛",
       "shoppingcartisempty": "购物车当前是空的",
@@ -101,6 +101,37 @@
       "piece": "件",
       "subtraction": "-",
       "addition": "+"
+    }
+  },
+  "indent": {
+    "freeShipping": "包邮",
+    "noDiscount": "没有可用优惠",
+    "confirmOrder": "确认订单",
+    "address": {
+      "ChooseWeChatDeliveryAddress": "选择微信的收货地址"
+    },
+    "remark": {
+      "postscript": "备注信息",
+      "hint": "选填，建议先和商家沟通后再填写",
+      "addANote": "添加备注",
+      "cancel": "取消",
+      "confirm": "确定"
+    },
+    "commodity": {
+      "cny": "￥",
+      "multiply": "×"
+    },
+    "card": {
+      "cny": "￥",
+      "postage": "邮费",
+      "StorePolicyAndPromotion": "商店优惠",
+      "totalAmountOfTheOrder": "订单总金额"
+    },
+    "placeAnOrder": {
+      "common": "共",
+      "total": "件，合计",
+      "cny": "￥",
+      "placeAnOrder": "下单"
     }
   }
 }

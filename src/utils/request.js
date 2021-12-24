@@ -2,25 +2,23 @@ import Taro from '@tarojs/taro';
 import { baseUrl } from '../config/index';
 
 export default async (options = { type: 'wx', method: 'GET', data: {} }) => {
+  let url = baseUrl + options.url;
 
-    let url = baseUrl + options.url
+  if (options.type == 'customize') {
+    url = options.url;
+  }
 
-    if (options.type == 'customize') {
-        url = options.url
-    }
+  return await Taro.request({
+    url: url,
 
-    return await Taro.request({
+    data: {
+      ...options.data,
+    },
 
-        url: url,
+    header: {
+      'Content-Type': 'application/json',
+    },
 
-        data: {
-            ...options.data,
-        },
-
-        header: {
-            'Content-Type': 'application/json',
-        },
-
-        method: options.method.toUpperCase(),
-    })
-}
+    method: options.method.toUpperCase(),
+  });
+};

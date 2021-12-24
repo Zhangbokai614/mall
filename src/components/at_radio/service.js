@@ -1,13 +1,13 @@
-import Request from '../../utils/request'
+import Request from '../../utils/request';
 
 export const goodscar = (id, value) => {
-    return Request({
-        type: 'customize',
-        url: 'http://192.168.0.36:8080/api/shibor',
-        method: 'POST',
-        data: {
-            id: id,
-            value: value,
-        }
-    });
-}
+  return Request({
+    type: 'customize',
+    url: 'http://192.168.0.34:8080/api/shibor',
+    method: 'POST',
+    data: {
+      id: id,
+      value: value,
+    },
+  });
+};

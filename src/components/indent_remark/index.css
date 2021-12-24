@@ -1,0 +1,143 @@
+.indent-remark-levelOne {
+  display: flex;
+  align-items: center;
+  margin: 2.8vw 2.8vw 2.8vw 2.8vw;
+  width: 94.4vw;
+  height: 8vh;
+  border-radius: var(--indent-remark-levelOne-border-radius);
+  background: var(--indent-remark-background);
+  box-shadow: var(--indent-remark-levelOne-box-shadow);
+  position: relative;
+}
+
+.box {
+  width: 76vw;
+  height: 36vh;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background: var(--indent-remark-background);
+  border-radius: var(--indent-remark-border-radius);
+  z-index: var(--indent-remark-z-index);
+}
+
+.mask {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--indent-remark-mask-background);
+}
+
+.none {
+  display: none;
+}
+
+.block {
+  display: block;
+}
+
+.indent-remark-levelOne-text-one {
+  margin-left: 4vw;
+}
+
+.indent-remark-levelOne-text-two {
+  width: 65vw;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  text-align: right;
+  position: absolute;
+  right: 8vw;
+}
+
+.indent-remark-chevron-right {
+  position: absolute;
+  right: 2vw;
+  color: var(--indent-remark-chevron-color);
+}
+
+.indent-remark-box-top {
+  display: flex;
+  flex-direction: column;
+  width: 76vw;
+  height: 28vh;
+  border-top-left-radius: var(--indent-remark-border-radius);
+  border-top-right-radius: var(--indent-remark-border-radius);
+}
+
+.indent-remark-box-top-one {
+  display: flex;
+  align-items: center;
+  width: 64.6vw;
+  height: 7.2vh;
+  margin: 0 5.7vw 0 5.7vw;
+}
+
+.indent-remark-box-top-two {
+  width: 64.6vw;
+  height: 17.6vh;
+  margin: 0 5.7vw 3.2vh 5.7vw;
+  background: var(--indent-remark-textarea-background);
+}
+
+.indent-remark-textarea {
+  margin: 2.2vh 5.7vw 1.8vh 5.7vw;
+  width: 53.2vw;
+  height: 13.6vh;
+}
+
+.indent-remark-box-bottom {
+  display: flex;
+  flex-direction: row;
+  width: 76vw;
+  height: 8vh;
+  border-bottom-left-radius: var(--indent-remark-border-radius);
+  border-bottom-right-radius: var(--indent-remark-border-radius);
+}
+
+.indent-remark-box-bottom-left {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38vw;
+  height: 8vh;
+  border-bottom-left-radius: var(--indent-remark-border-radius);
+}
+
+.indent-remark-box-bottom-left:active {
+  background: var(--indent-remark-active);
+}
+
+.indent-remark-box-bottom-right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38vw;
+  height: 8vh;
+  border-left-width: 1px;
+  border-color: var(--indent-remark-box-bottom-border-color);
+  border-bottom-right-radius: var(--indent-remark-border-radius);
+}
+
+.indent-remark-box-bottom-right:active {
+  background: var(--indent-remark-active);
+}
+
+.indent-remark-box-bottom-left-border {
+  border: thin solid var(--indent-remark-box-bottom-border-color);
+  border-top-width: 0px;
+  border-bottom-width: 0px;
+  border-left-width: 0px;
+  border-right-width: 1px;
+}
+
+.indent-remark-box-top-border {
+  border: thin solid var(--indent-remark-box-bottom-border-color);
+  border-top-width: 0px;
+  border-bottom-width: 1px;
+  border-left-width: 0px;
+  border-right-width: 0px;
+}
