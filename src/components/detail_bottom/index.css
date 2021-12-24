@@ -21,10 +21,6 @@
   background-color: var(--color--background);
 }
 
-.bottom-home::after {
-  border: none;
-}
-
 .bottom-service {
   height: 6vh;
   width: 12vw;
@@ -35,10 +31,6 @@
   justify-content: space-between;
   padding-bottom: 3vh;
   background-color: var(--card-bg-color);
-}
-
-.bottom-service::after {
-  border: none;
 }
 
 .bottom-goodscar {
@@ -53,7 +45,7 @@
   background-color: var(--color--background);
 }
 
-.bottom-goodscar::after {
+button::after {
   border: none;
 }
 

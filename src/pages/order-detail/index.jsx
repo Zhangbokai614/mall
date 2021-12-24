@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import Taro, { getCurrentInstance } from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
-import { AtIcon } from 'taro-ui'
+import { AtButton, AtIcon } from 'taro-ui'
 import { CuButton } from "taro-color-ui";
 
 import { Get } from '../../global-data/index'
@@ -138,6 +138,9 @@ export default class Index extends Component {
                 <View id='goods-info_text_specs'>
                   {orderInfo.specs}
                 </View>
+                <AtButton className='goods-info_text_apply'>
+                  {text.applyRefund}
+                </AtButton>
               </View>
             </View>
             {goodsContent}
@@ -163,7 +166,9 @@ export default class Index extends Component {
                 src={contactMerchantIcon}
                 mode='aspectFit'
               />
+              <View className='contact-card-text'>
               {text.contactTheMerchant}
+              </View>
             </button>
           </View>
           <View id='buttons-card'>
