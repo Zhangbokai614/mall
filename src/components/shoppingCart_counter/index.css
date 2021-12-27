@@ -8,8 +8,8 @@
 
 .shoppingCart-counter-input {
   text-align: center;
-  width: 8vw;
-  color: var(--color--main);
+  width: 10vw;
+  color: var(--shoppingCart-counter-input-number-color);
 }
 
 .shoppingCart-counter-button {
@@ -18,8 +18,8 @@
   align-items: center;
   width: 7vw;
   height: 7vw;
-  background-color: var(--color--background);
-  color: var(--color--main);
-  border: 2px solid var(--color--main);
-  font-size: var(--text--h1);
+  border-radius: var(--shoppingCart-counter-border-radius);
+  background-color: var(--shoppingCart-counter-button-background);
+  color: var(--shoppingCart-counter-button-text-color);
+  border: 3px solid var(--shoppingCart-counter-button-border-color);
 }

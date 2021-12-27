@@ -19,7 +19,7 @@
 .shoppingCart-null-textOne {
   display: flex;
   justify-content: center;
-  color: var(--text-color--black);
+  color: var(--ShoppingCard-null-font-h1-color);
 }
 
 .shoppingCart-null-textTwo {
@@ -27,11 +27,10 @@
   justify-content: center;
   margin-top: 1.2vh;
   margin-bottom: 1.5vh;
-  font-size: var(--text--h1);
-  color: var(--text-color--gray);
+  font-size: 25px;
+  color: var(--ShoppingCard-null-font-h2-color);
 }
 
 .shoppingCart-null-button {
   width: 30vw;
-  font-size: var(--text--h1);
 }

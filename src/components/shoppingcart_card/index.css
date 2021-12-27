@@ -1,13 +1,13 @@
 .shoppingCart-card-levelOne {
-  width: 92vw;
+  width: 94.4vw;
   height: 26vh;
-  margin: 2vw 4vw 2vw 4vw;
+  margin: 2vw 2.8vw 2vw 2.8vw;
   display: flex;
   position: relative;
   align-items: center;
-  border-radius: var(--radius--mini);
-  box-shadow: var(--box-shadow--l1);
-  background: var(--color--background);
+  border-radius: var(--shoppingCard-card-border-radius);
+  box-shadow: var(--shoppingCard-card-box-shadow);
+  background: var(--shoppingCard-card-background);
 }
 
 .shoppingCart-card-frameleft {
@@ -26,7 +26,7 @@
 .shoppingCart-card-cardImage {
   width: 20vh;
   height: 20vh;
-  border-radius: var(--radius--mini);
+  border-radius: var(--shoppingCart-card-Image-border);
 }
 
 .shoppingCart-card-frameright {
@@ -42,11 +42,10 @@
   width: 45vw;
   margin-top: 0.5vh;
   margin-bottom: 2vh;
-  font-size: var(--text--h1);
 }
 
 .shoppingCart-card-confing {
-  color: var(--state--unselect);
+  color: var(--shoppingCart-card-confing-color);
 }
 
 .shoppingCart-card-down {
@@ -67,11 +66,11 @@
 }
 
 .shoppingCart-card-money {
-  color: var(--color--main);
+  color: var(--shoppingCart-card-number-color);
 }
 
 .shoppingCart-card-number {
-  color: var(--color--main);
+  color: var(--shoppingCart-card-number-color);
 }
 
 .shoppingCart-card-counter {
@@ -83,21 +82,21 @@
 .unselected {
   width: 45px;
   height: 45px;
-  background: var(--color--background);
+  background: var(--shoppingCart-card-circle-unselect);
   border: solid;
   border-width: 1px;
   --tw-border-opacity: 1;
-  border-color: var(--state--unselect);
+  border-color: var(--shoppingCart-card-circle-border-color);
   -moz-border-radius: 50px;
   -webkit-border-radius: 50px;
-  border-radius: var(--radius);
+  border-radius: 50px;
 }
 
 .selected {
   width: 45px;
   height: 45px;
   border-radius: 100%;
-  background: var(--color--main);
+  background: var(--shoppingCart-card-circle-select);
   background-image: url('../../../src/asset/images/icon/check.svg');
   background-position: center center;
   background-repeat: no-repeat;
