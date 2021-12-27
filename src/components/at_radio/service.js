@@ -8,6 +8,9 @@ export const goodscar = (id, value) => {
         data: {
             id: id,
             value: value,
-        }
+        },
+        dataType: {
+            status: 'status',            
+        },
     });
 }
