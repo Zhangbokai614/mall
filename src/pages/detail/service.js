@@ -35,3 +35,11 @@ export const goodscar = (id, value) => {
         }
     });
 }
+
+export const address = ( data) => {
+    return Request({
+        url: '/order',
+        method: 'GET',
+        ...data
+    });
+}
