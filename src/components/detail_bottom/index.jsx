@@ -2,13 +2,27 @@ import { AtButton } from 'taro-ui'
 import { View, Image } from '@tarojs/components'
 import React from 'react'
 import Taro from '@tarojs/taro'
+import { getCurrentInstance } from '@tarojs/taro'
 
 import { Get } from '../../global-data/index'
 import shoppingcar from '../../asset/images/icon/detail-shopping-cart.png'
 import home from '../../asset/images/tabs/home-select.png'
 import service from '../../asset/images/icon/detail-customer-service-select.png'
 import './index.css'
+import * as homeApi from './service'
 class Bottomdetail extends React.Component {
+
+  constructor(props) {
+    super(props)
+    this.state = {
+      loading: true,
+    }
+  };
+
+  update(id, value) {
+    homeApi.goodscar(id, value)
+    console.log(id, value)
+  }
 
   goHref = (type) => {
     switch (type) {
@@ -39,8 +53,31 @@ class Bottomdetail extends React.Component {
     }
   };
 
+  componentDidMount() {
+  	this.loading()
+  }
+
+  componentDidShow() {
+  	this.loading()
+  }
+
+  async loading() {
+  	Taro.showLoading({
+  		title: Get('languages').loading,
+  	})
+    const { id } = getCurrentInstance().router.params
+  	const value = await homeApi.getValue(+id)
+  	this.setState({
+  		value: value,
+      loading: false,
+  	})
+  	Taro.hideLoading()
+  }
+
   render() {
 
+    const { id } = this.props
+    const value = this.state.value
     return (
 
       <View className='main-bottom'>
@@ -92,7 +129,7 @@ class Bottomdetail extends React.Component {
         <View className='bottom-container-right'>
           <AtButton
             className='bottom-right-car'
-            onClick={this.goHref.bind(this, '03')}
+            onClick={this.update.bind(this, id, value)}
           >
             {Get('languages').detailPage.addcar}
           </AtButton>
