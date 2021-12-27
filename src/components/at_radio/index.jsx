@@ -1,6 +1,7 @@
 import { View, Image } from '@tarojs/components'
 import React from 'react'
-import { AtButton, AtIcon, AtList, AtInputNumber } from 'taro-ui'
+import Taro from '@tarojs/taro'
+import { AtButton, AtIcon, AtList, AtInputNumber, AtToast, AtAvatar } from 'taro-ui'
 
 import { Get } from '../../global-data/index'
 import Fruit from '../../asset/images/icon/fruit.png'
@@ -15,21 +16,43 @@ class GoodsSelection extends React.Component {
     super(props)
     this.state = {
       value: 1,
+      loading: true,  
+      isOpened: false,
       displaySelect: 'mask none',
       classstyleSelect: 'box moveFromBottom',
       displayDistribution: 'mask none',
       classstyleDistribution: 'box moveFromBottom',
     }
+
   };
 
   update(id, value) {
-    homeApi.goodscar(id, value)
+    const status = homeApi.goodscar(id, value)
+    console.log(id, value, status)
   }
 
   handleChangeNumber(value) {
     this.setState({
       value
     })
+  };
+
+  successedToast() {
+    return (
+      <AtToast
+      isOpened
+      text={Get('languages').detailPage.addSuccessed}
+      />
+    )
+  };
+
+  failedToast() {
+    return (
+      <AtToast
+      isOpened
+      text={Get('languages').detailPage.addfailed}
+      />
+    )
   };
 
   goHref = (type) => {
@@ -89,6 +112,28 @@ class GoodsSelection extends React.Component {
     })
   };
 
+  componentDidMount() {
+		this.loading()
+	}
+
+	componentDidShow() {
+		this.loading()
+	}
+
+	async loading() {
+		Taro.showLoading({
+			title: Get('languages').loading,
+		})
+    
+		const status = await homeApi.goodscar()
+		this.setState({
+			status: status,
+      loading: false
+		}),
+		Taro.hideLoading()
+    console.log(this.state.status)
+	}
+
   render() {
 
     const { image } = this.props
@@ -96,6 +141,8 @@ class GoodsSelection extends React.Component {
     const { inventory } = this.props
     const { price } = this.props
     const { id } = this.props
+    const address = this.props.address
+    console.log(address)
 
     return (
       <View className='main-radio'>
@@ -131,7 +178,7 @@ class GoodsSelection extends React.Component {
                   />
                 </View>
                 <View className='show-price'>
-                  ￥{price}
+                {Get('languages').cny}{price}
                 </View>
               </View>
               <View className='show-detail'>
@@ -192,6 +239,9 @@ class GoodsSelection extends React.Component {
               <View className='container-title '>
                 {Get('languages').detailPage.distribution}
               </View>
+              <View className='container-content'>
+                {address}
+              </View>
               <AtIcon
                 className='container-icon'
                 value='chevron-right'
@@ -207,6 +257,7 @@ class GoodsSelection extends React.Component {
             <View
               className={this.state.classstyleDistribution}
             >
+
             </View>
           </AtList>
         </View>
