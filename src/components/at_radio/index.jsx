@@ -27,23 +27,13 @@ class GoodsSelection extends React.Component {
   };
 
   update(id, value) {
-    const status = homeApi.goodscar(id, value)
-    console.log(id, value, status)
+    homeApi.goodscar(id, value)
   }
 
   handleChangeNumber(value) {
     this.setState({
       value
     })
-  };
-
-  successedToast() {
-    return (
-      <AtToast
-      isOpened
-      text={Get('languages').detailPage.addSuccessed}
-      />
-    )
   };
 
   failedToast() {
@@ -112,28 +102,6 @@ class GoodsSelection extends React.Component {
     })
   };
 
-  componentDidMount() {
-		this.loading()
-	}
-
-	componentDidShow() {
-		this.loading()
-	}
-
-	async loading() {
-		Taro.showLoading({
-			title: Get('languages').loading,
-		})
-    
-		const status = await homeApi.goodscar()
-		this.setState({
-			status: status,
-      loading: false
-		}),
-		Taro.hideLoading()
-    console.log(this.state.status)
-	}
-
   render() {
 
     const { image } = this.props
@@ -142,7 +110,6 @@ class GoodsSelection extends React.Component {
     const { price } = this.props
     const { id } = this.props
     const address = this.props.address
-    console.log(address)
 
     return (
       <View className='main-radio'>

@@ -1,4 +1,6 @@
 import Request from '../../utils/request';
+import Taro from '@tarojs/taro';
+import { Get } from '../../global-data/index'
 
 export const goodscar = (id, value) => {
     return Request({
@@ -9,8 +11,26 @@ export const goodscar = (id, value) => {
             id: id,
             value: value,
         },
-        dataType: {
-            status: 'status',            
-        },
+    }).then(res => {
+        const {
+            statusCode,
+            data
+        } = res;
+        if (statusCode >= 200 && statusCode < 300) {
+            if (data.status !== 'ok') {
+                Taro.showToast({
+                    title: Get('languages').detailPage.addSuccessed,
+                    icon: 'success',
+                    mask: true,
+                });
+            }
+            return data;
+        } else {
+            Taro.showToast({
+                title: 'shibai',
+                icon: 'none',
+                mask: true,
+            });
+        }
     });
-}
+};

@@ -66,11 +66,13 @@ class Bottomdetail extends React.Component {
   		title: Get('languages').loading,
   	})
     const { id } = getCurrentInstance().router.params
+    console.log(id)
   	const value = await homeApi.getValue(+id)
   	this.setState({
   		value: value,
       loading: false,
   	})
+    console.log(id,value)
   	Taro.hideLoading()
   }
 
