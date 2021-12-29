@@ -136,11 +136,9 @@ export default class Index extends Component {
                   {orderInfo.title}
                 </View>
                 <View id='goods-info_text_specs'>
-                  {orderInfo.specs}
+                  <View>{orderInfo.specs}</View>
+                  <View id='goods-info_text_applyRefund'>{text.applyRefund}</View>
                 </View>
-                <AtButton className='goods-info_text_apply'>
-                  {text.applyRefund}
-                </AtButton>
               </View>
             </View>
             {goodsContent}
@@ -167,18 +165,18 @@ export default class Index extends Component {
                 mode='aspectFit'
               />
               <View className='contact-card-text'>
-              {text.contactTheMerchant}
+                {text.contactTheMerchant}
               </View>
             </button>
           </View>
           <View id='buttons-card'>
-            <CuButton 
-            className='buttons-card_button' 
-            color='yellow' 
-            size="large" 
-            round 
-            inline
-            onClick={this.checkLogistics.bind(this, orderInfo.order_code)}
+            <CuButton
+              className='buttons-card_button'
+              color='yellow'
+              size="large"
+              round
+              inline
+              onClick={this.checkLogistics.bind(this, orderInfo.order_code)}
             >{text.CheckLogistics}</CuButton>
             <CuButton className='buttons-card_button' color='red' size="large" round inline>{text.confirmTheReceiptOfGoods}</CuButton>
           </View>

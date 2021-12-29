@@ -1,6 +1,7 @@
 import React from 'react'
 import Taro from '@tarojs/taro'
 import { View, Image } from '@tarojs/components'
+import { AtButton } from "taro-ui";
 import { CuButton, CuTag } from "taro-color-ui";
 
 import { Get } from '../../global-data/index'
@@ -16,7 +17,8 @@ function handleClick(orderCode) {
   })
 }
 
-function checkLogistics(orderCode) {
+function checkLogistics(orderCode, e) {
+  e.stopPropagation()
   Taro.navigateTo({
     url: '/pages/logistics/index?orderCode=' + orderCode
   })
@@ -73,17 +75,15 @@ function OrderCard(props) {
           }
         </View>
         <View id='card-buttons'>
-          <CuButton
-            className='card-button'
-            color='yellow'
-            size="large"
-            round
-            inline
+          <AtButton
+            className='card-button card-button--yellow'
+            circle='true'
+            size='normal'
             onClick={checkLogistics.bind(this, orderInfo.order_code)}
           >
             {text.CheckLogistics}
-          </CuButton>
-          <CuButton className='card-button' color='red' size="large" round inline>{text.confirmTheReceiptOfGoods}</CuButton>
+          </AtButton>
+          <AtButton className='card-button card-button--red' size='normal' circle='true'>{text.confirmTheReceiptOfGoods}</AtButton>
         </View>
       </View>
     </View>

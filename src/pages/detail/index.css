@@ -33,7 +33,7 @@
   font-size: var(--text--info);
   background-color: var(--color--background);
   border: 2px solid var(--color--main);
-  border-radius: var(--radius--mini--small);
+  border-radius: var(--radius--tag);
 }
 
 .top-show-count {

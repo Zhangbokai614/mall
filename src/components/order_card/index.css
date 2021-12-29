@@ -16,7 +16,7 @@
   display: flex;
   flex-flow: row;
   justify-content: space-between;
-  font-weight: var(--font-weight--coarse);
+  font-weight: var(--font-weight--slender);
 }
 
 #card-content {
@@ -44,7 +44,7 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  font-weight: var(--font-weight--coarse);
+  font-weight: var(--font-weight--slender);
   font-size: var(--text--h1);
 }
 
@@ -87,13 +87,22 @@
   flex-flow: row;
   justify-content: space-between;
   align-content: center;
-  font-size: var(--text--h1);
+  font-size: var(--text--p);
 }
 
 .card-button {
   margin-left: 4vw;
   color: var(--text-color--white);
-  font-size: var(--text--h1);
+  border: none;
+  font-size: var(--text--p);
+}
+
+.card-button--red {
+  background-color: var(--color--main);
+}
+
+.card-button--yellow {
+  background-color: var(--color--subordinate);
 }
 
 .cu-tag {
