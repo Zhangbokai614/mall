@@ -1,10 +1,9 @@
 import React, { Component } from 'react'
 import Taro from '@tarojs/taro'
 import { View } from '@tarojs/components'
-import { AtAvatar } from 'taro-ui'
 
 import { Get } from '../../global-data/index'
-import { OptionsCard } from '../../components/options_card'
+import OptionsCard from '../../components/options_card'
 
 import pendingPaymentIcon from '../../asset/images/icon/pending-payment.png'
 import pendingReceiptIcon from '../../asset/images/icon/pending-receipt.png'

@@ -3,7 +3,7 @@ import { View } from '@tarojs/components'
 
 import './index.css'
 
-import { OrderCard } from '../../components/order_card'
+import OrderCard from '../../components/order_card'
 import { Get } from '../../global-data/index'
 
 const text = Get('languages').user.order

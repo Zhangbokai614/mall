@@ -140,21 +140,22 @@
   display: -webkit-box;
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 2;
-  font-weight: var(--font-weight--coarse);
+  font-weight: var(--font-weight--slender);
   font-size: var(--text--h1);
 }
 
 #goods-info_text_specs {
   color: var(--text-color--gray);
   margin-top: 2vh;
+  display: flex;
+  justify-content: space-between;
 }
 
-.goods-info_text_apply {
-  border: none;
-  text-align: right;
-  font-size: var(--text--p);
+#goods-info_text_applyRefund {
   color: var(--state--special);
-  margin-right: -10vw;
+  margin-right: 2vw;
+  font-size: var(--text--p);
+  font-weight: var(--font-weight--slender);
 }
 
 #goods-info_image {
@@ -167,7 +168,6 @@
   display: flex;
   flex-flow: row-reverse;
   align-content: center;
-  /* font-weight: var(--font-weight); */
   margin-right: 4vw;
   margin-top: 1vh;
   margin-bottom: 2vw;
@@ -179,7 +179,7 @@
 
 #total_cost {
   color: var(--color--main);
-  font-weight: var(--font-weight--coarse);
+  font-weight: var(--font-weight--slender);
   font-size: var(--text--h1);
   line-height: var(--text--h1);
 }
@@ -191,8 +191,8 @@
 }
 
 #contact-card-icon {
-  height: var( --text--h1);
-  width: var( --text--h1);
+  height: var(--text--h1);
+  width: var(--text--h1);
   margin-right: 2vw;
 }
 
@@ -215,8 +215,8 @@ button::after {
   flex-flow: row;
   justify-content: space-between;
   align-content: center;
-  background-color: var( --color--background);
-  position:sticky;
+  background-color: var(--color--background);
+  position: sticky;
   bottom: 0;
   padding-top: 2vh;
   padding-bottom: 2vh;
