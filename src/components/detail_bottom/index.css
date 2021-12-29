@@ -1,6 +1,6 @@
 .main-bottom {
   bottom: 0vh;
-  height: 10vh;
+  height: 8vh;
   z-index: 100;
   display: flex;
   position: sticky;
