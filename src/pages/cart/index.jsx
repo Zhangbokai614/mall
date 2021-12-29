@@ -1,25 +1,24 @@
 import Taro from '@tarojs/taro';
 import React, { Component } from 'react';
-
 import { Settlement } from '../../components/shoppingCart_settlement/index';
 import { CartAbout } from '../../components/shoppingCart_about';
 import { Cartnull } from '../../components/shoppingCart_null';
 import { CartTop } from '../../components/shoppingCart_top';
 import { Card } from '../../components/shoppingCart_card/index';
-
 import { Get } from '../../global-data';
-import * as cartApi from './service';
-
+import * as dataApi from './service';
 import './index.css';
+
+const text = Get('languages').shoppingCart;
 
 export default class index extends Component {
   constructor(props) {
     super(props);
     this.state = {
+      loading: true,
       topText: false,
       bottomeCircle: false,
     };
-
     this.cardData = new Array();
   }
 
@@ -65,19 +64,47 @@ export default class index extends Component {
   }
 
   moneySymbol() {
-    Taro.navigateTo({
-      url: '/pages/indent/index',
-    });
+    const isBelowThreshold = (currentValue) => currentValue === false;
+    if (this.cardData.map((a) => a.select).every(isBelowThreshold)) {
+      Taro.showToast({
+        title: text.noSelect,
+        icon: 'none',
+      });
+    } else {
+      const pid = 'indent';
+      Taro.navigateTo({
+        url: '/pages/indent/index',
+        success: () => {
+          Taro.eventCenter.once(`page:init:${pid}`, () => {
+            Taro.eventCenter.trigger(`message:detail:${pid}`, this.cardData);
+          });
+        },
+      });
+    }
   }
 
   async loading() {
     Taro.showLoading({
-      title: Get('languages').loading,
+      title: text.loading,
     });
-    const array = await cartApi.cart();
-    this.cardData = array.data;
-    this.setState({ topText: false, bottomeCircle: false });
+    const id = await dataApi.cart();
+    const array = new Array();
+    for (let i of id.data) {
+      const data = await (await dataApi.goodsInfo(i.id)).data[0];
+      array.push({
+        id: data.id,
+        select: false,
+        number: i.number,
+        inventory: data.inventory,
+        link: data.images[0],
+        price: data.price,
+        specs: data.specs,
+        title: data.title,
+      });
+    }
+    this.cardData = array;
     Taro.hideLoading();
+    this.setState({ loading: false, topText: false, bottomeCircle: false });
   }
 
   render() {
@@ -86,7 +113,7 @@ export default class index extends Component {
       const isBelowThreshold = (currentValue) => currentValue === true;
       return (
         <Card
-          key={String(e)}
+          key={String(e.id)}
           handleClick={() => {
             e.select === false ? (e.select = true) : (e.select = false);
             if (this.cardData.map((a) => a.select).every(isBelowThreshold)) {
@@ -105,7 +132,7 @@ export default class index extends Component {
           number={e.price}
           circle={e.select}
           value={e.number}
-          max={e.maximum_inventory}
+          max={e.inventory}
           min={1}
         />
       );
@@ -133,6 +160,6 @@ export default class index extends Component {
       </>
     );
 
-    return <>{this.cardData.length == 0 ? commodityNull : commodity}</>;
+    return <>{this.state.loading ? null : this.cardData.length == 0 ? commodityNull : commodity}</>;
   }
 }

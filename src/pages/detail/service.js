@@ -1,28 +1,28 @@
-import Request from '../../utils/request'
+import Request from '../../utils/request';
 
 export const goodsInfo = (id, data) => {
-    return Request({
-        url: '/goods_info?id=' + id,
-        method: 'GET',
-        ...data
-    });
-}
+  return Request({
+    url: '/goods_info?id=' + id,
+    method: 'GET',
+    ...data,
+  });
+};
 
-export const afterSales = ( data) => {
-    return Request({
-        url: '/after_sales',
-        method: 'GET',
-        ...data
-    });
-}
+export const afterSales = (data) => {
+  return Request({
+    url: '/after_sales',
+    method: 'GET',
+    ...data,
+  });
+};
 
-export const activity = ( data) => {
-    return Request({
-        url: '/activity',
-        method: 'GET',
-        ...data
-    });
-}
+export const activity = (data) => {
+  return Request({
+    url: '/activity',
+    method: 'GET',
+    ...data,
+  });
+};
 
 export const goodscar = (id, value) => {
     return Request({
@@ -33,5 +33,13 @@ export const goodscar = (id, value) => {
             id: id,
             value: value,
         }
+    });
+}
+
+export const address = ( data) => {
+    return Request({
+        url: '/order',
+        method: 'GET',
+        ...data
     });
 }

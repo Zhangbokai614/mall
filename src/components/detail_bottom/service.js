@@ -1,4 +1,4 @@
-import Request from '../../utils/request';
+import Request from '../../utils/request'
 import Taro from '@tarojs/taro';
 import { Get } from '../../global-data/index'
 
@@ -33,4 +33,13 @@ export const goodscar = (id, value) => {
             });
         }
     });
-};
+}
+
+export const getValue = (id, data) => {
+    return Request({
+        type: 'customize',
+        url: 'http://192.168.0.36:8080/api/shibor?id=' + id,
+        method: 'GET',
+        ...data
+    });
+}

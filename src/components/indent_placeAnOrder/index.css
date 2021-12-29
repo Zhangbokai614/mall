@@ -1,0 +1,30 @@
+.indent-placeAnOrder-levelOne {
+  display: flex;
+  width: 100vw;
+  height: 8.5vh;
+  position: fixed;
+  bottom: 0;
+  align-items: center;
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+  background: var(--indent-placeAnOrder-background);
+}
+
+.indent-placeAnOrder-text-one {
+  margin-left: 4vw;
+}
+
+.indent-placeAnOrder-text-two {
+  margin-left: 2.5vw;
+  color: var(--indent-placeAnOrder-text-color);
+}
+
+.indent-placeAnOrder-button {
+  position: absolute;
+  right: 0;
+  margin-right: 2vw;
+  width: 24vw;
+  color: var(--indent-placeAnOrder-button-color);
+  font-size: var(--indent-placeAnOrder-font-size);
+  background-color: var(--indent-placeAnOrder-button-background);
+}

@@ -1,6 +1,6 @@
 import Taro from '@tarojs/taro';
 import React, { Component } from 'react';
-import { View, Input, Button } from '@tarojs/components';
+import { View, Input } from '@tarojs/components';
 import { Get } from '../../global-data';
 import './index.css';
 
@@ -47,9 +47,9 @@ class Counter extends Component {
   render() {
     return (
       <View className='shoppingCart-counter-levelOne'>
-        <Button onClick={this.subtraction.bind(this)} className='shoppingCart-counter-button'>
+        <View onClick={this.subtraction.bind(this)} className='shoppingCart-counter-button'>
           {text.subtraction}
-        </Button>
+        </View>
         <Input
           className='shoppingCart-counter-input'
           type='number'
@@ -79,9 +79,9 @@ class Counter extends Component {
             }
           }}
         />
-        <Button onClick={this.addition.bind(this)} className='shoppingCart-counter-button'>
+        <View onClick={this.addition.bind(this)} className='shoppingCart-counter-button'>
           {text.addition}
-        </Button>
+        </View>
       </View>
     );
   }

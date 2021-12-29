@@ -1,0 +1,31 @@
+.indent-card-levelOne {
+  display: flex;
+  flex-direction: column;
+  width: 94.4vw;
+  margin: 2.8vw 2.8vw 2.8vw 2.8vw;
+  border-radius: var(--indent-card-border-radius);
+  background: var(--indent-card-background);
+  box-shadow: var(--indent-card-box-shadow);
+}
+
+.indext-card-levelone-one {
+  display: flex;
+  flex-direction: column;
+  width: 86.4vw;
+  margin: 0 4vw 0 4vw;
+}
+
+.indext-card-levelone-one-chunk {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: relative;
+  width: 86.4vw;
+  height: 8vh;
+}
+
+.indext-card-levelone-one-text-right {
+  position: absolute;
+  right: 0;
+  text-align: right;
+}

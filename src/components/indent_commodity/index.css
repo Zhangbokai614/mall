@@ -1,0 +1,46 @@
+.indext-commodity-levelone {
+  display: flex;
+  flex-direction: row;
+  width: 86.4vw;
+  margin: 5vw 4vw 0 4vw;
+}
+
+.indext-commodity-image {
+  width: 20vw;
+  height: 20vw;
+  border-radius: var(--shoppingCart-card-Image-border);
+}
+
+.indext-commodity-image-right {
+  display: flex;
+  flex-direction: row;
+  margin-left: 4vw;
+  width: 62.4vw;
+}
+
+.indext-commodity-image-right-left {
+  display: flex;
+  flex-direction: column;
+  width: 50vw;
+}
+
+.indext-commodity-image-right-right {
+  display: flex;
+  flex-direction: column;
+  width: 12.4vw;
+}
+
+.indext-commodity-title {
+  margin-top: 1vh;
+  margin-bottom: 1.5vh;
+}
+
+.indext-commodity-money {
+  margin-top: 1vh;
+  margin-bottom: 1.5vh;
+  text-align: right;
+}
+
+.indext-commodity-number {
+  text-align: right;
+}

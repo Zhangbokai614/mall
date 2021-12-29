@@ -1,7 +1,7 @@
 .shoppingCart-top-levelOne {
-  z-index: 10;
+  z-index: var(--shoppingCard-top-z-index);
   position: sticky;
-  top: 0px;
+  top: 0;
 }
 
 .shoppingCart-top-leveltwo {
@@ -10,21 +10,21 @@
   align-items: center;
   flex-direction: row;
   position: relative;
-  height: 8vh;
-  box-shadow: var(--box-shadow--l1);
-  border-bottom-right-radius: var(--radius--mini);
-  border-bottom-left-radius: var(--radius--mini);
-  background: var(--color--background);
+  height: var(--shoppingCard-top-height);
+  box-shadow: var(--shoppingCard-top-box-shadow);
+  border-bottom-right-radius: var(--shoppingCard-top-border);
+  border-bottom-left-radius: var(--shoppingCard-top-border);
+  background: var(--shoppingCard-top-background);
 }
 
 .shoppingCart-left-text {
   margin-left: 4vw;
-  color: var(--text-color--gray);
+  color: var(--shoppingCard-top-left-from-color);
 }
 
 .shoppingCart-right-text {
   position: absolute;
   right: 0;
   margin-right: 4vw;
-  color: var(--color--main);
+  color: var(--shoppingCard-top-right-from-color);
 }

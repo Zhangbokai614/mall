@@ -51,16 +51,17 @@ export default class Index extends Component {
 		const goodsInfo = await homeApi.goodsInfo(+id)
 		const afterSales = await homeApi.afterSales()
 		const activity = await homeApi.activity()
+		const address = await homeApi.address()
 		this.setState({
 			goodsInfo: goodsInfo.data.filter((e) => e.id === +id),
 			afterSales: afterSales.data.detail,
 			afterSalesFree: afterSales.data.free,
 			activityName: activity.data[0].activity_name,
+			address: address.data[0].address,
 			endTime: activity.data[0].end_time,
 			loading: false,
 		})
 		Taro.hideLoading()
-
 	}
 
 	render() {
@@ -70,6 +71,7 @@ export default class Index extends Component {
 		const afterSalesFree = this.state.afterSalesFree
 		const activityName = this.state.activityName
 		const time = this.state.endTime
+		const address = this.state.address
 
 		const nowTime = new Date()
 		const endDate = new Date(time)
@@ -128,6 +130,7 @@ export default class Index extends Component {
 						inventory={info[0].inventory}
 						price={info[0].price}
 						id={info[0].id}
+						address={address}
 					/>
 					<Introduction
 						detailImages={info[0].detailImages}
@@ -144,18 +147,19 @@ export default class Index extends Component {
 								{Get('languages').detailPage.afterSales}
 							</View>
 						</View>
-						<AtDivider 
-						className='main-bottom-divider'
+						<AtDivider
+							className='main-bottom-divider'
 						/>
 						<View className='main-bottom-content'>
 							{afterSalesDetail}
 						</View>
 						<View className='main-bottom-content'>
-							{Get('languages').detailPage.freeMoney}
 							{afterSalesFree}
 						</View>
 					</View>
-					<Bottomdetail />
+					<Bottomdetail 
+					id={info[0].id}
+					/>
 				</View>
 
 		)
