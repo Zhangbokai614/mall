@@ -69,7 +69,6 @@ export default class Index extends Component {
 		const afterSalesFree = this.state.afterSalesFree
 		const activityName = this.state.activityName
 		const time = this.state.endTime
-		const address = this.state.address
 
 		const nowTime = new Date()
 		const endDate = new Date(time)
@@ -128,7 +127,6 @@ export default class Index extends Component {
 						inventory={info[0].inventory}
 						price={info[0].price}
 						id={info[0].id}
-						address={address}
 					/>
 					<Introduction
 						detailImages={info[0].detailImages}
