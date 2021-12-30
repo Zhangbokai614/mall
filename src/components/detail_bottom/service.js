@@ -5,7 +5,7 @@ import { Get } from '../../global-data/index'
 export const goodscar = (id, value) => {
     return Request({
         type: 'customize',
-        url: 'http://192.168.0.36:8080/api/shibor',
+        url: 'http://192.168.0.36:8080/api/zbk',
         method: 'POST',
         data: {
             id: id,
@@ -38,7 +38,7 @@ export const goodscar = (id, value) => {
 export const getValue = (id, data) => {
     return Request({
         type: 'customize',
-        url: 'http://192.168.0.36:8080/api/shibor?id=' + id,
+        url: 'http://192.168.0.36:8080/api/zbk?id=' + id,
         method: 'GET',
         ...data
     });

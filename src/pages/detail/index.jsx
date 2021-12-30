@@ -51,13 +51,11 @@ export default class Index extends Component {
 		const goodsInfo = await homeApi.goodsInfo(+id)
 		const afterSales = await homeApi.afterSales()
 		const activity = await homeApi.activity()
-		const address = await homeApi.address()
 		this.setState({
 			goodsInfo: goodsInfo.data.filter((e) => e.id === +id),
 			afterSales: afterSales.data.detail,
 			afterSalesFree: afterSales.data.free,
 			activityName: activity.data[0].activity_name,
-			address: address.data[0].address,
 			endTime: activity.data[0].end_time,
 			loading: false,
 		})
