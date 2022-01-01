@@ -232,12 +232,10 @@ class GoodsSelection extends React.Component {
               </View>
               <View className='container-content'>
                 {addressDetail.userName}
-                {addressDetail.postalCode}
                 {addressDetail.provinceName}
                 {addressDetail.cityName}
                 {addressDetail.countyName}
                 {addressDetail.detailInfo}
-                {addressDetail.nationalCode}
                 {addressDetail.telNumber}
               </View>
               <AtIcon
