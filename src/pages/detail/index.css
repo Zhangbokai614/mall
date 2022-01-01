@@ -12,7 +12,7 @@
 
 .top-banner-price {
   font-size: var(--text--max);
-  margin-left: 3vw;
+  margin-left: 3.5vw;
   height: 5vw;
   display: flex;
   align-items: center;
@@ -57,18 +57,22 @@
 } 
 
 .top-show-info {
-  padding-left: 3vw;
   background-color: var(--color--background);
-  font-size: var(--text-h1);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
-  color: #212121 100%;
   box-shadow: var(--box-shadow--l1);
   height: 6vh;
   display: flex;
   align-items: center;
   flex-direction: row;
+}
+
+.top-show-info-title {
+  margin-left: 4.5vw;
+  font-size: var(--text-h1);
+  overflow: hidden;
+  width: 100vw;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  color: #212121 100%;
 }
 
 .main-bottom-service {

@@ -119,7 +119,9 @@ export default class Index extends Component {
 						</button>
 					</View>
 					<View className='top-show-info'>
-						{info[0].title}
+						<View className='top-show-info-title'>
+							{info[0].title}
+						</View>
 					</View>
 					<GoodsSelection
 						image={info[0].images[0]}
@@ -153,8 +155,8 @@ export default class Index extends Component {
 							{afterSalesFree}
 						</View>
 					</View>
-					<Bottomdetail 
-					id={info[0].id}
+					<Bottomdetail
+						id={info[0].id}
 					/>
 				</View>
 
