@@ -11,10 +11,12 @@
 }
 
 .top-banner-price {
-  font-size: var(--text--h1);
+  font-size: var(--text--max);
   margin-left: 3vw;
-  padding-bottom: 1vw;
   height: 5vw;
+  display: flex;
+  align-items: center;
+  justify-items: center;  
   color: var(--color--main);
 }
 
@@ -26,9 +28,9 @@
 .top-show-title {
   display: flex;
   align-items: center;
-  justify-items: center;
   white-space: nowrap;
   margin-left: 3vw;
+  height: 2.5vh;
   color: var(--color--main);
   font-size: var(--text--info);
   background-color: var(--color--background);

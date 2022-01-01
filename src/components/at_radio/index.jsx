@@ -1,12 +1,14 @@
 import { View, Image } from '@tarojs/components'
 import React from 'react'
 import Taro from '@tarojs/taro'
-import { AtButton, AtIcon, AtList, AtInputNumber, AtToast, AtAvatar } from 'taro-ui'
+import { AtButton, AtIcon, AtList, AtToast } from 'taro-ui'
 
 import { Get } from '../../global-data/index'
 import Fruit from '../../asset/images/icon/fruit.png'
 import FreeMoney from '../../asset/images/icon/free.png'
 import SevenDays from '../../asset/images/icon/notseven-days.png'
+import { Counter } from '../../components/shoppingCart_counter'
+
 import './index.css'
 import * as homeApi from './service'
 
@@ -16,7 +18,8 @@ class GoodsSelection extends React.Component {
     super(props)
     this.state = {
       value: 1,
-      loading: true,  
+      address: new Object(),
+      loading: true,
       isOpened: false,
       displaySelect: 'mask none',
       classstyleSelect: 'box moveFromBottom',
@@ -24,6 +27,26 @@ class GoodsSelection extends React.Component {
       classstyleDistribution: 'box moveFromBottom',
     }
 
+  };
+
+  address() {
+    Taro.chooseAddress({
+      success: (res) => {
+        this.setState({
+          address: {
+            userName: res.userName,
+            postalCode: res.postalCode,
+            provinceName: res.provinceName,
+            cityName: res.cityName,
+            countyName: res.countyName,
+            detailInfo: res.detailInfo,
+            nationalCode: res.nationalCode,
+            telNumber: res.telNumber,
+          }
+        })
+      }
+    })
+    this.setState({});
   };
 
   update(id, value) {
@@ -39,8 +62,8 @@ class GoodsSelection extends React.Component {
   failedToast() {
     return (
       <AtToast
-      isOpened
-      text={Get('languages').detailPage.addfailed}
+        isOpened
+        text={Get('languages').detailPage.addfailed}
       />
     )
   };
@@ -102,16 +125,25 @@ class GoodsSelection extends React.Component {
     })
   };
 
+  number(value) {
+    this.setState({
+      value
+    })
+  };
+
   render() {
 
+    const min = this.state.min
+    const value = this.state.value
     const { image } = this.props
     const { specs } = this.props
     const { inventory } = this.props
     const { price } = this.props
     const { id } = this.props
-    const address = this.props.address
 
+    const addressDetail = this.state.address
     return (
+
       <View className='main-radio'>
         <View>
           <AtList hasBorder={false}>
@@ -145,7 +177,7 @@ class GoodsSelection extends React.Component {
                   />
                 </View>
                 <View className='show-price'>
-                {Get('languages').cny}{price}
+                  {Get('languages').cny}{price}
                 </View>
               </View>
               <View className='show-detail'>
@@ -171,15 +203,7 @@ class GoodsSelection extends React.Component {
                   {Get('languages').detailPage.number}
                 </View>
                 <View className='show-input-number'>
-                  <AtInputNumber
-                    type='digit'
-                    min={1}
-                    max={99}
-                    step={1}
-                    width={100}
-                    value={this.state.value}
-                    onChange={this.handleChangeNumber.bind(this)}
-                  />
+                  <Counter value={value} min={min} max={inventory} onChange={this.number.bind(this, value)}/>
                 </View>
               </View>
               <AtButton
@@ -200,14 +224,19 @@ class GoodsSelection extends React.Component {
         <View>
           <AtList hasBorder={false}>
             <View
+              onClick={this.address.bind(this)}
               className='container-radio'
-              onClick={this.openDistribution.bind(this)}
             >
               <View className='container-title '>
                 {Get('languages').detailPage.distribution}
               </View>
               <View className='container-content'>
-                {address}
+                {addressDetail.userName}
+                {addressDetail.provinceName}
+                {addressDetail.cityName}
+                {addressDetail.countyName}
+                {addressDetail.detailInfo}
+                {addressDetail.telNumber}
               </View>
               <AtIcon
                 className='container-icon'
@@ -215,16 +244,6 @@ class GoodsSelection extends React.Component {
                 size='15'
                 color='#bfbfbf'
               />
-            </View>
-            <View
-              onClick={this.offDistribution.bind(this)}
-              title={Get('languages').deliveryTo}
-              className={this.state.displayDistribution}
-            />
-            <View
-              className={this.state.classstyleDistribution}
-            >
-
             </View>
           </AtList>
         </View>

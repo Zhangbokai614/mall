@@ -17,6 +17,7 @@ page {
   --state--special: #686BBC;
 
   /* font */
+  --text--max: 40px;
   --text--h1: 32px;
   --text--p: 28px;
   --text--info: 24px;

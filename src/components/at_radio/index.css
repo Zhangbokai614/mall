@@ -21,8 +21,10 @@
 
 .container-content {
   color: var(--text-color--gray);
+  text-overflow: ellipsis;
   margin-left: 7vw;
   font-size: var(--text--info);
+  width: 70vw;
 }
 
 .container-icon {
@@ -171,4 +173,30 @@
 .container-wrapper-content {
   display: flex;
   align-items: row;
+}
+
+.shoppingCart-counter-levelOne {
+  height: 5vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+
+.shoppingCart-counter-input {
+  text-align: center;
+  width: 10vw;
+  color: var(--color--main);
+}
+
+.shoppingCart-counter-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 7vw;
+  height: 7vw;
+  border-radius: 12px;
+  background-color: var(--text-color--white);
+  color: var(--color--main);
+  border: 3px solid var(--color--main);
 }

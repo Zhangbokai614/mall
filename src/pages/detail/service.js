@@ -27,7 +27,7 @@ export const activity = (data) => {
 export const goodscar = (id, value) => {
     return Request({
         type: 'customize',
-        url: 'http://192.168.0.36:8080/api/shibor',
+        url: 'http://192.168.0.36:8080/api/zbk',
         method: 'POST',
         data: {
             id: id,
