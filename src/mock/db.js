@@ -548,7 +548,7 @@ module.exports = () => {
         activity_code: '1000000',
         activity_name: '限时折扣',
         start_time: '2021-12-12 01:25:30',
-        end_time: '2021-12-30 01:00:00',
+        end_time: '2023-12-30 01:00:00',
         discount: 0.8,
         over: false,
       },
