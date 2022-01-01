@@ -44,12 +44,6 @@ export default class Index extends Component {
     Taro.hideLoading()
   }
 
-  logisticsJump() {
-    Taro.navigateTo({
-      url: '/pages/logistics/index?orderCode=' + this.state.orderInfo.order_code
-    })
-  }
-
   checkLogistics(orderCode) {
     Taro.navigateTo({
       url: '/pages/logistics/index?orderCode=' + orderCode
@@ -103,7 +97,7 @@ export default class Index extends Component {
           <View className='text'>
             {text.logisticsInfo}
           </View>
-          <View className='card' id='logistics' onClick={this.logisticsJump.bind(this)}>
+          <View className='card' id='logistics' onClick={this.checkLogistics.bind(this, orderInfo.order_code)}>
             <Image
               id='logistics__address-icon'
               src={addressIcon}

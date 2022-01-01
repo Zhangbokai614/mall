@@ -12,6 +12,7 @@ export default {
     'pages/orders/index',
     'pages/order-detail/index',
     'pages/indent/index',
+    'pages/logistics/index',
   ],
 
   window: {
