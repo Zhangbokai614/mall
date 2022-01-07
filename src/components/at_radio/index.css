@@ -1,5 +1,6 @@
 .main-radio {
   margin-top: 2vh;
+  box-shadow:var(--box-shadow--l1);
 }
 
 .container-radio {
