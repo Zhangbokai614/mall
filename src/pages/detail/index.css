@@ -79,6 +79,7 @@
   height: 30vh;
   margin-top: 2vh;
   text-align: left;
+  box-shadow:var(--box-shadow--l1);
   background-color: var(--color--background);
 }
 
